@@ -1,0 +1,20 @@
+:root {
+  --wast-blue: #145693;
+  --wast-blue-dark: #082e54;
+  --wast-blue-bright: #128bfb;
+  --wast-blue-light: #a5d2fd;
+  --wast-ink: #12283d;
+  --wast-muted: #587086;
+  --wast-paper: #f5f8fa;
+  --wast-white: #ffffff;
+  --wast-line: #d3e1eb;
+  --wast-display: "Barlow Condensed", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  --wast-body: "DM Sans", Arial, sans-serif;
+  --wast-container: 1180px;
+  --wast-gutter: 24px;
+  --wast-section-space: 112px;
+  --wast-control-height: 54px;
+  --wast-radius: 0px;
+  --wast-speed: 200ms;
+  --wast-ease: ease;
+}
