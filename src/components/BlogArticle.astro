@@ -41,6 +41,7 @@ const serviceLinks = storageOptions.filter(option => option.slug !== post.slug).
         <a class="article-aside-link" href="/storage-near-you/">Storage near you</a>
         <nav aria-label="Storage options for this guide">
           {serviceLinks.map(option => <a class="article-aside-link" href={`/${option.slug}/`}>{option.label} in Glendene</a>)}
+        </nav>
         <p class="archive-note">This article was published in {post.date.slice(0, 4)}. Please check with the yard for current facilities, access and availability.</p>
       </aside>
     </div>

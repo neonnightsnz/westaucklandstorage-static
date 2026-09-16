@@ -241,6 +241,27 @@ const faqs = [
         </div>
       </section>
 
+      <section class="reviews-section section-pad">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">From the people who store here</p>
+              <h2>Word gets<br /><span>around.</span></h2>
+            </div>
+            <p>Rated {averageRating.toFixed(1)} out of 5 across {reviewCount} owner reviews.</p>
+          </div>
+          <div class="review-grid">
+            {featuredReviews.map((review) => (
+              <figure class="review-card">
+                <p class="review-stars" aria-label={`${review.rating} out of 5 stars`}><span aria-hidden="true">★★★★★</span></p>
+                <blockquote class="review-quote">{review.text}</blockquote>
+                <figcaption class="review-author">{review.name}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="contact" class="contact-section section-pad">
         <div class="container contact-grid">
           <div class="contact-intro">
