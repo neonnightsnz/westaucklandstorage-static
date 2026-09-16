@@ -2,3 +2,10 @@ node_modules/
 dist/
 .astro/
 .DS_Store
+
+# Local-only mirror dumps, backups and saved-page artifacts.
+# None of these are needed to build the site (see README) and none should be committed.
+westaucklandstorage-static/
+westaucklandstorage-wpress/
+West Auckland Storage _ Boat, Caravan & Vehicle Storage.html
+West Auckland Storage _ Boat, Caravan & Vehicle Storage_files/

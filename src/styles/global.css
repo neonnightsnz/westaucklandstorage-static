@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap");
+@import "../../design-system/west-auckland-storage/tokens.css";
 
 :root {
   --blue: var(--wast-blue);
@@ -339,4 +340,28 @@ address { margin: 0 0 25px; color: var(--ink); font-size: 15px; font-style: norm
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+
+/* Brand-guide sections: lead with location, price and slipway. */
+.pillars-section { background: white; }
+.pillar-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.pillar-card { display: flex; flex-direction: column; padding: 33px 30px 36px; background: var(--paper); border-top: 4px solid var(--blue-bright); }
+.pillar-number { color: var(--blue); font-family: var(--display); font-size: 30px; font-weight: 700; line-height: 1; }
+.pillar-card h3 { margin: 16px 0 0; color: var(--blue-dark); font-size: 30px; }
+.pillar-card p { margin: 14px 0 0; color: var(--muted); font-size: 16px; }
+
+.yard-stats { display: flex; flex-wrap: wrap; gap: 34px; max-width: 490px; margin: 0 0 42px; }
+.yard-stats strong { display: block; color: var(--blue-light); font-family: var(--display); font-size: 48px; font-weight: 700; line-height: .9; }
+.yard-stats small { color: #afc6d7; font-size: 13px; }
+
+.value-band { padding: clamp(64px, 8vw, 104px) 0; background: var(--blue); color: white; }
+.value-band .container { display: grid; gap: 16px; justify-items: start; }
+.value-line { margin: 0; color: white; font-family: var(--display); font-size: clamp(38px, 6vw, 76px); font-weight: 700; letter-spacing: -.035em; line-height: .95; text-transform: uppercase; }
+.value-sub { max-width: 620px; margin: 0; color: #d3e5f1; font-size: 17px; }
+
+.slipway-section .why-photo { order: 2; }
+
+@media (max-width: 680px) {
+  .pillar-grid { grid-template-columns: 1fr; }
+  .slipway-section .why-photo { order: -1; }
 }

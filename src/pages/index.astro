@@ -26,6 +26,24 @@ const services = [
   },
 ];
 
+const pillars = [
+  {
+    number: "01",
+    title: "Close to home",
+    copy: "Right in Glendene at Span Farm Boat Yard — minutes from Waitakere and handy for owners right across West Auckland.",
+  },
+  {
+    number: "02",
+    title: "No marina price tag",
+    copy: "Fair value for a working yard: no marina fees, no marina waitlist, and flexible short or long-term terms.",
+  },
+  {
+    number: "03",
+    title: "Slipway access",
+    copy: "A real launch option for smaller trailer boats while it is operational. Ask us about current access before you arrive.",
+  },
+];
+
 const faqs = [
   {
     question: "Where is West Auckland Storage?",
@@ -70,6 +88,27 @@ const faqs = [
         </div>
         <div class="hero-stamp" aria-hidden="true">
           <span>WEST</span><strong>AUCKLAND</strong><span>STORAGE</span>
+        </div>
+            </section>
+
+      <section class="pillars-section section-pad">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Location. Price. Slipway.</p>
+              <h2>Three reasons<br /><span>owners pick us.</span></h2>
+            </div>
+            <p>Not a marina and not a storage chain — a working West Auckland boat yard built around three plain advantages.</p>
+          </div>
+          <div class="pillar-grid">
+            {pillars.map((pillar) => (
+              <article class="pillar-card">
+                <span class="pillar-number">{pillar.number}</span>
+                <h3>{pillar.title}</h3>
+                <p>{pillar.copy}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -128,11 +167,24 @@ const faqs = [
             <li><span>02</span><div><strong>Fair value</strong><small>Useful storage without the marina price tag.</small></div></li>
             <li><span>03</span><div><strong>No fuss</strong><small>Quick quotes, flexible terms, monthly invoicing.</small></div></li>
           </ul>
+          <!-- Confirm current figures with the yard before publishing; the brand guide asks for honest numbers only. -->
+          <div class="yard-stats">
+            <div><strong>15+</strong><small>years storing boats and caravans</small></div>
+            <div><strong>100+</strong><small>boats looked after for locals</small></div>
+          </div>
           <a class="button button-outline-light" href="#contact">Talk to the team <span aria-hidden="true">→</span></a>
         </div>
       </section>
 
-      <section class="location-section section-pad">
+            <section class="value-band">
+              <div class="container">
+                <p class="value-line">No marina prices.<br />No marina waitlist.</p>
+                <p class="value-sub">Keep your boat, caravan or gear close to home — and stop paying to store it like a marina.</p>
+                <a class="button button-bright" href="#contact">Get a quote <span aria-hidden="true">→</span></a>
+              </div>
+            </section>
+
+            <section class="location-section section-pad">
         <div class="container location-grid">
           <div class="location-copy">
             <p class="eyebrow">Find your spot</p>
@@ -148,7 +200,20 @@ const faqs = [
         </div>
       </section>
 
-      <section id="faq" class="faq-section section-pad">
+            <section class="why-section slipway-section">
+              <div class="why-photo">
+                <img src="/images/boat-trailer.jpg" alt="A trailer boat at Span Farm Boat Yard" loading="lazy" />
+                <span class="photo-caption">Slipway · smaller trailer boats</span>
+              </div>
+              <div class="why-content section-pad">
+                <p class="eyebrow eyebrow-light">Slipway access</p>
+                <h2>Easy to launch.<br /><em>Honest about it.</em></h2>
+                <p class="why-lede">A slipway is a genuine advantage for smaller trailer boats, and a big reason owners choose the yard over a marina. It is not available all of the time, so ask us about current access before you arrive. We would rather give you a straight answer than oversell it.</p>
+                <a class="button button-outline-light" href="#contact">Ask about access <span aria-hidden="true">→</span></a>
+              </div>
+            </section>
+
+            <section id="faq" class="faq-section section-pad">
         <div class="container faq-grid">
           <div>
             <p class="eyebrow">Good to know</p>
