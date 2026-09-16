@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+const f = 'dist/why-choose-west-auckland-storage/index.html';
+const h = fs.readFileSync(f, 'utf8');
+console.log('len', h.length);
+console.log('</html> count', (h.match(/<\/html>/g) || []).length);
+console.log('<!DOCTYPE count', (h.match(/<!DOCTYPE/gi) || []).length);
+console.log('<body count', (h.match(/<body/g) || []).length);
+const first = h.indexOf('</html>');
+console.log('\n--- around first </html> (pos ' + first + ') ---');
+console.log(JSON.stringify(h.slice(first - 250, first + 320)));
