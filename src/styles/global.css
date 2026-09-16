@@ -377,3 +377,25 @@ address { margin: 0 0 25px; color: var(--ink); font-size: 15px; font-style: norm
 @media (max-width: 680px) {
   .not-found-actions { align-items: start; flex-direction: column; gap: 18px; }
 }
+
+/* Storage near you — locations hub. */
+.locations-section { background: white; }
+.locations-section h2 { color: var(--blue-dark); }
+.locations-section h2 span { color: var(--blue); }
+.location-areas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px 40px; }
+.location-area { padding-top: 22px; border-top: 3px solid var(--blue-bright); }
+.location-area h3 { margin: 0 0 6px; color: var(--blue-dark); font-size: 30px; }
+.location-area-blurb { margin: 0 0 16px; color: var(--muted); font-size: 15px; }
+.location-list { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
+.location-list a, .location-item { display: flex; align-items: baseline; justify-content: space-between; gap: 18px; padding: 12px 2px; border-top: 1px solid var(--line); text-decoration: none; }
+.location-list li:first-child a, .location-list li:first-child .location-item { border-top: 0; }
+.location-list strong { color: var(--ink); font-family: var(--display); font-size: 19px; font-weight: 700; letter-spacing: .01em; text-transform: uppercase; }
+.location-list span { color: var(--muted); font-size: 13px; text-align: right; }
+.location-list a:hover strong, .location-list a:focus-visible strong { color: var(--blue); }
+.location-item strong { color: var(--muted); }
+@media (max-width: 900px) {
+  .location-areas { grid-template-columns: 1fr; }
+}
+@media (max-width: 680px) {
+  .location-list span { display: none; }
+}

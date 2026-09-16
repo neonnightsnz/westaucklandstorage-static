@@ -69,9 +69,30 @@ const relatedPages = page?.related
             </ul>
             <a class="button button-bright" href="/contact/">Ask about space <span aria-hidden="true">→</span></a>
           </div>
-        </aside>
+                </aside>
       </div>
     </section>
+
+    {page.kind === "locations" && (
+      <section class="locations-section section-pad">
+        <div class="container">
+          <div class="section-heading"><div><p class="eyebrow">Find your suburb</p><h2>Local guides for<br /><span>the west.</span></h2></div><p>Every suburb below links to a guide written for owners in that area.</p></div>
+          <div class="location-areas">
+            {locationGroups.map((group) => (
+              <div class="location-area">
+                <h3>{group.area}</h3>
+                <p class="location-area-blurb">{group.blurb}</p>
+                <ul class="location-list">
+                  {group.suburbs.map((suburb) => suburb.slug
+                    ? <li><a href={`/${suburb.slug}/`}><strong>{suburb.name}</strong><span>{suburb.note}</span></a></li>
+                    : <li><span class="location-item"><strong>{suburb.name}</strong><span>{suburb.note}</span></span></li>)}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
 
     {page.kind === "contact" && (
       <section class="contact-section section-pad">
