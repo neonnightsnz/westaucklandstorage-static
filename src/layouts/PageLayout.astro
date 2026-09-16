@@ -5,11 +5,12 @@ interface Props {
   title: string;
   description: string;
   home?: boolean;
-  type?: 'website' | 'article';
+    type?: 'website' | 'article';
   publishedTime?: string;
+  noindex?: boolean;
 }
 
-const { title, description, home = false, type = 'website', publishedTime } = Astro.props;
+const { title, description, home = false, type = 'website', publishedTime, noindex = false } = Astro.props;
 const currentPath = Astro.url.pathname;
 const SITE_URL = 'https://westaucklandstorage.co.nz';
 const site = Astro.site ?? new URL(SITE_URL);
@@ -55,6 +56,7 @@ const localBusiness = {
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#145693" />
+    {noindex && <meta name="robots" content="noindex" />}
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
