@@ -21,7 +21,7 @@ Read alongside `brandvoice-visual-identity.md` (voice/visual rules) and `README.
 | Homepage | `src/pages/index.astro` | Hero, pillars, intro, storage grid, why-us, value band, location, slipway, FAQ, contact |
 | Core pages | `src/data/sitePages.ts` | `about`, `services`, `contact` |
 | Storage options | `src/data/sitePages.ts` (`storageOptions`) | 9 detail pages |
-| Blog | `src/data/blogPosts.json` | 34 articles + `/blog/`, `/author/isaac/`, `/category/uncategorized/` archives (4 pages each) |
+| Blog | `src/data/curated-blog.mjs` → `blogPosts.json` | 34 brand-aligned articles + `/blog/`, `/author/isaac/`, `/category/uncategorized/` archives (4 pages each) |
 | Discovery | `src/pages/sitemap.astro`, `sitemap.xml.ts`, `public/robots.txt`, `public/_redirects` | Full sitemap + legacy redirects |
 | Forms | `src/components/QuoteForm.astro` | `mailto:` based, no backend |
 
@@ -31,7 +31,7 @@ Read alongside `brandvoice-visual-identity.md` (voice/visual rules) and `README.
 - `.gitignore` saved-page filename mismatch **fixed**; `West-Auckland-Storage.html` now ignored.
 - Hero overlays were simplified vs. the saved snapshot (see Phase 0).
 - Published figures (`15+`, `100+`) carry an "verify before go-live" comment.
-- ~9–12 imported articles contain claims the brand guide bans (security, "premier").
+- Blog copy: all 34 articles rewritten to the brand voice and compiled from `src/data/curated-blog.mjs` (banned claims and invented testimonials removed).
 - ~470 MB of untracked debris at the repo root.
 
 ---
@@ -52,10 +52,7 @@ Decisions and tiny fixes that unblock everything else.
 - [ ] **Hero overlays** — decide whether to restore the richer gradients in `src/styles/global.css` (`.hero-overlay`, `.inner-hero-overlay`) and the `13px` nav size from the saved snapshot, or keep the flat overlays as intentional.
 - [ ] **Verify figures** — confirm `15+ years` and `100+ boats` with the yard; update `index.astro`, then delete the `<-- Confirm current figures -->` comment. If unverifiable, remove the stat block.
 - [ ] **Confirm NAP** — phone `09 818 4586`, email `info@westaucklandstorage.co.nz`, address `20 Akatea Road, Glendene 0602`, entity `Span Farm Boat Yard Ltd`. Confirm these are the live/billing-correct details.
-- [ ] **Blog voice decision** — choose the treatment for legacy claims:
-  - (a) keep verbatim behind the existing `BlogArticle.astro` disclaimer **[current default]**, or
-  - (b) sanitise the offending sentences, or
-  - (c) keep copy but add `noindex` to affected articles.
+- [x] **Blog voice decision** — **done** (option b): all 34 articles rewritten to the brand voice. Copy lives in `src/data/curated-blog.mjs` and compiles to `blogPosts.json` via `npm run build:blog`; the mirror copy is kept only as `blogPosts.raw.json`. The build step rejects banned claims and invented testimonials.
 - [ ] **Tag a release** once the above are settled, so Cloudflare has a known-good baseline.
 
 ---
@@ -82,7 +79,7 @@ The biggest brand-aligned growth lever: the site already hints at being a local 
 - [ ] **Suburb/location pages** — create "storage near <suburb>" landing pages (Henderson, Massey, Te Atatu, New Lynn, Titirangi, Swanson, Kelston, Glendene) using existing imagery and the honest brand voice. Add to `sitePages.ts` and internal links.
 - [ ] **Service page depth** — enrich the 9 `storageOptions` pages with practical detail (typical sizes, access notes, what to bring). Keep conditional language on slipway/security.
 - [ ] **Blog taxonomy** — currently only `Uncategorized` + author `isaac`. Introduce 2–4 real categories (e.g. Boat care, Local guides, Storage tips) and map posts; update archive generation in `src/data/blog.ts`.
-- [ ] **Legacy article treatment** — action the Phase 0 blog decision; if rewriting, keep paragraphs that `check-site.mjs` asserts on, or update the sampler.
+- [x] **Legacy article treatment** — **done** (Phase 0). Slugs, dates and images preserved; copy rewritten to brand voice; `check-site.mjs` still passes.
 - [ ] **Internal linking** — link service ↔ blog ↔ location pages; add a "related storage options" block to service pages.
 - [ ] **Meta descriptions** — review per-page descriptions in `sitePages.ts` and `blogPosts.json` for length and CTA.
 - [ ] **New content cadence** — a simple monthly "from the yard" post keeps the blog fresh for SEO.
@@ -153,7 +150,7 @@ The biggest brand-aligned growth lever: the site already hints at being a local 
 |---|---|---|---|
 | 1 | Restore hero gradients or keep flat? | Yard | Open |
 | 2 | Are `15+` / `100+` figures accurate? | Yard | Open |
-| 3 | Blog: keep verbatim / sanitise / noindex? | Yard | Open |
+| 3 | Blog: keep verbatim / sanitise / noindex? | Yard | **Resolved** — all 34 rewritten |
 | 4 | Form backend: stay `mailto:` or add endpoint? | Yard | Open |
 | 5 | Analytics: Cloudflare Web Analytics OK? | Yard | Open |
 | 6 | Repo debris: safe to delete? | Yard | Open |

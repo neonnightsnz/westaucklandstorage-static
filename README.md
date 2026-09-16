@@ -6,11 +6,14 @@ Astro marketing site with the original WordPress blog restored into the current 
 - `npm run dev` starts the local site on port 5000.
 - `npm run build` generates the static site in `dist`.
 - `npm run check:site` verifies built routes, article copy, archives, links and images.
-- `npm run import:blog` imports the 34 posts and images from the checked-in `westaucklandstorage.co.nz` mirror.
+- `npm run import:blog` imports the 34 posts and their images from the checked-in `westaucklandstorage.co.nz` mirror, writing a raw provenance snapshot to `src/data/blogPosts.raw.json`.
+- `npm run build:blog` rebuilds `src/data/blogPosts.json` from the brand-aligned copy in `src/data/curated-blog.mjs`.
 
 The original article URLs and ordering are preserved, with four pages each for the blog, Isaac's author archive and the Uncategorized archive. `/sitemap/` lists the complete site; `/sitemap.xml` and `/robots.txt` support crawlers. The legacy `/services/contact/` address redirects to `/contact/`.
 
-The mirror's Swanson article was a 404. Its full published text was recovered from post 343 in the supplied WordPress backup and saved in `src/data/recovered-swanson.json` so imports remain reproducible without the backup. Article copy is preserved as historical source content; current core service and contact pages retain their existing copy.
+The mirror's Swanson article was a 404. Its full published text was recovered from post 343 in the supplied WordPress backup and saved in `src/data/recovered-swanson.json` so imports remain reproducible without the backup.
+
+Original article URLs, slugs and dates are preserved so existing links keep working. The article copy itself has been rewritten to the brand voice in `brandvoice-visual-identity.md`: the mirror's original optimised copy is kept only as a raw import snapshot (`blogPosts.raw.json`), and the shipped copy lives in `src/data/curated-blog.mjs` and is compiled into `blogPosts.json` by `npm run build:blog`. That rewrite removes the security claims, invented testimonials and indoor/container storage language that never matched the outdoor boat yard. Run `npm run build:blog` after any `npm run import:blog` to reapply the curated copy.
 
 ## Brand and design system
 
