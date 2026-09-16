@@ -75,4 +75,8 @@ for (const [base, total] of Object.entries(archiveExpectations)) {
   assert.equal(listed.length, total, `Archive ${base} must list ${total} articles`);
   assert.equal(new Set(listed).size, total, `Archive ${base} must not duplicate articles`);
 }
+const hub = fs.readFileSync('dist/storage-near-you/index.html', 'utf8');
+assert.equal((hub.match(/class="location-list"/g) ?? []).length, 4, 'Location hub must group suburbs into 4 areas');
+assert.equal((hub.match(/class="location-item"/g) ?? []).length, 1, 'Suburbs without a guide must be listed, not linked');
+assert.equal((hub.match(/href="\/(?:west-auckland-storage|discovering-west-auckland)/g) ?? []).length, 19, 'Location hub must link all 19 suburb guides');
 console.log(`Verified ${files.length} HTML pages, ${urls.length} sitemap entries, 34 complete articles, all archive pages and internal links/images.`);

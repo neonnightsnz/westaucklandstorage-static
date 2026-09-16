@@ -1,0 +1,44 @@
+---
+import { posts, categoryFor, categoryLabel } from '../data/blog';
+const { post } = Astro.props;
+const position = posts.findIndex(item => item.slug === post.slug);
+const adjacent = [posts[position - 1], posts[position + 1]].filter(Boolean);
+const category = categoryFor(post.slug);
+const categoryName = categoryLabel(category);
+---
+<main id="main">
+  <header class="article-header section-pad">
+    <div class="container">
+      <nav class="article-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">From the yard</a></nav>
+      <p class="eyebrow">From the yard</p>
+      <h1>{post.title}</h1>
+      <p class="article-meta"><time datetime={post.date}>{post.dateLabel}</time> · By <a href="/author/isaac/">{post.author}</a> · <a href={`/category/${category}/`}>{categoryName}</a></p>
+    </div>
+  </header>
+  <section class="page-content section-pad article-section">
+    <div class="container article-grid">
+      <article class="prose article-prose">
+        <img class="article-image" src={post.image} alt={post.imageAlt} width="1200" height="800" fetchpriority="high" />
+        <div set:html={post.content} />
+        <a class="text-link" href="/blog/">← All articles</a>
+      </article>
+      <aside class="page-aside aside-card">
+        <p class="eyebrow">Find your space</p>
+        <h2>Storage close to home.</h2>
+        <p>Talk to the yard about space for your boat, caravan, trailer or vehicle.</p>
+        <a class="button button-bright" href="/contact/">Ask about space →</a>
+        <a class="article-aside-link" href="/services/">Explore our storage options</a>
+        <a class="article-aside-link" href="/storage-near-you/">Storage near you</a>
+        <p class="archive-note">This article was published in {post.date.slice(0, 4)}. Please check with the yard for current facilities, access and availability.</p>
+      </aside>
+    </div>
+  </section>
+  <nav class="related-section section-pad" aria-label="More articles">
+    <div class="container">
+      <p class="eyebrow">Keep reading</p>
+      <div class="related-grid">
+        {adjacent.map(item => <a class="related-card" href={`/${item.slug}/`}><h3>{item.title}</h3><span class="text-link">Read article →</span></a>)}
+      </div>
+    </div>
+  </nav>
+</main>

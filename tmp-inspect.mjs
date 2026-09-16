@@ -1,10 +1,10 @@
 import fs from 'node:fs';
-const f = 'dist/why-choose-west-auckland-storage/index.html';
-const h = fs.readFileSync(f, 'utf8');
-const markers = ['<!DOCTYPE', '<html', '<head', '</head', '<body', '<header', '</header', '<main', '</main', '<footer', '</footer', '</body', '</html', '<title', 'article-header', 'blog-card', 'archive-heading-grid', 'locations-section', 'blog-grid'];
-for (const m of markers) {
-  const positions = [];
-  let i = -1;
-  while ((i = h.indexOf(m, i + 1)) !== -1) positions.push(i);
-  console.log(m.padEnd(22), positions.join(', '));
-}
+const hub = fs.readFileSync('dist/storage-near-you/index.html', 'utf8');
+const count = (re) => (hub.match(re) || []).length;
+console.log('len', hub.length);
+console.log('location-list (areas)', count(/class="location-list"/g));
+console.log('location-area', count(/class="location-area"/g));
+console.log('location-item (non-link)', count(/class="location-item"/g));
+console.log('suburb guide links', count(/href="\/(?:west-auckland-storage|discovering-west-auckland)/g));
+console.log('hub in sitemap.xml', fs.readFileSync('dist/sitemap.xml', 'utf8').includes('/storage-near-you/'));
+console.log('footer link present on article', fs.readFileSync('dist/boat-storage-at-west-auckland-storage/index.html', 'utf8').includes('/storage-near-you/'));
