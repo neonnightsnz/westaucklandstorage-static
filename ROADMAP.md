@@ -1,0 +1,159 @@
+# West Auckland Storage — Website Roadmap
+
+A prioritised, forward-looking plan for the Astro marketing site.
+Read alongside `brandvoice-visual-identity.md` (voice/visual rules) and `README.md` (build & deploy).
+
+---
+
+## 1. Where we are
+
+**Status:** The site builds clean and passes its own guardrails.
+
+- `npm run build` → 52 pages.
+- `npm run check:site` → 53 HTML pages, 52 sitemap entries, 34 articles, archives + links/images verified.
+- Stack: Astro 7.3.2, static output, Node 22+, Cloudflare Pages (`dist/`), Replit preview on port 5000.
+- One token source (`design-system/west-auckland-storage/tokens.css`), imported by `global.css` and `design-system.css`.
+
+**What exists today**
+
+| Area | Files | Notes |
+|---|---|---|
+| Homepage | `src/pages/index.astro` | Hero, pillars, intro, storage grid, why-us, value band, location, slipway, FAQ, contact |
+| Core pages | `src/data/sitePages.ts` | `about`, `services`, `contact` |
+| Storage options | `src/data/sitePages.ts` (`storageOptions`) | 9 detail pages |
+| Blog | `src/data/blogPosts.json` | 34 articles + `/blog/`, `/author/isaac/`, `/category/uncategorized/` archives (4 pages each) |
+| Discovery | `src/pages/sitemap.astro`, `sitemap.xml.ts`, `public/robots.txt`, `public/_redirects` | Full sitemap + legacy redirects |
+| Forms | `src/components/QuoteForm.astro` | `mailto:` based, no backend |
+
+**Known issues carried in**
+
+- `--wast-*` token import bug **fixed** in a prior session (site was unstyled before).
+- `.gitignore` saved-page filename mismatch **fixed**; `West-Auckland-Storage.html` now ignored.
+- Hero overlays were simplified vs. the saved snapshot (see Phase 0).
+- Published figures (`15+`, `100+`) carry an "verify before go-live" comment.
+- ~9–12 imported articles contain claims the brand guide bans (security, "premier").
+- ~470 MB of untracked debris at the repo root.
+
+---
+
+## 2. Guiding principles
+
+1. **Brand guide is law.** Honest, local, practical, no over-promising. Never claim security/facilities not currently in place.
+2. **Lead with location, price, slipway.** Every page ends with an obvious next step (call / quote / ask about space).
+3. **Green build, always.** `npm run build` + `npm run check:site` must pass before any deploy. Never weaken the guardrails.
+4. **One token source.** No hard-coded colours or fonts; edit tokens only.
+
+---
+
+## 3. Phase 0 — Correctness & sign-off (immediate, small)
+
+Decisions and tiny fixes that unblock everything else.
+
+- [ ] **Hero overlays** — decide whether to restore the richer gradients in `src/styles/global.css` (`.hero-overlay`, `.inner-hero-overlay`) and the `13px` nav size from the saved snapshot, or keep the flat overlays as intentional.
+- [ ] **Verify figures** — confirm `15+ years` and `100+ boats` with the yard; update `index.astro`, then delete the `<-- Confirm current figures -->` comment. If unverifiable, remove the stat block.
+- [ ] **Confirm NAP** — phone `09 818 4586`, email `info@westaucklandstorage.co.nz`, address `20 Akatea Road, Glendene 0602`, entity `Span Farm Boat Yard Ltd`. Confirm these are the live/billing-correct details.
+- [ ] **Blog voice decision** — choose the treatment for legacy claims:
+  - (a) keep verbatim behind the existing `BlogArticle.astro` disclaimer **[current default]**, or
+  - (b) sanitise the offending sentences, or
+  - (c) keep copy but add `noindex` to affected articles.
+- [ ] **Tag a release** once the above are settled, so Cloudflare has a known-good baseline.
+
+---
+
+## 4. Phase 1 — Foundations (technical SEO, sharing, resilience)
+
+Cheap, high-leverage, and mostly invisible to visitors.
+
+- [ ] **Social sharing meta** — extend `src/layouts/PageLayout.astro` with Open Graph + Twitter Card tags: `og:title`, `og:description`, `og:type`, `og:url`, `og:image`, `og:locale= en_NZ`, `twitter:card`. Add a default 1200×630 OG image to `public/images/`.
+- [ ] **Structured data** — add JSON-LD `LocalBusiness`/`AutomotiveBusiness` schema (NAP, geo coordinates, `sameAs`, `areaServed` = West Auckland suburbs) to `PageLayout.astro`.
+- [ ] **404 page** — add `src/pages/404.astro` (branded, with links to services/blog/contact) so Cloudflare Pages serves a real 404. Add an assertion to `check-site.mjs`.
+- [ ] **App icons & manifest** — add `apple-touch-icon`, a small `site.webmanifest`, and `theme-color` already present. Keep the SVG favicon.
+- [ ] **RSS feed** — add `src/pages/rss.xml.ts` for the `/blog/` series; reference it in `robots.txt` and a `<link rel="alternate">`.
+- [ ] **Sitemap `lastmod`** — add `lastmod` (post dates + today for core pages) in `sitemap.xml.ts`.
+- [ ] **Form reliability decision** — `mailto:` works but depends on the visitor's mail client. Decide whether to add a Cloudflare Pages Function/endpoint (or a form service) for a true on-site submit later (see Backlog).
+- [ ] **Accessibility pass** — keyboard nav, focus-visible states, colour contrast (AA), and `<details>`/nav semantics. Fix findings in `global.css`.
+
+---
+
+## 5. Phase 2 — Content & local SEO growth
+
+The biggest brand-aligned growth lever: the site already hints at being a local guide, and images for several suburbs exist in `public/wp-content/uploads/` (Glendene, Massey, New Lynn, Titirangi, Te Atatu, Whenuapai).
+
+- [ ] **Suburb/location pages** — create "storage near <suburb>" landing pages (Henderson, Massey, Te Atatu, New Lynn, Titirangi, Swanson, Kelston, Glendene) using existing imagery and the honest brand voice. Add to `sitePages.ts` and internal links.
+- [ ] **Service page depth** — enrich the 9 `storageOptions` pages with practical detail (typical sizes, access notes, what to bring). Keep conditional language on slipway/security.
+- [ ] **Blog taxonomy** — currently only `Uncategorized` + author `isaac`. Introduce 2–4 real categories (e.g. Boat care, Local guides, Storage tips) and map posts; update archive generation in `src/data/blog.ts`.
+- [ ] **Legacy article treatment** — action the Phase 0 blog decision; if rewriting, keep paragraphs that `check-site.mjs` asserts on, or update the sampler.
+- [ ] **Internal linking** — link service ↔ blog ↔ location pages; add a "related storage options" block to service pages.
+- [ ] **Meta descriptions** — review per-page descriptions in `sitePages.ts` and `blogPosts.json` for length and CTA.
+- [ ] **New content cadence** — a simple monthly "from the yard" post keeps the blog fresh for SEO.
+
+---
+
+## 6. Phase 3 — Design polish & performance
+
+- [ ] **Image optimisation** — adopt Astro's `<Image>`/`astro:assets` for the storage grid, hero, `why-photo` and blog images. The `wp-content` "scaled" JPEGs are large; generate responsive sizes and modern formats.
+- [ ] **Lighthouse targets** — aim ≥ 95 Performance / 100 Accessibility / 100 Best-practices on key templates; record before/after.
+- [ ] **Motion** — add `@media (prefers-reduced-motion: reduce)` handling; no animation currently exists, so a quick guard.
+- [ ] **Print stylesheet** — clean print layout for the contact/quote details.
+- [ ] **CSS tidy** — confirm `global.css` vs `design-system.css` responsibilities and remove duplication introduced by the token fix.
+- [ ] **Design-system page parity** — keep `/design-system/` in step with new components (pillars, value band, stat block).
+
+---
+
+## 7. Phase 4 — Measurement & iteration
+
+- [ ] **Analytics** — add privacy-friendly, cookie-free analytics (Cloudflare Web Analytics) via a small script; no consent banner needed.
+- [ ] **Goal events** — instrument the call/email links and the quote form (form-open + click events).
+- [ ] **Search Console & Bing** — verify the domain, submit `/sitemap.xml`, monitor queries for suburb terms.
+- [ ] **Google Business Profile** — align photos, NAP and tone with the site (brand guide §11).
+- [ ] **Monthly review** — one-page scorecard: traffic, top pages, CTA clicks, new posts.
+
+---
+
+## 8. Phase 5 — Housekeeping & governance
+
+- [ ] **Repo cleanup (~470 MB)** — safely stage then remove root debris: `attached_assets/`, `hts-cache/`, `hts-log.txt`, `wp-content/` & `wp-includes/` (root copies), `west-auckland-storeage/`, `images/` extras, `screenshots/`, `fonts.googleapis.com/`, `gmpg.org/`, `junk.metafilter.com/`, `backblue.gif`, `fade.gif`, `Start-application.png`. **Keep:** `westaucklandstorage.co.nz/` (needed by `import:blog`) and `public/wp-content/` (article images).
+- [ ] **Loose files** — decide the fate of `code-review-template.md` and `design-system.txt` (keep, move to `docs/`, or delete).
+- [ ] **CI check** — add a GitHub Action (or Cloudflare build step) running `npm ci && npm run build && npm run check:site` on every push.
+- [ ] **Deploy hygiene** — confirm `wrangler.jsonc` publish dir = `dist`, Node 22, and that the mirror is never published.
+- [ ] **Docs** — keep `README.md`, `replit.md` and this roadmap current after each phase.
+
+---
+
+## 9. Guardrails (do not break)
+
+`scripts/check-site.mjs` enforces these — treat as contract:
+
+- Homepage is the Replit landing page with `class="hero"`; no HTTrack splash; no `index.html` splash entry point.
+- The mirror (`westaucklandstorage.co.nz/`) is never published; redirects for mirror prefixes exist.
+- Every page (except `design-system/index.html` and `services/contact/index.html`) has exactly one `id="site-nav"` and a skip link.
+- `/services/` exposes exactly **9** `service-card`s.
+- Exactly **one** `data-contact-form` on `/` and `/contact/`, each containing "Prepare enquiry".
+- `/sitemap.xml` uses original paths only, no duplicates, all targets exist.
+- All 34 articles: present in sitemap, correct date, >1000 chars, original paragraphs preserved.
+- Archives (`/blog/`, `/author/isaac/`, `/category/uncategorized/`) list all 34 posts across 4 pages.
+- Zero broken internal links or images.
+
+---
+
+## 10. Backlog / future ideas
+
+- Real server-side form handling with spam protection + email delivery.
+- Online availability/enquiry booking calendar.
+- Google Reviews widget (only if genuine reviews exist).
+- Multi-location support if the yard expands.
+- `lastmod`/`hreflang` if a second language is ever added.
+- Move design tokens into a small build step or package for reuse across signage/quotes.
+
+---
+
+## 11. Decision log / open questions
+
+| # | Question | Owner | Status |
+|---|---|---|---|
+| 1 | Restore hero gradients or keep flat? | Yard | Open |
+| 2 | Are `15+` / `100+` figures accurate? | Yard | Open |
+| 3 | Blog: keep verbatim / sanitise / noindex? | Yard | Open |
+| 4 | Form backend: stay `mailto:` or add endpoint? | Yard | Open |
+| 5 | Analytics: Cloudflare Web Analytics OK? | Yard | Open |
+| 6 | Repo debris: safe to delete? | Yard | Open |
