@@ -1,0 +1,97 @@
+HTTrack3.49-2+htsswf+htsjava launched on Tue, 01 Sep 2026 13:04:39 at https://westaucklandstorage.co.nz/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qYC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" -Y https://westaucklandstorage.co.nz/ -O1 "C:\Users\isaac\My Drive\Downloads\west-auckland-storeage" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+13:04:53	Error: 	"Not Found" (404) at link fonts.googleapis.com/ (from https://westaucklandstorage.co.nz/)
+13:04:53	Warning: 	Retry after error -4 (No data (connection closed)) at link https://westaucklandstorage.co.nz/xmlrpc.php?rsd (from https://westaucklandstorage.co.nz/)
+13:05:12	Warning: 	Retry after error -4 (No data (connection closed)) at link https://westaucklandstorage.co.nz/xmlrpc.php?rsd (from https://westaucklandstorage.co.nz/)
+13:05:12	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=24
+13:05:12	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=24 to https://westaucklandstorage.co.nz/about/
+13:05:12	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=26
+13:05:12	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=26 to https://westaucklandstorage.co.nz/services/
+13:05:12	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/services/contact/
+13:05:12	Warning: 	File has moved from https://westaucklandstorage.co.nz/services/contact/ to https://westaucklandstorage.co.nz/contact/
+13:05:28	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=28
+13:05:28	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=28 to https://westaucklandstorage.co.nz/contact/
+13:05:33	Error: 	"No data (connection closed)" (-4) after 2 retries at link https://westaucklandstorage.co.nz/xmlrpc.php?rsd (from https://westaucklandstorage.co.nz/)
+13:05:35	Error: 	"Not Found" (404) at link https://westaucklandstorage.co.nz/west-auckland-storage-your-trusted-storage-solution-in-swanson/ (from https://westaucklandstorage.co.nz/blog/page/2/)
+13:05:43	Warning: 	File not parsed, looks like binary: https://westaucklandstorage.co.nz/wp-content/uploads/2024/10/TPXUXESJZH5OOOAH3YTOLQ67DI.avif
+13:05:48	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=384
+13:05:48	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=384 to https://westaucklandstorage.co.nz/west-auckland-storage-your-reliable-storage-solution-in-laingholm/
+13:05:48	Warning: 	Retry after error -4 (No data (connection closed)) at link https://westaucklandstorage.co.nz/xmlrpc.php (from https://westaucklandstorage.co.nz/west-auckland-storage-your-reliable-storage-solution-in-laingholm/)
+13:05:54	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=381
+13:05:54	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=381 to https://westaucklandstorage.co.nz/west-auckland-storage-your-trusted-storage-in-huia/
+13:05:54	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=378
+13:05:54	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=378 to https://westaucklandstorage.co.nz/west-auckland-storage-secure-storage-in-sunnyvale/
+13:05:54	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=375
+13:05:54	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=375 to https://westaucklandstorage.co.nz/west-auckland-storage-your-storage-solution-in-new-lynn/
+13:05:54	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=371
+13:05:54	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=371 to https://westaucklandstorage.co.nz/west-auckland-storage-reliable-storage-in-massey/
+13:05:54	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=368
+13:05:54	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=368 to https://westaucklandstorage.co.nz/west-auckland-storage-trusted-storage-solutions-in-west-harbour/
+13:05:54	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=365
+13:05:54	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=365 to https://westaucklandstorage.co.nz/west-auckland-storage-your-storage-solution-in-hobsonville/
+13:05:54	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=362
+13:05:54	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=362 to https://westaucklandstorage.co.nz/west-auckland-storage-reliable-storage-in-lincoln/
+13:05:54	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=359
+13:05:54	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=359 to https://westaucklandstorage.co.nz/west-auckland-storage-your-trusted-storage-solution-in-green-bay/
+13:05:54	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=348
+13:05:54	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=348 to https://westaucklandstorage.co.nz/west-auckland-storage-your-reliable-storage-solution-in-kelston/
+13:05:57	Warning: 	Retry after error -5 (Unable to get server's address: No such host is known. ) at link junk.metafilter.com/xfn.gif (from https://gmpg.org/xfn/more)
+13:06:09	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=339
+13:06:09	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=339 to https://westaucklandstorage.co.nz/west-auckland-storage-your-trusted-storage-solution-in-whenuapai/
+13:06:09	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=336
+13:06:09	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=336 to https://westaucklandstorage.co.nz/west-auckland-storage-your-premier-storage-solution-in-glendene/
+13:06:09	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=333
+13:06:09	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=333 to https://westaucklandstorage.co.nz/west-auckland-storage-your-ideal-storage-solution-in-western-heights/
+13:06:09	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=330
+13:06:09	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=330 to https://westaucklandstorage.co.nz/west-auckland-storage-your-trusted-storage-solution-in-glen-eden/
+13:06:09	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=327
+13:06:09	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=327 to https://westaucklandstorage.co.nz/west-auckland-storage-the-perfect-storage-solution-for-herald-island-residents/
+13:06:09	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=324
+13:06:09	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=324 to https://westaucklandstorage.co.nz/west-auckland-storage-your-go-to-storage-solution-in-te-atatu-peninsula/
+13:06:09	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=321
+13:06:09	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=321 to https://westaucklandstorage.co.nz/west-auckland-storage-the-ideal-choice-for-te-atatu-south-residents/
+13:06:09	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=318
+13:06:09	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=318 to https://westaucklandstorage.co.nz/discovering-west-auckland-storage-the-perfect-solution-for-titirangi-residents/
+13:06:09	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=290
+13:06:09	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=290 to https://westaucklandstorage.co.nz/vehicle-storage-at-west-auckland-storage/
+13:06:09	Warning: 	Retry after error -4 (No data (connection closed)) at link https://westaucklandstorage.co.nz/xmlrpc.php (from https://westaucklandstorage.co.nz/west-auckland-storage-your-reliable-storage-solution-in-laingholm/)
+13:06:10	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=248
+13:06:10	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=248 to https://westaucklandstorage.co.nz/business-storage-solutions-at-west-auckland-storage/
+13:06:10	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=251
+13:06:10	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=251 to https://westaucklandstorage.co.nz/motorbike-storage-at-west-auckland-storage/
+13:06:10	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=258
+13:06:10	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=258 to https://westaucklandstorage.co.nz/caravan-storage-at-west-auckland-storage/
+13:06:10	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=255
+13:06:10	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=255 to https://westaucklandstorage.co.nz/outdoor-storage-solutions-at-west-auckland-storage/
+13:06:10	Warning: 	Retry after error -5 (Unable to get server's address: unknown error) at link junk.metafilter.com/xfn.gif (from https://gmpg.org/xfn/more)
+13:06:10	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=287
+13:06:10	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=287 to https://westaucklandstorage.co.nz/truck-storage-at-west-auckland-storage/
+13:06:10	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=284
+13:06:10	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=284 to https://westaucklandstorage.co.nz/trailer-storage-at-west-auckland-storage/
+13:06:10	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=281
+13:06:10	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=281 to https://westaucklandstorage.co.nz/west-auckland-storage-your-go-to-for-secure-boat-and-vehicle-storage/
+13:06:10	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=279
+13:06:10	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=279 to https://westaucklandstorage.co.nz/uncovered-boat-storage-at-west-auckland-storage/
+13:06:10	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=276
+13:06:10	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=276 to https://westaucklandstorage.co.nz/span-farm-boat-yard-ltd-your-premier-boat-storage-solution-in-west-auckland/
+13:06:10	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=273
+13:06:10	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=273 to https://westaucklandstorage.co.nz/why-choose-west-auckland-storage/
+13:06:10	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=270
+13:06:10	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=270 to https://westaucklandstorage.co.nz/why-choose-west-auckland-storage-for-your-long-term-storage-needs/
+13:06:10	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=267
+13:06:10	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=267 to https://westaucklandstorage.co.nz/why-choose-west-auckland-storage-for-your-short-term-storage-needs/
+13:06:10	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=264
+13:06:10	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=264 to https://westaucklandstorage.co.nz/benefits-of-storing-your-boat-at-west-auckland-storage/
+13:06:11	Warning: 	Moved Permanently for https://westaucklandstorage.co.nz/?p=261
+13:06:11	Warning: 	File has moved from https://westaucklandstorage.co.nz/?p=261 to https://westaucklandstorage.co.nz/boat-storage-at-west-auckland-storage/
+13:06:11	Error: 	"No data (connection closed)" (-4) after 2 retries at link https://westaucklandstorage.co.nz/xmlrpc.php (from https://westaucklandstorage.co.nz/west-auckland-storage-your-reliable-storage-solution-in-laingholm/)
+13:06:11	Error: 	"Unable to get server's address: unknown error" (-5) after 2 retries at link junk.metafilter.com/xfn.gif (from https://gmpg.org/xfn/more)
+
+HTTrack Website Copier/3.49-2 mirror complete in 1 minutes 32 seconds : 383 links scanned, 331 files written (28217817 bytes overall) [19950695 bytes received at 216855 bytes/sec], 10901157 bytes transferred using HTTP compression in 220 files, ratio 21%, 14.6 requests per connection
+(5 errors, 81 warnings, 0 messages)

@@ -1,0 +1,5 @@
+date	size'/'remotesize	flags(request:Update,Range state:File response:Modified,Chunked,gZipped)	statuscode	status ('servermsg')	MIME	Etag|Date	URL	localfile	(from URL)
+08:47:56	85/85	U--MCZ	200	updated ('OK')	text/plain	date:Sat,%2005%20Sep%202026%2020:47:56%20GMT	https://www.houst.com/robots.txt		(from )
+08:47:57	6427/6427	---M--	502	error ('Bad%20Gateway')	text/html	date:Sat,%2005%20Sep%202026%2020:47:57%20GMT	https://www.houst.com/	C:/Users/isaac/My%20Drive/Downloads/houst/www.houst.com/index.html	(from )
+08:47:57	6427/6427	---M--	502	error ('Bad%20Gateway')	text/html	date:Sat,%2005%20Sep%202026%2020:47:57%20GMT	https://www.houst.com/	C:/Users/isaac/My%20Drive/Downloads/houst/www.houst.com/index.html	(from )
+08:47:57	6427/6427	---M--	502	error ('Bad%20Gateway')	text/html	date:Sat,%2005%20Sep%202026%2020:47:57%20GMT	https://www.houst.com/	C:/Users/isaac/My%20Drive/Downloads/houst/www.houst.com/index.html	(from )
