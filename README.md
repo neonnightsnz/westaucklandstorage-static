@@ -20,6 +20,8 @@ Original article URLs, slugs and dates are preserved so existing links keep work
 
 ## Brand and design system
 
+The primary redesign reference is [`references/design/West-Auckland-Storage.html`](references/design/West-Auckland-Storage.html), with supporting assets included for remote agents. Read the root [`AGENTS.md`](AGENTS.md) before redesign work. The original root saved page remains a local-only artifact.
+
 Read `brandvoice-visual-identity.md` before changing copy, colour or imagery.
 
 - `design-system/west-auckland-storage/tokens.css` is the single source of truth for colour, type, spacing and layout tokens.
