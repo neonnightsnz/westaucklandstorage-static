@@ -8,8 +8,11 @@ Astro marketing site with the original WordPress blog restored into the current 
 - `npm run check:site` verifies built routes, article copy, archives, links and images.
 - `npm run import:blog` imports the 34 posts and their images from the checked-in `westaucklandstorage.co.nz` mirror, writing a raw provenance snapshot to `src/data/blogPosts.raw.json`.
 - `npm run build:blog` rebuilds `src/data/blogPosts.json` from the brand-aligned copy in `src/data/curated-blog.mjs`.
+- `npm run build:assets` regenerates the social-sharing card and app icons in `public/images/` from `public/images/boat-hardstand.jpg` and `public/favicon.svg` (uses `sharp`). The generated files are committed, so this is only needed after a design change.
 
-The original article URLs and ordering are preserved, with four pages each for the blog, Isaac's author archive and the Uncategorized archive. `/sitemap/` lists the complete site; `/sitemap.xml` and `/robots.txt` support crawlers. The legacy `/services/contact/` address redirects to `/contact/`.
+The original article URLs and ordering are preserved, with four pages each for the blog, Isaac's author archive and the Uncategorized archive. `/sitemap/` lists the complete site; `/sitemap.xml` (with `<lastmod>`) and `/robots.txt` support crawlers. The legacy `/services/contact/` address redirects to `/contact/`.
+
+`src/layouts/PageLayout.astro` adds Open Graph and Twitter Card tags, a canonical URL, a link to the `/rss.xml` feed, app-icon/manifest links, and JSON-LD `AutomotiveBusiness` structured data for every page. `src/pages/404.astro` is a branded, `noindex` not-found page (Cloudflare Pages serves it automatically), and `src/pages/rss.xml.ts` publishes the blog as RSS 2.0.
 
 The mirror's Swanson article was a 404. Its full published text was recovered from post 343 in the supplied WordPress backup and saved in `src/data/recovered-swanson.json` so imports remain reproducible without the backup.
 

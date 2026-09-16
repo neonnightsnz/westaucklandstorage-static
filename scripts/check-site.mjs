@@ -55,15 +55,24 @@ for (const post of posts) {
   const paragraphs = [...post.content.matchAll(/<p[^>]*>([\s\S]*?)<\/p>/g)];
   for (const [, paragraph] of paragraphs) assert.ok(html.includes(paragraph), `Lost original paragraph: ${post.slug}`);
 }
-for (const base of ['blog', 'author/isaac', 'category/uncategorized']) {
+// Archive coverage mirrors the taxonomy in src/data/blog.ts.
+const archiveExpectations = {
+  'blog': 34,
+  'author/isaac': 34,
+  'category/local-guides': 19,
+  'category/storage-options': 9,
+  'category/storage-tips': 6,
+};
+for (const [base, total] of Object.entries(archiveExpectations)) {
+  const archivePages = Math.max(1, Math.ceil(total / 10));
   const listed = [];
-  for (let i = 1; i <= 4; i++) {
+  for (let i = 1; i <= archivePages; i++) {
     const route = `${base}/${i === 1 ? '' : `page/${i}/`}`;
     const html = fs.readFileSync(`dist/${route}index.html`, 'utf8');
-    assert.equal((html.match(/class="blog-card"/g) ?? []).length, i === 4 ? 4 : 10);
+    assert.equal((html.match(/class="blog-card"/g) ?? []).length, Math.min(10, total - (i - 1) * 10), `Archive ${base} page ${i} card count`);
     for (const post of posts) if (html.includes(`href="/${post.slug}/"`)) listed.push(post.slug);
   }
-  assert.equal(listed.length, 34);
-  assert.equal(new Set(listed).size, 34);
+  assert.equal(listed.length, total, `Archive ${base} must list ${total} articles`);
+  assert.equal(new Set(listed).size, total, `Archive ${base} must not duplicate articles`);
 }
 console.log(`Verified ${files.length} HTML pages, ${urls.length} sitemap entries, 34 complete articles, all archive pages and internal links/images.`);

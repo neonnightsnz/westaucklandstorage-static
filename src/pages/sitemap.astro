@@ -13,7 +13,7 @@ const guides = posts.filter(post => !storageOptions.some(option => option.slug =
         <section class="sitemap-panel"><h2>Main pages</h2><ul>{mainPages.map(page => <li><a href={`/${page.slug}`}>{page.title} <span aria-hidden="true">↗</span></a></li>)}</ul></section>
         <section class="sitemap-panel"><h2>What we store</h2><ul>{storageOptions.map(option => <li><a href={`/${option.slug}/`}>{option.label}</a></li>)}</ul></section>
         <section class="sitemap-panel sitemap-panel-wide"><h2>Articles & local guides</h2><ul>{guides.map(post => <li><a href={`/${post.slug}/`}>{post.title}</a></li>)}</ul></section>
-        <section class="sitemap-panel"><h2>Blog archives</h2><ul>{archives.map(archive => <li><a href={`/${archive.slug}/`}>{archive.base === 'blog' ? 'All articles' : archive.base === 'author/isaac' ? 'Articles by Isaac' : 'Uncategorized'} — Page {archive.number}</a></li>)}</ul></section>
+        <section class="sitemap-panel"><h2>Blog archives</h2><ul>{archives.map(archive => <li><a href={`/${archive.slug}/`}>{archive.label} — Page {archive.number}</a></li>)}</ul></section>
         <section class="sitemap-panel"><h2>Site resources</h2><ul><li><a href="/sitemap.xml">XML sitemap</a></li><li><a href="/design-system/">West Auckland Storage design system</a></li></ul></section>
       </div>
     </div>

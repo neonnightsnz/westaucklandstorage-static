@@ -26,8 +26,8 @@ const relatedPages = page?.related
 ---
 
 <PageLayout
-  title={post ? `${post.title} | West Auckland Storage` : archive ? `${archive.base === 'author/isaac' ? 'Articles by Isaac' : archive.base === 'category/uncategorized' ? 'Uncategorized' : 'From the yard'} — Page ${archive.number} | West Auckland Storage` : `${page.title.replace(".", "")} ${page.highlight} | West Auckland Storage`}
-  description={post ? post.excerpt : archive ? `Browse page ${archive.number} of our storage advice and West Auckland guides.` : page.description}
+  title={post ? `${post.title} | West Auckland Storage` : archive ? `${archive.label} — Page ${archive.number} | West Auckland Storage` : `${page.title.replace(".", "")} ${page.highlight} | West Auckland Storage`}
+    description={post ? post.excerpt : archive ? `${archive.description} Page ${archive.number} of ${archive.pageCount}.` : page.description}
   type={post ? 'article' : 'website'}
   publishedTime={post?.date}
 >

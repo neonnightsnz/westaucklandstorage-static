@@ -1,18 +1,18 @@
 ---
-import { posts, pageSize, pageCount, archivePath } from '../data/blog';
+import { pageSize, archivePath } from '../data/blog';
 const { archive } = Astro.props;
-const selected = posts.slice((archive.number - 1) * pageSize, archive.number * pageSize);
-const heading = archive.base === 'author/isaac' ? 'Articles by Isaac' : archive.base === 'category/uncategorized' ? 'Uncategorized' : 'From the yard.';
+const selected = archive.items.slice((archive.number - 1) * pageSize, archive.number * pageSize);
+const heading = archive.label;
 ---
 <main id="main">
   <header class="article-header archive-header section-pad">
     <div class="container archive-heading-grid">
       <div>
-      <nav class="article-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog/">Blog</a></nav>
+      <nav class="article-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">From the yard</a></nav>
       <p class="eyebrow">Storage notes & local guides</p>
-      <h1>{heading}</h1>
-      <p class="archive-intro">Boat, caravan and vehicle storage advice, and guides for our West Auckland neighbours.</p>
-      <p class="article-meta">Page {archive.number} of {pageCount} · {posts.length} articles</p>
+      <h1>{heading}{archive.number > 1 ? ` — Page ${archive.number}` : ''}</h1>
+      <p class="archive-intro">{archive.description}</p>
+      <p class="article-meta">Page {archive.number} of {archive.pageCount} · {archive.total} articles</p>
       </div>
       <figure class="archive-photo"><img src="/images/yard-boat.jpg" alt="A boat at Span Farm Boat Yard" width="800" height="650" /><figcaption>From our yard in Glendene</figcaption></figure>
     </div>
@@ -32,8 +32,8 @@ const heading = archive.base === 'author/isaac' ? 'Articles by Isaac' : archive.
       </div>
       <nav class="pagination" aria-label="Article pages">
         {archive.number > 1 && <a rel="prev" href={archivePath(archive.base, archive.number - 1)}>← Previous</a>}
-        {Array.from({ length: pageCount }, (_, i) => <a href={archivePath(archive.base, i + 1)} aria-label={`Page ${i + 1}`} aria-current={archive.number === i + 1 ? 'page' : undefined}>{i + 1}</a>)}
-        {archive.number < pageCount && <a rel="next" href={archivePath(archive.base, archive.number + 1)}>Next →</a>}
+        {Array.from({ length: archive.pageCount }, (_, i) => <a href={archivePath(archive.base, i + 1)} aria-label={`Page ${i + 1}`} aria-current={archive.number === i + 1 ? 'page' : undefined}>{i + 1}</a>)}
+        {archive.number < archive.pageCount && <a rel="next" href={archivePath(archive.base, archive.number + 1)}>Next →</a>}
       </nav>
     </div>
   </section>
