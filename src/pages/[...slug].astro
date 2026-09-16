@@ -1,6 +1,7 @@
 ---
+import QuoteForm from "../components/QuoteForm.astro";
 import PageLayout from "../layouts/PageLayout.astro";
-import { pages } from "../data/sitePages";
+import { pages, storageOptions } from "../data/sitePages";
 import { posts, archives } from "../data/blog";
 import BlogArticle from "../components/BlogArticle.astro";
 import BlogArchive from "../components/BlogArchive.astro";
@@ -17,7 +18,10 @@ export function getStaticPaths() {
 
 const { page, post, archive } = Astro.props;
 const relatedPages = page?.related
-  ?.map((slug) => pages.find((candidate) => candidate.slug === slug))
+  ?.map((slug) => {
+    const article = posts.find(candidate => candidate.slug === slug);
+    return article ? { ...article, eyebrow: 'From the yard', highlight: '' } : pages.find(candidate => candidate.slug === slug);
+  })
   .filter(Boolean);
 ---
 
@@ -30,7 +34,7 @@ const relatedPages = page?.related
     <section class="inner-hero" style={`--hero-image: url("${page.image}")`}>
       <div class="inner-hero-overlay"></div>
       <div class="container inner-hero-content">
-        <a class="breadcrumb" href="/">Home <span aria-hidden="true">/</span> {page.eyebrow}</a>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">{page.eyebrow}</span></nav>
         <p class="eyebrow eyebrow-light">{page.eyebrow}</p>
         <h1>{page.title}<br /><em>{page.highlight}</em></h1>
         <p class="hero-lede">{page.description}</p>
@@ -74,30 +78,26 @@ const relatedPages = page?.related
             <h2>Start the<br /><em>conversation.</em></h2>
             <p>Fill in the basics and your email app will open with the details ready to send.</p>
           </div>
-          <form class="quote-form" data-contact-form>
-            <div class="form-row">
-              <label>Your name <input name="name" required autocomplete="name" /></label>
-              <label>Phone or email <input name="contact" required autocomplete="email" /></label>
-            </div>
-            <label>What are you storing?
-              <select name="item" required>
-                <option value="">Choose one</option>
-                <option>Boat</option>
-                <option>Caravan</option>
-                <option>Trailer</option>
-                <option>Vehicle or other gear</option>
-              </select>
-            </label>
-            <label>Anything else we should know? <textarea name="message" rows="4" placeholder="Size, timing, access needs…"></textarea></label>
-            <button class="button button-bright" type="submit">Send enquiry <span aria-hidden="true">→</span></button>
-            <p class="form-note">This opens your email app with the details filled in.</p>
-            <p class="form-status" role="status" aria-live="polite"></p>
-          </form>
+          <QuoteForm />
         </div>
       </section>
     )}
 
-    {relatedPages?.length > 0 && (
+    {page.slug === 'services' && (
+      <section class="storage-section section-pad">
+        <div class="container">
+          <div class="section-heading"><div><p class="eyebrow">Find the right fit</p><h2>Room for<br /><span>what you own.</span></h2></div><p>Explore the options, then talk to the yard about size, timing and available space.</p></div>
+          <div class="service-grid">
+            {storageOptions.map((item, index) => <article class="service-card">
+              <div class="service-image"><img src={item.image} alt="" loading="lazy" width="640" height="480" /><span class="service-number">{String(index + 1).padStart(2, '0')}</span></div>
+              <div class="service-body"><h3>{item.label}</h3><p>{item.description}</p><a class="text-link" href={`/${item.slug}/`}>Explore {item.label.toLowerCase()} <span aria-hidden="true">→</span></a></div>
+            </article>)}
+          </div>
+        </div>
+      </section>
+    )}
+
+    {page.slug !== 'services' && relatedPages?.length > 0 && (
       <section class="related-section section-pad">
         <div class="container">
           <div class="section-heading">
@@ -120,23 +120,4 @@ const relatedPages = page?.related
     )}
   </main>
   </>}
-
-  {page?.kind === "contact" && (
-    <script>
-      const form = document.querySelector("[data-contact-form]");
-      const status = document.querySelector(".form-status");
-      form?.addEventListener("submit", (event) => {
-        event.preventDefault();
-        const data = new FormData(form);
-        const body = [
-          `Name: ${data.get("name")}`,
-          `Phone or email: ${data.get("contact")}`,
-          `Storing: ${data.get("item")}`,
-          `Details: ${data.get("message") || "None provided"}`,
-        ].join("\n");
-        window.location.href = `mailto:info@westaucklandstorage.co.nz?subject=${encodeURIComponent(`Storage enquiry from ${data.get("name")}`)}&body=${encodeURIComponent(body)}`;
-        if (status) status.textContent = "Your email app should open now.";
-      });
-    </script>
-  )}
 </PageLayout>

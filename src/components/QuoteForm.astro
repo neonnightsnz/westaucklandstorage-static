@@ -1,0 +1,29 @@
+<form class="quote-form" data-contact-form>
+  <div class="form-row">
+    <label>Your name <input name="name" required autocomplete="name" /></label>
+    <label>Phone or email <input name="contact" required /></label>
+  </div>
+  <label>What are you storing?
+    <select name="item" required>
+      <option value="">Choose one</option>
+      <option>Boat</option><option>Caravan</option><option>Trailer</option><option>Vehicle or other gear</option>
+    </select>
+  </label>
+  <label>Anything else we should know? <textarea name="message" rows="4" placeholder="Size, timing, access needs…"></textarea></label>
+  <button class="button button-bright" type="submit">Prepare enquiry <span aria-hidden="true">→</span></button>
+  <p class="form-note">This opens your email app. Check the details, then send your enquiry.</p>
+  <p class="form-status" role="status" aria-live="polite"></p>
+</form>
+
+<script>
+  document.querySelectorAll<HTMLFormElement>('[data-contact-form]').forEach(form => {
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      const data = new FormData(form);
+      const body = [`Name: ${data.get('name')}`, `Phone or email: ${data.get('contact')}`, `Storing: ${data.get('item')}`, `Details: ${data.get('message') || 'None provided'}`].join('\n');
+      window.location.href = `mailto:info@westaucklandstorage.co.nz?subject=${encodeURIComponent(`Storage enquiry from ${data.get('name')}`)}&body=${encodeURIComponent(body)}`;
+      const status = form.querySelector('.form-status');
+      if (status) status.textContent = 'Your email draft is ready to open. If nothing happens, call 09 818 4586 or email info@westaucklandstorage.co.nz.';
+    });
+  });
+</script>

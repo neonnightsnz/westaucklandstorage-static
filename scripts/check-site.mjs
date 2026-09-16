@@ -16,10 +16,22 @@ assert.ok(redirects.includes('/westaucklandstorage.co.nz/* /:splat 301'));
 assert.ok(redirects.includes('/west-auckland-storeage/westaucklandstorage.co.nz/* /:splat 301'));
 for (const file of files) {
   const html = fs.readFileSync(path.join('dist', file), 'utf8');
+  for (const [, image] of html.matchAll(/<img[^>]*src="([^"]+)"/g)) assert.ok(!image.endsWith('.html'), `Image with incorrect MIME extension: ${file}`);
+  if (!['design-system/index.html', 'services/contact/index.html'].includes(file.replaceAll('\\', '/'))) {
+    assert.equal((html.match(/id="site-nav"/g) ?? []).length, 1, `Shared navigation missing or duplicated: ${file}`);
+    assert.ok(html.includes('Skip to content'), `Skip link missing: ${file}`);
+  }
   for (const [, url] of html.matchAll(/(?:href|src)="(\/[^"#?]*)[^\"]*"/g)) {
     const target = path.join('dist', decodeURIComponent(url));
     if (!fs.existsSync(target) && !fs.existsSync(path.join(target, 'index.html'))) broken.push(`${file}: ${url}`);
   }
+}
+const servicesHtml = fs.readFileSync('dist/services/index.html', 'utf8');
+assert.equal((servicesHtml.match(/class="service-card"/g) ?? []).length, 9, 'Services must expose all storage options');
+for (const route of ['', 'contact/']) {
+  const html = fs.readFileSync(`dist/${route}index.html`, 'utf8');
+  assert.equal((html.match(/<form[^>]*data-contact-form/g) ?? []).length, 1, 'Use one enquiry form per page');
+  assert.ok(html.includes('Prepare enquiry'), 'Form must describe email-draft behaviour');
 }
 assert.deepEqual(broken, [], 'Broken internal links or images');
 const sitemap = fs.readFileSync('dist/sitemap.xml', 'utf8');

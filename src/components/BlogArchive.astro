@@ -6,12 +6,15 @@ const heading = archive.base === 'author/isaac' ? 'Articles by Isaac' : archive.
 ---
 <main id="main">
   <header class="article-header archive-header section-pad">
-    <div class="container">
+    <div class="container archive-heading-grid">
+      <div>
       <nav class="article-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog/">Blog</a></nav>
       <p class="eyebrow">Storage notes & local guides</p>
       <h1>{heading}</h1>
       <p class="archive-intro">Boat, caravan and vehicle storage advice, and guides for our West Auckland neighbours.</p>
       <p class="article-meta">Page {archive.number} of {pageCount} · {posts.length} articles</p>
+      </div>
+      <figure class="archive-photo"><img src="/images/yard-boat.jpg" alt="A boat at Span Farm Boat Yard" width="800" height="650" /><figcaption>From our yard in Glendene</figcaption></figure>
     </div>
   </header>
   <section class="section-pad">

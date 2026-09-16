@@ -18,10 +18,14 @@ function localUrl(value, slug) {
   if (url.pathname.startsWith('/wp-content/uploads/')) {
     const source = path.join(root, decodeURIComponent(url.pathname));
     if (!fs.existsSync(source)) throw new Error(`Missing original asset: ${source}`);
-    const dest = path.join('public', decodeURIComponent(url.pathname));
+    // HTTrack saved this AVIF with an .html extension; serve the correct MIME type.
+    const bytes = fs.readFileSync(source);
+    const assetPath = url.pathname.endsWith('.html') && bytes.subarray(4, 12).toString() === 'ftypavif'
+      ? url.pathname.replace(/\.html$/, '.avif') : url.pathname;
+    const dest = path.join('public', decodeURIComponent(assetPath));
     fs.mkdirSync(path.dirname(dest), { recursive: true });
     fs.copyFileSync(source, dest);
-    return url.pathname;
+    return assetPath;
   }
   return url.pathname.replace(/index\.html$/, '') + url.search + url.hash;
 }

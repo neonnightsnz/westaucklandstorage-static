@@ -4,9 +4,17 @@ import "../styles/global.css";
 interface Props {
   title: string;
   description: string;
+  home?: boolean;
 }
 
-const { title, description } = Astro.props;
+const { title, description, home = false } = Astro.props;
+const currentPath = Astro.url.pathname;
+const navigation = [
+  { href: '/services/', label: 'What we store' },
+  { href: '/about/', label: 'Why us' },
+  { href: '/blog/', label: 'From the yard' },
+  { href: '/contact/', label: 'Contact' },
+];
 ---
 
 <!doctype html>
@@ -22,7 +30,7 @@ const { title, description } = Astro.props;
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header interior-header">
+    <header class:list={['site-header', { 'interior-header': !home }]}>
       <div class="container header-inner">
         <a class="brand" href="/" aria-label="West Auckland Storage home">
           <img src="/images/logo.png" alt="West Auckland Storage" width="221" height="259" />
@@ -32,10 +40,7 @@ const { title, description } = Astro.props;
           <span></span><span></span>
         </button>
         <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-          <a href="/about/">About</a>
-          <a href="/services/">Services</a>
-          <a href="/blog/">From the yard</a>
-          <a href="/contact/">Contact</a>
+          {navigation.map(item => <a href={item.href} aria-current={currentPath === item.href ? 'page' : undefined}>{item.label}</a>)}
           <a class="nav-call" href="tel:098184586">Call 09 818 4586 <span aria-hidden="true">↗</span></a>
         </nav>
       </div>
@@ -53,6 +58,7 @@ const { title, description } = Astro.props;
           <a href="/services/">What we store</a>
           <a href="/about/">Why us</a>
           <a href="/contact/">Get a quote</a>
+          <a href="/blog/">From the yard</a>
           <a href="/sitemap/">Sitemap</a>
         </div>
         <div class="footer-address">Span Farm Boat Yard<br />20 Akatea Road, Glendene</div>
@@ -64,17 +70,26 @@ const { title, description } = Astro.props;
     </footer>
 
     <script>
-      const menuToggle = document.querySelector(".menu-toggle");
-      const siteNav = document.querySelector("#site-nav");
+      const menuToggle = document.querySelector<HTMLButtonElement>(".menu-toggle");
+      const siteNav = document.querySelector<HTMLElement>("#site-nav");
+      const closeMenu = () => {
+        menuToggle?.setAttribute('aria-expanded', 'false');
+        siteNav?.classList.remove('is-open');
+      };
       menuToggle?.addEventListener("click", () => {
         const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
         menuToggle.setAttribute("aria-expanded", String(!isOpen));
         siteNav?.classList.toggle("is-open", !isOpen);
       });
       siteNav?.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
-        menuToggle?.setAttribute("aria-expanded", "false");
-        siteNav?.classList.remove("is-open");
+        closeMenu();
       }));
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && menuToggle?.getAttribute('aria-expanded') === 'true') {
+          closeMenu();
+          menuToggle.focus();
+        }
+      });
       const year = document.querySelector("[data-year]");
       if (year) year.textContent = String(new Date().getFullYear());
     </script>

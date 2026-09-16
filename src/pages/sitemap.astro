@@ -1,18 +1,21 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
 import { posts, archives } from '../data/blog';
+import { storageOptions } from '../data/sitePages';
 const mainPages = [{ slug: '', title: 'Home' }, { slug: 'about/', title: 'About' }, { slug: 'services/', title: 'Services' }, { slug: 'contact/', title: 'Contact' }, { slug: 'blog/', title: 'From the yard' }];
+const guides = posts.filter(post => !storageOptions.some(option => option.slug === post.slug));
 ---
 <PageLayout title="Sitemap | West Auckland Storage" description="Find every page, storage article and local guide on West Auckland Storage.">
   <main id="main" class="section-pad">
     <div class="container sitemap-content">
-      <p class="eyebrow">Explore the site</p>
-      <h1>Sitemap.</h1>
-      <section><h2>Main pages</h2><ul>{mainPages.map(page => <li><a href={`/${page.slug}`}>{page.title}</a></li>)}</ul></section>
-      <section><h2>Articles & local guides</h2><ul>{posts.map(post => <li><a href={`/${post.slug}/`}>{post.title}</a></li>)}</ul></section>
-      <section><h2>Blog archives</h2><ul>{archives.map(archive => <li><a href={`/${archive.slug}/`}>{archive.base === 'blog' ? 'All articles' : archive.base === 'author/isaac' ? 'Articles by Isaac' : 'Uncategorized'} — Page {archive.number}</a></li>)}</ul></section>
-      <a href="/sitemap.xml">XML sitemap</a>
-      <section><h2>Design system</h2><a href="/design-system/">West Auckland Storage design system</a></section>
+      <header class="sitemap-header"><p class="eyebrow">Explore the site</p><h1>Find your<br /><em>way around.</em></h1><p>Storage options, local guides and a direct line to the yard.</p></header>
+      <div class="sitemap-grid">
+        <section class="sitemap-panel"><h2>Main pages</h2><ul>{mainPages.map(page => <li><a href={`/${page.slug}`}>{page.title} <span aria-hidden="true">↗</span></a></li>)}</ul></section>
+        <section class="sitemap-panel"><h2>What we store</h2><ul>{storageOptions.map(option => <li><a href={`/${option.slug}/`}>{option.label}</a></li>)}</ul></section>
+        <section class="sitemap-panel sitemap-panel-wide"><h2>Articles & local guides</h2><ul>{guides.map(post => <li><a href={`/${post.slug}/`}>{post.title}</a></li>)}</ul></section>
+        <section class="sitemap-panel"><h2>Blog archives</h2><ul>{archives.map(archive => <li><a href={`/${archive.slug}/`}>{archive.base === 'blog' ? 'All articles' : archive.base === 'author/isaac' ? 'Articles by Isaac' : 'Uncategorized'} — Page {archive.number}</a></li>)}</ul></section>
+        <section class="sitemap-panel"><h2>Site resources</h2><ul><li><a href="/sitemap.xml">XML sitemap</a></li><li><a href="/design-system/">West Auckland Storage design system</a></li></ul></section>
+      </div>
     </div>
   </main>
 </PageLayout>
