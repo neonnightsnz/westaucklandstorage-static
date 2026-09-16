@@ -10,3 +10,16 @@
 /west-auckland-storeage/westaucklandstorage.co.nz/* /:splat 301
 /services/contact /contact/ 301
 /services/contact/ /contact/ 301
+
+# The old Uncategorized archive contained all posts, in the same order as /blog/.
+/category/uncategorized /blog/ 301
+/category/uncategorized/ /blog/ 301
+/category/uncategorized/page/2/ /blog/page/2/ 301
+/category/uncategorized/page/3/ /blog/page/3/ 301
+/category/uncategorized/page/4/ /blog/page/4/ 301
+
+# Retain old feed and Rank Math sitemap discovery URLs.
+/feed/ /rss.xml 301
+/sitemap_index.xml /sitemap.xml 301
+/post-sitemap.xml /sitemap.xml 301
+/page-sitemap.xml /sitemap.xml 301

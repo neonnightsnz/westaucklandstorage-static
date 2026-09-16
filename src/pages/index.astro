@@ -1,6 +1,7 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
 import QuoteForm from "../components/QuoteForm.astro";
+import { featuredReviews, reviewCount, averageRating } from "../data/reviews";
 
 const services = [
   {
@@ -48,22 +49,27 @@ const faqs = [
   {
     question: "Where is West Auckland Storage?",
     answer:
-      "We’re at Span Farm Boat Yard, 20 Akatea Road, Glendene, Waitakere 0602 — close to the communities we serve across West Auckland.",
+      "We’re at Span Farm Boat Yard, 20 Akatea Road, Glendene 0602 — a short drive from Henderson, Massey, Te Atatu, New Lynn, Kelston and Titirangi.",
+  },
+  {
+    question: "What does storage cost?",
+    answer:
+      "It depends on what you’re storing and how much room it needs. Call the yard on 09 818 4586 with the size and type of your boat, caravan or vehicle and we’ll give you a straight answer. We invoice monthly.",
   },
   {
     question: "What can I store?",
     answer:
-      "We store boats, caravans, trailers, cars, 4WDs, utes, trucks, motorbikes, kayaks and other recreational gear. Get in touch with the size and type of item you have and we’ll talk through the options.",
+      "Boats on trailers, caravans, trailers, cars, 4WDs, utes, trucks, motorbikes, jet skis and kayaks. Tell us what you’ve got and we’ll work out a spot that fits.",
   },
   {
     question: "Can I store something short-term?",
     answer:
-      "Yes. We can discuss short stays, winter storage and longer-term arrangements. We keep the setup straightforward and invoice monthly.",
+      "Yes. Plenty of owners use the yard just for winter or between trips, while others stay longer term. Terms are flexible, so it’s easy to start with one season and take it from there.",
   },
   {
     question: "Is slipway access available?",
     answer:
-      "Slipway access is available for smaller trailer boats when operational. Ask us about current access and suitability before you arrive so we can give you the right answer.",
+      "It’s a real option for smaller trailer boats, but only when it’s operational — it isn’t available every day. Call before you arrive and we’ll tell you straight whether it suits your boat.",
   },
 ];
 ---
@@ -76,10 +82,10 @@ const faqs = [
         <div class="container hero-content">
           <p class="eyebrow eyebrow-light">Span Farm Boat Yard · Glendene</p>
           <h1>Keep it close.<br /><em>Keep it sorted.</em></h1>
-          <p class="hero-lede">Secure outdoor storage for boats, caravans, trailers and gear — right here in West Auckland.</p>
+                    <p class="hero-lede">Boat, caravan and vehicle storage on outdoor hardstand in Glendene — close to home for owners right across West Auckland.</p>
           <div class="hero-actions">
-            <a class="button button-bright" href="#contact">Get a quote <span aria-hidden="true">→</span></a>
-            <a class="text-link text-link-light" href="tel:098184586">Talk to the yard <span aria-hidden="true">↗</span></a>
+            <a class="button button-bright" href="#contact">Ask about space</a>
+            <a class="text-link text-link-light" href="tel:098184586">Call 09 818 4586</a>
           </div>
           <div class="hero-note">
             <span class="note-line"></span>
@@ -172,15 +178,15 @@ const faqs = [
             <div><strong>15+</strong><small>years storing boats and caravans</small></div>
             <div><strong>100+</strong><small>boats looked after for locals</small></div>
           </div>
-          <a class="button button-outline-light" href="#contact">Talk to the team <span aria-hidden="true">→</span></a>
+                    <a class="button button-outline-light" href="#contact">Ask about space</a>
         </div>
       </section>
 
             <section class="value-band">
               <div class="container">
                 <p class="value-line">No marina prices.<br />No marina waitlist.</p>
-                <p class="value-sub">Keep your boat, caravan or gear close to home — and stop paying to store it like a marina.</p>
-                <a class="button button-bright" href="#contact">Get a quote <span aria-hidden="true">→</span></a>
+                <p class="value-sub">Keep your boat, caravan or gear close to home — priced to the space you actually need, with flexible terms and monthly invoicing.</p>
+                <a class="button button-bright" href="#contact">Ask about space</a>
               </div>
             </section>
 
@@ -209,9 +215,14 @@ const faqs = [
                 <p class="eyebrow eyebrow-light">Slipway access</p>
                 <h2>Easy to launch.<br /><em>Honest about it.</em></h2>
                 <p class="why-lede">A slipway is a genuine advantage for smaller trailer boats, and a big reason owners choose the yard over a marina. It is not available all of the time, so ask us about current access before you arrive. We would rather give you a straight answer than oversell it.</p>
-                <a class="button button-outline-light" href="#contact">Ask about access <span aria-hidden="true">→</span></a>
+                                <a class="button button-outline-light" href="#contact">Ask about space</a>
               </div>
             </section>
+
+            <figure class="yard-band">
+              <img src="/images/boats-yard.jpg" alt="Boats and trailers stored on the hardstand at Span Farm Boat Yard" loading="lazy" />
+              <figcaption class="photo-caption">Hardstand · Span Farm Boat Yard, Glendene</figcaption>
+            </figure>
 
             <section id="faq" class="faq-section section-pad">
         <div class="container faq-grid">

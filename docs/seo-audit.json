@@ -1,0 +1,2911 @@
+{
+  "legacy": [
+    {
+      "route": "/",
+      "title": "Welcome to West Auckland Storage - Your Trusted Storage Partner",
+      "description": "Discover our storage solutions and services available.",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "WebPage"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/blog/",
+        "/contact/",
+        "/services/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/about/",
+      "title": "About Us - Discover Our Commitment to Exceptional Storage",
+      "description": "Learn more about West Auckland Storage and our commitment.",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "AboutPage"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/blog/",
+        "/contact/",
+        "/services/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/author/isaac/",
+      "title": "Isaac - West Auckland Storage",
+      "description": "",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "WebSite",
+        "BreadcrumbList",
+        "ProfilePage",
+        "Person"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/author/isaac/page/2/",
+        "/author/isaac/page/4/",
+        "/blog/",
+        "/contact/",
+        "/services/",
+        "/west-auckland-storage-reliable-storage-in-lincoln/",
+        "/west-auckland-storage-reliable-storage-in-massey/",
+        "/west-auckland-storage-secure-storage-in-sunnyvale/",
+        "/west-auckland-storage-trusted-storage-solutions-in-west-harbour/",
+        "/west-auckland-storage-your-reliable-storage-solution-in-kelston/",
+        "/west-auckland-storage-your-reliable-storage-solution-in-laingholm/",
+        "/west-auckland-storage-your-storage-solution-in-hobsonville/",
+        "/west-auckland-storage-your-storage-solution-in-new-lynn/",
+        "/west-auckland-storage-your-trusted-storage-in-huia/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-green-bay/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/author/isaac/page/2/",
+      "title": "Isaac - West Auckland Storage - Page 2 of 4",
+      "description": "",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "WebSite",
+        "BreadcrumbList",
+        "ProfilePage",
+        "Person"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/author/isaac/page/2/",
+        "/author/isaac/page/3/",
+        "/author/isaac/page/4/",
+        "/blog/",
+        "/contact/",
+        "/discovering-west-auckland-storage-the-perfect-solution-for-titirangi-residents/",
+        "/services/",
+        "/vehicle-storage-at-west-auckland-storage/",
+        "/west-auckland-storage-the-ideal-choice-for-te-atatu-south-residents/",
+        "/west-auckland-storage-the-perfect-storage-solution-for-herald-island-residents/",
+        "/west-auckland-storage-your-go-to-storage-solution-in-te-atatu-peninsula/",
+        "/west-auckland-storage-your-ideal-storage-solution-in-western-heights/",
+        "/west-auckland-storage-your-premier-storage-solution-in-glendene/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-glen-eden/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-swanson/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-whenuapai/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/author/isaac/page/3/",
+      "title": "Isaac - West Auckland Storage - Page 3 of 4",
+      "description": "",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "WebSite",
+        "BreadcrumbList",
+        "ProfilePage",
+        "Person"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/author/isaac/page/2/",
+        "/author/isaac/page/3/",
+        "/author/isaac/page/4/",
+        "/benefits-of-storing-your-boat-at-west-auckland-storage/",
+        "/blog/",
+        "/boat-storage-at-west-auckland-storage/",
+        "/contact/",
+        "/services/",
+        "/span-farm-boat-yard-ltd-your-premier-boat-storage-solution-in-west-auckland/",
+        "/trailer-storage-at-west-auckland-storage/",
+        "/truck-storage-at-west-auckland-storage/",
+        "/uncovered-boat-storage-at-west-auckland-storage/",
+        "/west-auckland-storage-your-go-to-for-secure-boat-and-vehicle-storage/",
+        "/why-choose-west-auckland-storage-for-your-long-term-storage-needs/",
+        "/why-choose-west-auckland-storage-for-your-short-term-storage-needs/",
+        "/why-choose-west-auckland-storage/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/author/isaac/page/4/",
+      "title": "Isaac - West Auckland Storage - Page 4 of 4",
+      "description": "",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "WebSite",
+        "BreadcrumbList",
+        "ProfilePage",
+        "Person"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/author/isaac/page/3/",
+        "/author/isaac/page/4/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/caravan-storage-at-west-auckland-storage/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/outdoor-storage-solutions-at-west-auckland-storage/",
+        "/services/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/benefits-of-storing-your-boat-at-west-auckland-storage/",
+      "title": "Top Benefits of Boat Storage - Why Choose Us?",
+      "description": "Discover the advantages of storing your boat with us.",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/benefits-of-storing-your-boat-at-west-auckland-storage/",
+        "/blog/",
+        "/boat-storage-at-west-auckland-storage/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/services/",
+        "/why-choose-west-auckland-storage-for-your-short-term-storage-needs/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/blog/",
+      "title": "Storage Insights & Tips - Stay Updated with Our Blog",
+      "description": "Stay updated with tips and news from West Auckland Storage.",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "WebSite",
+        "BreadcrumbList",
+        "CollectionPage"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/blog/",
+        "/blog/page/2/",
+        "/blog/page/4/",
+        "/contact/",
+        "/services/",
+        "/west-auckland-storage-reliable-storage-in-lincoln/",
+        "/west-auckland-storage-reliable-storage-in-massey/",
+        "/west-auckland-storage-secure-storage-in-sunnyvale/",
+        "/west-auckland-storage-trusted-storage-solutions-in-west-harbour/",
+        "/west-auckland-storage-your-reliable-storage-solution-in-kelston/",
+        "/west-auckland-storage-your-reliable-storage-solution-in-laingholm/",
+        "/west-auckland-storage-your-storage-solution-in-hobsonville/",
+        "/west-auckland-storage-your-storage-solution-in-new-lynn/",
+        "/west-auckland-storage-your-trusted-storage-in-huia/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-green-bay/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/blog/page/2/",
+      "title": "Storage Insights & Tips - Stay Updated with Our Blog",
+      "description": "Stay updated with tips and news from West Auckland Storage.",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "WebSite",
+        "BreadcrumbList",
+        "CollectionPage"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/blog/",
+        "/blog/page/2/",
+        "/blog/page/3/",
+        "/blog/page/4/",
+        "/contact/",
+        "/discovering-west-auckland-storage-the-perfect-solution-for-titirangi-residents/",
+        "/services/",
+        "/vehicle-storage-at-west-auckland-storage/",
+        "/west-auckland-storage-the-ideal-choice-for-te-atatu-south-residents/",
+        "/west-auckland-storage-the-perfect-storage-solution-for-herald-island-residents/",
+        "/west-auckland-storage-your-go-to-storage-solution-in-te-atatu-peninsula/",
+        "/west-auckland-storage-your-ideal-storage-solution-in-western-heights/",
+        "/west-auckland-storage-your-premier-storage-solution-in-glendene/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-glen-eden/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-swanson/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-whenuapai/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/blog/page/3/",
+      "title": "Storage Insights & Tips - Stay Updated with Our Blog",
+      "description": "Stay updated with tips and news from West Auckland Storage.",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "WebSite",
+        "BreadcrumbList",
+        "CollectionPage"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/benefits-of-storing-your-boat-at-west-auckland-storage/",
+        "/blog/",
+        "/blog/page/2/",
+        "/blog/page/3/",
+        "/blog/page/4/",
+        "/boat-storage-at-west-auckland-storage/",
+        "/contact/",
+        "/services/",
+        "/span-farm-boat-yard-ltd-your-premier-boat-storage-solution-in-west-auckland/",
+        "/trailer-storage-at-west-auckland-storage/",
+        "/truck-storage-at-west-auckland-storage/",
+        "/uncovered-boat-storage-at-west-auckland-storage/",
+        "/west-auckland-storage-your-go-to-for-secure-boat-and-vehicle-storage/",
+        "/why-choose-west-auckland-storage-for-your-long-term-storage-needs/",
+        "/why-choose-west-auckland-storage-for-your-short-term-storage-needs/",
+        "/why-choose-west-auckland-storage/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/blog/page/4/",
+      "title": "Storage Insights & Tips - Stay Updated with Our Blog",
+      "description": "Stay updated with tips and news from West Auckland Storage.",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "WebSite",
+        "BreadcrumbList",
+        "CollectionPage"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/blog/",
+        "/blog/page/3/",
+        "/blog/page/4/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/caravan-storage-at-west-auckland-storage/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/outdoor-storage-solutions-at-west-auckland-storage/",
+        "/services/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/boat-storage-at-west-auckland-storage/",
+      "title": "Boat Storage You Can Trust - Secure Solutions for Your Vessel",
+      "description": "Reliable boat storage options for every type of boat.",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/benefits-of-storing-your-boat-at-west-auckland-storage/",
+        "/blog/",
+        "/boat-storage-at-west-auckland-storage/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/caravan-storage-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/services/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/business-storage-solutions-at-west-auckland-storage/",
+      "title": "Business Storage Solutions - Tailored for Your Needs",
+      "description": "Discover tailored storage solutions for businesses.",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/outdoor-storage-solutions-at-west-auckland-storage/",
+        "/services/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/caravan-storage-at-west-auckland-storage/",
+      "title": "Caravan Storage Made Easy - Safe & Affordable",
+      "description": "Safe and secure caravan storage solutions available.",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/boat-storage-at-west-auckland-storage/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/caravan-storage-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/outdoor-storage-solutions-at-west-auckland-storage/",
+        "/services/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/category/uncategorized/",
+      "title": "Uncategorized Archives - West Auckland Storage",
+      "description": "",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "WebSite",
+        "BreadcrumbList",
+        "CollectionPage"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/blog/",
+        "/category/uncategorized/",
+        "/category/uncategorized/page/2/",
+        "/category/uncategorized/page/4/",
+        "/contact/",
+        "/services/",
+        "/west-auckland-storage-reliable-storage-in-lincoln/",
+        "/west-auckland-storage-reliable-storage-in-massey/",
+        "/west-auckland-storage-secure-storage-in-sunnyvale/",
+        "/west-auckland-storage-trusted-storage-solutions-in-west-harbour/",
+        "/west-auckland-storage-your-reliable-storage-solution-in-kelston/",
+        "/west-auckland-storage-your-reliable-storage-solution-in-laingholm/",
+        "/west-auckland-storage-your-storage-solution-in-hobsonville/",
+        "/west-auckland-storage-your-storage-solution-in-new-lynn/",
+        "/west-auckland-storage-your-trusted-storage-in-huia/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-green-bay/"
+      ],
+      "disposition": "review"
+    },
+    {
+      "route": "/category/uncategorized/page/2/",
+      "title": "Uncategorized Archives - Page 2 of 4 - West Auckland Storage",
+      "description": "",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "WebSite",
+        "BreadcrumbList",
+        "CollectionPage"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/blog/",
+        "/category/uncategorized/",
+        "/category/uncategorized/page/2/",
+        "/category/uncategorized/page/3/",
+        "/category/uncategorized/page/4/",
+        "/contact/",
+        "/discovering-west-auckland-storage-the-perfect-solution-for-titirangi-residents/",
+        "/services/",
+        "/vehicle-storage-at-west-auckland-storage/",
+        "/west-auckland-storage-the-ideal-choice-for-te-atatu-south-residents/",
+        "/west-auckland-storage-the-perfect-storage-solution-for-herald-island-residents/",
+        "/west-auckland-storage-your-go-to-storage-solution-in-te-atatu-peninsula/",
+        "/west-auckland-storage-your-ideal-storage-solution-in-western-heights/",
+        "/west-auckland-storage-your-premier-storage-solution-in-glendene/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-glen-eden/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-swanson/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-whenuapai/"
+      ],
+      "disposition": "review"
+    },
+    {
+      "route": "/category/uncategorized/page/3/",
+      "title": "Uncategorized Archives - Page 3 of 4 - West Auckland Storage",
+      "description": "",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "WebSite",
+        "BreadcrumbList",
+        "CollectionPage"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/benefits-of-storing-your-boat-at-west-auckland-storage/",
+        "/blog/",
+        "/boat-storage-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/category/uncategorized/page/2/",
+        "/category/uncategorized/page/3/",
+        "/category/uncategorized/page/4/",
+        "/contact/",
+        "/services/",
+        "/span-farm-boat-yard-ltd-your-premier-boat-storage-solution-in-west-auckland/",
+        "/trailer-storage-at-west-auckland-storage/",
+        "/truck-storage-at-west-auckland-storage/",
+        "/uncovered-boat-storage-at-west-auckland-storage/",
+        "/west-auckland-storage-your-go-to-for-secure-boat-and-vehicle-storage/",
+        "/why-choose-west-auckland-storage-for-your-long-term-storage-needs/",
+        "/why-choose-west-auckland-storage-for-your-short-term-storage-needs/",
+        "/why-choose-west-auckland-storage/"
+      ],
+      "disposition": "review"
+    },
+    {
+      "route": "/category/uncategorized/page/4/",
+      "title": "Uncategorized Archives - Page 4 of 4 - West Auckland Storage",
+      "description": "",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "WebSite",
+        "BreadcrumbList",
+        "CollectionPage"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/caravan-storage-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/category/uncategorized/page/3/",
+        "/category/uncategorized/page/4/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/outdoor-storage-solutions-at-west-auckland-storage/",
+        "/services/"
+      ],
+      "disposition": "review"
+    },
+    {
+      "route": "/contact/",
+      "title": "Get in Touch - Contact West Auckland Storage Today",
+      "description": "Get in touch with our team for inquiries and support.",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "ContactPage"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/blog/",
+        "/contact/",
+        "/services/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/discovering-west-auckland-storage-the-perfect-solution-for-titirangi-residents/",
+      "title": "Discover Perfect Storage Solutions for Titirangi Residents",
+      "description": "Explore storage solutions tailored for Titirangi residents.",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/contact/",
+        "/discovering-west-auckland-storage-the-perfect-solution-for-titirangi-residents/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/services/",
+        "/vehicle-storage-at-west-auckland-storage/",
+        "/west-auckland-storage-the-ideal-choice-for-te-atatu-south-residents/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/motorbike-storage-at-west-auckland-storage/",
+      "title": "Secure Your Ride - Premier Motorbike Storage Options",
+      "description": "Secure motorbike storage options for peace of mind.",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/outdoor-storage-solutions-at-west-auckland-storage/",
+        "/services/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/outdoor-storage-solutions-at-west-auckland-storage/",
+      "title": "Outdoor Storage Solutions - Secure & Convenient Options",
+      "description": "Explore our outdoor storage options for various needs.",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/caravan-storage-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/outdoor-storage-solutions-at-west-auckland-storage/",
+        "/services/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/services/",
+      "title": "Explore Our Services - Tailored Storage Solutions for You",
+      "description": "Explore our range of storage services tailored for your needs.",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "BreadcrumbList"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/blog/",
+        "/contact/",
+        "/services/",
+        "/services/contact/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/services/contact/",
+      "title": "Page has moved",
+      "description": "",
+      "canonical": "",
+      "schemaTypes": [],
+      "internalLinks": [],
+      "disposition": "preserved",
+      "redirect": "/contact/"
+    },
+    {
+      "route": "/span-farm-boat-yard-ltd-your-premier-boat-storage-solution-in-west-auckland/",
+      "title": "Premier Boat Storage - Why West Auckland Is Your Best Option",
+      "description": "Discover our premier boat storage solutions.",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/services/",
+        "/span-farm-boat-yard-ltd-your-premier-boat-storage-solution-in-west-auckland/",
+        "/uncovered-boat-storage-at-west-auckland-storage/",
+        "/why-choose-west-auckland-storage/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/trailer-storage-at-west-auckland-storage/",
+      "title": "Reliable Trailer Storage - Secure Your Equipment Today",
+      "description": "Safe and convenient trailer storage solutions.",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/services/",
+        "/trailer-storage-at-west-auckland-storage/",
+        "/truck-storage-at-west-auckland-storage/",
+        "/west-auckland-storage-your-go-to-for-secure-boat-and-vehicle-storage/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/truck-storage-at-west-auckland-storage/",
+      "title": "Truck Storage Solutions - Keep Your Vehicle Safe",
+      "description": "Reliable storage options for trucks and commercial vehicles.",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/services/",
+        "/trailer-storage-at-west-auckland-storage/",
+        "/truck-storage-at-west-auckland-storage/",
+        "/vehicle-storage-at-west-auckland-storage/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/uncovered-boat-storage-at-west-auckland-storage/",
+      "title": "Affordable Uncovered Boat Storage - Safe & Convenient",
+      "description": "Affordable uncovered boat storage options available.",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/services/",
+        "/span-farm-boat-yard-ltd-your-premier-boat-storage-solution-in-west-auckland/",
+        "/uncovered-boat-storage-at-west-auckland-storage/",
+        "/west-auckland-storage-your-go-to-for-secure-boat-and-vehicle-storage/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/vehicle-storage-at-west-auckland-storage/",
+      "title": "Comprehensive Vehicle Storage - Safe & Accessible",
+      "description": "Comprehensive vehicle storage options available.",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/contact/",
+        "/discovering-west-auckland-storage-the-perfect-solution-for-titirangi-residents/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/services/",
+        "/truck-storage-at-west-auckland-storage/",
+        "/vehicle-storage-at-west-auckland-storage/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/west-auckland-storage-reliable-storage-in-lincoln/",
+      "title": "West Auckland Storage: Reliable Storage in Lincoln - West Auckland Storage",
+      "description": "Lincoln, a growing suburb of West Auckland, offers a blend of suburban charm and modern conveniences. If you’re looking for secure storage for your vehicle or",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/services/",
+        "/west-auckland-storage-reliable-storage-in-lincoln/",
+        "/west-auckland-storage-your-storage-solution-in-hobsonville/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-green-bay/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/west-auckland-storage-reliable-storage-in-massey/",
+      "title": "West Auckland Storage: Reliable Storage in Massey - West Auckland Storage",
+      "description": "Massey, known for its friendly community and convenient amenities, is home to many residents in need of secure storage solutions. West Auckland Storage",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/services/",
+        "/west-auckland-storage-reliable-storage-in-massey/",
+        "/west-auckland-storage-trusted-storage-solutions-in-west-harbour/",
+        "/west-auckland-storage-your-storage-solution-in-new-lynn/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/west-auckland-storage-secure-storage-in-sunnyvale/",
+      "title": "West Auckland Storage: Secure Storage in Sunnyvale - West Auckland Storage",
+      "description": "Sunnyvale, a charming suburb of West Auckland, is perfect for families and outdoor enthusiasts. For residents seeking secure storage for their boats,",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/services/",
+        "/west-auckland-storage-secure-storage-in-sunnyvale/",
+        "/west-auckland-storage-your-storage-solution-in-new-lynn/",
+        "/west-auckland-storage-your-trusted-storage-in-huia/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/west-auckland-storage-the-ideal-choice-for-te-atatu-south-residents/",
+      "title": "Ideal Storage Solutions for Te Atatu South Residents",
+      "description": "The best storage solutions for Te Atatu South residents.",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/contact/",
+        "/discovering-west-auckland-storage-the-perfect-solution-for-titirangi-residents/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/services/",
+        "/west-auckland-storage-the-ideal-choice-for-te-atatu-south-residents/",
+        "/west-auckland-storage-your-go-to-storage-solution-in-te-atatu-peninsula/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/west-auckland-storage-the-perfect-storage-solution-for-herald-island-residents/",
+      "title": "Perfect Storage for Herald Island Residents - Secure & Affordable",
+      "description": "Discover the perfect storage solutions for Herald Island.",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/services/",
+        "/west-auckland-storage-the-perfect-storage-solution-for-herald-island-residents/",
+        "/west-auckland-storage-your-go-to-storage-solution-in-te-atatu-peninsula/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-glen-eden/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/west-auckland-storage-trusted-storage-solutions-in-west-harbour/",
+      "title": "West Auckland Storage: Trusted Storage Solutions in West Harbour - West Auckland Storage",
+      "description": "West Harbour is a vibrant Auckland suburb that boasts stunning views and a welcoming community. For residents needing secure storage for their vehicles or",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/services/",
+        "/west-auckland-storage-reliable-storage-in-massey/",
+        "/west-auckland-storage-trusted-storage-solutions-in-west-harbour/",
+        "/west-auckland-storage-your-storage-solution-in-hobsonville/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/west-auckland-storage-your-go-to-for-secure-boat-and-vehicle-storage/",
+      "title": "Your Go-To for Secure Boat & Vehicle Storage Solutions",
+      "description": "Your go-to facility for secure boat and vehicle storage.",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/services/",
+        "/trailer-storage-at-west-auckland-storage/",
+        "/uncovered-boat-storage-at-west-auckland-storage/",
+        "/west-auckland-storage-your-go-to-for-secure-boat-and-vehicle-storage/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/west-auckland-storage-your-go-to-storage-solution-in-te-atatu-peninsula/",
+      "title": "Your Trusted Storage Solution in Te Atatu Peninsula",
+      "description": "Reliable storage solutions in Te Atatu Peninsula.",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/services/",
+        "/west-auckland-storage-the-ideal-choice-for-te-atatu-south-residents/",
+        "/west-auckland-storage-the-perfect-storage-solution-for-herald-island-residents/",
+        "/west-auckland-storage-your-go-to-storage-solution-in-te-atatu-peninsula/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/west-auckland-storage-your-ideal-storage-solution-in-western-heights/",
+      "title": "Ideal Storage Solutions in Western Heights - Safe & Reliable",
+      "description": "The ideal choice for all your storage needs in Western Heights.",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/services/",
+        "/west-auckland-storage-your-ideal-storage-solution-in-western-heights/",
+        "/west-auckland-storage-your-premier-storage-solution-in-glendene/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-glen-eden/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/west-auckland-storage-your-premier-storage-solution-in-glendene/",
+      "title": "Premier Storage in Glendene - Secure & Accessible",
+      "description": "Experience premier storage options in Glendene.",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/services/",
+        "/west-auckland-storage-your-ideal-storage-solution-in-western-heights/",
+        "/west-auckland-storage-your-premier-storage-solution-in-glendene/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-whenuapai/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/west-auckland-storage-your-reliable-storage-solution-in-kelston/",
+      "title": "Reliable Storage in Kelston - Your Trusted Provider",
+      "description": "Dependable storage options for Kelston residents.",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/services/",
+        "/west-auckland-storage-your-reliable-storage-solution-in-kelston/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-green-bay/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-swanson/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/west-auckland-storage-your-reliable-storage-solution-in-laingholm/",
+      "title": "West Auckland Storage: Your Reliable Storage Solution in Laingholm - West Auckland Storage",
+      "description": "Laingholm, a scenic and tranquil suburb of West Auckland, is perfect for those who enjoy a peaceful lifestyle surrounded by nature. If you’re a resident in",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/services/",
+        "/west-auckland-storage-your-reliable-storage-solution-in-laingholm/",
+        "/west-auckland-storage-your-trusted-storage-in-huia/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/west-auckland-storage-your-storage-solution-in-hobsonville/",
+      "title": "West Auckland Storage: Your Storage Solution in Hobsonville - West Auckland Storage",
+      "description": "Hobsonville, a vibrant suburb known for its waterfront lifestyle, offers an array of amenities for residents. If you need secure storage for your boat,",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/services/",
+        "/west-auckland-storage-reliable-storage-in-lincoln/",
+        "/west-auckland-storage-trusted-storage-solutions-in-west-harbour/",
+        "/west-auckland-storage-your-storage-solution-in-hobsonville/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/west-auckland-storage-your-storage-solution-in-new-lynn/",
+      "title": "West Auckland Storage: Your Storage Solution in New Lynn - West Auckland Storage",
+      "description": "New Lynn, a bustling suburb of West Auckland, is known for its vibrant community and excellent amenities. If you’re in need of secure storage for your vehicle",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/services/",
+        "/west-auckland-storage-reliable-storage-in-massey/",
+        "/west-auckland-storage-secure-storage-in-sunnyvale/",
+        "/west-auckland-storage-your-storage-solution-in-new-lynn/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/west-auckland-storage-your-trusted-storage-in-huia/",
+      "title": "West Auckland Storage: Your Trusted Storage in Huia - West Auckland Storage",
+      "description": "Huia, known for its stunning natural beauty and relaxed lifestyle, is a great place to live. If you need secure storage for your vehicle or boat, West",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/services/",
+        "/west-auckland-storage-secure-storage-in-sunnyvale/",
+        "/west-auckland-storage-your-reliable-storage-solution-in-laingholm/",
+        "/west-auckland-storage-your-trusted-storage-in-huia/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/west-auckland-storage-your-trusted-storage-solution-in-glen-eden/",
+      "title": "Trusted Storage Solutions in Glen Eden - Secure & Convenient",
+      "description": "Your trusted choice for storage in Glen Eden.",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/services/",
+        "/west-auckland-storage-the-perfect-storage-solution-for-herald-island-residents/",
+        "/west-auckland-storage-your-ideal-storage-solution-in-western-heights/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-glen-eden/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/west-auckland-storage-your-trusted-storage-solution-in-green-bay/",
+      "title": "West Auckland Storage: Your Trusted Storage Solution in Green Bay - West Auckland Storage",
+      "description": "Green Bay, a picturesque suburb in West Auckland, offers a welcoming community and beautiful waterfront views. If you’re a Green Bay resident in search of",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/services/",
+        "/west-auckland-storage-reliable-storage-in-lincoln/",
+        "/west-auckland-storage-your-reliable-storage-solution-in-kelston/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-green-bay/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/west-auckland-storage-your-trusted-storage-solution-in-swanson/",
+      "title": "Page Not Found - West Auckland Storage",
+      "description": "",
+      "canonical": "",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "WebSite",
+        "BreadcrumbList",
+        "WebPage"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/blog/",
+        "/contact/",
+        "/services/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-swanson/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/west-auckland-storage-your-trusted-storage-solution-in-whenuapai/",
+      "title": "Trusted Storage Solutions in Whenuapai - Safe & Convenient",
+      "description": "Your trusted storage provider in Whenuapai.",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/services/",
+        "/west-auckland-storage-your-premier-storage-solution-in-glendene/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-swanson/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-whenuapai/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/why-choose-west-auckland-storage-for-your-long-term-storage-needs/",
+      "title": "Long-Term Storage Made Easy - Why Choose Us?",
+      "description": "Learn why we're the best choice for long-term storage.",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/services/",
+        "/why-choose-west-auckland-storage-for-your-long-term-storage-needs/",
+        "/why-choose-west-auckland-storage-for-your-short-term-storage-needs/",
+        "/why-choose-west-auckland-storage/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/why-choose-west-auckland-storage-for-your-short-term-storage-needs/",
+      "title": "Why Choose Us for Short-Term Storage? Discover the Advantages!",
+      "description": "Reasons to choose our short-term storage solutions.",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/benefits-of-storing-your-boat-at-west-auckland-storage/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/services/",
+        "/why-choose-west-auckland-storage-for-your-long-term-storage-needs/",
+        "/why-choose-west-auckland-storage-for-your-short-term-storage-needs/"
+      ],
+      "disposition": "preserved"
+    },
+    {
+      "route": "/why-choose-west-auckland-storage/",
+      "title": "Why West Auckland Storage? Your Best Choice for Secure Solutions",
+      "description": "Explore the benefits of choosing our storage solutions.",
+      "canonical": "index.html",
+      "schemaTypes": [
+        "Place",
+        "SelfStorage",
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/category/uncategorized/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/services/",
+        "/span-farm-boat-yard-ltd-your-premier-boat-storage-solution-in-west-auckland/",
+        "/why-choose-west-auckland-storage-for-your-long-term-storage-needs/",
+        "/why-choose-west-auckland-storage/"
+      ],
+      "disposition": "preserved"
+    }
+  ],
+  "current": [
+    {
+      "route": "/",
+      "title": "West Auckland Storage | Boat, Caravan & Vehicle Storage",
+      "description": "Secure, affordable boat and caravan storage close to home in West Auckland. Store at Span Farm Boat Yard in Glendene.",
+      "canonical": "https://westaucklandstorage.co.nz/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/blog/",
+        "/boat-storage-at-west-auckland-storage/",
+        "/caravan-storage-at-west-auckland-storage/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/vehicle-storage-at-west-auckland-storage/"
+      ]
+    },
+    {
+      "route": "/about/",
+      "title": "A real yard No fuss. | West Auckland Storage",
+      "description": "West Auckland Storage is part of Span Farm Boat Yard in Glendene — a practical place to store the things that matter to you.",
+      "canonical": "https://westaucklandstorage.co.nz/about/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/blog/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/"
+      ]
+    },
+    {
+      "route": "/author/isaac/",
+      "title": "Articles by Isaac — Page 1 | West Auckland Storage",
+      "description": "Storage notes and local guides written from the yard. Page 1 of 4.",
+      "canonical": "https://westaucklandstorage.co.nz/author/isaac/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/author/isaac/page/2/",
+        "/author/isaac/page/3/",
+        "/author/isaac/page/4/",
+        "/blog/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/west-auckland-storage-reliable-storage-in-lincoln/",
+        "/west-auckland-storage-reliable-storage-in-massey/",
+        "/west-auckland-storage-secure-storage-in-sunnyvale/",
+        "/west-auckland-storage-trusted-storage-solutions-in-west-harbour/",
+        "/west-auckland-storage-your-reliable-storage-solution-in-kelston/",
+        "/west-auckland-storage-your-reliable-storage-solution-in-laingholm/",
+        "/west-auckland-storage-your-storage-solution-in-hobsonville/",
+        "/west-auckland-storage-your-storage-solution-in-new-lynn/",
+        "/west-auckland-storage-your-trusted-storage-in-huia/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-green-bay/"
+      ]
+    },
+    {
+      "route": "/author/isaac/page/2/",
+      "title": "Articles by Isaac — Page 2 | West Auckland Storage",
+      "description": "Storage notes and local guides written from the yard. Page 2 of 4.",
+      "canonical": "https://westaucklandstorage.co.nz/author/isaac/page/2/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/author/isaac/page/2/",
+        "/author/isaac/page/3/",
+        "/author/isaac/page/4/",
+        "/blog/",
+        "/contact/",
+        "/discovering-west-auckland-storage-the-perfect-solution-for-titirangi-residents/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/vehicle-storage-at-west-auckland-storage/",
+        "/west-auckland-storage-the-ideal-choice-for-te-atatu-south-residents/",
+        "/west-auckland-storage-the-perfect-storage-solution-for-herald-island-residents/",
+        "/west-auckland-storage-your-go-to-storage-solution-in-te-atatu-peninsula/",
+        "/west-auckland-storage-your-ideal-storage-solution-in-western-heights/",
+        "/west-auckland-storage-your-premier-storage-solution-in-glendene/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-glen-eden/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-swanson/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-whenuapai/"
+      ]
+    },
+    {
+      "route": "/author/isaac/page/3/",
+      "title": "Articles by Isaac — Page 3 | West Auckland Storage",
+      "description": "Storage notes and local guides written from the yard. Page 3 of 4.",
+      "canonical": "https://westaucklandstorage.co.nz/author/isaac/page/3/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/author/isaac/page/2/",
+        "/author/isaac/page/3/",
+        "/author/isaac/page/4/",
+        "/benefits-of-storing-your-boat-at-west-auckland-storage/",
+        "/blog/",
+        "/boat-storage-at-west-auckland-storage/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/span-farm-boat-yard-ltd-your-premier-boat-storage-solution-in-west-auckland/",
+        "/storage-near-you/",
+        "/trailer-storage-at-west-auckland-storage/",
+        "/truck-storage-at-west-auckland-storage/",
+        "/uncovered-boat-storage-at-west-auckland-storage/",
+        "/west-auckland-storage-your-go-to-for-secure-boat-and-vehicle-storage/",
+        "/why-choose-west-auckland-storage-for-your-long-term-storage-needs/",
+        "/why-choose-west-auckland-storage-for-your-short-term-storage-needs/",
+        "/why-choose-west-auckland-storage/"
+      ]
+    },
+    {
+      "route": "/author/isaac/page/4/",
+      "title": "Articles by Isaac — Page 4 | West Auckland Storage",
+      "description": "Storage notes and local guides written from the yard. Page 4 of 4.",
+      "canonical": "https://westaucklandstorage.co.nz/author/isaac/page/4/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/author/isaac/page/2/",
+        "/author/isaac/page/3/",
+        "/author/isaac/page/4/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/caravan-storage-at-west-auckland-storage/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/outdoor-storage-solutions-at-west-auckland-storage/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/"
+      ]
+    },
+    {
+      "route": "/benefits-of-storing-your-boat-at-west-auckland-storage/",
+      "title": "Benefits of Storing Your Boat with Us | West Auckland Storage",
+      "description": "Keeping a boat at home is fine until it is not — until the driveway is full, the trailer is in the way, or the boat is taking a beating from the weather. Storing your boat at a working yard solves…",
+      "canonical": "https://westaucklandstorage.co.nz/benefits-of-storing-your-boat-at-west-auckland-storage/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/benefits-of-storing-your-boat-at-west-auckland-storage/",
+        "/blog/",
+        "/boat-storage-at-west-auckland-storage/",
+        "/category/storage-tips/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/why-choose-west-auckland-storage-for-your-short-term-storage-needs/"
+      ]
+    },
+    {
+      "route": "/blog/",
+      "title": "From the yard — Page 1 | West Auckland Storage",
+      "description": "Boat, caravan and vehicle storage advice, and guides for our West Auckland neighbours. Page 1 of 4.",
+      "canonical": "https://westaucklandstorage.co.nz/blog/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/blog/",
+        "/blog/page/2/",
+        "/blog/page/3/",
+        "/blog/page/4/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/west-auckland-storage-reliable-storage-in-lincoln/",
+        "/west-auckland-storage-reliable-storage-in-massey/",
+        "/west-auckland-storage-secure-storage-in-sunnyvale/",
+        "/west-auckland-storage-trusted-storage-solutions-in-west-harbour/",
+        "/west-auckland-storage-your-reliable-storage-solution-in-kelston/",
+        "/west-auckland-storage-your-reliable-storage-solution-in-laingholm/",
+        "/west-auckland-storage-your-storage-solution-in-hobsonville/",
+        "/west-auckland-storage-your-storage-solution-in-new-lynn/",
+        "/west-auckland-storage-your-trusted-storage-in-huia/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-green-bay/"
+      ]
+    },
+    {
+      "route": "/blog/page/2/",
+      "title": "From the yard — Page 2 | West Auckland Storage",
+      "description": "Boat, caravan and vehicle storage advice, and guides for our West Auckland neighbours. Page 2 of 4.",
+      "canonical": "https://westaucklandstorage.co.nz/blog/page/2/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/blog/",
+        "/blog/page/2/",
+        "/blog/page/3/",
+        "/blog/page/4/",
+        "/contact/",
+        "/discovering-west-auckland-storage-the-perfect-solution-for-titirangi-residents/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/vehicle-storage-at-west-auckland-storage/",
+        "/west-auckland-storage-the-ideal-choice-for-te-atatu-south-residents/",
+        "/west-auckland-storage-the-perfect-storage-solution-for-herald-island-residents/",
+        "/west-auckland-storage-your-go-to-storage-solution-in-te-atatu-peninsula/",
+        "/west-auckland-storage-your-ideal-storage-solution-in-western-heights/",
+        "/west-auckland-storage-your-premier-storage-solution-in-glendene/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-glen-eden/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-swanson/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-whenuapai/"
+      ]
+    },
+    {
+      "route": "/blog/page/3/",
+      "title": "From the yard — Page 3 | West Auckland Storage",
+      "description": "Boat, caravan and vehicle storage advice, and guides for our West Auckland neighbours. Page 3 of 4.",
+      "canonical": "https://westaucklandstorage.co.nz/blog/page/3/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/benefits-of-storing-your-boat-at-west-auckland-storage/",
+        "/blog/",
+        "/blog/page/2/",
+        "/blog/page/3/",
+        "/blog/page/4/",
+        "/boat-storage-at-west-auckland-storage/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/span-farm-boat-yard-ltd-your-premier-boat-storage-solution-in-west-auckland/",
+        "/storage-near-you/",
+        "/trailer-storage-at-west-auckland-storage/",
+        "/truck-storage-at-west-auckland-storage/",
+        "/uncovered-boat-storage-at-west-auckland-storage/",
+        "/west-auckland-storage-your-go-to-for-secure-boat-and-vehicle-storage/",
+        "/why-choose-west-auckland-storage-for-your-long-term-storage-needs/",
+        "/why-choose-west-auckland-storage-for-your-short-term-storage-needs/",
+        "/why-choose-west-auckland-storage/"
+      ]
+    },
+    {
+      "route": "/blog/page/4/",
+      "title": "From the yard — Page 4 | West Auckland Storage",
+      "description": "Boat, caravan and vehicle storage advice, and guides for our West Auckland neighbours. Page 4 of 4.",
+      "canonical": "https://westaucklandstorage.co.nz/blog/page/4/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/blog/",
+        "/blog/page/2/",
+        "/blog/page/3/",
+        "/blog/page/4/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/caravan-storage-at-west-auckland-storage/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/outdoor-storage-solutions-at-west-auckland-storage/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/"
+      ]
+    },
+    {
+      "route": "/boat-storage-at-west-auckland-storage/",
+      "title": "Boat Storage at West Auckland Storage | West Auckland Storage",
+      "description": "Our main job is boat storage. We keep trailer boats, launches, yachts and jet skis at Span Farm Boat Yard in Glendene, where owners across West Auckland store their boats close to home at a fair…",
+      "canonical": "https://westaucklandstorage.co.nz/boat-storage-at-west-auckland-storage/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/benefits-of-storing-your-boat-at-west-auckland-storage/",
+        "/blog/",
+        "/boat-storage-at-west-auckland-storage/",
+        "/caravan-storage-at-west-auckland-storage/",
+        "/category/storage-options/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/"
+      ]
+    },
+    {
+      "route": "/business-storage-solutions-at-west-auckland-storage/",
+      "title": "Business & Fleet Storage in West Auckland | West Auckland Storage",
+      "description": "Businesses need somewhere practical to park the vehicles, trailers and equipment they are not using every day. We offer straightforward outdoor storage at Span Farm Boat Yard in Glendene for…",
+      "canonical": "https://westaucklandstorage.co.nz/business-storage-solutions-at-west-auckland-storage/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/category/storage-options/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/"
+      ]
+    },
+    {
+      "route": "/caravan-storage-at-west-auckland-storage/",
+      "title": "Caravan & Campervan Storage in West Auckland | West Auckland Storage",
+      "description": "A caravan or campervan is wonderful to own and awkward to park. Between trips it takes up the best part of a driveway and sits out in the weather. Outdoor storage at our Glendene yard gives it a…",
+      "canonical": "https://westaucklandstorage.co.nz/caravan-storage-at-west-auckland-storage/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/boat-storage-at-west-auckland-storage/",
+        "/caravan-storage-at-west-auckland-storage/",
+        "/category/storage-options/",
+        "/contact/",
+        "/outdoor-storage-solutions-at-west-auckland-storage/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/"
+      ]
+    },
+    {
+      "route": "/category/local-guides/",
+      "title": "Local guides — Page 1 | West Auckland Storage",
+      "description": "Storage notes and practical guides for West Auckland suburbs and neighbourhoods. Page 1 of 2.",
+      "canonical": "https://westaucklandstorage.co.nz/category/local-guides/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/blog/",
+        "/category/local-guides/",
+        "/category/local-guides/page/2/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/west-auckland-storage-reliable-storage-in-lincoln/",
+        "/west-auckland-storage-reliable-storage-in-massey/",
+        "/west-auckland-storage-secure-storage-in-sunnyvale/",
+        "/west-auckland-storage-trusted-storage-solutions-in-west-harbour/",
+        "/west-auckland-storage-your-reliable-storage-solution-in-kelston/",
+        "/west-auckland-storage-your-reliable-storage-solution-in-laingholm/",
+        "/west-auckland-storage-your-storage-solution-in-hobsonville/",
+        "/west-auckland-storage-your-storage-solution-in-new-lynn/",
+        "/west-auckland-storage-your-trusted-storage-in-huia/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-green-bay/"
+      ]
+    },
+    {
+      "route": "/category/local-guides/page/2/",
+      "title": "Local guides — Page 2 | West Auckland Storage",
+      "description": "Storage notes and practical guides for West Auckland suburbs and neighbourhoods. Page 2 of 2.",
+      "canonical": "https://westaucklandstorage.co.nz/category/local-guides/page/2/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/blog/",
+        "/category/local-guides/",
+        "/category/local-guides/page/2/",
+        "/contact/",
+        "/discovering-west-auckland-storage-the-perfect-solution-for-titirangi-residents/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/west-auckland-storage-the-ideal-choice-for-te-atatu-south-residents/",
+        "/west-auckland-storage-the-perfect-storage-solution-for-herald-island-residents/",
+        "/west-auckland-storage-your-go-to-storage-solution-in-te-atatu-peninsula/",
+        "/west-auckland-storage-your-ideal-storage-solution-in-western-heights/",
+        "/west-auckland-storage-your-premier-storage-solution-in-glendene/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-glen-eden/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-swanson/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-whenuapai/"
+      ]
+    },
+    {
+      "route": "/category/storage-options/",
+      "title": "Storage options — Page 1 | West Auckland Storage",
+      "description": "What we store at the yard, and how boat, caravan and vehicle storage works. Page 1 of 1.",
+      "canonical": "https://westaucklandstorage.co.nz/category/storage-options/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/blog/",
+        "/boat-storage-at-west-auckland-storage/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/caravan-storage-at-west-auckland-storage/",
+        "/category/storage-options/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/outdoor-storage-solutions-at-west-auckland-storage/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/trailer-storage-at-west-auckland-storage/",
+        "/truck-storage-at-west-auckland-storage/",
+        "/uncovered-boat-storage-at-west-auckland-storage/",
+        "/vehicle-storage-at-west-auckland-storage/"
+      ]
+    },
+    {
+      "route": "/category/storage-tips/",
+      "title": "Storage tips — Page 1 | West Auckland Storage",
+      "description": "Straightforward advice for looking after your boat, caravan and gear. Page 1 of 1.",
+      "canonical": "https://westaucklandstorage.co.nz/category/storage-tips/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/benefits-of-storing-your-boat-at-west-auckland-storage/",
+        "/blog/",
+        "/category/storage-tips/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/span-farm-boat-yard-ltd-your-premier-boat-storage-solution-in-west-auckland/",
+        "/storage-near-you/",
+        "/west-auckland-storage-your-go-to-for-secure-boat-and-vehicle-storage/",
+        "/why-choose-west-auckland-storage-for-your-long-term-storage-needs/",
+        "/why-choose-west-auckland-storage-for-your-short-term-storage-needs/",
+        "/why-choose-west-auckland-storage/"
+      ]
+    },
+    {
+      "route": "/contact/",
+      "title": "Tell us what you’ve got. | West Auckland Storage",
+      "description": "Call or email West Auckland Storage for a straightforward quote on boat, caravan, trailer and vehicle storage.",
+      "canonical": "https://westaucklandstorage.co.nz/contact/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/blog/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/"
+      ]
+    },
+    {
+      "route": "/design-system/",
+      "title": "West Auckland Storage · Design system",
+      "description": "West Auckland Storage extracted design system.",
+      "canonical": "",
+      "schemaTypes": [],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/contact/",
+        "/services/"
+      ]
+    },
+    {
+      "route": "/discovering-west-auckland-storage-the-perfect-solution-for-titirangi-residents/",
+      "title": "Boat & Caravan Storage near Titirangi | West Auckland Storage",
+      "description": "Titirangi",
+      "canonical": "https://westaucklandstorage.co.nz/discovering-west-auckland-storage-the-perfect-solution-for-titirangi-residents/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/category/local-guides/",
+        "/contact/",
+        "/discovering-west-auckland-storage-the-perfect-solution-for-titirangi-residents/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/vehicle-storage-at-west-auckland-storage/",
+        "/west-auckland-storage-the-ideal-choice-for-te-atatu-south-residents/"
+      ]
+    },
+    {
+      "route": "/motorbike-storage-at-west-auckland-storage/",
+      "title": "Motorbike Storage in West Auckland | West Auckland Storage",
+      "description": "A motorbike — or a collection of them — takes up more room than you expect, and leaving one outside at home is not ideal. We offer practical outdoor storage for motorbikes at Span Farm Boat Yard…",
+      "canonical": "https://westaucklandstorage.co.nz/motorbike-storage-at-west-auckland-storage/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/category/storage-options/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/outdoor-storage-solutions-at-west-auckland-storage/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/"
+      ]
+    },
+    {
+      "route": "/outdoor-storage-solutions-at-west-auckland-storage/",
+      "title": "Outdoor Storage Options in West Auckland | West Auckland Storage",
+      "description": "Everything we offer is outdoor storage — practical hardstand space at a working boat yard, for the boats, vehicles and gear that do not fit at home. It is simple, affordable and easy to access.",
+      "canonical": "https://westaucklandstorage.co.nz/outdoor-storage-solutions-at-west-auckland-storage/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/caravan-storage-at-west-auckland-storage/",
+        "/category/storage-options/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/outdoor-storage-solutions-at-west-auckland-storage/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/"
+      ]
+    },
+    {
+      "route": "/services/",
+      "title": "Storage that makes sense. | West Auckland Storage",
+      "description": "Boat, caravan, trailer, vehicle and equipment storage close to home in West Auckland.",
+      "canonical": "https://westaucklandstorage.co.nz/services/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/blog/",
+        "/boat-storage-at-west-auckland-storage/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/caravan-storage-at-west-auckland-storage/",
+        "/contact/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/outdoor-storage-solutions-at-west-auckland-storage/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/trailer-storage-at-west-auckland-storage/",
+        "/truck-storage-at-west-auckland-storage/",
+        "/uncovered-boat-storage-at-west-auckland-storage/",
+        "/vehicle-storage-at-west-auckland-storage/"
+      ]
+    },
+    {
+      "route": "/services/contact/",
+      "title": "Redirecting to: /contact/",
+      "description": "",
+      "canonical": "https://westaucklandstorage.co.nz/contact/",
+      "schemaTypes": [],
+      "internalLinks": [
+        "/contact/"
+      ]
+    },
+    {
+      "route": "/sitemap/",
+      "title": "Sitemap | West Auckland Storage",
+      "description": "Find every page, storage article and local guide on West Auckland Storage.",
+      "canonical": "https://westaucklandstorage.co.nz/sitemap/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/author/isaac/page/2/",
+        "/author/isaac/page/3/",
+        "/author/isaac/page/4/",
+        "/benefits-of-storing-your-boat-at-west-auckland-storage/",
+        "/blog/",
+        "/blog/page/2/",
+        "/blog/page/3/",
+        "/blog/page/4/",
+        "/boat-storage-at-west-auckland-storage/",
+        "/business-storage-solutions-at-west-auckland-storage/",
+        "/caravan-storage-at-west-auckland-storage/",
+        "/category/local-guides/",
+        "/category/local-guides/page/2/",
+        "/category/storage-options/",
+        "/category/storage-tips/",
+        "/contact/",
+        "/design-system/",
+        "/discovering-west-auckland-storage-the-perfect-solution-for-titirangi-residents/",
+        "/motorbike-storage-at-west-auckland-storage/",
+        "/outdoor-storage-solutions-at-west-auckland-storage/",
+        "/services/",
+        "/sitemap.xml",
+        "/sitemap/",
+        "/span-farm-boat-yard-ltd-your-premier-boat-storage-solution-in-west-auckland/",
+        "/storage-near-you/",
+        "/trailer-storage-at-west-auckland-storage/",
+        "/truck-storage-at-west-auckland-storage/",
+        "/uncovered-boat-storage-at-west-auckland-storage/",
+        "/vehicle-storage-at-west-auckland-storage/",
+        "/west-auckland-storage-reliable-storage-in-lincoln/",
+        "/west-auckland-storage-reliable-storage-in-massey/",
+        "/west-auckland-storage-secure-storage-in-sunnyvale/",
+        "/west-auckland-storage-the-ideal-choice-for-te-atatu-south-residents/",
+        "/west-auckland-storage-the-perfect-storage-solution-for-herald-island-residents/",
+        "/west-auckland-storage-trusted-storage-solutions-in-west-harbour/",
+        "/west-auckland-storage-your-go-to-for-secure-boat-and-vehicle-storage/",
+        "/west-auckland-storage-your-go-to-storage-solution-in-te-atatu-peninsula/",
+        "/west-auckland-storage-your-ideal-storage-solution-in-western-heights/",
+        "/west-auckland-storage-your-premier-storage-solution-in-glendene/",
+        "/west-auckland-storage-your-reliable-storage-solution-in-kelston/",
+        "/west-auckland-storage-your-reliable-storage-solution-in-laingholm/",
+        "/west-auckland-storage-your-storage-solution-in-hobsonville/",
+        "/west-auckland-storage-your-storage-solution-in-new-lynn/",
+        "/west-auckland-storage-your-trusted-storage-in-huia/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-glen-eden/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-green-bay/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-swanson/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-whenuapai/",
+        "/why-choose-west-auckland-storage-for-your-long-term-storage-needs/",
+        "/why-choose-west-auckland-storage-for-your-short-term-storage-needs/",
+        "/why-choose-west-auckland-storage/"
+      ]
+    },
+    {
+      "route": "/span-farm-boat-yard-ltd-your-premier-boat-storage-solution-in-west-auckland/",
+      "title": "Span Farm Boat Yard: Boat Storage in West Auckland | West Auckland Storage",
+      "description": "Span Farm Boat Yard is the working boat yard behind West Auckland Storage. If you are looking for boat storage in West Auckland that is close to home, fairly priced and run by people who know…",
+      "canonical": "https://westaucklandstorage.co.nz/span-farm-boat-yard-ltd-your-premier-boat-storage-solution-in-west-auckland/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/category/storage-tips/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/span-farm-boat-yard-ltd-your-premier-boat-storage-solution-in-west-auckland/",
+        "/storage-near-you/",
+        "/uncovered-boat-storage-at-west-auckland-storage/",
+        "/why-choose-west-auckland-storage/"
+      ]
+    },
+    {
+      "route": "/storage-near-you/",
+      "title": "Storage near you. | West Auckland Storage",
+      "description": "Boat, caravan and vehicle storage for owners across West Auckland — from our Glendene yard we look after boats from Henderson, Massey, Te Atatu, New Lynn, Titirangi and beyond.",
+      "canonical": "https://westaucklandstorage.co.nz/storage-near-you/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/blog/",
+        "/boat-storage-at-west-auckland-storage/",
+        "/contact/",
+        "/discovering-west-auckland-storage-the-perfect-solution-for-titirangi-residents/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/west-auckland-storage-reliable-storage-in-lincoln/",
+        "/west-auckland-storage-reliable-storage-in-massey/",
+        "/west-auckland-storage-secure-storage-in-sunnyvale/",
+        "/west-auckland-storage-the-ideal-choice-for-te-atatu-south-residents/",
+        "/west-auckland-storage-the-perfect-storage-solution-for-herald-island-residents/",
+        "/west-auckland-storage-trusted-storage-solutions-in-west-harbour/",
+        "/west-auckland-storage-your-go-to-storage-solution-in-te-atatu-peninsula/",
+        "/west-auckland-storage-your-ideal-storage-solution-in-western-heights/",
+        "/west-auckland-storage-your-premier-storage-solution-in-glendene/",
+        "/west-auckland-storage-your-reliable-storage-solution-in-kelston/",
+        "/west-auckland-storage-your-reliable-storage-solution-in-laingholm/",
+        "/west-auckland-storage-your-storage-solution-in-hobsonville/",
+        "/west-auckland-storage-your-storage-solution-in-new-lynn/",
+        "/west-auckland-storage-your-trusted-storage-in-huia/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-glen-eden/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-green-bay/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-swanson/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-whenuapai/"
+      ]
+    },
+    {
+      "route": "/trailer-storage-at-west-auckland-storage/",
+      "title": "Trailer Storage in West Auckland | West Auckland Storage",
+      "description": "Utility trailers and boat trailers are useful right up until you have nowhere to park them. We offer straightforward outdoor trailer storage at Span Farm Boat Yard in Glendene, so your trailer is…",
+      "canonical": "https://westaucklandstorage.co.nz/trailer-storage-at-west-auckland-storage/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/category/storage-options/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/trailer-storage-at-west-auckland-storage/",
+        "/truck-storage-at-west-auckland-storage/",
+        "/west-auckland-storage-your-go-to-for-secure-boat-and-vehicle-storage/"
+      ]
+    },
+    {
+      "route": "/truck-storage-at-west-auckland-storage/",
+      "title": "Truck Storage in West Auckland | West Auckland Storage",
+      "description": "Commercial vehicles, work trucks and larger equipment need somewhere they can sit without blocking the yard at home. We offer outdoor storage for trucks and larger vehicles at Span Farm Boat Yard…",
+      "canonical": "https://westaucklandstorage.co.nz/truck-storage-at-west-auckland-storage/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/category/storage-options/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/trailer-storage-at-west-auckland-storage/",
+        "/truck-storage-at-west-auckland-storage/",
+        "/vehicle-storage-at-west-auckland-storage/"
+      ]
+    },
+    {
+      "route": "/uncovered-boat-storage-at-west-auckland-storage/",
+      "title": "Uncovered Boat Storage in West Auckland | West Auckland Storage",
+      "description": "Uncovered, outdoor boat storage suits owners who want a straightforward, affordable place to keep a boat between trips — no marina fees, no marina waitlist, and room to work on the boat when you…",
+      "canonical": "https://westaucklandstorage.co.nz/uncovered-boat-storage-at-west-auckland-storage/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/category/storage-options/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/span-farm-boat-yard-ltd-your-premier-boat-storage-solution-in-west-auckland/",
+        "/storage-near-you/",
+        "/uncovered-boat-storage-at-west-auckland-storage/",
+        "/west-auckland-storage-your-go-to-for-secure-boat-and-vehicle-storage/"
+      ]
+    },
+    {
+      "route": "/vehicle-storage-at-west-auckland-storage/",
+      "title": "Vehicle Storage in West Auckland | West Auckland Storage",
+      "description": "If a car, 4WD or ute has become a spare rather than a daily, you probably do not need it sitting on the driveway any more. We offer practical outdoor vehicle storage at Span Farm Boat Yard in…",
+      "canonical": "https://westaucklandstorage.co.nz/vehicle-storage-at-west-auckland-storage/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/category/storage-options/",
+        "/contact/",
+        "/discovering-west-auckland-storage-the-perfect-solution-for-titirangi-residents/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/truck-storage-at-west-auckland-storage/",
+        "/vehicle-storage-at-west-auckland-storage/"
+      ]
+    },
+    {
+      "route": "/west-auckland-storage-reliable-storage-in-lincoln/",
+      "title": "Storage near Lincoln Road, Henderson | West Auckland Storage",
+      "description": "Around the Lincoln Road end of Henderson, off-street parking is hard to come by and the traffic never really stops. A nearby yard for your boat, caravan or spare vehicle takes the pressure off the…",
+      "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-reliable-storage-in-lincoln/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/category/local-guides/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/west-auckland-storage-reliable-storage-in-lincoln/",
+        "/west-auckland-storage-your-storage-solution-in-hobsonville/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-green-bay/"
+      ]
+    },
+    {
+      "route": "/west-auckland-storage-reliable-storage-in-massey/",
+      "title": "Boat, Caravan & Trailer Storage near Massey | West Auckland Storage",
+      "description": "Massey has grown quickly, and plenty of households now juggle a boat, a trailer and a couple of cars on a section that was never designed for all of it. Storing what you use less often at our…",
+      "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-reliable-storage-in-massey/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/category/local-guides/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/west-auckland-storage-reliable-storage-in-massey/",
+        "/west-auckland-storage-trusted-storage-solutions-in-west-harbour/",
+        "/west-auckland-storage-your-storage-solution-in-new-lynn/"
+      ]
+    },
+    {
+      "route": "/west-auckland-storage-secure-storage-in-sunnyvale/",
+      "title": "Caravan & Trailer Storage near Sunnyvale | West Auckland Storage",
+      "description": "Sunnyvale is a settled, family-friendly part of West Auckland where the driveway is already doing three jobs. A caravan or trailer parked on it is one thing too many. Outdoor storage at a working…",
+      "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-secure-storage-in-sunnyvale/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/category/local-guides/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/west-auckland-storage-secure-storage-in-sunnyvale/",
+        "/west-auckland-storage-your-storage-solution-in-new-lynn/",
+        "/west-auckland-storage-your-trusted-storage-in-huia/"
+      ]
+    },
+    {
+      "route": "/west-auckland-storage-the-ideal-choice-for-te-atatu-south-residents/",
+      "title": "Storage for Te Atatu South Owners | West Auckland Storage",
+      "description": "Te Atatu South is well placed for the motorway and the harbour, which makes it a handy base for people who tow. But off-street space is limited, and a boat or trailer parked on the street is never…",
+      "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-the-ideal-choice-for-te-atatu-south-residents/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/category/local-guides/",
+        "/contact/",
+        "/discovering-west-auckland-storage-the-perfect-solution-for-titirangi-residents/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/west-auckland-storage-the-ideal-choice-for-te-atatu-south-residents/",
+        "/west-auckland-storage-your-go-to-storage-solution-in-te-atatu-peninsula/"
+      ]
+    },
+    {
+      "route": "/west-auckland-storage-the-perfect-storage-solution-for-herald-island-residents/",
+      "title": "Boat Storage for Herald Island Residents | West Auckland Storage",
+      "description": "Herald Island is a tightly knit waterfront community where boat ownership is a way of life — and where driveway and berth space is limited. Our Glendene yard is a straightforward, close-to-home…",
+      "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-the-perfect-storage-solution-for-herald-island-residents/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/category/local-guides/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/west-auckland-storage-the-perfect-storage-solution-for-herald-island-residents/",
+        "/west-auckland-storage-your-go-to-storage-solution-in-te-atatu-peninsula/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-glen-eden/"
+      ]
+    },
+    {
+      "route": "/west-auckland-storage-trusted-storage-solutions-in-west-harbour/",
+      "title": "Boat Storage for West Harbour Owners | West Auckland Storage",
+      "description": "West Harbour sits right by the water, which is wonderful for boat owners and expensive when the only nearby option is a marina. Storing at our Glendene yard gives you the close-to-home convenience…",
+      "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-trusted-storage-solutions-in-west-harbour/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/category/local-guides/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/west-auckland-storage-reliable-storage-in-massey/",
+        "/west-auckland-storage-trusted-storage-solutions-in-west-harbour/",
+        "/west-auckland-storage-your-storage-solution-in-hobsonville/"
+      ]
+    },
+    {
+      "route": "/west-auckland-storage-your-go-to-for-secure-boat-and-vehicle-storage/",
+      "title": "Boat & Vehicle Storage in West Auckland | West Auckland Storage",
+      "description": "West Auckland Storage is a working boat yard at Span Farm Boat Yard in Glendene, storing boats and vehicles for owners across West Auckland. If you are tired of marina prices or waiting on a…",
+      "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-your-go-to-for-secure-boat-and-vehicle-storage/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/category/storage-tips/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/trailer-storage-at-west-auckland-storage/",
+        "/uncovered-boat-storage-at-west-auckland-storage/",
+        "/west-auckland-storage-your-go-to-for-secure-boat-and-vehicle-storage/"
+      ]
+    },
+    {
+      "route": "/west-auckland-storage-your-go-to-storage-solution-in-te-atatu-peninsula/",
+      "title": "Boat & Caravan Storage for Te Atatu Peninsula | West Auckland Storage",
+      "description": "The Peninsula is a waterfront community with plenty of boat owners and not much spare parking. Keeping your boat or caravan at our Glendene yard is close to home and far less hassle than squeezing…",
+      "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-your-go-to-storage-solution-in-te-atatu-peninsula/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/category/local-guides/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/west-auckland-storage-the-ideal-choice-for-te-atatu-south-residents/",
+        "/west-auckland-storage-the-perfect-storage-solution-for-herald-island-residents/",
+        "/west-auckland-storage-your-go-to-storage-solution-in-te-atatu-peninsula/"
+      ]
+    },
+    {
+      "route": "/west-auckland-storage-your-ideal-storage-solution-in-western-heights/",
+      "title": "Boat & Caravan Storage near Western Heights | West Auckland Storage",
+      "description": "Western Heights looks out over the harbour from the ridgeline above Henderson and Te Atatu, where sections are often sloped and driveways steep. Storing your boat or caravan at a nearby yard is an…",
+      "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-your-ideal-storage-solution-in-western-heights/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/category/local-guides/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/west-auckland-storage-your-ideal-storage-solution-in-western-heights/",
+        "/west-auckland-storage-your-premier-storage-solution-in-glendene/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-glen-eden/"
+      ]
+    },
+    {
+      "route": "/west-auckland-storage-your-premier-storage-solution-in-glendene/",
+      "title": "Storage in Glendene — Right at the Yard | West Auckland Storage",
+      "description": "Span Farm Boat Yard is in Glendene, so if you live locally you simply cannot store any closer to home. For Glendene residents, the yard is the obvious place to keep a boat, caravan or spare…",
+      "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-your-premier-storage-solution-in-glendene/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/category/local-guides/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/west-auckland-storage-your-ideal-storage-solution-in-western-heights/",
+        "/west-auckland-storage-your-premier-storage-solution-in-glendene/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-whenuapai/"
+      ]
+    },
+    {
+      "route": "/west-auckland-storage-your-reliable-storage-solution-in-kelston/",
+      "title": "Caravan, Trailer & Boat Storage near Kelston | West Auckland Storage",
+      "description": "Kelston is a mix of family homes, busy roads and small businesses, and kerbside space is tight. A nearby yard for the boat, caravan or trailer frees up the driveway and keeps your gear where you…",
+      "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-your-reliable-storage-solution-in-kelston/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/category/local-guides/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/west-auckland-storage-your-reliable-storage-solution-in-kelston/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-green-bay/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-swanson/"
+      ]
+    },
+    {
+      "route": "/west-auckland-storage-your-reliable-storage-solution-in-laingholm/",
+      "title": "Boat, Caravan & Vehicle Storage near Laingholm | West Auckland Storage",
+      "description": "Laingholm sits on the harbour side of the Waitakere Ranges, where sections are often steep, driveways are narrow and there is rarely room to park a boat, caravan or second vehicle at home. Storing…",
+      "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-your-reliable-storage-solution-in-laingholm/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/category/local-guides/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/west-auckland-storage-your-reliable-storage-solution-in-laingholm/",
+        "/west-auckland-storage-your-trusted-storage-in-huia/"
+      ]
+    },
+    {
+      "route": "/west-auckland-storage-your-storage-solution-in-hobsonville/",
+      "title": "Storage for Hobsonville Boats & Caravans | West Auckland Storage",
+      "description": "Hobsonville",
+      "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-your-storage-solution-in-hobsonville/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/category/local-guides/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/west-auckland-storage-reliable-storage-in-lincoln/",
+        "/west-auckland-storage-trusted-storage-solutions-in-west-harbour/",
+        "/west-auckland-storage-your-storage-solution-in-hobsonville/"
+      ]
+    },
+    {
+      "route": "/west-auckland-storage-your-storage-solution-in-new-lynn/",
+      "title": "Storage in Glendene for New Lynn Owners | West Auckland Storage",
+      "description": "New Lynn is busy and increasingly built-up, and many homes and townhouses simply do not have the off-street space for a boat, caravan or spare vehicle. Keeping it a short drive away at our…",
+      "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-your-storage-solution-in-new-lynn/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/category/local-guides/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/west-auckland-storage-reliable-storage-in-massey/",
+        "/west-auckland-storage-secure-storage-in-sunnyvale/",
+        "/west-auckland-storage-your-storage-solution-in-new-lynn/"
+      ]
+    },
+    {
+      "route": "/west-auckland-storage-your-trusted-storage-in-huia/",
+      "title": "Boat & Trailer Storage for Huia | West Auckland Storage",
+      "description": "Huia is a small settlement at the end of the Manukau Harbour road, and most properties out that way have tidy but tight off-street space. If your boat or trailer spends more time parked than used,…",
+      "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-your-trusted-storage-in-huia/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/category/local-guides/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/west-auckland-storage-secure-storage-in-sunnyvale/",
+        "/west-auckland-storage-your-reliable-storage-solution-in-laingholm/",
+        "/west-auckland-storage-your-trusted-storage-in-huia/"
+      ]
+    },
+    {
+      "route": "/west-auckland-storage-your-trusted-storage-solution-in-glen-eden/",
+      "title": "Caravan, Trailer & Boat Storage near Glen Eden | West Auckland Storage",
+      "description": "Glen Eden",
+      "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-your-trusted-storage-solution-in-glen-eden/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/category/local-guides/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/west-auckland-storage-the-perfect-storage-solution-for-herald-island-residents/",
+        "/west-auckland-storage-your-ideal-storage-solution-in-western-heights/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-glen-eden/"
+      ]
+    },
+    {
+      "route": "/west-auckland-storage-your-trusted-storage-solution-in-green-bay/",
+      "title": "Boat & Caravan Storage near Green Bay | West Auckland Storage",
+      "description": "Green Bay looks out over the Manukau Harbour, and many of its sections climb steeply up from the road. That makes storing a boat or caravan at home awkward — and makes a nearby yard a welcome…",
+      "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-your-trusted-storage-solution-in-green-bay/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/category/local-guides/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/west-auckland-storage-reliable-storage-in-lincoln/",
+        "/west-auckland-storage-your-reliable-storage-solution-in-kelston/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-green-bay/"
+      ]
+    },
+    {
+      "route": "/west-auckland-storage-your-trusted-storage-solution-in-swanson/",
+      "title": "Boat & Trailer Storage for Swanson | West Auckland Storage",
+      "description": "Swanson feels a little more rural than the rest of West Auckland, with the train line running through and sections that often come with a shed already. Even so, finding a tidy home for a boat or…",
+      "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-your-trusted-storage-solution-in-swanson/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/category/local-guides/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/west-auckland-storage-your-reliable-storage-solution-in-kelston/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-swanson/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-whenuapai/"
+      ]
+    },
+    {
+      "route": "/west-auckland-storage-your-trusted-storage-solution-in-whenuapai/",
+      "title": "Storage for Whenuapai Boats & Vehicles | West Auckland Storage",
+      "description": "Whenuapai sits between the airfield and the upper harbour, with a real mix of larger sections and new development. Whether you have a boat, a caravan or a work vehicle, keeping it at a nearby yard…",
+      "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-your-trusted-storage-solution-in-whenuapai/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/category/local-guides/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/west-auckland-storage-your-premier-storage-solution-in-glendene/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-swanson/",
+        "/west-auckland-storage-your-trusted-storage-solution-in-whenuapai/"
+      ]
+    },
+    {
+      "route": "/why-choose-west-auckland-storage-for-your-long-term-storage-needs/",
+      "title": "Long-Term Boat, Caravan & Vehicle Storage | West Auckland Storage",
+      "description": "Some things you store because you need them next weekend. Others you store because they are not going anywhere for a while — a boat laid up for the season, a caravan between trips, a project that…",
+      "canonical": "https://westaucklandstorage.co.nz/why-choose-west-auckland-storage-for-your-long-term-storage-needs/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/category/storage-tips/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/why-choose-west-auckland-storage-for-your-long-term-storage-needs/",
+        "/why-choose-west-auckland-storage-for-your-short-term-storage-needs/",
+        "/why-choose-west-auckland-storage/"
+      ]
+    },
+    {
+      "route": "/why-choose-west-auckland-storage-for-your-short-term-storage-needs/",
+      "title": "Short-Term & Seasonal Storage in West Auckland | West Auckland Storage",
+      "description": "Not everything needs storing for months. Sometimes you just need a practical spot for a few weeks — while you travel, while the driveway is being redone, or over a busy season. Our short-term and…",
+      "canonical": "https://westaucklandstorage.co.nz/why-choose-west-auckland-storage-for-your-short-term-storage-needs/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/benefits-of-storing-your-boat-at-west-auckland-storage/",
+        "/blog/",
+        "/category/storage-tips/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/storage-near-you/",
+        "/why-choose-west-auckland-storage-for-your-long-term-storage-needs/",
+        "/why-choose-west-auckland-storage-for-your-short-term-storage-needs/"
+      ]
+    },
+    {
+      "route": "/why-choose-west-auckland-storage/",
+      "title": "Why Owners Choose West Auckland Storage | West Auckland Storage",
+      "description": "There are plenty of storage options in West Auckland. Owners choose ours for three plain reasons — location, price and slipway access — and because it is a working boat yard rather than a faceless…",
+      "canonical": "https://westaucklandstorage.co.nz/why-choose-west-auckland-storage/",
+      "schemaTypes": [
+        "AutomotiveBusiness"
+      ],
+      "internalLinks": [
+        "/",
+        "/about/",
+        "/author/isaac/",
+        "/blog/",
+        "/category/storage-tips/",
+        "/contact/",
+        "/services/",
+        "/sitemap/",
+        "/span-farm-boat-yard-ltd-your-premier-boat-storage-solution-in-west-auckland/",
+        "/storage-near-you/",
+        "/why-choose-west-auckland-storage-for-your-long-term-storage-needs/",
+        "/why-choose-west-auckland-storage/"
+      ]
+    }
+  ]
+}

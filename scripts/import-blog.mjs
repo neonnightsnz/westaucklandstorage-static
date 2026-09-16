@@ -5,7 +5,7 @@ import path from 'node:path';
 // This writes a RAW snapshot to src/data/blogPosts.raw.json for provenance only.
 // The site ships the brand-aligned copy in src/data/blogPosts.json, which is
 // rebuilt from src/data/curated-blog.mjs with `npm run build:blog`.
-const root = 'westaucklandstorage.co.nz';
+const root = 'references/wordpress';
 const plain = (html) => html.replace(/<[^>]*>/g, '').replace(/&amp;/g, '&').replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(+n)).replace(/&nbsp;/g, ' ').replace(/&quot;/g, '"').replace(/&#x([\da-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16))).trim();
 const slugs = [];
 for (let page = 1; page <= 4; page++) {

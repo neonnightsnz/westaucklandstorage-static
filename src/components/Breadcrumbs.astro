@@ -1,0 +1,11 @@
+---
+import { breadcrumbsFor } from '../data/seo';
+const { class: className = 'article-breadcrumb' } = Astro.props;
+const items = breadcrumbsFor(Astro.url.pathname);
+---
+{items.length > 0 && <nav class={className} aria-label="Breadcrumb">
+  {items.map((item, index) => <>
+    {index > 0 && <span aria-hidden="true">/</span>}
+    {index === items.length - 1 ? <span aria-current="page">{item.name}</span> : <a href={item.path}>{item.name}</a>}
+  </>)}
+</nav>}

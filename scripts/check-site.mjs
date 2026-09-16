@@ -39,7 +39,7 @@ assert.equal((servicesHtml.match(/class="service-card"/g) ?? []).length, 9, 'Ser
 for (const route of ['', 'contact/']) {
   const html = fs.readFileSync(`dist/${route}index.html`, 'utf8');
   assert.equal((html.match(/<form[^>]*data-contact-form/g) ?? []).length, 1, 'Use one enquiry form per page');
-  assert.ok(html.includes('Prepare enquiry'), 'Form must describe email-draft behaviour');
+  assert.ok(html.includes('Send enquiry'), 'Form must offer a clear send action');
 }
 assert.deepEqual(broken, [], 'Broken internal links or images');
 const sitemap = fs.readFileSync('dist/sitemap.xml', 'utf8');

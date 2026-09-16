@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import { metadataFor, structuredDataFor } from "../data/seo";
+import { posts } from "../data/blog";
 
 interface Props {
   title: string;
@@ -10,12 +12,15 @@ interface Props {
   noindex?: boolean;
 }
 
-const { title, description, home = false, type = 'website', publishedTime, noindex = false } = Astro.props;
+const { title: suppliedTitle, description: suppliedDescription, home = false, type = 'website', publishedTime, noindex = false } = Astro.props;
+const { title, description } = metadataFor(Astro.url.pathname, { title: suppliedTitle, description: suppliedDescription });
 const currentPath = Astro.url.pathname;
 const SITE_URL = 'https://westaucklandstorage.co.nz';
 const site = Astro.site ?? new URL(SITE_URL);
 const canonical = new URL(Astro.url.pathname, site).href;
-const ogImage = new URL('/images/og-default.jpg', site).href;
+const post = posts.find(post => currentPath === `/${post.slug}/`);
+const ogImage = new URL(post?.image ?? '/images/og-default.jpg', site).href;
+const ogImageAlt = post?.imageAlt || (post ? post.title : 'West Auckland Storage — boat, caravan and vehicle storage in Glendene');
 const navigation = [
   { href: '/services/', label: 'What we store' },
   { href: '/about/', label: 'Why us' },
@@ -23,32 +28,7 @@ const navigation = [
   { href: '/contact/', label: 'Contact' },
 ];
 
-// Structured data for local search. NAP mirrors the footer/contact page.
-const localBusiness = {
-  '@context': 'https://schema.org',
-  '@type': 'AutomotiveBusiness',
-  name: 'West Auckland Storage',
-  description:
-    'Boat, caravan, trailer and vehicle storage on outdoor hardstand at Span Farm Boat Yard, Glendene, West Auckland.',
-  url: SITE_URL,
-  telephone: '+64 9 818 4586',
-  email: 'info@westaucklandstorage.co.nz',
-  image: ogImage,
-  logo: new URL('/images/logo.png', site).href,
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: '20 Akatea Road, Glendene',
-    addressLocality: 'Auckland',
-    addressRegion: 'Auckland',
-    postalCode: '0602',
-    addressCountry: 'NZ',
-  },
-  // Coordinates declared by the original site's structured data.
-  geo: { '@type': 'GeoCoordinates', latitude: -36.890488, longitude: 174.662988 },
-  areaServed: ['Glendene', 'Henderson', 'Massey', 'Te Atatu', 'New Lynn', 'Titirangi', 'Kelston', 'Swanson', 'Whenuapai', 'Hobsonville'],
-  parentOrganization: { '@type': 'Organization', name: 'Span Farm Boat Yard Ltd' },
-  knowsAbout: ['boat storage', 'caravan storage', 'trailer storage', 'vehicle storage', 'outdoor hardstand storage'],
-};
+const structuredData = structuredDataFor(currentPath, title, description, ogImage);
 ---
 
 <!doctype html>
@@ -58,7 +38,7 @@ const localBusiness = {
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#145693" />
-    {noindex && <meta name="robots" content="noindex" />}
+    <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large'} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
@@ -71,15 +51,16 @@ const localBusiness = {
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImage} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="West Auckland Storage — boat, caravan and vehicle storage in Glendene" />
+    {!post && <meta property="og:image:width" content="1200" />}
+    {!post && <meta property="og:image:height" content="630" />}
+    <meta property="og:image:alt" content={ogImageAlt} />
     {type === 'article' && publishedTime && <meta property="article:published_time" content={publishedTime} />}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
-    <script type="application/ld+json" set:html={JSON.stringify(localBusiness)} />
+    <meta name="twitter:image:alt" content={ogImageAlt} />
+    {!noindex && <script type="application/ld+json" set:html={JSON.stringify(structuredData).replace(/</g, '\u003c')} />}
     <title>{title}</title>
   </head>
   <body>

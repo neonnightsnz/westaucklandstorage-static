@@ -1,15 +1,25 @@
 ---
 import { posts, categoryFor, categoryLabel } from '../data/blog';
+import { storageOptions } from '../data/sitePages';
+import { locationGroups } from '../data/locations';
+import Breadcrumbs from './Breadcrumbs.astro';
 const { post } = Astro.props;
-const position = posts.findIndex(item => item.slug === post.slug);
-const adjacent = [posts[position - 1], posts[position + 1]].filter(Boolean);
 const category = categoryFor(post.slug);
 const categoryName = categoryLabel(category);
+const localGroup = locationGroups.find(group => group.suburbs.some(suburb => suburb.slug === post.slug));
+const localPeers = localGroup?.suburbs.map(suburb => suburb.slug).filter(slug => slug && slug !== post.slug) ?? [];
+const preferred = category === 'local-guides'
+  ? [storageOptions[0].slug, ...localPeers]
+  : category === 'storage-options'
+    ? ['why-choose-west-auckland-storage-for-your-long-term-storage-needs', 'why-choose-west-auckland-storage-for-your-short-term-storage-needs', 'boat-storage-at-west-auckland-storage']
+    : storageOptions.slice(0, 3).map(option => option.slug);
+const related = [...new Set(preferred)].filter(slug => slug !== post.slug).map(slug => posts.find(item => item.slug === slug)).filter(Boolean).slice(0, 3);
+const serviceLinks = storageOptions.filter(option => option.slug !== post.slug).slice(0, 3);
 ---
 <main id="main">
   <header class="article-header section-pad">
     <div class="container">
-      <nav class="article-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">From the yard</a></nav>
+      <Breadcrumbs />
       <p class="eyebrow">From the yard</p>
       <h1>{post.title}</h1>
       <p class="article-meta"><time datetime={post.date}>{post.dateLabel}</time> · By <a href="/author/isaac/">{post.author}</a> · <a href={`/category/${category}/`}>{categoryName}</a></p>
@@ -29,6 +39,8 @@ const categoryName = categoryLabel(category);
         <a class="button button-bright" href="/contact/">Ask about space →</a>
         <a class="article-aside-link" href="/services/">Explore our storage options</a>
         <a class="article-aside-link" href="/storage-near-you/">Storage near you</a>
+        <nav aria-label="Storage options for this guide">
+          {serviceLinks.map(option => <a class="article-aside-link" href={`/${option.slug}/`}>{option.label} in Glendene</a>)}
         <p class="archive-note">This article was published in {post.date.slice(0, 4)}. Please check with the yard for current facilities, access and availability.</p>
       </aside>
     </div>
@@ -37,7 +49,7 @@ const categoryName = categoryLabel(category);
     <div class="container">
       <p class="eyebrow">Keep reading</p>
       <div class="related-grid">
-        {adjacent.map(item => <a class="related-card" href={`/${item.slug}/`}><h3>{item.title}</h3><span class="text-link">Read article →</span></a>)}
+        {related.map(item => <a class="related-card" href={`/${item.slug}/`}><h3>{item.title}</h3><span class="text-link">Read article →</span></a>)}
       </div>
     </div>
   </nav>

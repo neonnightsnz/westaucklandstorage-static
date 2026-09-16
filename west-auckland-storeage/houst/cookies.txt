@@ -1,5 +1,0 @@
-# HTTrack Website Copier Cookie File
-# This file format is compatible with Netscape cookies
-www.houst.com	TRUE	/	FALSE	1999999999	_cfuvid	uiQxoaMEQGJjeR7bOdU5ri00oKW6ynMSO.m7G74g8aw-1788600144.914706-1.0.1.1-RyiJ0QEjUp9xuoS9wMVTpGuopDxf8BPz9NBHqMGWU3w
-www.houst.com	TRUE	/	FALSE	1999999999	SameSite	None
-

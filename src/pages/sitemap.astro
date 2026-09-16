@@ -2,12 +2,14 @@
 import PageLayout from '../layouts/PageLayout.astro';
 import { posts, archives } from '../data/blog';
 import { storageOptions } from '../data/sitePages';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 const mainPages = [{ slug: '', title: 'Home' }, { slug: 'about/', title: 'About' }, { slug: 'services/', title: 'Services' }, { slug: 'contact/', title: 'Contact' }, { slug: 'blog/', title: 'From the yard' }];
 const guides = posts.filter(post => !storageOptions.some(option => option.slug === post.slug));
 ---
 <PageLayout title="Sitemap | West Auckland Storage" description="Find every page, storage article and local guide on West Auckland Storage.">
   <main id="main" class="section-pad">
     <div class="container sitemap-content">
+      <Breadcrumbs />
       <header class="sitemap-header"><p class="eyebrow">Explore the site</p><h1>Find your<br /><em>way around.</em></h1><p>Storage options, local guides and a direct line to the yard.</p></header>
       <div class="sitemap-grid">
         <section class="sitemap-panel"><h2>Main pages</h2><ul>{mainPages.map(page => <li><a href={`/${page.slug}`}>{page.title} <span aria-hidden="true">↗</span></a></li>)}</ul></section>

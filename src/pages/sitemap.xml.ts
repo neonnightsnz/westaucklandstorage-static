@@ -5,14 +5,11 @@ export const prerender = true;
 
 export function GET({ site }) {
   const origin = site?.origin ?? "https://westaucklandstorage.co.nz";
-  const today = new Date().toISOString().slice(0, 10);
-  const urls = [...new Set(["/", "/sitemap/", "/design-system/", ...pages.map((page) => `/${page.slug}/`), ...posts.map(post => `/${post.slug}/`), ...archives.map(archive => `/${archive.slug}/`)])];
-  const lastmodFor = (path) => {
-    const post = posts.find(candidate => `/${candidate.slug}/` === path);
-    return post ? post.date : today;
-  };
+  // Publication dates are not modification dates. Omit lastmod until editorial
+  // modification dates are maintained; rebuilding must not claim fresh content.
+  const urls = [...new Set(["/", "/sitemap/", ...pages.map((page) => `/${page.slug}/`), ...posts.map(post => `/${post.slug}/`), ...archives.map(archive => `/${archive.slug}/`)])];
   const body = urls
-    .map((path) => `  <url><loc>${origin}${path}</loc><lastmod>${lastmodFor(path)}</lastmod></url>`)
+    .map((path) => `  <url><loc>${origin}${path}</loc></url>`)
     .join("\n");
 
   return new Response(`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${body}\n</urlset>`, {
