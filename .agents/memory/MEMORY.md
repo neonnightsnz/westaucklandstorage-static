@@ -1,0 +1,1 @@
+- [Astro Replit workflow](astro-replit-workflow.md) — keep Astro 7 foregrounded with ASTRO_DEV_BACKGROUND=1 so the preview workflow retains port 5000.

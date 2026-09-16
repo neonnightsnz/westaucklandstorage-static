@@ -1,0 +1,80 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en-NZ">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#145693" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header interior-header">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="West Auckland Storage home">
+          <img src="/images/logo.png" alt="West Auckland Storage" width="221" height="259" />
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span class="sr-only">Toggle navigation</span>
+          <span></span><span></span>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+          <a href="/about/">About</a>
+          <a href="/services/">Services</a>
+          <a href="/blog/">From the yard</a>
+          <a href="/contact/">Contact</a>
+          <a class="nav-call" href="tel:098184586">Call 09 818 4586 <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <slot />
+
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <a class="brand brand-footer" href="/" aria-label="West Auckland Storage home">
+          <img src="/images/logo.png" alt="West Auckland Storage" width="221" height="259" />
+        </a>
+        <p>Secure, affordable storage<br />close to home.</p>
+        <div class="footer-links">
+          <a href="/services/">What we store</a>
+          <a href="/about/">Why us</a>
+          <a href="/contact/">Get a quote</a>
+        </div>
+        <div class="footer-address">Span Farm Boat Yard<br />20 Akatea Road, Glendene</div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© <span data-year>2026</span> West Auckland Storage</span>
+        <span>Part of Span Farm Boat Yard Ltd</span>
+      </div>
+    </footer>
+
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const siteNav = document.querySelector("#site-nav");
+      menuToggle?.addEventListener("click", () => {
+        const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!isOpen));
+        siteNav?.classList.toggle("is-open", !isOpen);
+      });
+      siteNav?.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
+        menuToggle?.setAttribute("aria-expanded", "false");
+        siteNav?.classList.remove("is-open");
+      }));
+      const year = document.querySelector("[data-year]");
+      if (year) year.textContent = String(new Date().getFullYear());
+    </script>
+  </body>
+</html>

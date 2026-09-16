@@ -1,0 +1,278 @@
+---
+import "../styles/global.css";
+
+const services = [
+  {
+    number: "01",
+    title: "Boat storage",
+    copy: "Keep your boat close to home, out of the driveway, and ready for the next trip. Trailer boats, launches, yachts and jet skis are welcome.",
+    image: "/images/boat-hardstand.jpg",
+  },
+  {
+    number: "02",
+    title: "Caravan & trailer storage",
+    copy: "Free up the driveway between trips with straightforward outdoor storage on flexible short or long-term arrangements.",
+    image: "/images/trailer-storage.jpg",
+  },
+  {
+    number: "03",
+    title: "Vehicles & gear",
+    copy: "Cars, 4WDs, utes, trucks, trailers, kayaks and more. Tell us what you have and we’ll work out a practical spot.",
+    image: "/images/boats-yard.jpg",
+  },
+];
+
+const faqs = [
+  {
+    question: "Where is West Auckland Storage?",
+    answer:
+      "We’re at Span Farm Boat Yard, 20 Akatea Road, Glendene, Waitakere 0602 — close to the communities we serve across West Auckland.",
+  },
+  {
+    question: "What can I store?",
+    answer:
+      "We store boats, caravans, trailers, cars, 4WDs, utes, trucks, motorbikes, kayaks and other recreational gear. Get in touch with the size and type of item you have and we’ll talk through the options.",
+  },
+  {
+    question: "Can I store something short-term?",
+    answer:
+      "Yes. We can discuss short stays, winter storage and longer-term arrangements. We keep the setup straightforward and invoice monthly.",
+  },
+  {
+    question: "Is slipway access available?",
+    answer:
+      "Slipway access is available for smaller trailer boats when operational. Ask us about current access and suitability before you arrive so we can give you the right answer.",
+  },
+];
+---
+
+<html lang="en-NZ">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Secure, affordable boat and caravan storage close to home in West Auckland. Store at Span Farm Boat Yard in Glendene." />
+    <meta name="theme-color" content="#145693" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>West Auckland Storage | Boat, Caravan & Vehicle Storage</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="West Auckland Storage home">
+          <img src="/images/logo.png" alt="West Auckland Storage" width="221" height="259" />
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span class="sr-only">Toggle navigation</span>
+          <span></span><span></span>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+          <a href="/services/">What we store</a>
+          <a href="/about/">Why us</a>
+          <a href="#faq">Questions</a>
+          <a href="/contact/">Contact</a>
+          <a class="nav-call" href="tel:098184586">Call 09 818 4586 <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="hero-image" aria-hidden="true"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <p class="eyebrow eyebrow-light">Span Farm Boat Yard · Glendene</p>
+          <h1>Keep it close.<br /><em>Keep it sorted.</em></h1>
+          <p class="hero-lede">Secure outdoor storage for boats, caravans, trailers and gear — right here in West Auckland.</p>
+          <div class="hero-actions">
+            <a class="button button-bright" href="#contact">Get a quote <span aria-hidden="true">→</span></a>
+            <a class="text-link text-link-light" href="tel:098184586">Talk to the yard <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-note">
+            <span class="note-line"></span>
+            <span>Close to home. Easy to launch. No marina price tag.</span>
+          </div>
+        </div>
+        <div class="hero-stamp" aria-hidden="true">
+          <span>WEST</span><strong>AUCKLAND</strong><span>STORAGE</span>
+        </div>
+      </section>
+
+      <section class="intro section-pad">
+        <div class="container intro-grid">
+          <div>
+            <p class="eyebrow">A working boat yard</p>
+            <h2>Storage that makes<br /><span>sense.</span></h2>
+          </div>
+          <div class="intro-copy">
+            <p class="large-copy">You don’t need a marina. You need somewhere secure, close to home, and easy to get to when the weekend comes around.</p>
+            <p>West Auckland Storage is part of Span Farm Boat Yard in Glendene. We’ve been looking after boats, caravans and recreational gear for local owners for over 15 years.</p>
+            <a class="text-link" href="#why-us">See why people use us <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="storage" class="storage-section section-pad">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Bring us what you’ve got</p>
+              <h2>Room for the<br /><span>good stuff.</span></h2>
+            </div>
+            <p>From a small trailer boat to a caravan that needs a home between trips, we’ll find a practical spot for it.</p>
+          </div>
+          <div class="service-grid">
+            {services.map((service) => (
+              <article class="service-card">
+                <div class="service-image">
+                  <img src={service.image} alt={service.title} loading="lazy" />
+                  <span class="service-number">{service.number}</span>
+                </div>
+                <div class="service-body">
+                  <h3>{service.title}</h3>
+                  <p>{service.copy}</p>
+                  <a class="text-link" href="#contact">Ask about space <span aria-hidden="true">→</span></a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="why-us" class="why-section">
+        <div class="why-photo">
+          <img src="/images/yard-boat.jpg" alt="Boat stored at the Span Farm Boat Yard" loading="lazy" />
+          <span class="photo-caption">20 Akatea Road · Glendene</span>
+        </div>
+        <div class="why-content section-pad">
+          <p class="eyebrow eyebrow-light">Why West Auckland Storage</p>
+          <h2>Run by people<br />who know <em>boats.</em></h2>
+          <p class="why-lede">This isn’t a call centre or a row of anonymous units. It’s a real boat yard, run by people who understand what’s being stored and why it matters.</p>
+          <ul class="check-list">
+            <li><span>01</span><div><strong>Close to home</strong><small>Right in Glendene, serving West Auckland.</small></div></li>
+            <li><span>02</span><div><strong>Fair value</strong><small>Useful storage without the marina price tag.</small></div></li>
+            <li><span>03</span><div><strong>No fuss</strong><small>Quick quotes, flexible terms, monthly invoicing.</small></div></li>
+          </ul>
+          <a class="button button-outline-light" href="#contact">Talk to the team <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+
+      <section class="location-section section-pad">
+        <div class="container location-grid">
+          <div class="location-copy">
+            <p class="eyebrow">Find your spot</p>
+            <h2>West Auckland,<br /><span>sorted.</span></h2>
+            <p>We’re at Span Farm Boat Yard in Glendene — handy for boat owners across Waitakere and West Auckland.</p>
+            <address>20 Akatea Road<br />Glendene, Waitakere 0602</address>
+            <a class="text-link" href="https://www.google.com/maps/search/?api=1&query=20+Akatea+Road+Glendene+Auckland+0602" target="_blank" rel="noreferrer">Open in Google Maps <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="location-image">
+            <img src="/images/glendene.jpg" alt="Auckland landscape near Glendene" loading="lazy" />
+            <div class="location-pin" aria-hidden="true"><span>20</span><small>AKATEA<br />ROAD</small></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="faq-section section-pad">
+        <div class="container faq-grid">
+          <div>
+            <p class="eyebrow">Good to know</p>
+            <h2>Questions,<br /><span>answered.</span></h2>
+          </div>
+          <div class="faq-list">
+            {faqs.map((faq, index) => (
+              <details open={index === 0}>
+                <summary><span>{faq.question}</span><b aria-hidden="true">+</b></summary>
+                <p>{faq.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section section-pad">
+        <div class="container contact-grid">
+          <div class="contact-intro">
+            <p class="eyebrow eyebrow-light">Ready to get sorted?</p>
+            <h2>Tell us what<br /><em>you’ve got.</em></h2>
+            <p>Give us a few details and we’ll come back to you with the next step. Or call the yard if you’d rather have a chat.</p>
+            <a class="contact-phone" href="tel:098184586">09 818 4586 <span>↗</span></a>
+            <a class="contact-email" href="mailto:info@westaucklandstorage.co.nz">info@westaucklandstorage.co.nz</a>
+          </div>
+          <form class="quote-form" data-contact-form>
+            <div class="form-row">
+              <label>Your name <input name="name" required autocomplete="name" /></label>
+              <label>Phone or email <input name="contact" required autocomplete="email" /></label>
+            </div>
+            <label>What are you storing?
+              <select name="item" required>
+                <option value="">Choose one</option>
+                <option>Boat</option>
+                <option>Caravan</option>
+                <option>Trailer</option>
+                <option>Vehicle or other gear</option>
+              </select>
+            </label>
+            <label>Anything else we should know? <textarea name="message" rows="4" placeholder="Size, timing, access needs…"></textarea></label>
+            <button class="button button-bright" type="submit">Start the conversation <span aria-hidden="true">→</span></button>
+            <p class="form-note">This opens your email app with the details filled in.</p>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <a class="brand brand-footer" href="/" aria-label="West Auckland Storage home">
+          <img src="/images/logo.png" alt="West Auckland Storage" width="221" height="259" />
+        </a>
+        <p>Secure, affordable storage<br />close to home.</p>
+        <div class="footer-links">
+            <a href="/services/">What we store</a>
+            <a href="/about/">Why us</a>
+            <a href="/contact/">Get a quote</a>
+        </div>
+        <div class="footer-address">Span Farm Boat Yard<br />20 Akatea Road, Glendene</div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© <span data-year>2026</span> West Auckland Storage</span>
+        <span>Part of Span Farm Boat Yard Ltd</span>
+      </div>
+    </footer>
+
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const siteNav = document.querySelector("#site-nav");
+      menuToggle?.addEventListener("click", () => {
+        const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!isOpen));
+        siteNav?.classList.toggle("is-open", !isOpen);
+      });
+      siteNav?.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
+        menuToggle?.setAttribute("aria-expanded", "false");
+        siteNav?.classList.remove("is-open");
+      }));
+
+      const form = document.querySelector("[data-contact-form]");
+      const status = document.querySelector(".form-status");
+      form?.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const data = new FormData(form);
+        const subject = `Storage enquiry from ${data.get("name")}`;
+        const body = [
+          `Name: ${data.get("name")}`,
+          `Phone or email: ${data.get("contact")}`,
+          `Storing: ${data.get("item")}`,
+          `Details: ${data.get("message") || "None provided"}`,
+        ].join("\n");
+        window.location.href = `mailto:info@westaucklandstorage.co.nz?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        if (status) status.textContent = "Your email app should open now.";
+      });
+
+      const year = document.querySelector("[data-year]");
+      if (year) year.textContent = String(new Date().getFullYear());
+    </script>
+  </body>
+</html>
