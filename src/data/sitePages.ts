@@ -89,6 +89,41 @@ export const pages = [
       "services",
       "about"
     ]
+  },
+  {
+    "slug": "storage-near-you",
+    "eyebrow": "Covering West Auckland",
+    "title": "Storage near",
+    "highlight": "you.",
+    "description": "Boat, caravan and vehicle storage for owners across West Auckland — from our Glendene yard we look after boats from Henderson, Massey, Te Atatu, New Lynn, Titirangi and beyond.",
+    "image": "/images/glendene.jpg",
+    "kind": "locations",
+    "sections": [
+      {
+        "heading": "One yard, across the west",
+        "paragraphs": [
+          "West Auckland Storage sits at Span Farm Boat Yard in Glendene, right in the middle of the west. That means most owners are only a short drive from their boat, caravan or trailer — close enough to check on it, clean it, or hook up and head away for the weekend.",
+          "Below are the West Auckland suburbs we look after most often, each with a local guide. If your suburb isn’t listed, get in touch — if you can get to Glendene, we can almost certainly help."
+        ]
+      },
+      {
+        "heading": "Why owners travel to the yard",
+        "paragraphs": [
+          "It comes back to the same three things: location, price and slipway access for smaller trailer boats when it’s operational. No marina waitlist, no marina price tag, and no need to drive across the city to reach your own boat."
+        ]
+      }
+    ],
+    "bullets": [
+      "Close to home across West Auckland",
+      "Fair value, no marina price tag",
+      "Slipway access when operational",
+      "Short and longer-term options"
+    ],
+    "related": [
+      "services",
+      "boat-storage-at-west-auckland-storage",
+      "contact"
+    ]
   }
 ];
 
