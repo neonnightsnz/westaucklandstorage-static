@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Architecture review for westaucklandstorage-static</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module">
+      import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+      mermaid.initialize({ startOnLoad: true, theme: "neutral", securityLevel: "loose" });
+    </script>
+    <style>
+      .seam { stroke-dasharray: 4 4; }
+      .deep { background: linear-gradient(135deg, #0f172a, #1e293b); }
+      .hatch { background-image: repeating-linear-gradient(45deg, rgba(220,38,38,.16) 0 6px, transparent 6px 12px); }
+    </style>
+  </head>
+  <body class="bg-stone-50 text-slate-900 font-sans">
+    <main class="max-w-5xl mx-auto px-6 py-12 space-y-14">
+
+      <header class="border-b border-slate-200 pb-8">
+        <h1 class="font-serif text-4xl tracking-tight">Architecture review &mdash; westaucklandstorage-static</h1>
+        <p class="mt-2 text-sm text-slate-500">16 September 2026 &middot; Astro static site &middot; 5 candidates</p>
+        <div class="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-xs uppercase tracking-wider text-slate-500">
+          <span class="flex items-center gap-2"><span class="inline-block h-4 w-6 border border-slate-400 bg-white"></span> module</span>
+          <span class="flex items-center gap-2"><svg width="34" height="8"><line x1="0" y1="4" x2="34" y2="4" stroke="#64748b" stroke-width="2" class="seam"/></svg> seam</span>
+          <span class="flex items-center gap-2"><svg width="34" height="8"><line x1="0" y1="4" x2="34" y2="4" stroke="#dc2626" stroke-width="2"/></svg> leakage</span>
+          <span class="flex items-center gap-2"><span class="inline-block h-4 w-6 deep"></span> deep module</span>
+        </div>
+        <p class="mt-6 text-sm text-slate-600">No <code class="font-mono text-xs">CONTEXT.md</code> and no <code class="font-mono text-xs">docs/adr/</code> in the repo yet &mdash; candidates below use the repo's own nouns (storage option, archive, marketing page, NAP).</p>
+      </header>
+
+      <section id="candidates" class="space-y-14">
+
+        <!-- ===================== CANDIDATE 1 ===================== -->
+        <article class="scroll-mt-8" id="c1">
+          <div class="flex flex-wrap items-center gap-3">
+            <h2 class="font-serif text-2xl">1. Name the business facts once</h2>
+            <span class="rounded-full bg-emerald-100 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider text-emerald-800">Strong</span>
+            <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider text-slate-600">in-process</span>
+          </div>
+
+          <p class="mt-4 font-mono text-sm text-slate-600">
+            src/data/seo.ts &middot; src/data/sitePages.ts &middot; src/layouts/PageLayout.astro &middot;
+            src/pages/index.astro &middot; src/pages/[...slug].astro &middot; src/pages/404.astro &middot;
+            src/data/curated-blog.mjs &middot; functions/api/contact.js
+          </p>
+
+          <div class="mt-6 grid gap-4 md:grid-cols-2">
+            <div class="rounded-lg border border-slate-200 bg-white p-4">
+              <p class="mb-3 text-xs uppercase tracking-wider text-slate-500">Before &mdash; one fact, eight shallow copies</p>
+              <div class="space-y-1.5 text-xs">
+                <div class="flex items-center justify-between rounded border border-red-300 hatch px-2 py-1.5"><span class="font-mono">PageLayout</span><span class="font-mono text-red-700">09 818 4586</span></div>
+                <div class="flex items-center justify-between rounded border border-red-300 hatch px-2 py-1.5"><span class="font-mono">index.astro</span><span class="font-mono text-red-700">09 818 4586</span></div>
+                <div class="flex items-center justify-between rounded border border-red-300 hatch px-2 py-1.5"><span class="font-mono">[...slug].astro</span><span class="font-mono text-red-700">09 818 4586</span></div>
+                <div class="flex items-center justify-between rounded border border-red-300 hatch px-2 py-1.5"><span class="font-mono">404.astro</span><span class="font-mono text-red-700">09 818 4586</span></div>
+                <div class="flex items-center justify-between rounded border border-red-300 hatch px-2 py-1.5"><span class="font-mono">sitePages.ts</span><span class="font-mono text-red-700">09 818 4586</span></div>
+                <div class="flex items-center justify-between rounded border border-red-300 hatch px-2 py-1.5"><span class="font-mono">seo.ts</span><span class="font-mono text-red-700">+6498184586</span></div>
+                <div class="flex items-center justify-between rounded border border-red-300 hatch px-2 py-1.5"><span class="font-mono">curated-blog.mjs</span><span class="font-mono text-red-700">09 818 4586</span></div>
+                <div class="flex items-center justify-between rounded border border-red-300 hatch px-2 py-1.5"><span class="font-mono">contact.js</span><span class="font-mono text-red-700">from:</span></div>
+              </div>
+              <p class="mt-3 text-xs text-red-700">Visible address and schema address are authored separately &mdash; nothing keeps them equal.</p>
+            </div>
+
+            <div class="rounded-lg border border-slate-200 bg-white p-4">
+              <p class="mb-3 text-xs uppercase tracking-wider text-slate-500">After &mdash; one deep module behind the seam</p>
+              <div class="deep rounded-md px-3 py-4 text-white">
+                <p class="text-xs uppercase tracking-wider text-slate-300">src/data/site.ts</p>
+                <p class="mt-1 font-mono text-xs">NAP &middot; telHref &middot; mailto &middot; addressLines &middot; geo &middot; entity</p>
+              </div>
+              <svg width="100%" height="14" class="my-1"><line x1="50%" y1="0" x2="50%" y2="14" stroke="#64748b" stroke-width="2" class="seam"/></svg>
+              <div class="grid grid-cols-2 gap-1.5 text-xs">
+                <span class="rounded border border-slate-300 bg-slate-50 px-2 py-1.5 font-mono">PageLayout</span>
+                <span class="rounded border border-slate-300 bg-slate-50 px-2 py-1.5 font-mono">index.astro</span>
+                <span class="rounded border border-slate-300 bg-slate-50 px-2 py-1.5 font-mono">[...slug].astro</span>
+                <span class="rounded border border-slate-300 bg-slate-50 px-2 py-1.5 font-mono">404.astro</span>
+                <span class="rounded border border-slate-300 bg-slate-50 px-2 py-1.5 font-mono">sitePages.ts</span>
+                <span class="rounded border border-slate-300 bg-slate-50 px-2 py-1.5 font-mono">seo.ts</span>
+              </div>
+              <p class="mt-3 text-xs text-emerald-700">Schema and visible text read the same interface &mdash; drift becomes impossible.</p>
+            </div>
+          </div>
+
+          <dl class="mt-5 space-y-2 text-sm">
+            <div class="flex gap-3"><dt class="w-20 shrink-0 text-xs uppercase tracking-wider text-slate-500">Problem</dt><dd>The yard's NAP is re-typed in eight modules, so one change means eight edits and the structured-data address can silently drift from the visible one.</dd></div>
+            <div class="flex gap-3"><dt class="w-20 shrink-0 text-xs uppercase tracking-wider text-slate-500">Solution</dt><dd>Add a deep <code class="font-mono text-xs">site.ts</code> module that owns the business facts and the derived <code class="font-mono text-xs">tel:</code> / <code class="font-mono text-xs">mailto:</code> forms; every other module imports it.</dd></div>
+          </dl>
+
+          <ul class="mt-4 grid gap-2 text-sm sm:grid-cols-2">
+            <li class="flex gap-2"><span class="text-emerald-600">&bull;</span> locality: one module owns the phone</li>
+            <li class="flex gap-2"><span class="text-emerald-600">&bull;</span> leverage: eight call sites, one interface</li>
+            <li class="flex gap-2"><span class="text-emerald-600">&bull;</span> interface shrinks; literals disappear</li>
+            <li class="flex gap-2"><span class="text-emerald-600">&bull;</span> schema cannot drift from visible text</li>
+          </ul>
+        </article>
+
+        <!-- ===================== CANDIDATE 2 ===================== -->
+        <article class="scroll-mt-8" id="c2">
+          <div class="flex flex-wrap items-center gap-3">
+            <h2 class="font-serif text-2xl">2. Derive the homepage cards from storageOptions</h2>
+            <span class="rounded-full bg-emerald-100 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider text-emerald-800">Strong</span>
+            <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider text-slate-600">in-process</span>
+          </div>
+
+          <p class="mt-4 font-mono text-sm text-slate-600">src/pages/index.astro &middot; src/data/sitePages.ts</p>
+
+          <div class="mt-6 grid gap-4 md:grid-cols-2">
+            <div class="rounded-lg border border-slate-200 bg-white p-4">
+              <p class="mb-3 text-xs uppercase tracking-wider text-slate-500">Before &mdash; two modules, same three options</p>
+              <pre class="mermaid">
+flowchart LR
+  A["index.astro<br/>services array"] -.leak.-> B["sitePages.ts<br/>storageOptions"]
+  classDef leak stroke:#dc2626,stroke-width:2px;
+  class A,B leak
+              </pre>
+              <p class="mt-2 text-xs text-red-700">Slugs and labels duplicated; a rename in one module breaks the other's links.</p>
+            </div>
+            <div class="rounded-lg border border-slate-200 bg-white p-4">
+              <p class="mb-3 text-xs uppercase tracking-wider text-slate-500">After &mdash; homepage reads the one interface</p>
+              <pre class="mermaid">
+flowchart LR
+  B["sitePages.ts<br/>storageOptions"] --> C["index.astro<br/>cards derived by slug"]
+  C --> D["bespoke blurb, one place"]
+  classDef deep fill:#0f172a,color:#fff,stroke:#0f172a;
+  class D deep
+              </pre>
+              <p class="mt-2 text-xs text-emerald-700">One module owns the storage options; the homepage only adds its own copy.</p>
+            </div>
+          </div>
+
+          <dl class="mt-5 space-y-2 text-sm">
+            <div class="flex gap-3"><dt class="w-20 shrink-0 text-xs uppercase tracking-wider text-slate-500">Problem</dt><dd><code class="font-mono text-xs">index.astro</code> hard-codes three storage options that <code class="font-mono text-xs">storageOptions</code> already describes, so the two drift.</dd></div>
+            <div class="flex gap-3"><dt class="w-20 shrink-0 text-xs uppercase tracking-wider text-slate-500">Solution</dt><dd>Derive the three cards from <code class="font-mono text-xs">storageOptions</code> by slug; keep only the bespoke homepage blurb local.</dd></div>
+          </dl>
+
+          <ul class="mt-4 grid gap-2 text-sm sm:grid-cols-2">
+            <li class="flex gap-2"><span class="text-emerald-600">&bull;</span> delete the duplicate array</li>
+            <li class="flex gap-2"><span class="text-emerald-600">&bull;</span> one module owns storage options</li>
+            <li class="flex gap-2"><span class="text-emerald-600">&bull;</span> leverage: nine and three agree</li>
+            <li class="flex gap-2"><span class="text-emerald-600">&bull;</span> rename can no longer break a link</li>
+          </ul>
+        </article>
+
+        <!-- ===================== CANDIDATE 3 ===================== -->
+        <article class="scroll-mt-8" id="c3">
+          <div class="flex flex-wrap items-center gap-3">
+            <h2 class="font-serif text-2xl">3. Give the marketing page its own module</h2>
+            <span class="rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider text-amber-800">Worth exploring</span>
+            <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider text-slate-600">in-process</span>
+          </div>
+
+          <p class="mt-4 font-mono text-sm text-slate-600">src/pages/[...slug].astro &middot; src/components/BlogArticle.astro &middot; src/components/BlogArchive.astro</p>
+
+          <div class="mt-6 grid gap-4 md:grid-cols-2">
+            <div class="rounded-lg border border-slate-200 bg-white p-4">
+              <p class="mb-3 text-xs uppercase tracking-wider text-slate-500">Before &mdash; one module resolves and renders everything</p>
+              <div class="space-y-1 text-xs">
+                <div class="rounded border border-red-300 hatch px-2 py-1.5 font-mono">[...slug].astro &middot; getStaticPaths</div>
+                <div class="rounded border border-red-300 hatch px-2 py-1.5 font-mono">[...slug].astro &middot; post ? Article : archive ? Archive : &hellip;</div>
+                <div class="rounded border border-slate-300 bg-slate-50 px-2 py-1.5 font-mono text-slate-500">kind contact &rarr; contact block</div>
+                <div class="rounded border border-slate-300 bg-slate-50 px-2 py-1.5 font-mono text-slate-500">slug services &rarr; service grid</div>
+                <div class="rounded border border-slate-300 bg-slate-50 px-2 py-1.5 font-mono text-slate-500">kind locations &rarr; locations block</div>
+                <div class="rounded border border-slate-300 bg-slate-50 px-2 py-1.5 font-mono text-slate-500">related &rarr; related block</div>
+              </div>
+              <p class="mt-3 text-xs text-red-700">Article and archive already have deep modules; the page shape never got one.</p>
+            </div>
+            <div class="rounded-lg border border-slate-200 bg-white p-4">
+              <p class="mb-3 text-xs uppercase tracking-wider text-slate-500">After &mdash; thin resolver, deep renderers</p>
+              <div class="rounded border border-slate-300 bg-slate-50 px-2 py-1.5 text-xs font-mono">[...slug].astro &middot; route &rarr; shape</div>
+              <svg width="100%" height="14" class="my-1"><line x1="50%" y1="0" x2="50%" y2="14" stroke="#64748b" stroke-width="2" class="seam"/></svg>
+              <div class="deep rounded-md px-2 py-2 text-white text-xs font-mono">MarketingPage.astro &middot; one interface: page</div>
+              <div class="mt-1 grid grid-cols-2 gap-1 text-xs">
+                <span class="rounded border border-slate-300 bg-slate-50 px-2 py-1.5 font-mono">BlogArticle</span>
+                <span class="rounded border border-slate-300 bg-slate-50 px-2 py-1.5 font-mono">BlogArchive</span>
+              </div>
+              <p class="mt-3 text-xs text-emerald-700">All three shapes sit behind the same kind of seam.</p>
+            </div>
+          </div>
+
+          <dl class="mt-5 space-y-2 text-sm">
+            <div class="flex gap-3"><dt class="w-20 shrink-0 text-xs uppercase tracking-wider text-slate-500">Problem</dt><dd>The catch-all module's interface is nearly as wide as its implementation: route resolution and four page-specific render blocks live together.</dd></div>
+            <div class="flex gap-3"><dt class="w-20 shrink-0 text-xs uppercase tracking-wider text-slate-500">Solution</dt><dd>Extract a <code class="font-mono text-xs">MarketingPage</code> module taking <code class="font-mono text-xs">page</code>, leaving the router a resolver that maps route to shape.</dd></div>
+          </dl>
+
+          <ul class="mt-4 grid gap-2 text-sm sm:grid-cols-2">
+            <li class="flex gap-2"><span class="text-emerald-600">&bull;</span> locality: page rendering in one module</li>
+            <li class="flex gap-2"><span class="text-emerald-600">&bull;</span> router narrows to a resolver</li>
+            <li class="flex gap-2"><span class="text-emerald-600">&bull;</span> interface shrinks; router stops growing</li>
+            <li class="flex gap-2"><span class="text-emerald-600">&bull;</span> matches the existing article seam</li>
+          </ul>
+        </article>
+
+        <!-- ===================== CANDIDATE 4 ===================== -->
+        <article class="scroll-mt-8" id="c4">
+          <div class="flex flex-wrap items-center gap-3">
+            <h2 class="font-serif text-2xl">4. One article-rules module for generator and guardrail</h2>
+            <span class="rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider text-amber-800">Worth exploring</span>
+            <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider text-slate-600">in-process</span>
+          </div>
+
+          <p class="mt-4 font-mono text-sm text-slate-600">scripts/apply-blog-content.mjs &middot; scripts/check-site.mjs &middot; scripts/audit-seo.mjs</p>
+
+          <div class="mt-6 grid gap-4 md:grid-cols-2">
+            <div class="rounded-lg border border-slate-200 bg-white p-4">
+              <p class="mb-3 text-xs uppercase tracking-wider text-slate-500">Before &mdash; three copies of the same helpers</p>
+              <pre class="mermaid">
+flowchart TB
+  A["apply-blog-content.mjs"] --- A1["decode + banned + fakeQuote + excerptOf"]
+  C["check-site.mjs"] --- C1["own length and content rules"]
+  D["audit-seo.mjs"] --- D1["decode again"]
+  classDef leak stroke:#dc2626,stroke-width:2px;
+  class A1,C1,D1 leak
+              </pre>
+              <p class="mt-2 text-xs text-red-700"><code class="font-mono">decode</code> is written three times; article validity is split across two modules.</p>
+            </div>
+            <div class="rounded-lg border border-slate-200 bg-white p-4">
+              <p class="mb-3 text-xs uppercase tracking-wider text-slate-500">After &mdash; one deep module behind the seam</p>
+              <pre class="mermaid">
+flowchart LR
+  G["apply-blog-content.mjs"] --> R["lib/article-rules.mjs<br/>validateArticle, decode, excerptOf"]
+  C["check-site.mjs"] --> R
+  A["audit-seo.mjs"] --> R
+  classDef deep fill:#0f172a,color:#fff,stroke:#0f172a;
+  class R deep
+              </pre>
+              <p class="mt-2 text-xs text-emerald-700">The generator cannot emit content the guardrail would reject.</p>
+            </div>
+          </div>
+
+          <dl class="mt-5 space-y-2 text-sm">
+            <div class="flex gap-3"><dt class="w-20 shrink-0 text-xs uppercase tracking-wider text-slate-500">Problem</dt><dd>What makes a valid article &mdash; length, banned claims, excerpt derivation &mdash; is owned twice, and <code class="font-mono text-xs">decode</code> three times, so the rules can diverge.</dd></div>
+            <div class="flex gap-3"><dt class="w-20 shrink-0 text-xs uppercase tracking-wider text-slate-500">Solution</dt><dd>Extract <code class="font-mono text-xs">scripts/lib/article-rules.mjs</code> exporting <code class="font-mono text-xs">validateArticle</code>, <code class="font-mono text-xs">decode</code> and <code class="font-mono text-xs">excerptOf</code>; both scripts import it.</dd></div>
+          </dl>
+
+          <ul class="mt-4 grid gap-2 text-sm sm:grid-cols-2">
+            <li class="flex gap-2"><span class="text-emerald-600">&bull;</span> delete two decode copies</li>
+            <li class="flex gap-2"><span class="text-emerald-600">&bull;</span> one interface for article validity</li>
+            <li class="flex gap-2"><span class="text-emerald-600">&bull;</span> generator and guardrail cannot diverge</li>
+            <li class="flex gap-2"><span class="text-emerald-600">&bull;</span> leverage: rules change once</li>
+          </ul>
+        </article>
+
+        <!-- ===================== CANDIDATE 5 ===================== -->
+        <article class="scroll-mt-8" id="c5">
+          <div class="flex flex-wrap items-center gap-3">
+            <h2 class="font-serif text-2xl">5. Derive the archive counts in the guardrail</h2>
+            <span class="rounded-full bg-slate-200 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider text-slate-700">Speculative</span>
+            <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider text-slate-600">in-process</span>
+          </div>
+
+          <p class="mt-4 font-mono text-sm text-slate-600">scripts/check-site.mjs &middot; src/data/blog.ts &middot; src/data/locations.ts</p>
+
+          <div class="mt-6 grid gap-4 md:grid-cols-2">
+            <div class="rounded-lg border border-slate-200 bg-white p-4">
+              <p class="mb-3 text-xs uppercase tracking-wider text-slate-500">Before &mdash; a second copy of the taxonomy</p>
+              <div class="space-y-2 text-xs">
+                <div>
+                  <p class="text-slate-500">blog.ts owns it</p>
+                  <div class="mt-1 h-4 rounded-sm bg-slate-700" style="width:72%"></div>
+                </div>
+                <div>
+                  <p class="text-slate-500">check-site.mjs re-states 19 / 9 / 6 / 4 / 10-10-10-4</p>
+                  <div class="mt-1 h-4 rounded-sm bg-slate-700 hatch border border-red-300" style="width:72%"></div>
+                </div>
+              </div>
+              <p class="mt-3 text-xs text-slate-600">Two interfaces for one taxonomy.</p>
+            </div>
+            <div class="rounded-lg border border-slate-200 bg-white p-4">
+              <p class="mb-3 text-xs uppercase tracking-wider text-slate-500">After &mdash; counts read from the source</p>
+              <div class="space-y-2 text-xs">
+                <div>
+                  <p class="text-slate-500">blog.ts exports, guardrail imports</p>
+                  <div class="mt-1 h-6 rounded-sm bg-slate-700" style="width:72%"></div>
+                </div>
+                <div>
+                  <p class="text-slate-500">no literals</p>
+                  <div class="mt-1 h-4 rounded-sm bg-slate-200 border border-slate-300" style="width:72%"></div>
+                </div>
+              </div>
+              <p class="mt-3 text-xs text-amber-700">Warning: the literals are also a tripwire &mdash; deriving removes a deliberate "pause and review" signal.</p>
+            </div>
+          </div>
+
+          <dl class="mt-5 space-y-2 text-sm">
+            <div class="flex gap-3"><dt class="w-20 shrink-0 text-xs uppercase tracking-wider text-slate-500">Problem</dt><dd>The archive and category counts are hand-maintained in the guardrail, duplicating the taxonomy <code class="font-mono text-xs">blog.ts</code> already computes.</dd></div>
+            <div class="flex gap-3"><dt class="w-20 shrink-0 text-xs uppercase tracking-wider text-slate-500">Solution</dt><dd>Import <code class="font-mono text-xs">archives</code> / <code class="font-mono text-xs">categories</code> into the guardrail and assert against derived totals.</dd></div>
+          </dl>
+
+          <ul class="mt-4 grid gap-2 text-sm sm:grid-cols-2">
+            <li class="flex gap-2"><span class="text-emerald-600">&bull;</span> counts derive from the taxonomy</li>
+            <li class="flex gap-2"><span class="text-emerald-600">&bull;</span> one interface for archive shape</li>
+            <li class="flex gap-2"><span class="text-amber-600">&bull;</span> loses the deliberate tripwire</li>
+          </ul>
+
+          <div class="mt-4 rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900">
+            Not an ADR conflict (there are no ADRs yet) &mdash; but the hard-coded numbers read as an intentional guardrail. Record the intent before changing it.
+          </div>
+        </article>
+
+      </section>
+
+      <!-- ===================== TOP RECOMMENDATION ===================== -->
+      <section id="top-recommendation">
+        <div class="rounded-xl border-2 border-slate-900 bg-white p-6">
+          <p class="text-xs uppercase tracking-wider text-slate-500">Top recommendation</p>
+          <h2 class="mt-2 font-serif text-2xl"><a class="underline decoration-emerald-500 decoration-2 underline-offset-4" href="#c1">1. Name the business facts once</a></h2>
+          <p class="mt-3 text-sm text-slate-700">Highest leverage: the NAP is the yard's most-repeated fact and the one local search depends on. One deep <code class="font-mono text-xs">site.ts</code> module removes eight shallow copies and stops the structured-data address drifting from the visible one &mdash; a correctness win, not just tidiness.</p>
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>
