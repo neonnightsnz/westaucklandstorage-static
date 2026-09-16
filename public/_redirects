@@ -1,0 +1,12 @@
+# Original WordPress slugs are served by the redesigned Astro pages.
+# Retire the HTTrack mirror directory prefixes, including old bookmarked URLs.
+/westaucklandstorage.co.nz / 301
+/westaucklandstorage.co.nz/ / 301
+/westaucklandstorage.co.nz/* /:splat 301
+/west-auckland-storeage / 301
+/west-auckland-storeage/ / 301
+/west-auckland-storeage/westaucklandstorage.co.nz / 301
+/west-auckland-storeage/westaucklandstorage.co.nz/ / 301
+/west-auckland-storeage/westaucklandstorage.co.nz/* /:splat 301
+/services/contact /contact/ 301
+/services/contact/ /contact/ 301

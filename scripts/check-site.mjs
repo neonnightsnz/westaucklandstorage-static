@@ -5,6 +5,15 @@ import posts from '../src/data/blogPosts.json' with { type: 'json' };
 
 const files = fs.readdirSync('dist', { recursive: true }).filter(file => file.endsWith('.html'));
 const broken = [];
+assert.ok(!fs.existsSync('index.html'), 'The copier splash page must not be a deployment entry point');
+const homepage = fs.readFileSync('dist/index.html', 'utf8');
+assert.ok(homepage.includes('class="hero"'), 'The Replit landing page must be the homepage');
+assert.ok(!homepage.includes('HTTrack'), 'The homepage must not contain the copier splash');
+assert.ok(!fs.existsSync('dist/westaucklandstorage.co.nz'), 'Do not publish the original mirror');
+const redirects = fs.readFileSync('dist/_redirects', 'utf8');
+assert.ok(redirects.includes('/westaucklandstorage.co.nz/ / 301'));
+assert.ok(redirects.includes('/westaucklandstorage.co.nz/* /:splat 301'));
+assert.ok(redirects.includes('/west-auckland-storeage/westaucklandstorage.co.nz/* /:splat 301'));
 for (const file of files) {
   const html = fs.readFileSync(path.join('dist', file), 'utf8');
   for (const [, url] of html.matchAll(/(?:href|src)="(\/[^"#?]*)[^\"]*"/g)) {
@@ -15,6 +24,7 @@ for (const file of files) {
 assert.deepEqual(broken, [], 'Broken internal links or images');
 const sitemap = fs.readFileSync('dist/sitemap.xml', 'utf8');
 const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => new URL(match[1]).pathname);
+assert.ok(urls.every(url => !url.includes('westaucklandstorage.co.nz')), 'Sitemap must use original paths, not mirror prefixes');
 assert.equal(new Set(urls).size, urls.length, 'Duplicate sitemap entries');
 for (const url of urls) assert.ok(fs.existsSync(path.join('dist', url, 'index.html')), `Missing sitemap target: ${url}`);
 for (const post of posts) {

@@ -12,6 +12,7 @@ const mainPages = [{ slug: '', title: 'Home' }, { slug: 'about/', title: 'About'
       <section><h2>Articles & local guides</h2><ul>{posts.map(post => <li><a href={`/${post.slug}/`}>{post.title}</a></li>)}</ul></section>
       <section><h2>Blog archives</h2><ul>{archives.map(archive => <li><a href={`/${archive.slug}/`}>{archive.base === 'blog' ? 'All articles' : archive.base === 'author/isaac' ? 'Articles by Isaac' : 'Uncategorized'} — Page {archive.number}</a></li>)}</ul></section>
       <a href="/sitemap.xml">XML sitemap</a>
+      <section><h2>Design system</h2><a href="/design-system/">West Auckland Storage design system</a></section>
     </div>
   </main>
 </PageLayout>
