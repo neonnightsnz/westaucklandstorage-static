@@ -1,0 +1,136 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import { pages } from "../data/sitePages";
+
+export const prerender = true;
+
+export function getStaticPaths() {
+  return pages.map((page) => ({
+    params: { slug: page.slug },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+const relatedPages = page.related
+  ?.map((slug) => pages.find((candidate) => candidate.slug === slug))
+  .filter(Boolean);
+---
+
+<PageLayout
+  title={`${page.title.replace(".", "")} ${page.highlight} | West Auckland Storage`}
+  description={page.description}
+>
+  <main id="main">
+    <section class="inner-hero" style={`--hero-image: url("${page.image}")`}>
+      <div class="inner-hero-overlay"></div>
+      <div class="container inner-hero-content">
+        <a class="breadcrumb" href="/">Home <span aria-hidden="true">/</span> {page.eyebrow}</a>
+        <p class="eyebrow eyebrow-light">{page.eyebrow}</p>
+        <h1>{page.title}<br /><em>{page.highlight}</em></h1>
+        <p class="hero-lede">{page.description}</p>
+      </div>
+    </section>
+
+    <section class="page-content section-pad">
+      <div class="container page-grid">
+        <article class="prose">
+          {page.sections.map((section) => (
+            <section>
+              <h2>{section.heading}</h2>
+              {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+            </section>
+          ))}
+          {page.kind === "contact" && (
+            <div class="contact-details">
+              <a class="contact-phone" href="tel:098184586">09 818 4586 <span>↗</span></a>
+              <a class="contact-email" href="mailto:info@westaucklandstorage.co.nz">info@westaucklandstorage.co.nz</a>
+              <address>20 Akatea Road<br />Glendene, Waitakere 0602</address>
+            </div>
+          )}
+        </article>
+        <aside class="page-aside">
+          <div class="aside-card">
+            <p class="eyebrow">Good to know</p>
+            <ul class="check-list check-list-dark">
+              {page.bullets.map((bullet) => <li><span aria-hidden="true">+</span><div><strong>{bullet}</strong></div></li>)}
+            </ul>
+            <a class="button button-bright" href="/contact/">Ask about space <span aria-hidden="true">→</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    {page.kind === "contact" && (
+      <section class="contact-section section-pad">
+        <div class="container contact-grid">
+          <div class="contact-intro">
+            <p class="eyebrow eyebrow-light">A quick enquiry</p>
+            <h2>Start the<br /><em>conversation.</em></h2>
+            <p>Fill in the basics and your email app will open with the details ready to send.</p>
+          </div>
+          <form class="quote-form" data-contact-form>
+            <div class="form-row">
+              <label>Your name <input name="name" required autocomplete="name" /></label>
+              <label>Phone or email <input name="contact" required autocomplete="email" /></label>
+            </div>
+            <label>What are you storing?
+              <select name="item" required>
+                <option value="">Choose one</option>
+                <option>Boat</option>
+                <option>Caravan</option>
+                <option>Trailer</option>
+                <option>Vehicle or other gear</option>
+              </select>
+            </label>
+            <label>Anything else we should know? <textarea name="message" rows="4" placeholder="Size, timing, access needs…"></textarea></label>
+            <button class="button button-bright" type="submit">Send enquiry <span aria-hidden="true">→</span></button>
+            <p class="form-note">This opens your email app with the details filled in.</p>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    )}
+
+    {relatedPages?.length > 0 && (
+      <section class="related-section section-pad">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Keep reading</p>
+              <h2>More from<br /><span>the yard.</span></h2>
+            </div>
+          </div>
+          <div class="related-grid">
+            {relatedPages.slice(0, 3).map((related) => (
+              <a class="related-card" href={`/${related.slug}/`}>
+                <span class="eyebrow">{related.eyebrow}</span>
+                <h3>{related.title} <em>{related.highlight}</em></h3>
+                <span class="text-link">Read more <span aria-hidden="true">→</span></span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+  </main>
+
+  {page.kind === "contact" && (
+    <script>
+      const form = document.querySelector("[data-contact-form]");
+      const status = document.querySelector(".form-status");
+      form?.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const data = new FormData(form);
+        const body = [
+          `Name: ${data.get("name")}`,
+          `Phone or email: ${data.get("contact")}`,
+          `Storing: ${data.get("item")}`,
+          `Details: ${data.get("message") || "None provided"}`,
+        ].join("\n");
+        window.location.href = `mailto:info@westaucklandstorage.co.nz?subject=${encodeURIComponent(`Storage enquiry from ${data.get("name")}`)}&body=${encodeURIComponent(body)}`;
+        if (status) status.textContent = "Your email app should open now.";
+      });
+    </script>
+  )}
+</PageLayout>
