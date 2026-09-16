@@ -1,7 +1,9 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
 import QuoteForm from "../components/QuoteForm.astro";
-import { featuredReviews, reviewCount, averageRating } from "../data/reviews";
+import { reviewCount, averageRating } from "../data/reviews";
+import ReviewSlider from "../components/ReviewSlider.astro";
+import { yearsSinceIncorporation } from "../data/company";
 
 const services = [
   {
@@ -35,8 +37,8 @@ const pillars = [
   },
   {
     number: "02",
-    title: "No marina price tag",
-    copy: "Fair value for a working yard: no marina fees, no marina waitlist, and flexible short or long-term terms.",
+    title: "A quote for your space",
+    copy: "Tell us what you are storing and its size. We will quote for the space it needs, with monthly invoicing.",
   },
   {
     number: "03",
@@ -67,9 +69,9 @@ const faqs = [
       "Yes. Plenty of owners use the yard just for winter or between trips, while others stay longer term. Terms are flexible, so it’s easy to start with one season and take it from there.",
   },
   {
-    question: "Is slipway access available?",
+    question: "What should I check before using the slipway?",
     answer:
-      "It’s a real option for smaller trailer boats, but only when it’s operational — it isn’t available every day. Call before you arrive and we’ll tell you straight whether it suits your boat.",
+      "Call 09 818 4586 before bringing your boat. Tell us its size and when you plan to arrive so we can confirm suitability and current access.",
   },
 ];
 ---
@@ -80,16 +82,16 @@ const faqs = [
         <div class="hero-image" aria-hidden="true"></div>
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-          <p class="eyebrow eyebrow-light">Span Farm Boat Yard · Glendene</p>
+          <p class="eyebrow eyebrow-light">Boat, caravan &amp; vehicle storage in Glendene</p>
           <h1>Keep it close.<br /><em>Keep it sorted.</em></h1>
-                    <p class="hero-lede">Boat, caravan and vehicle storage on outdoor hardstand in Glendene — close to home for owners right across West Auckland.</p>
+                    <p class="hero-lede">Outdoor hardstand at Span Farm Boat Yard. Close to home for owners across West Auckland.</p>
           <div class="hero-actions">
             <a class="button button-bright" href="#contact">Ask about space</a>
             <a class="text-link text-link-light" href="tel:098184586">Call 09 818 4586</a>
           </div>
           <div class="hero-note">
             <span class="note-line"></span>
-            <span>Close to home. Flexible terms. No marina price tag.</span>
+            <span>Company established in 2008 · {averageRating.toFixed(1)} out of 5 from {reviewCount} owner reviews.</span>
           </div>
         </div>
         <div class="hero-stamp" aria-hidden="true">
@@ -126,7 +128,7 @@ const faqs = [
           </div>
           <div class="intro-copy">
             <p class="large-copy">You don’t need a marina. You need somewhere secure, close to home, and easy to get to when the weekend comes around.</p>
-            <p>West Auckland Storage is part of Span Farm Boat Yard in Glendene. We’ve been looking after boats, caravans and recreational gear for local owners for over 15 years.</p>
+            <p>West Auckland Storage is part of Span Farm Boat Yard in Glendene. The company was incorporated on 10 January 2008.</p>
             <a class="text-link" href="#why-us">See why people use us <span aria-hidden="true">→</span></a>
           </div>
         </div>
@@ -170,12 +172,12 @@ const faqs = [
           <p class="why-lede">This isn’t a call centre or a row of anonymous units. It’s a real boat yard, run by people who understand what’s being stored and why it matters.</p>
           <ul class="check-list">
             <li><span>01</span><div><strong>Close to home</strong><small>Right in Glendene, serving West Auckland.</small></div></li>
-            <li><span>02</span><div><strong>Fair value</strong><small>Useful storage without the marina price tag.</small></div></li>
+            <li><span>02</span><div><strong>Fair value</strong><small>Storage priced for the space you need.</small></div></li>
             <li><span>03</span><div><strong>No fuss</strong><small>Quick quotes, flexible terms, monthly invoicing.</small></div></li>
           </ul>
           <!-- Confirm current figures with the yard before publishing; the brand guide asks for honest numbers only. -->
           <div class="yard-stats">
-            <div><strong>15+</strong><small>years storing boats and caravans</small></div>
+            <div><strong>{yearsSinceIncorporation}+</strong><small>years since incorporation</small></div>
             <div><strong>100+</strong><small>boats looked after for locals</small></div>
           </div>
                     <a class="button button-outline-light" href="#contact">Ask about space</a>
@@ -184,8 +186,8 @@ const faqs = [
 
             <section class="value-band">
               <div class="container">
-                <p class="value-line">No marina prices.<br />No marina waitlist.</p>
-                <p class="value-sub">Keep your boat, caravan or gear close to home — priced to the space you actually need, with flexible terms and monthly invoicing.</p>
+                <p class="value-line">What will your<br />storage cost?</p>
+                <p class="value-sub">Send us the type and size of your boat, caravan or vehicle, plus when you need storage. We will confirm the price and available space.</p>
                 <a class="button button-bright" href="#contact">Ask about space</a>
               </div>
             </section>
@@ -215,7 +217,7 @@ const faqs = [
                 <p class="eyebrow eyebrow-light">Slipway access</p>
                 <h2>Easy to launch.<br /><em>Honest about it.</em></h2>
                 <p class="why-lede">A slipway is a genuine advantage for smaller trailer boats, and a big reason owners choose the yard over a marina. It is not available all of the time, so ask us about current access before you arrive. We would rather give you a straight answer than oversell it.</p>
-                                <a class="button button-outline-light" href="#contact">Ask about space</a>
+                                <a class="button button-outline-light" href="#contact" data-enquiry-item="Slipway access">Ask about space</a>
               </div>
             </section>
 
@@ -250,15 +252,7 @@ const faqs = [
             </div>
             <p>Rated {averageRating.toFixed(1)} out of 5 across {reviewCount} owner reviews.</p>
           </div>
-          <div class="review-grid">
-            {featuredReviews.map((review) => (
-              <figure class="review-card">
-                <p class="review-stars" aria-label={`${review.rating} out of 5 stars`}><span aria-hidden="true">★★★★★</span></p>
-                <blockquote class="review-quote">{review.text}</blockquote>
-                <figcaption class="review-author">{review.name}</figcaption>
-              </figure>
-            ))}
-          </div>
+          <ReviewSlider />
         </div>
       </section>
 

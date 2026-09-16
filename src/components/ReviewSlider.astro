@@ -1,0 +1,86 @@
+---
+import { featuredReviews } from '../data/reviews';
+---
+<section class="review-slider" aria-label="Owner reviews" aria-roledescription="carousel" data-review-slider>
+  <div class="review-track" id="owner-review-track" tabindex="0" aria-label="Reviews. Use the left and right arrow keys to browse.">
+    {featuredReviews.map((review, index) => (
+      <figure class="review-card" role="group" aria-roledescription="slide" aria-label={`Review ${index + 1} of ${featuredReviews.length}`}>
+        <p class="review-stars" aria-label={`${review.rating} out of 5 stars`}><span aria-hidden="true">{'★'.repeat(review.rating)}</span></p>
+        <blockquote class="review-quote">{review.text}</blockquote>
+        <figcaption class="review-author">{review.name}</figcaption>
+      </figure>
+    ))}
+  </div>
+  <div class="review-controls" hidden>
+    <button type="button" class="review-arrow" data-review-prev aria-label="Previous reviews" aria-controls="owner-review-track"><span aria-hidden="true">←</span></button>
+    <div class="review-pagination">
+      <div class="review-dots" aria-label="Choose reviews"></div>
+      <p class="review-position" aria-live="polite" aria-atomic="true"></p>
+    </div>
+    <button type="button" class="review-arrow" data-review-next aria-label="Next reviews" aria-controls="owner-review-track"><span aria-hidden="true">→</span></button>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-review-slider]').forEach(slider => {
+    const track = slider.querySelector<HTMLElement>('.review-track')!;
+    const cards = Array.from(track.querySelectorAll<HTMLElement>('.review-card'));
+    const controls = slider.querySelector<HTMLElement>('.review-controls')!;
+    const previous = slider.querySelector<HTMLButtonElement>('[data-review-prev]')!;
+    const next = slider.querySelector<HTMLButtonElement>('[data-review-next]')!;
+    const dots = slider.querySelector<HTMLElement>('.review-dots')!;
+    const status = slider.querySelector<HTMLElement>('.review-position')!;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let visible = 1;
+    let current = 0;
+    let step = 0;
+    let scrollFrame = 0;
+    const last = () => Math.max(0, cards.length - visible);
+
+    const update = () => {
+      current = Math.max(0, Math.min(last(), Math.round(track.scrollLeft / step)));
+      previous.disabled = current === 0;
+      next.disabled = current === last();
+      dots.querySelectorAll('button').forEach((dot, index) => {
+        if (index === current) dot.setAttribute('aria-current', 'true');
+        else dot.removeAttribute('aria-current');
+      });
+      status.textContent = visible === 1 ? `Review ${current + 1} of ${cards.length}` : `Reviews ${current + 1} to ${Math.min(cards.length, current + visible)} of ${cards.length}`;
+    };
+    const goTo = (index: number) => {
+      current = Math.max(0, Math.min(last(), index));
+      track.scrollTo({ left: current * step, behavior: reducedMotion.matches ? 'instant' : 'smooth' });
+    };
+    const measure = () => {
+      const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+      step = cards[0].getBoundingClientRect().width + gap;
+      visible = Math.max(1, Math.round((track.clientWidth + gap) / step));
+      if (dots.childElementCount !== last() + 1) {
+        dots.replaceChildren(...Array.from({ length: last() + 1 }, (_, index) => {
+          const dot = document.createElement('button');
+          dot.type = 'button';
+          dot.className = 'review-dot';
+          dot.setAttribute('aria-label', `Show reviews starting at ${index + 1}`);
+          dot.setAttribute('aria-controls', track.id);
+          dot.addEventListener('click', () => goTo(index));
+          return dot;
+        }));
+      }
+      update();
+    };
+    previous.addEventListener('click', () => goTo(current - 1));
+    next.addEventListener('click', () => goTo(current + 1));
+    track.addEventListener('keydown', event => {
+      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+      goTo(event.key === 'Home' ? 0 : event.key === 'End' ? last() : current + (event.key === 'ArrowRight' ? 1 : -1));
+    });
+    track.addEventListener('scroll', () => {
+      cancelAnimationFrame(scrollFrame);
+      scrollFrame = requestAnimationFrame(update);
+    }, { passive: true });
+    new ResizeObserver(measure).observe(track);
+    measure();
+    controls.hidden = false;
+  });
+</script>

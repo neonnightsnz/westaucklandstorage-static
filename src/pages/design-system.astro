@@ -1,5 +1,6 @@
 ---
 import "../styles/design-system.css";
+import { yearsSinceIncorporation } from "../data/company";
 ---
 
 <!doctype html>
@@ -144,8 +145,8 @@ import "../styles/design-system.css";
                 </article>
                 <article class="ds-component-card">
                   <h3>Information markers</h3>
-                  <p class="ds-metric" style="margin:20px 0 0;color:#A5D2FD;font-size:58px;line-height:.8">15+</p>
-                  <p style="margin-top:12px">years serving local owners</p>
+                  <p class="ds-metric" style="margin:20px 0 0;color:#A5D2FD;font-size:58px;line-height:.8">{yearsSinceIncorporation}+</p>
+                  <p style="margin-top:12px">years since incorporation</p>
                 </article>
               </div>
             </div>

@@ -14,7 +14,7 @@
  *     Send the enquiry as email through Resend.
  *
  * Until a provider is configured the endpoint replies 503 and the form
- * gracefully falls back to the mailto: draft, so no enquiry is ever lost.
+ * keeps entered details visible for retry and offers the yard phone number.
  */
 
 const json = (payload, status = 200) =>
@@ -47,7 +47,15 @@ export function onRequestGet() {
 }
 
 export async function onRequestPost({ request, env }) {
-  const data = await readPayload(request);
+  let data;
+  try {
+    data = await readPayload(request);
+  } catch {
+    return json({ ok: false, error: 'invalid_payload' }, 400);
+  }
+  if (!data || typeof data !== 'object' || Array.isArray(data)) {
+    return json({ ok: false, error: 'invalid_payload' }, 400);
+  }
 
   // Honeypot: a real visitor never fills this hidden field in.
   if (clean(data.company)) return json({ ok: true });
@@ -96,7 +104,7 @@ export async function onRequestPost({ request, env }) {
         body: JSON.stringify({
           from: env.CONTACT_FROM || 'West Auckland Storage <website@westaucklandstorage.co.nz>',
           to: [env.CONTACT_TO],
-          reply_to: enquiry.contact,
+          ...(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(enquiry.contact) ? { reply_to: enquiry.contact } : {}),
           subject: `Storage enquiry from ${enquiry.name}`,
           text,
         }),

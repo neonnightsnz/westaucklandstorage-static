@@ -1,4 +1,4 @@
-<form class="quote-form" data-contact-form method="post" action="mailto:info@westaucklandstorage.co.nz">
+<form class="quote-form" data-contact-form method="post" action="/api/contact">
   <div class="form-row">
     <label>Your name <input name="name" required autocomplete="name" /></label>
     <label>Phone or email <input name="contact" required /></label>
@@ -6,7 +6,7 @@
   <label>What are you storing?
     <select name="item" required>
       <option value="">Choose one</option>
-      <option>Boat</option><option>Caravan</option><option>Trailer</option><option>Vehicle or other gear</option>
+      <option>Boat</option><option>Caravan</option><option>Trailer</option><option>Vehicle or other gear</option><option>Slipway access</option>
     </select>
   </label>
   <label>Anything else we should know? <textarea name="message" rows="4" placeholder="Size, timing, access needs…"></textarea></label>
@@ -19,18 +19,17 @@
 </form>
 
 <script>
-  // Submit in-page via /api/contact. If the endpoint is unavailable (no
-  // provider configured yet, or offline) fall back to a mailto: draft so
-  // the enquiry is never lost.
-  const mailDraft = (data: FormData) => {
-    const body = [`Name: ${data.get('name')}`, `Phone or email: ${data.get('contact')}`, `Storing: ${data.get('item')}`, `Details: ${data.get('message') || 'None provided'}`].join('\n');
-    window.location.href = `mailto:info@westaucklandstorage.co.nz?subject=${encodeURIComponent(`Storage enquiry from ${data.get('name')}`)}&body=${encodeURIComponent(body)}`;
-  };
-
   document.querySelectorAll<HTMLFormElement>('[data-contact-form]').forEach(form => {
     const status = form.querySelector<HTMLElement>('.form-status');
     const submit = form.querySelector<HTMLButtonElement>('button[type="submit"]');
     const setStatus = (text: string) => { if (status) status.textContent = text; };
+
+    document.querySelectorAll<HTMLAnchorElement>('[data-enquiry-item]').forEach(link => {
+      link.addEventListener('click', () => {
+        const item = form.elements.namedItem('item') as HTMLSelectElement;
+        item.value = link.dataset.enquiryItem || '';
+      });
+    });
 
     form.addEventListener('submit', async event => {
       event.preventDefault();
@@ -50,12 +49,12 @@
             page: window.location.pathname,
           }),
         });
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const result = await response.json();
+        if (!response.ok || result.ok !== true) throw new Error('Delivery not confirmed');
         form.reset();
-        setStatus('Thanks — your enquiry is on its way. We’ll be in touch. Prefer to talk? Call 09 818 4586.');
+        setStatus('Thanks, your enquiry has been sent. We’ll be in touch. Prefer to talk? Call 09 818 4586.');
       } catch {
-        mailDraft(data);
-        setStatus('We couldn’t send that just now, so we’ve opened an email draft instead. If nothing happens, call 09 818 4586.');
+        setStatus('Your enquiry has not been sent. Your details are still here. Please try again or call 09 818 4586.');
       } finally {
         submit?.removeAttribute('disabled');
       }

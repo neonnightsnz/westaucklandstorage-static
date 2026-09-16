@@ -12,7 +12,7 @@ export const pages = [
         "heading": "Not a chain. Not a call centre.",
         "paragraphs": [
           "West Auckland Storage operates from Span Farm Boat Yard, 20 Akatea Road, Glendene. We’re a working boat yard run by people who know what boats, caravans and recreational gear need.",
-          "For more than 15 years, local owners have used the yard because it’s close to home, straightforward to deal with and built around practical storage rather than polished promises."
+          "The company was incorporated on 10 January 2008. Today, the yard offers practical storage close to home for local owners."
         ]
       },
       {
@@ -23,7 +23,7 @@ export const pages = [
       }
     ],
     "bullets": [
-      "15+ years serving local owners",
+      "Company established in 2008",
       "Span Farm Boat Yard in Glendene",
       "Practical outdoor storage",
       "People who know what they’re looking after"

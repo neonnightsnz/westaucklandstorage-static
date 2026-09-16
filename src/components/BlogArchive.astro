@@ -6,16 +6,13 @@ const selected = archive.items.slice((archive.number - 1) * pageSize, archive.nu
 const heading = archive.label;
 ---
 <main id="main">
-  <header class="article-header archive-header section-pad">
-    <div class="container archive-heading-grid">
-      <div>
+  <header class="inner-hero archive-header">
+    <div class="container inner-hero-content">
       <Breadcrumbs />
-      <p class="eyebrow">Storage notes & local guides</p>
+      <p class="eyebrow eyebrow-light">Storage notes & local guides</p>
       <h1>{heading}{archive.number > 1 ? ` — Page ${archive.number}` : ''}</h1>
-      <p class="archive-intro">{archive.description}</p>
+      <p class="hero-lede">{archive.description}</p>
       <p class="article-meta">Page {archive.number} of {archive.pageCount} · {archive.total} articles</p>
-      </div>
-      <figure class="archive-photo"><img src="/images/yard-boat.jpg" alt="A boat at Span Farm Boat Yard" width="800" height="650" /><figcaption>From our yard in Glendene</figcaption></figure>
     </div>
   </header>
   <section class="section-pad">

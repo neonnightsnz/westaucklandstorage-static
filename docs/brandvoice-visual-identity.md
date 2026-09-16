@@ -76,7 +76,7 @@ All groups share one thing: **they value proximity, price, and security.** All s
 
 Only use figures where they remain accurate — check before publishing:
 
-- 15+ years serving local owners
+- Company incorporated on 10 January 2008, confirmed by the owner. Use "Company established in 2008" in short copy. Incorporation does not establish continuous storage operations.
 - 100+ boats currently in storage
 
 ## 7. Content Principles
