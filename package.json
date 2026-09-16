@@ -1,0 +1,17 @@
+{
+  "name": "west-auckland-storage",
+  "version": "1.0.0",
+  "description": "West Auckland Storage marketing website",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --host 0.0.0.0 --port 5000",
+    "build": "astro build",
+    "preview": "astro preview --host 0.0.0.0 --port 5000"
+  },
+  "keywords": ["astro", "storage", "west-auckland"],
+  "author": "West Auckland Storage",
+  "license": "ISC",
+  "dependencies": {
+    "astro": "^7.3.2"
+  }
+}
