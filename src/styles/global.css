@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
 @import "../../design-system/west-auckland-storage/tokens.css";
 
 :root {
@@ -399,3 +399,35 @@ address { margin: 0 0 25px; color: var(--ink); font-size: 15px; font-style: norm
 @media (max-width: 680px) {
   .location-list span { display: none; }
 }
+
+/* ------------------------------------------------------------------
+   Design pass — de-template the default chrome and strengthen identity.
+   Grounded in the yard's own world: painted signage, hardstand markings
+   and marine blues. Rationale lives in the brand guide + ROADMAP.md.
+   ------------------------------------------------------------------ */
+
+/* Bebas Neue is uppercase-only and tall, so give display type its own beat. */
+h1, h2, h3 { letter-spacing: .01em; }
+h1 { line-height: .82; }
+h2 { line-height: .86; }
+
+/* Section labels were tracked-out ALL-CAPS above every heading — a default
+   tell. Re-set them as plain-language signage tags. */
+.eyebrow { text-transform: none; font-size: 13px; letter-spacing: .02em; }
+.eyebrow::before { width: 22px; height: 2px; }
+
+/* Drop the arrow glyph that was appended to every button and link. */
+.text-link > span, .button > span, .nav-call > span, .contact-phone > span { display: none; }
+
+/* Links carry a painted underline instead of an arrow. */
+.text-link { padding-bottom: 3px; border-bottom: 2px solid var(--blue-bright); }
+.text-link-light { border-bottom-color: var(--blue-light); }
+.text-link:hover, .text-link:focus-visible { color: var(--blue-dark); }
+
+/* 01 / 02 / 03 on these cards is decoration, not a sequence — cut it. */
+.pillar-number, .service-number { display: none; }
+
+/* Signature marking: a painted bay-line along the hero edge, echoing the
+   hardstand markings painted on the yard. */
+.hero::after { position: absolute; right: 0; bottom: 0; left: 0; height: 8px; background-image: repeating-linear-gradient(90deg, var(--blue-bright) 0 26px, transparent 26px 42px); content: ""; }
+.hero-actions { flex-wrap: wrap; row-gap: 16px; }
