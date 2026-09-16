@@ -1,0 +1,17 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { posts, archives } from '../data/blog';
+const mainPages = [{ slug: '', title: 'Home' }, { slug: 'about/', title: 'About' }, { slug: 'services/', title: 'Services' }, { slug: 'contact/', title: 'Contact' }, { slug: 'blog/', title: 'From the yard' }];
+---
+<PageLayout title="Sitemap | West Auckland Storage" description="Find every page, storage article and local guide on West Auckland Storage.">
+  <main id="main" class="section-pad">
+    <div class="container sitemap-content">
+      <p class="eyebrow">Explore the site</p>
+      <h1>Sitemap.</h1>
+      <section><h2>Main pages</h2><ul>{mainPages.map(page => <li><a href={`/${page.slug}`}>{page.title}</a></li>)}</ul></section>
+      <section><h2>Articles & local guides</h2><ul>{posts.map(post => <li><a href={`/${post.slug}/`}>{post.title}</a></li>)}</ul></section>
+      <section><h2>Blog archives</h2><ul>{archives.map(archive => <li><a href={`/${archive.slug}/`}>{archive.base === 'blog' ? 'All articles' : archive.base === 'author/isaac' ? 'Articles by Isaac' : 'Uncategorized'} — Page {archive.number}</a></li>)}</ul></section>
+      <a href="/sitemap.xml">XML sitemap</a>
+    </div>
+  </main>
+</PageLayout>

@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "astro dev --host 0.0.0.0 --port 5000",
     "build": "astro build",
-    "preview": "astro preview --host 0.0.0.0 --port 5000"
+    "preview": "astro preview --host 0.0.0.0 --port 5000",
+    "import:blog": "node scripts/import-blog.mjs",
+    "check:site": "node scripts/check-site.mjs"
   },
   "keywords": ["astro", "storage", "west-auckland"],
   "author": "West Auckland Storage",

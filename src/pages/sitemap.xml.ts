@@ -1,10 +1,11 @@
 import { pages } from "../data/sitePages";
+import { posts, archives } from "../data/blog";
 
 export const prerender = true;
 
 export function GET({ site }) {
   const origin = site?.origin ?? "https://westaucklandstorage.co.nz";
-  const urls = ["/", ...pages.map((page) => `/${page.slug}/`)];
+  const urls = [...new Set(["/", "/sitemap/", ...pages.map((page) => `/${page.slug}/`), ...posts.map(post => `/${post.slug}/`), ...archives.map(archive => `/${archive.slug}/`)])];
   const body = urls
     .map((path) => `  <url><loc>${origin}${path}</loc></url>`)
     .join("\n");

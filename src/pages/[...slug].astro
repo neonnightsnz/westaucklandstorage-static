@@ -1,26 +1,31 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
 import { pages } from "../data/sitePages";
+import { posts, archives } from "../data/blog";
+import BlogArticle from "../components/BlogArticle.astro";
+import BlogArchive from "../components/BlogArchive.astro";
 
 export const prerender = true;
 
 export function getStaticPaths() {
-  return pages.map((page) => ({
+  return [...pages.filter(page => !posts.some(post => post.slug === page.slug) && page.slug !== 'blog').map((page) => ({
     params: { slug: page.slug },
     props: { page },
-  }));
+  })), ...posts.map(post => ({ params: { slug: post.slug }, props: { post } })),
+  ...archives.map(archive => ({ params: { slug: archive.slug }, props: { archive } }))];
 }
 
-const { page } = Astro.props;
-const relatedPages = page.related
+const { page, post, archive } = Astro.props;
+const relatedPages = page?.related
   ?.map((slug) => pages.find((candidate) => candidate.slug === slug))
   .filter(Boolean);
 ---
 
 <PageLayout
-  title={`${page.title.replace(".", "")} ${page.highlight} | West Auckland Storage`}
-  description={page.description}
+  title={post ? `${post.title} | West Auckland Storage` : archive ? `${archive.base === 'author/isaac' ? 'Articles by Isaac' : archive.base === 'category/uncategorized' ? 'Uncategorized' : 'From the yard'} — Page ${archive.number} | West Auckland Storage` : `${page.title.replace(".", "")} ${page.highlight} | West Auckland Storage`}
+  description={post ? post.excerpt : archive ? `Browse page ${archive.number} of our storage advice and West Auckland guides.` : page.description}
 >
+  {post ? <BlogArticle post={post} /> : archive ? <BlogArchive archive={archive} /> : <>
   <main id="main">
     <section class="inner-hero" style={`--hero-image: url("${page.image}")`}>
       <div class="inner-hero-overlay"></div>
@@ -114,8 +119,9 @@ const relatedPages = page.related
       </section>
     )}
   </main>
+  </>}
 
-  {page.kind === "contact" && (
+  {page?.kind === "contact" && (
     <script>
       const form = document.querySelector("[data-contact-form]");
       const status = document.querySelector(".form-status");

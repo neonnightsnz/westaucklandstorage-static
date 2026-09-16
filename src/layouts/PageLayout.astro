@@ -16,6 +16,7 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#145693" />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site ?? 'https://westaucklandstorage.co.nz')} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
   </head>
@@ -52,6 +53,7 @@ const { title, description } = Astro.props;
           <a href="/services/">What we store</a>
           <a href="/about/">Why us</a>
           <a href="/contact/">Get a quote</a>
+          <a href="/sitemap/">Sitemap</a>
         </div>
         <div class="footer-address">Span Farm Boat Yard<br />20 Akatea Road, Glendene</div>
       </div>
