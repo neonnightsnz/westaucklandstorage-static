@@ -5,27 +5,77 @@ interface Props {
   title: string;
   description: string;
   home?: boolean;
+  type?: 'website' | 'article';
+  publishedTime?: string;
 }
 
-const { title, description, home = false } = Astro.props;
+const { title, description, home = false, type = 'website', publishedTime } = Astro.props;
 const currentPath = Astro.url.pathname;
+const SITE_URL = 'https://westaucklandstorage.co.nz';
+const site = Astro.site ?? new URL(SITE_URL);
+const canonical = new URL(Astro.url.pathname, site).href;
+const ogImage = new URL('/images/og-default.jpg', site).href;
 const navigation = [
   { href: '/services/', label: 'What we store' },
   { href: '/about/', label: 'Why us' },
   { href: '/blog/', label: 'From the yard' },
   { href: '/contact/', label: 'Contact' },
 ];
+
+// Structured data for local search. NAP mirrors the footer/contact page.
+const localBusiness = {
+  '@context': 'https://schema.org',
+  '@type': 'AutomotiveBusiness',
+  name: 'West Auckland Storage',
+  description:
+    'Boat, caravan, trailer and vehicle storage on outdoor hardstand at Span Farm Boat Yard, Glendene, West Auckland.',
+  url: SITE_URL,
+  telephone: '+64 9 818 4586',
+  email: 'info@westaucklandstorage.co.nz',
+  image: ogImage,
+  logo: new URL('/images/logo.png', site).href,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '20 Akatea Road, Glendene',
+    addressLocality: 'Auckland',
+    addressRegion: 'Auckland',
+    postalCode: '0602',
+    addressCountry: 'NZ',
+  },
+  areaServed: ['Glendene', 'Henderson', 'Massey', 'Te Atatu', 'New Lynn', 'Titirangi', 'Kelston', 'Swanson', 'Whenuapai', 'Hobsonville'],
+  parentOrganization: { '@type': 'Organization', name: 'Span Farm Boat Yard Ltd' },
+  knowsAbout: ['boat storage', 'caravan storage', 'trailer storage', 'vehicle storage', 'outdoor hardstand storage'],
+};
 ---
 
 <!doctype html>
 <html lang="en-NZ">
-  <head>
+    <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#145693" />
-    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site ?? 'https://westaucklandstorage.co.nz')} />
+    <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="alternate" type="application/rss+xml" title="West Auckland Storage — From the yard" href="/rss.xml" />
+    <meta property="og:site_name" content="West Auckland Storage" />
+    <meta property="og:type" content={type} />
+    <meta property="og:locale" content="en_NZ" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="West Auckland Storage — boat, caravan and vehicle storage in Glendene" />
+    {type === 'article' && publishedTime && <meta property="article:published_time" content={publishedTime} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <script type="application/ld+json" set:html={JSON.stringify(localBusiness)} />
     <title>{title}</title>
   </head>
   <body>

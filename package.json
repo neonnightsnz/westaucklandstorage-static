@@ -9,6 +9,7 @@
     "preview": "astro preview --host 0.0.0.0 --port 5000",
     "import:blog": "node scripts/import-blog.mjs",
     "build:blog": "node scripts/apply-blog-content.mjs",
+    "build:assets": "node scripts/generate-assets.mjs",
     "check:site": "node scripts/check-site.mjs"
   },
   "keywords": ["astro", "storage", "west-auckland"],
