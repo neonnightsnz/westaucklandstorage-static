@@ -93,7 +93,7 @@ export const blogContent = {
   },
   "west-auckland-storage-reliable-storage-in-lincoln": {
     title: "Storage near Lincoln Road, Henderson",
-    content: `<p>Around the Lincoln Road end of Henderson, off-street parking is at a premium and the traffic never really stops. A nearby yard for your boat, caravan or spare vehicle takes the pressure off the driveway and keeps your gear out of the way.</p>
+    content: `<p>Around the Lincoln Road end of Henderson, off-street parking is hard to come by and the traffic never really stops. A nearby yard for your boat, caravan or spare vehicle takes the pressure off the driveway and keeps your gear out of the way.</p>
 <h2>Why this part of Henderson suits our yard</h2>
 <p><strong>Close to home.</strong> Span Farm Boat Yard, 20 Akatea Road, Glendene, is a short, straightforward run from the Lincoln Road area.</p>
 <p><strong>Fair value.</strong> Sensible outdoor storage without marina costs or a waitlist.</p>
@@ -148,6 +148,8 @@ export const blogContent = {
 <p><strong>Practical and uncomplicated.</strong> A working yard run by people who know what is being stored.</p>
 <h2>What we store</h2>
 <p>Boats, jet skis, caravans, campervans, trailers, cars, 4WDs, utes, trucks, motorbikes and recreational gear.</p>
+<h2>Why a yard suits Whenuapai owners</h2>
+<p>Larger sections are handy, but a boat or work vehicle still needs the right spot — level, easy to get to and out of the way of the house. Our Glendene yard is close by and made for exactly that.</p>
 <h2>Next step</h2>
 <p>Short-term, seasonal and long-term options, invoiced monthly. Call 09 818 4586 or email info@westaucklandstorage.co.nz with the details and we will get back to you.</p>`
   },
@@ -184,6 +186,8 @@ export const blogContent = {
 <p><strong>Real people to deal with.</strong> This is a working boat yard, not an online-only booking system.</p>
 <h2>What we store</h2>
 <p>Caravans and campervans, trailers, boats and jet skis, cars, 4WDs, utes, motorbikes, kayaks and other recreational gear. Tell us the size and how long you need.</p>
+<h2>Room for the everyday extras</h2>
+<p>Glen Eden households often run a caravan, a trailer and a couple of cars off one driveway. Storing the one you use least at our yard keeps the rest of the driveway working the way it should.</p>
 <h2>Get sorted</h2>
 <p>Flexible short and long-term options, invoiced monthly. Call 09 818 4586 or email info@westaucklandstorage.co.nz and we will help you find the right spot.</p>`
   },
@@ -232,7 +236,218 @@ export const blogContent = {
 <p><strong>Slipway access.</strong> Available for smaller trailer boats while it is operational. Ask about current access before you arrive.</p>
 <h2>What we store</h2>
 <p>Boats and jet skis, caravans and campervans, trailers, cars, 4WDs, utes, motorbikes, kayaks and other recreational gear.</p>
+<h2>A flatter, easier spot to store</h2>
+<p>Titirangi's charm is its bush and its hills — which is exactly why level, easy-access storage nearby is worth having. Drive up, hitch on and head off without wrestling the boat on a slope.</p>
 <h2>Get sorted</h2>
 <p>Flexible short and long-term options, invoiced monthly. Call 09 818 4586 or email info@westaucklandstorage.co.nz and we will find the right spot for you.</p>`
+  },
+  "vehicle-storage-at-west-auckland-storage": {
+    title: "Vehicle Storage in West Auckland",
+    content: `<p>If a car, 4WD or ute has become a spare rather than a daily, you probably do not need it sitting on the driveway any more. We offer practical outdoor vehicle storage at Span Farm Boat Yard in Glendene — close to home and priced well below a lock-up.</p>
+<h2>What we store</h2>
+<p>Cars, 4WDs, utes and vans, along with trailers, caravans, boats and motorbikes. Tell us the size, whether it needs to stay registered, and how often you will need access, and we will suggest a spot.</p>
+<h2>Why owners choose outdoor storage here</h2>
+<p><strong>Close to home.</strong> 20 Akatea Road, Glendene — handy for drivers across West Auckland.</p>
+<p><strong>Fair value.</strong> You pay for a hardstand space in a working yard, not marina fees or a polished facility.</p>
+<p><strong>Flexible terms.</strong> Store short-term while you travel, or long-term during the off-season, and pay monthly.</p>
+<h2>A practical note</h2>
+<p>This is outdoor storage, so vehicles sit out in the weather. A cover and a wash before you park it up will serve you well, and a seasonal check keeps a stored vehicle in good shape.</p>
+<h2>Get a quote</h2>
+<p>Call 09 818 4586 or email info@westaucklandstorage.co.nz with the make, size and how long you need the space.</p>`
+  },
+  "truck-storage-at-west-auckland-storage": {
+    title: "Truck Storage in West Auckland",
+    content: `<p>Commercial vehicles, work trucks and larger equipment need somewhere they can sit without blocking the yard at home. We offer outdoor storage for trucks and larger vehicles at Span Farm Boat Yard in Glendene, subject to space and access.</p>
+<h2>Who this suits</h2>
+<p>Tradespeople, small businesses and owners with a truck, ute or piece of equipment that is not needed every day. Because sizes vary so much, we work out each space individually rather than fitting everyone into one box.</p>
+<h2>What to tell us</h2>
+<p>The type and length of the vehicle, whether it needs to drive in and out easily, and how often you will need access. Larger vehicles depend on availability and access, so it is worth checking before you commit.</p>
+<h2>Why owners use the yard</h2>
+<p><strong>Close to home.</strong> 20 Akatea Road, Glendene, easy to reach from across West Auckland.</p>
+<p><strong>Fair value.</strong> Straightforward outdoor storage with no marina-style overheads.</p>
+<p><strong>Flexible terms.</strong> Short and longer-term arrangements, invoiced monthly.</p>
+<h2>Talk to the yard</h2>
+<p>Call 09 818 4586 or email info@westaucklandstorage.co.nz with the vehicle details and we will let you know what is possible.</p>`
+  },
+  "trailer-storage-at-west-auckland-storage": {
+    title: "Trailer Storage in West Auckland",
+    content: `<p>Utility trailers and boat trailers are useful right up until you have nowhere to park them. We offer straightforward outdoor trailer storage at Span Farm Boat Yard in Glendene, so your trailer is off the street and ready the next time you need it.</p>
+<h2>What we store</h2>
+<p>Utility trailers, boat trailers, box trailers and camping trailers. Caravans, campervans and boat trailers with the boat still on them are welcome as well.</p>
+<h2>Why owners choose us</h2>
+<p><strong>Close to home.</strong> 20 Akatea Road, Glendene.</p>
+<p><strong>Fair value.</strong> Outdoor hardstand storage without marina fees.</p>
+<p><strong>Easy access.</strong> A working yard with room to move, so hitching up is not a puzzle.</p>
+<h2>Before you store</h2>
+<p>Give the trailer a clean and check the tyres, bearings and lights so it is ready to roll when you collect it. Tell us roughly how long you need the space and we will sort the rest.</p>
+<h2>Get sorted</h2>
+<p>Call 09 818 4586 or email info@westaucklandstorage.co.nz to check space and pricing.</p>`
+  },
+  "west-auckland-storage-your-go-to-for-secure-boat-and-vehicle-storage": {
+    title: "Boat & Vehicle Storage in West Auckland",
+    content: `<p>West Auckland Storage is a working boat yard at Span Farm Boat Yard in Glendene, storing boats and vehicles for owners across West Auckland. If you are tired of marina prices or waiting on a marina waitlist, this is the practical local alternative.</p>
+<h2>What we store</h2>
+<p>Trailer boats, launches, yachts and jet skis; caravans and campervans; trailers, cars, 4WDs, utes, trucks, motorbikes, kayaks and other recreational gear.</p>
+<h2>Why owners choose the yard</h2>
+<p><strong>Location.</strong> 20 Akatea Road, Glendene — close to home for owners right across West Auckland.</p>
+<p><strong>Price.</strong> Fair value for outdoor storage, with no marina fees and no waitlist.</p>
+<p><strong>Slipway access.</strong> A launch option for smaller trailer boats while it is operational. Ask us about current access before you arrive.</p>
+<h2>Getting started</h2>
+<p>Short-term, seasonal and long-term storage is all available and invoiced monthly. Call 09 818 4586 or email info@westaucklandstorage.co.nz and we will help you find the right spot.</p>`
+  },
+  "uncovered-boat-storage-at-west-auckland-storage": {
+    title: "Uncovered Boat Storage in West Auckland",
+    content: `<p>Uncovered, outdoor boat storage suits owners who want a straightforward, affordable place to keep a boat between trips — no marina fees, no marina waitlist, and room to work on the boat when you need to.</p>
+<h2>Why uncovered storage works</h2>
+<p><strong>Cost-effective.</strong> Outdoor hardstand storage is priced below covered or marina options, which matters when the boat sits unused for part of the year.</p>
+<p><strong>Easy access.</strong> Drive up to the boat, hitch on and go — no awkward manoeuvring in a tight shed.</p>
+<p><strong>Room to work.</strong> Cleaning, servicing and getting the boat ready for the season is far easier with space around it.</p>
+<h2>Looking after a boat stored outdoors</h2>
+<p>A good cover or tarp, a regular wash-down and a quick check of the trailer and fittings each season will keep an outdoor-stored boat in good shape.</p>
+<h2>Sizes and access</h2>
+<p>We can take boats up to around 24 tonnes, from small trailer boats to larger yachts. Tell us the size and how long you need the space.</p>
+<h2>Get a quote</h2>
+<p>Call 09 818 4586 or email info@westaucklandstorage.co.nz and we will work out the right spot for your boat.</p>`
+  },
+  "span-farm-boat-yard-ltd-your-premier-boat-storage-solution-in-west-auckland": {
+    title: "Span Farm Boat Yard: Boat Storage in West Auckland",
+    content: `<p>Span Farm Boat Yard is the working boat yard behind West Auckland Storage. If you are looking for boat storage in West Auckland that is close to home, fairly priced and run by people who know boats, you have found it.</p>
+<h2>What the yard offers</h2>
+<p><strong>Uncovered boat storage.</strong> Practical outdoor hardstand storage for boats that do not need a shed — easy to access and priced for a working yard.</p>
+<p><strong>Space for real boats.</strong> We can accommodate boats up to around 24 tonnes, from small trailer boats through to larger yachts, with room to move on the hardstand.</p>
+<p><strong>Slipway access.</strong> Available for smaller trailer boats when it is operational. Because it is not always in service, please ask us about current access before you arrive.</p>
+<h2>Why owners choose the yard</h2>
+<p><strong>Location.</strong> 20 Akatea Road, Glendene — close to home for owners across West Auckland.</p>
+<p><strong>Price.</strong> Fair value outdoors, with no marina fees and no waitlist.</p>
+<p><strong>Straightforward.</strong> A real yard, real people and simple monthly terms.</p>
+<h2>Get in touch</h2>
+<p>Call 09 818 4586 or email info@westaucklandstorage.co.nz to talk about storing your boat at Span Farm Boat Yard.</p>`
+  },
+  "why-choose-west-auckland-storage": {
+    title: "Why Owners Choose West Auckland Storage",
+    content: `<p>There are plenty of storage options in West Auckland. Owners choose ours for three plain reasons — location, price and slipway access — and because it is a working boat yard rather than a faceless facility.</p>
+<h2>Location</h2>
+<p>We are at Span Farm Boat Yard, 20 Akatea Road, Glendene, close to home for owners right across West Auckland. No long tow before a trip and no trek to the far side of town.</p>
+<h2>Price</h2>
+<p>You pay for practical outdoor hardstand storage, not marina fees and not a marina waitlist. If you are storing something you are not using every week, that difference adds up.</p>
+<h2>Slipway access</h2>
+<p>A slipway is a genuine advantage for smaller trailer boats, and a big reason owners pick the yard over a marina. It is not available all of the time, so ask us about current access before you arrive.</p>
+<h2>Run by people who know boats</h2>
+<p>This is not a call centre or a row of anonymous units. It is a real boat yard, and the team understands what is being stored and why it matters.</p>
+<h2>Talk to us</h2>
+<p>Short and long-term storage, invoiced monthly. Call 09 818 4586 or email info@westaucklandstorage.co.nz.</p>`
+  },
+  "why-choose-west-auckland-storage-for-your-long-term-storage-needs": {
+    title: "Long-Term Boat, Caravan & Vehicle Storage",
+    content: `<p>Some things you store because you need them next weekend. Others you store because they are not going anywhere for a while — a boat laid up for the season, a caravan between trips, a project that will take months. That is what our long-term storage is for.</p>
+<h2>What long-term storage suits</h2>
+<p>Boats and yachts out of the water for the season, caravans and campervans parked up between trips, and spare vehicles and equipment that are not in regular use.</p>
+<h2>Why owners store long-term with us</h2>
+<p><strong>Fair, ongoing pricing.</strong> No marina fees and no waitlist, with monthly invoicing so it is easy to budget.</p>
+<p><strong>Close to home.</strong> 20 Akatea Road, Glendene — near enough to check on things without a special trip.</p>
+<p><strong>A working yard.</strong> Practical, no-fuss storage run by people who know boats, caravans and vehicles.</p>
+<h2>Getting the most from long-term storage</h2>
+<p>Clean and cover whatever you are storing, check it each season, and keep trailers, tyres and fittings in good order. A little maintenance in storage saves a lot of trouble later.</p>
+<h2>Talk it through</h2>
+<p>Call 09 818 4586 or email info@westaucklandstorage.co.nz to discuss long-term space.</p>`
+  },
+  "why-choose-west-auckland-storage-for-your-short-term-storage-needs": {
+    title: "Short-Term & Seasonal Storage in West Auckland",
+    content: `<p>Not everything needs storing for months. Sometimes you just need a practical spot for a few weeks — while you travel, while the driveway is being redone, or over a busy season. Our short-term and seasonal storage covers exactly that.</p>
+<h2>When short-term storage helps</h2>
+<p>Heading overseas for a few weeks, freeing up the driveway for building work, storing a boat or caravan over the winter, or simply keeping a vehicle off the street for a spell.</p>
+<h2>Why owners use the yard</h2>
+<p><strong>Flexible.</strong> Store for as long as you need, with monthly invoicing.</p>
+<p><strong>Close to home.</strong> 20 Akatea Road, Glendene.</p>
+<p><strong>Fair value.</strong> Outdoor hardstand storage without marina costs or a waitlist.</p>
+<h2>What to tell us</h2>
+<p>The type and size of what you are storing, roughly how long you need the space, and how often you will need access. That is enough for us to suggest a spot and a price.</p>
+<h2>Ready when you are</h2>
+<p>Tell us what you are storing and roughly how long for, and we will match you to a spot. Call 09 818 4586 or email info@westaucklandstorage.co.nz.</p>`
+  },
+  "benefits-of-storing-your-boat-at-west-auckland-storage": {
+    title: "Benefits of Storing Your Boat with Us",
+    content: `<p>Keeping a boat at home is fine until it is not — until the driveway is full, the trailer is in the way, or the boat is taking a beating from the weather. Storing your boat at a working yard solves a few problems at once.</p>
+<h2>Why boat owners store with us</h2>
+<p><strong>You get your space back.</strong> The driveway, the garage and the street stop being a boat park.</p>
+<p><strong>Your boat is in one place.</strong> A dedicated storage spot means less shuffling, less chance of damage and a boat that is easier to prepare.</p>
+<p><strong>It is close to home.</strong> 20 Akatea Road, Glendene — handy for owners across West Auckland.</p>
+<p><strong>It is fair value.</strong> Outdoor hardstand storage without marina fees or a waitlist.</p>
+<h2>A practical tip</h2>
+<p>Give the boat a clean, cover it properly and check the trailer and tyres each season. Boats stored outdoors look after themselves much better with a little routine care.</p>
+<h2>Get a quote</h2>
+<p>Call 09 818 4586 or email info@westaucklandstorage.co.nz with the size of your boat and how long you need the space.</p>`
+  },
+  "boat-storage-at-west-auckland-storage": {
+    title: "Boat Storage at West Auckland Storage",
+    content: `<p>Our main job is boat storage. We keep trailer boats, launches, yachts and jet skis at Span Farm Boat Yard in Glendene, where owners across West Auckland store their boats close to home at a fair price.</p>
+<h2>What we store</h2>
+<p>Trailer boats, launches, yachts and jet skis — and we can take boats up to around 24 tonnes, so larger vessels are welcome too.</p>
+<h2>Why owners choose our yard</h2>
+<p><strong>Close to home.</strong> 20 Akatea Road, Glendene.</p>
+<p><strong>No marina price tag.</strong> Outdoor storage without marina fees or a marina waitlist.</p>
+<p><strong>Slipway access.</strong> A launch option for smaller trailer boats while it is operational. Ask us about current access before you arrive.</p>
+<h2>Looking after a boat in storage</h2>
+<p>A cover, a wash-down and a seasonal check of the trailer and fittings keep an outdoor-stored boat ready for the water.</p>
+<h2>Get started</h2>
+<p>Short and long-term storage, invoiced monthly. Call 09 818 4586 or email info@westaucklandstorage.co.nz to check space.</p>`
+  },
+  "caravan-storage-at-west-auckland-storage": {
+    title: "Caravan & Campervan Storage in West Auckland",
+    content: `<p>A caravan or campervan is wonderful to own and awkward to park. Between trips it takes up the best part of a driveway and sits out in the weather. Outdoor storage at our Glendene yard gives it a proper home and gives you back the space.</p>
+<h2>What we store</h2>
+<p>Caravans, campervans and motorhomes, along with trailers, boats, cars and other vehicles.</p>
+<h2>Why owners choose us</h2>
+<p><strong>Close to home.</strong> 20 Akatea Road, Glendene — easy to reach when a trip comes up.</p>
+<p><strong>Fair value.</strong> Outdoor hardstand storage without marina fees.</p>
+<p><strong>Flexible.</strong> Store for a season, over winter or on an ongoing basis, and pay monthly.</p>
+<h2>Before you store</h2>
+<p>Give the caravan a clean, empty the tanks, check the tyres and consider a cover. A little preparation now protects your investment over the off-season.</p>
+<h2>Get sorted</h2>
+<p>Call 09 818 4586 or email info@westaucklandstorage.co.nz with the size and how long you need the space.</p>`
+  },
+  "outdoor-storage-solutions-at-west-auckland-storage": {
+    title: "Outdoor Storage Options in West Auckland",
+    content: `<p>Everything we offer is outdoor storage — practical hardstand space at a working boat yard, for the boats, vehicles and gear that do not fit at home. It is simple, affordable and easy to access.</p>
+<h2>What we can store for you</h2>
+<p>Caravans and campervans; boats — fishing, sailing and ski; cars, 4WDs and utes; trucks and work vehicles; trailers of all kinds; motorbikes; kayaks, jet skis and other recreational gear.</p>
+<h2>Why outdoor storage works</h2>
+<p><strong>Affordable.</strong> Outdoor storage costs less than covered or marina options.</p>
+<p><strong>Accessible.</strong> Drive up to your item without wrestling it out of a shed.</p>
+<p><strong>Room to work.</strong> Space around your boat or vehicle makes cleaning and maintenance far easier.</p>
+<h2>Looking after anything stored outdoors</h2>
+<p>Covers, a regular clean and a seasonal check go a long way — especially for boats and caravans that sit out in the weather.</p>
+<h2>Talk to us</h2>
+<p>Call 09 818 4586 or email info@westaucklandstorage.co.nz and we will find the right spot for what you have.</p>`
+  },
+  "motorbike-storage-at-west-auckland-storage": {
+    title: "Motorbike Storage in West Auckland",
+    content: `<p>A motorbike — or a collection of them — takes up more room than you expect, and leaving one outside at home is not ideal. We offer practical outdoor storage for motorbikes at Span Farm Boat Yard in Glendene.</p>
+<h2>What we store</h2>
+<p>Road bikes, trail bikes, classics and project bikes, along with vehicles, trailers and recreational gear.</p>
+<h2>Why owners choose the yard</h2>
+<p><strong>Close to home.</strong> 20 Akatea Road, Glendene.</p>
+<p><strong>Fair value.</strong> Outdoor storage without marina-style overheads.</p>
+<p><strong>Flexible terms.</strong> Store for a few months or long-term, and pay monthly.</p>
+<h2>Room for more than one</h2>
+<p>If you keep a few bikes, or you are building or restoring one, storing them together at the yard keeps the garage free and everything in one accessible place.</p>
+<h2>Looking after a stored bike</h2>
+<p>Wash and dry it, top up the tank or drain the fuel, keep the battery on a maintainer and cover it to keep the weather off. A little care keeps a stored bike ready to ride.</p>
+<h2>Get in touch</h2>
+<p>Call 09 818 4586 or email info@westaucklandstorage.co.nz to check space.</p>`
+  },
+  "business-storage-solutions-at-west-auckland-storage": {
+    title: "Business & Fleet Storage in West Auckland",
+    content: `<p>Businesses need somewhere practical to park the vehicles, trailers and equipment they are not using every day. We offer straightforward outdoor storage at Span Farm Boat Yard in Glendene for exactly that.</p>
+<h2>Who this suits</h2>
+<p>Tradespeople, contractors and small businesses with work vehicles, trailers, boats or equipment that need a safe home base in West Auckland.</p>
+<h2>Why businesses choose the yard</h2>
+<p><strong>Close to home.</strong> 20 Akatea Road, Glendene — convenient for teams working across West Auckland.</p>
+<p><strong>Fair value.</strong> Outdoor storage without marina-style overheads.</p>
+<p><strong>Flexible.</strong> Short and longer-term arrangements, invoiced monthly.</p>
+<h2>What we can store</h2>
+<p>Work vehicles, utes and trucks; trailers; boats; and equipment. Because sizes vary, tell us what you have and how often you need access, and we will work out the space.</p>
+<h2>Talk to us</h2>
+<p>Call 09 818 4586 or email info@westaucklandstorage.co.nz to discuss your business storage needs.</p>`
   }
 };

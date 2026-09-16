@@ -2,6 +2,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 // Import the checked-in WordPress mirror, preserving its article order and copy.
+// This writes a RAW snapshot to src/data/blogPosts.raw.json for provenance only.
+// The site ships the brand-aligned copy in src/data/blogPosts.json, which is
+// rebuilt from src/data/curated-blog.mjs with `npm run build:blog`.
 const root = 'westaucklandstorage.co.nz';
 const plain = (html) => html.replace(/<[^>]*>/g, '').replace(/&amp;/g, '&').replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(+n)).replace(/&nbsp;/g, ' ').replace(/&quot;/g, '"').replace(/&#x([\da-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16))).trim();
 const slugs = [];
@@ -50,5 +53,5 @@ const posts = slugs.map(slug => {
   return { slug, title, date, dateLabel, author: 'Isaac', image, imageAlt, excerpt, content };
 });
 if (posts.length !== 34) throw new Error(`Expected 34 original posts, found ${posts.length}`);
-fs.writeFileSync('src/data/blogPosts.json', JSON.stringify(posts, null, 2) + '\n');
-console.log(`Imported ${posts.length} complete articles and their images.`);
+fs.writeFileSync('src/data/blogPosts.raw.json', JSON.stringify(posts, null, 2) + '\n');
+console.log(`Imported ${posts.length} raw articles to src/data/blogPosts.raw.json. Run \`npm run build:blog\` to reapply curated copy.`);
