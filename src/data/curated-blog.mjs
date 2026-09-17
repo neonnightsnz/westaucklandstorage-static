@@ -13,7 +13,7 @@ export const blogContent = {
 <h2>Why Laingholm owners use the yard</h2>
 <p><strong>Close to home.</strong> We are at Span Farm Boat Yard, 20 Akatea Road, Glendene — a straightforward run from Laingholm, so picking up the boat for a harbour day does not become a mission.</p>
 <p><strong>No marina price tag.</strong> You pay for practical outdoor hardstand storage, not marina fees and not a marina waitlist.</p>
-<p><strong>Slipway access.</strong> A genuine launch option for smaller trailer boats while it is operational. Ask us about current access before you arrive.</p>
+<p>Slipway access depends on conditions on the day — check with us before you head down.</p>
 <h2>What you can store</h2>
 <p>Trailer boats, launches and jet skis; caravans and campervans; cars, 4WDs, utes, shipping containers, trailers, kayaks and other recreational gear. Tell us what you have and roughly how long you need the space, and we will work out a spot that fits.</p>
 <h2>Getting started</h2>
@@ -25,7 +25,7 @@ export const blogContent = {
 <h2>Why Huia owners use the yard</h2>
 <p><strong>Close to home.</strong> Span Farm Boat Yard, 20 Akatea Road, Glendene, is an easy drive back toward the city, so your gear never has to travel far to be looked after.</p>
 <p><strong>Fair value.</strong> Practical outdoor storage priced for a working yard rather than a marina.</p>
-<p><strong>Slipway access.</strong> Available for smaller trailer boats when it is operational — ask us about current access and suitability before you arrive.</p>
+<p>Slipway access depends on conditions on the day — check with us before you head down.</p>
 <h2>Popular with Huia locals</h2>
 <p>Trailer boats and small launches, plus caravans, campervans, trailers, 4WDs and utes that no longer fit at home. Kayaks and other recreational gear are welcome too.</p>
 <h2>Talk to the yard</h2>
@@ -49,7 +49,7 @@ export const blogContent = {
 <h2>Why New Lynn owners store with us</h2>
 <p><strong>Minutes away.</strong> Span Farm Boat Yard, 20 Akatea Road, Glendene, is a quick trip from New Lynn — close enough to drop in, far enough to free up your section.</p>
 <p><strong>Fair value.</strong> You are paying for practical outdoor storage, not a marina and not a call centre.</p>
-<p><strong>Slipway access.</strong> A launch option for smaller trailer boats while it is operational. Ask about current access before you arrive.</p>
+<p>Slipway access depends on conditions on the day — check with us before you head down.</p>
 <h2>What we look after</h2>
 <p>Boats and jet skis, caravans and campervans, trailers, cars, 4WDs, utes, trucks, shipping containers, kayaks and other recreational gear. If it needs a home that is not the driveway, tell us about it.</p>
 <h2>Get sorted</h2>
@@ -73,7 +73,7 @@ export const blogContent = {
 <h2>Why West Harbour owners choose us</h2>
 <p><strong>Close to the water, without the marina.</strong> Span Farm Boat Yard, 20 Akatea Road, Glendene, is a short drive from West Harbour.</p>
 <p><strong>Fair value.</strong> You pay for outdoor hardstand storage, not marina fees.</p>
-<p><strong>Slipway access.</strong> A real advantage for smaller trailer boats when it is operational. Ask us about current access before you arrive.</p>
+<p>Slipway access depends on conditions on the day — check with us before you head down.</p>
 <h2>What we store</h2>
 <p>Trailer boats, launches, yachts and jet skis, along with caravans, campervans, trailers, cars, 4WDs, utes, shipping containers and kayaks. Tell us what you have and we will work out the space.</p>
 <h2>Get in touch</h2>
@@ -97,7 +97,7 @@ export const blogContent = {
 <h2>Why this part of Henderson suits our yard</h2>
 <p><strong>Close to home.</strong> Span Farm Boat Yard, 20 Akatea Road, Glendene, is a short, straightforward run from the Lincoln Road area.</p>
 <p><strong>Fair value.</strong> Sensible outdoor storage without marina costs or a waitlist.</p>
-<p><strong>Slipway access.</strong> Available for smaller trailer boats when operational — ask us about current access before you arrive.</p>
+<p>Slipway access depends on conditions on the day — check with us before you head down.</p>
 <h2>What you can store</h2>
 <p>Trailer boats and launches, caravans and campervans, trailers, cars, 4WDs, utes, shipping containers and recreational gear. Larger vehicles and equipment can be discussed with the team.</p>
 <h2>Talk to us</h2>
@@ -109,7 +109,7 @@ export const blogContent = {
 <h2>Why Green Bay owners use the yard</h2>
 <p><strong>Close to home.</strong> Span Farm Boat Yard, 20 Akatea Road, Glendene, is a short drive from Green Bay.</p>
 <p><strong>No marina price tag.</strong> Practical outdoor storage for a fair price, with no marina waitlist.</p>
-<p><strong>Slipway access.</strong> A genuine launch option for smaller trailer boats when it is operational. Check current access with us before you arrive.</p>
+<p>Slipway access depends on conditions on the day — check with us before you head down.</p>
 <h2>What we store</h2>
 <p>Boats, jet skis, caravans, campervans, trailers, cars, 4WDs, utes, shipping containers, kayaks and other recreational gear. Tell us the size and how long you need it stored.</p>
 <h2>Get started</h2>
@@ -121,7 +121,7 @@ export const blogContent = {
 <h2>Why Kelston owners use the yard</h2>
 <p><strong>Close to home.</strong> Span Farm Boat Yard, 20 Akatea Road, Glendene, is right next door to Kelston — one of the nearest spots you will find to store a boat or caravan.</p>
 <p><strong>No marina price tag.</strong> Fair, straightforward pricing with no marina fees and no waitlist.</p>
-<p><strong>Slipway access.</strong> A real advantage for smaller trailer boats while it is operational. Ask us about current access before you arrive.</p>
+<p>Slipway access depends on conditions on the day — check with us before you head down.</p>
 <h2>What we store</h2>
 <p>Boats and jet skis, caravans and campervans, trailers, cars, 4WDs, utes, shipping containers, kayaks and other recreational gear. Larger equipment can be discussed with the yard.</p>
 <h2>Get sorted</h2>
@@ -133,7 +133,7 @@ export const blogContent = {
 <h2>Why Swanson owners use the yard</h2>
 <p><strong>Close to home.</strong> Span Farm Boat Yard, 20 Akatea Road, Glendene, is a short drive from Swanson.</p>
 <p><strong>Fair value.</strong> Practical outdoor storage priced for a working yard, not a marina.</p>
-<p><strong>Slipway access.</strong> Available for smaller trailer boats when operational — check current access with us before you arrive.</p>
+<p>Available for smaller trailer boats when operational — check current access with us before you arrive.</p>
 <h2>What we look after</h2>
 <p>Trailer boats and launches, caravans and campervans, trailers, cars, 4WDs, utes, shipping containers, kayaks and other recreational gear. Tell us what you have and how long you need it stored.</p>
 <h2>Talk to the yard</h2>
@@ -159,7 +159,7 @@ export const blogContent = {
 <h2>Why Glendene owners store with us</h2>
 <p><strong>Literally down the road.</strong> We are at 20 Akatea Road, Glendene — your neighbours are already storing with us.</p>
 <p><strong>No marina price tag.</strong> Practical outdoor storage priced for a working yard rather than a marina, with no waitlist.</p>
-<p><strong>Slipway access.</strong> A launch option for smaller trailer boats while it is operational. Ask about current access before you arrive.</p>
+<p>Slipway access depends on conditions on the day — check with us before you head down.</p>
 <h2>What you can store</h2>
 <p>Trailer boats, launches and jet skis; caravans and campervans; trailers, cars, 4WDs, utes, shipping containers, kayaks and other recreational gear. Larger items can be discussed with the team.</p>
 <h2>Get started</h2>
@@ -171,7 +171,7 @@ export const blogContent = {
 <h2>Why Western Heights owners use the yard</h2>
 <p><strong>Close to home.</strong> Span Farm Boat Yard, 20 Akatea Road, Glendene, is a short drive down the hill and along.</p>
 <p><strong>Fair value.</strong> Outdoor hardstand storage without marina fees or a marina waitlist.</p>
-<p><strong>Slipway access.</strong> Available for smaller trailer boats when it is operational — ask us about current access before you arrive.</p>
+<p>Available for smaller trailer boats when it is operational — ask us about current access before you arrive.</p>
 <h2>What fits</h2>
 <p>Boats and jet skis, caravans and campervans, trailers, cars, 4WDs, utes, shipping containers, kayaks and other recreational gear.</p>
 <h2>Talk to us</h2>
@@ -197,7 +197,7 @@ export const blogContent = {
 <h2>Why Herald Island owners choose us</h2>
 <p><strong>Close to home.</strong> Span Farm Boat Yard, 20 Akatea Road, Glendene, is a short drive from the island.</p>
 <p><strong>No marina price tag.</strong> Practical outdoor storage instead of marina fees or a marina waitlist.</p>
-<p><strong>Slipway access.</strong> A genuine launch option for smaller trailer boats while it is operational. Ask about current access before you arrive.</p>
+<p>A genuine launch option for smaller trailer boats while it is operational. Ask about current access before you arrive.</p>
 <h2>What we look after</h2>
 <p>Trailer boats, launches and jet skis, along with caravans, campervans, trailers, cars, 4WDs, utes, shipping containers and kayaks.</p>
 <h2>Get in touch</h2>
@@ -209,7 +209,7 @@ export const blogContent = {
 <h2>Why Peninsula owners use the yard</h2>
 <p><strong>Close to home.</strong> Span Farm Boat Yard, 20 Akatea Road, Glendene, is a short drive from Te Atatu Peninsula.</p>
 <p><strong>No marina price tag.</strong> Fair, practical pricing with no marina fees and no waitlist.</p>
-<p><strong>Slipway access.</strong> A real advantage for smaller trailer boats when it is operational — check current access with us before you arrive.</p>
+<p>A real advantage for smaller trailer boats when it is operational — check current access with us before you arrive.</p>
 <h2>What we store</h2>
 <p>Boats, jet skis, caravans, campervans, trailers, cars, 4WDs, utes, shipping containers, kayaks and other recreational gear. Tell us what you have and we will work out the space.</p>
 <h2>Ready when you are</h2>
@@ -233,7 +233,7 @@ export const blogContent = {
 <h2>Why Titirangi owners use the yard</h2>
 <p><strong>Close to home.</strong> Span Farm Boat Yard, 20 Akatea Road, Glendene, is an easy drive down the hill from Titirangi.</p>
 <p><strong>No marina price tag.</strong> Practical outdoor storage priced for a working yard, with no marina waitlist.</p>
-<p><strong>Slipway access.</strong> Available for smaller trailer boats while it is operational. Ask about current access before you arrive.</p>
+<p>Available for smaller trailer boats while it is operational. Ask about current access before you arrive.</p>
 <h2>What we store</h2>
 <p>Boats and jet skis, caravans and campervans, trailers, cars, 4WDs, utes, shipping containers, kayaks and other recreational gear.</p>
 <h2>A flatter, easier spot to store</h2>
@@ -288,7 +288,7 @@ export const blogContent = {
 <h2>Why owners choose the yard</h2>
 <p><strong>Location.</strong> 20 Akatea Road, Glendene — close to home for owners right across West Auckland.</p>
 <p><strong>Price.</strong> Fair value for outdoor storage, with no marina fees and no waitlist.</p>
-<p><strong>Slipway access.</strong> A launch option for smaller trailer boats while it is operational. Ask us about current access before you arrive.</p>
+<p>A launch option for smaller trailer boats while it is operational. Ask us about current access before you arrive.</p>
 <h2>Getting started</h2>
 <p>Short-term, seasonal and long-term storage is all available and invoiced monthly. Call 09 818 4586 or email info@westaucklandstorage.co.nz and we will help you find the right spot.</p>`
   },
@@ -311,7 +311,7 @@ export const blogContent = {
 <h2>What the yard offers</h2>
 <p><strong>Uncovered boat storage.</strong> Practical outdoor hardstand storage for boats that do not need a shed — easy to access and priced for a working yard.</p>
 <p><strong>Space for real boats.</strong> We store boats up to 40ft. Tell us the length including the trailer and your start date so we can check a suitable space.</p>
-<p><strong>Slipway access.</strong> Available for smaller trailer boats when it is operational. Because it is not always in service, please ask us about current access before you arrive.</p>
+<p>Available for smaller trailer boats when it is operational. Because it is not always in service, please ask us about current access before you arrive.</p>
 <h2>Why owners choose the yard</h2>
 <p><strong>Location.</strong> 20 Akatea Road, Glendene — close to home for owners across West Auckland.</p>
 <p><strong>Price.</strong> Fair value outdoors, with no marina fees and no waitlist.</p>

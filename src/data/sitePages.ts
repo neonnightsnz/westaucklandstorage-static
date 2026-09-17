@@ -23,7 +23,6 @@ export const pages = [
       }
     ],
     "bullets": [
-      "Company established in 2008",
       "Span Farm Boat Yard in Glendene",
       "Practical outdoor storage",
       "A gated yard with CCTV and an on-site manager",
@@ -112,14 +111,14 @@ export const pages = [
       {
         "heading": "Why owners travel to the yard",
         "paragraphs": [
-          "It comes back to location and price, plus a working yard that is close to home and easy to reach. The slipway is currently under repair and our haul-out facilities are a work in progress, so ask us where things stand before you plan a launch around either. No marina waitlist, no marina price tag, and no need to drive across the city to reach your own boat."
+          "It comes back to location and price, plus a working yard that is close to home and easy to reach. Slipway access depends on conditions on the day — check with us before you head down. No marina waitlist, no marina price tag, and no need to drive across the city to reach your own boat."
         ]
       }
     ],
     "bullets": [
       "Close to home across West Auckland",
       "From $200 + GST per month, no marina price tag",
-      "Slipway under repair — ask us",
+      "Slipway access depends on conditions on the day — check with us before you head down",
       "Short and longer-term options"
     ],
     "related": [

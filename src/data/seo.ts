@@ -67,7 +67,7 @@ export function structuredDataFor(pathname: string, title: string, description: 
       image: absoluteUrl('/images/boat-hardstand.jpg'), logo: absoluteUrl('/images/logo.png'),
       address: { '@type': 'PostalAddress', streetAddress: '20 Akatea Road, Glendene', addressLocality: 'Waitakere', addressRegion: 'Auckland', postalCode: '0602', addressCountry: 'NZ' },
       geo: { '@type': 'GeoCoordinates', latitude: -36.890488, longitude: 174.662988 },
-      hasMap: 'https://www.google.com/maps/search/?api=1&query=-36.890488,174.662988',
+      hasMap: 'https://maps.app.goo.gl/a359LycS4y4m8mbS9',
       areaServed: locationGroups.flatMap(group => group.suburbs.map(suburb => suburb.name)),
       priceRange: 'From $200 + GST per month',
       paymentAccepted: 'Cash, Cheque, Credit Card, Bank Transfer',
