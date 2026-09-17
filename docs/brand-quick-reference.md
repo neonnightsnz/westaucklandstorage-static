@@ -38,7 +38,7 @@ Reference dimensions are an 1180px content maximum, 24px desktop side gutters an
 
 Use the business name **West Auckland Storage**, phone **09 818 4586**, address **20 Akatea Road, Glendene, Auckland 0602** and email **info@westaucklandstorage.co.nz** consistently. The yard is Span Farm Boat Yard Ltd; Jeff is the on-site manager. The call link is `tel:098184586`.
 
-Storage is monthly, from $200 + GST, with no deposit required and no waitlist. The yard stores boats on trailers up to 40ft, caravans, trailers, cars, 4WDs, utes, trucks, motorbikes, jet skis, kayaks, business equipment and 20ft or 40ft shipping containers. Ask the yard for container pricing. Do not offer household storage.
+Storage is monthly, from $200 + GST, with no deposit required and no waitlist. The yard stores boats on trailers up to 40ft, caravans, trailers, cars, 4WDs, utes, trucks, shipping containers, jet skis, kayaks, business equipment and 20ft or 40ft shipping containers. Ask the yard for container pricing. Do not offer household storage.
 
 CCTV, a gated yard and an on-site manager are confirmed. Daylight access is best; after-hours access uses a gate code, with 24/7 access by prior arrangement. Boat work requires the site manager's pre-approval. Toilets and a wash-down hose are available.
 

@@ -15,7 +15,7 @@ West Auckland Storage is not trying to be the biggest storage brand in Auckland.
 - **Price:** billed monthly, starting from $200 + GST (quoted excluding GST). No deposit required.
 - **Security:** CCTV, a gated yard and an on-site manager are all in place and may be stated plainly.
 - **Access:** daylight hours are best for general access; after hours by gate code; 24/7 by prior arrangement.
-- **What we store:** boats to 40ft, caravans, trailers, cars, utes, trucks, motorbikes, jet skis, kayaks, business equipment, and shipping containers (20ft and 40ft). No household storage.
+- **What we store:** boats to 40ft, caravans, trailers, cars, utes, trucks, shipping containers, jet skis, kayaks, business equipment, and shipping containers (20ft and 40ft). No household storage.
 
 See §12 for the full set of confirmed operational facts.
 
@@ -25,7 +25,7 @@ Primary groups:
 
 1. **Boat owners in West Auckland** — Launching regularly, need storage close to home, often frustrated by marina costs and marina waitlists.
 2. **Caravan and trailer owners** — Seasonal users who want a secure home for the caravan or trailer between trips.
-3. **General vehicle storage** — Cars, 4WDs, utes, trucks, motorbikes, jet skis, kayaks and equipment.
+3. **General vehicle storage** — Cars, 4WDs, utes, trucks, shipping containers, jet skis, kayaks and equipment.
 4. **Long-term and seasonal storage** — Owners who need somewhere reliable for months at a time.
 
 All groups share one thing: **they value proximity, price, and security.** All share one fear: **paying too much to store something they are not using.**
@@ -163,7 +163,7 @@ Only use figures where they remain accurate — these are confirmed with the yar
 
 **What we store**
 
-- Boats on trailers, caravans, trailers, cars, 4WDs, utes, trucks, motorbikes, jet skis and kayaks.
+- Boats on trailers, caravans, trailers, cars, 4WDs, utes, trucks, shipping containers, jet skis and kayaks.
 - **Boats up to 40ft (~12.2m).**
 - **Shipping containers, 20ft (~6.1m) and 40ft (~12.2m)** — ring the yard for container pricing.
 - **No household storage.** Do not offer or imply it.

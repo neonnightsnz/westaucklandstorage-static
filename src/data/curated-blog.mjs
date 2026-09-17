@@ -15,7 +15,7 @@ export const blogContent = {
 <p><strong>No marina price tag.</strong> You pay for practical outdoor hardstand storage, not marina fees and not a marina waitlist.</p>
 <p><strong>Slipway access.</strong> A genuine launch option for smaller trailer boats while it is operational. Ask us about current access before you arrive.</p>
 <h2>What you can store</h2>
-<p>Trailer boats, launches and jet skis; caravans and campervans; cars, 4WDs, utes, motorbikes, trailers, kayaks and other recreational gear. Tell us what you have and roughly how long you need the space, and we will work out a spot that fits.</p>
+<p>Trailer boats, launches and jet skis; caravans and campervans; cars, 4WDs, utes, shipping containers, trailers, kayaks and other recreational gear. Tell us what you have and roughly how long you need the space, and we will work out a spot that fits.</p>
 <h2>Getting started</h2>
 <p>Storage is flexible — short stays, winter storage or longer-term arrangements, invoiced monthly. Call 09 818 4586 or email info@westaucklandstorage.co.nz and we will come back with the next step.</p>`
   },
@@ -39,7 +39,7 @@ export const blogContent = {
 <p><strong>No marina price tag.</strong> Straightforward hardstand storage instead of marina fees or a waitlist.</p>
 <p><strong>Flexible terms.</strong> Store for a season, over winter, or on an ongoing basis, and pay monthly.</p>
 <h2>Room for what you own</h2>
-<p>Caravans, campervans and trailers are the common ones, but we also store boats, jet skis, cars, 4WDs, utes, motorbikes, kayaks and other gear. Tell us the size and we will find the right spot.</p>
+<p>Caravans, campervans and trailers are the common ones, but we also store boats, jet skis, cars, 4WDs, utes, shipping containers, kayaks and other gear. Tell us the size and we will find the right spot.</p>
 <h2>Next step</h2>
 <p>Give us a call on 09 818 4586 or email info@westaucklandstorage.co.nz with a few details and we will get back to you with the options.</p>`
   },
@@ -51,7 +51,7 @@ export const blogContent = {
 <p><strong>Fair value.</strong> You are paying for practical outdoor storage, not a marina and not a call centre.</p>
 <p><strong>Slipway access.</strong> A launch option for smaller trailer boats while it is operational. Ask about current access before you arrive.</p>
 <h2>What we look after</h2>
-<p>Boats and jet skis, caravans and campervans, trailers, cars, 4WDs, utes, trucks, motorbikes, kayaks and other recreational gear. If it needs a home that is not the driveway, tell us about it.</p>
+<p>Boats and jet skis, caravans and campervans, trailers, cars, 4WDs, utes, trucks, shipping containers, kayaks and other recreational gear. If it needs a home that is not the driveway, tell us about it.</p>
 <h2>Get sorted</h2>
 <p>We offer short and longer-term storage with monthly invoicing. Call 09 818 4586 or email info@westaucklandstorage.co.nz to talk through what you need.</p>`
   },
@@ -63,7 +63,7 @@ export const blogContent = {
 <p><strong>No marina price tag.</strong> Sensible outdoor storage without marina costs or a waitlist.</p>
 <p><strong>Practical setup.</strong> A working yard run by people who understand what is being stored.</p>
 <h2>What fits</h2>
-<p>Trailer boats and launches, caravans and campervans, trailers, cars, 4WDs, utes, motorbikes and recreational gear. Larger items such as trucks can be discussed with the yard.</p>
+<p>Trailer boats and launches, caravans and campervans, trailers, cars, 4WDs, utes, shipping containers and recreational gear. Larger items such as trucks can be discussed with the yard.</p>
 <h2>Ready when you are</h2>
 <p>Short-term, seasonal and long-term options are available. Call 09 818 4586 or email info@westaucklandstorage.co.nz with the details and we will come back to you.</p>`
   },
@@ -75,7 +75,7 @@ export const blogContent = {
 <p><strong>Fair value.</strong> You pay for outdoor hardstand storage, not marina fees.</p>
 <p><strong>Slipway access.</strong> A real advantage for smaller trailer boats when it is operational. Ask us about current access before you arrive.</p>
 <h2>What we store</h2>
-<p>Trailer boats, launches, yachts and jet skis, along with caravans, campervans, trailers, cars, 4WDs, utes, motorbikes and kayaks. Tell us what you have and we will work out the space.</p>
+<p>Trailer boats, launches, yachts and jet skis, along with caravans, campervans, trailers, cars, 4WDs, utes, shipping containers and kayaks. Tell us what you have and we will work out the space.</p>
 <h2>Get in touch</h2>
 <p>Flexible short and long-term storage, invoiced monthly. Call 09 818 4586 or email info@westaucklandstorage.co.nz and we will help you find a spot.</p>`
   },
@@ -87,7 +87,7 @@ export const blogContent = {
 <p><strong>No marina price tag.</strong> Practical outdoor storage priced for a working yard.</p>
 <p><strong>Real people.</strong> This is a working boat yard, not a row of anonymous units or an online-only booking system.</p>
 <h2>What we look after</h2>
-<p>Boats, jet skis, caravans, campervans, trailers, cars, 4WDs, utes, motorbikes, kayaks and other recreational gear.</p>
+<p>Boats, jet skis, caravans, campervans, trailers, cars, 4WDs, utes, shipping containers, kayaks and other recreational gear.</p>
 <h2>Start here</h2>
 <p>Short stays, winter storage and longer-term arrangements are all welcome, invoiced monthly. Call 09 818 4586 or email info@westaucklandstorage.co.nz and we will talk it through.</p>`
   },
@@ -99,7 +99,7 @@ export const blogContent = {
 <p><strong>Fair value.</strong> Sensible outdoor storage without marina costs or a waitlist.</p>
 <p><strong>Slipway access.</strong> Available for smaller trailer boats when operational — ask us about current access before you arrive.</p>
 <h2>What you can store</h2>
-<p>Trailer boats and launches, caravans and campervans, trailers, cars, 4WDs, utes, motorbikes and recreational gear. Larger vehicles and equipment can be discussed with the team.</p>
+<p>Trailer boats and launches, caravans and campervans, trailers, cars, 4WDs, utes, shipping containers and recreational gear. Larger vehicles and equipment can be discussed with the team.</p>
 <h2>Talk to us</h2>
 <p>Flexible short and long-term storage, invoiced monthly. Call 09 818 4586 or email info@westaucklandstorage.co.nz with a few details and we will get back to you.</p>`
   },
@@ -111,7 +111,7 @@ export const blogContent = {
 <p><strong>No marina price tag.</strong> Practical outdoor storage for a fair price, with no marina waitlist.</p>
 <p><strong>Slipway access.</strong> A genuine launch option for smaller trailer boats when it is operational. Check current access with us before you arrive.</p>
 <h2>What we store</h2>
-<p>Boats, jet skis, caravans, campervans, trailers, cars, 4WDs, utes, motorbikes, kayaks and other recreational gear. Tell us the size and how long you need it stored.</p>
+<p>Boats, jet skis, caravans, campervans, trailers, cars, 4WDs, utes, shipping containers, kayaks and other recreational gear. Tell us the size and how long you need it stored.</p>
 <h2>Get started</h2>
 <p>Short and longer-term storage, invoiced monthly. Call 09 818 4586 or email info@westaucklandstorage.co.nz and we will find the right spot for you.</p>`
   },
@@ -123,7 +123,7 @@ export const blogContent = {
 <p><strong>No marina price tag.</strong> Fair, straightforward pricing with no marina fees and no waitlist.</p>
 <p><strong>Slipway access.</strong> A real advantage for smaller trailer boats while it is operational. Ask us about current access before you arrive.</p>
 <h2>What we store</h2>
-<p>Boats and jet skis, caravans and campervans, trailers, cars, 4WDs, utes, motorbikes, kayaks and other recreational gear. Larger equipment can be discussed with the yard.</p>
+<p>Boats and jet skis, caravans and campervans, trailers, cars, 4WDs, utes, shipping containers, kayaks and other recreational gear. Larger equipment can be discussed with the yard.</p>
 <h2>Get sorted</h2>
 <p>Short-term, seasonal and long-term storage are all available and invoiced monthly. Call 09 818 4586 or email info@westaucklandstorage.co.nz to check space.</p>`
   },
@@ -135,7 +135,7 @@ export const blogContent = {
 <p><strong>Fair value.</strong> Practical outdoor storage priced for a working yard, not a marina.</p>
 <p><strong>Slipway access.</strong> Available for smaller trailer boats when operational — check current access with us before you arrive.</p>
 <h2>What we look after</h2>
-<p>Trailer boats and launches, caravans and campervans, trailers, cars, 4WDs, utes, motorbikes, kayaks and other recreational gear. Tell us what you have and how long you need it stored.</p>
+<p>Trailer boats and launches, caravans and campervans, trailers, cars, 4WDs, utes, shipping containers, kayaks and other recreational gear. Tell us what you have and how long you need it stored.</p>
 <h2>Talk to the yard</h2>
 <p>Flexible short and long-term storage with monthly invoicing. Call 09 818 4586 or email info@westaucklandstorage.co.nz and we will work out the details.</p>`
   },
@@ -147,7 +147,7 @@ export const blogContent = {
 <p><strong>No marina price tag.</strong> Sensible outdoor storage without marina costs or a waitlist.</p>
 <p><strong>Practical and uncomplicated.</strong> A working yard run by people who know what is being stored.</p>
 <h2>What we store</h2>
-<p>Boats, jet skis, caravans, campervans, trailers, cars, 4WDs, utes, trucks, motorbikes and recreational gear.</p>
+<p>Boats, jet skis, caravans, campervans, trailers, cars, 4WDs, utes, trucks, shipping containers and recreational gear.</p>
 <h2>Why a yard suits Whenuapai owners</h2>
 <p>Larger sections are handy, but a boat or work vehicle still needs the right spot — level, easy to get to and out of the way of the house. Our Glendene yard is close by and made for exactly that.</p>
 <h2>Next step</h2>
@@ -161,7 +161,7 @@ export const blogContent = {
 <p><strong>No marina price tag.</strong> Practical outdoor storage priced for a working yard rather than a marina, with no waitlist.</p>
 <p><strong>Slipway access.</strong> A launch option for smaller trailer boats while it is operational. Ask about current access before you arrive.</p>
 <h2>What you can store</h2>
-<p>Trailer boats, launches and jet skis; caravans and campervans; trailers, cars, 4WDs, utes, motorbikes, kayaks and other recreational gear. Larger items can be discussed with the team.</p>
+<p>Trailer boats, launches and jet skis; caravans and campervans; trailers, cars, 4WDs, utes, shipping containers, kayaks and other recreational gear. Larger items can be discussed with the team.</p>
 <h2>Get started</h2>
 <p>Flexible short and long-term storage, invoiced monthly. Call 09 818 4586 or email info@westaucklandstorage.co.nz and we will find you a spot.</p>`
   },
@@ -173,7 +173,7 @@ export const blogContent = {
 <p><strong>Fair value.</strong> Outdoor hardstand storage without marina fees or a marina waitlist.</p>
 <p><strong>Slipway access.</strong> Available for smaller trailer boats when it is operational — ask us about current access before you arrive.</p>
 <h2>What fits</h2>
-<p>Boats and jet skis, caravans and campervans, trailers, cars, 4WDs, utes, motorbikes, kayaks and other recreational gear.</p>
+<p>Boats and jet skis, caravans and campervans, trailers, cars, 4WDs, utes, shipping containers, kayaks and other recreational gear.</p>
 <h2>Talk to us</h2>
 <p>Short-term, seasonal and long-term storage, invoiced monthly. Call 09 818 4586 or email info@westaucklandstorage.co.nz to check space and pricing.</p>`
   },
@@ -185,7 +185,7 @@ export const blogContent = {
 <p><strong>No marina price tag.</strong> Sensible outdoor storage priced for a working yard.</p>
 <p><strong>Real people to deal with.</strong> This is a working boat yard, not an online-only booking system.</p>
 <h2>What we store</h2>
-<p>Caravans and campervans, trailers, boats and jet skis, cars, 4WDs, utes, motorbikes, kayaks and other recreational gear. Tell us the size and how long you need.</p>
+<p>Caravans and campervans, trailers, boats and jet skis, cars, 4WDs, utes, shipping containers, kayaks and other recreational gear. Tell us the size and how long you need.</p>
 <h2>Room for the everyday extras</h2>
 <p>Glen Eden households often run a caravan, a trailer and a couple of cars off one driveway. Storing the one you use least at our yard keeps the rest of the driveway working the way it should.</p>
 <h2>Get sorted</h2>
@@ -199,7 +199,7 @@ export const blogContent = {
 <p><strong>No marina price tag.</strong> Practical outdoor storage instead of marina fees or a marina waitlist.</p>
 <p><strong>Slipway access.</strong> A genuine launch option for smaller trailer boats while it is operational. Ask about current access before you arrive.</p>
 <h2>What we look after</h2>
-<p>Trailer boats, launches and jet skis, along with caravans, campervans, trailers, cars, 4WDs, utes, motorbikes and kayaks.</p>
+<p>Trailer boats, launches and jet skis, along with caravans, campervans, trailers, cars, 4WDs, utes, shipping containers and kayaks.</p>
 <h2>Get in touch</h2>
 <p>Short-term, seasonal and long-term storage, invoiced monthly. Call 09 818 4586 or email info@westaucklandstorage.co.nz and we will sort the details.</p>`
   },
@@ -211,7 +211,7 @@ export const blogContent = {
 <p><strong>No marina price tag.</strong> Fair, practical pricing with no marina fees and no waitlist.</p>
 <p><strong>Slipway access.</strong> A real advantage for smaller trailer boats when it is operational — check current access with us before you arrive.</p>
 <h2>What we store</h2>
-<p>Boats, jet skis, caravans, campervans, trailers, cars, 4WDs, utes, motorbikes, kayaks and other recreational gear. Tell us what you have and we will work out the space.</p>
+<p>Boats, jet skis, caravans, campervans, trailers, cars, 4WDs, utes, shipping containers, kayaks and other recreational gear. Tell us what you have and we will work out the space.</p>
 <h2>Ready when you are</h2>
 <p>Flexible short and long-term storage, invoiced monthly. Call 09 818 4586 or email info@westaucklandstorage.co.nz to check availability.</p>`
   },
@@ -223,7 +223,7 @@ export const blogContent = {
 <p><strong>Fair value.</strong> Sensible outdoor hardstand storage without marina costs.</p>
 <p><strong>Practical and uncomplicated.</strong> A working yard run by people who know boats, caravans and trailers.</p>
 <h2>What fits</h2>
-<p>Trailer boats and launches, caravans and campervans, trailers, cars, 4WDs, utes, motorbikes, kayaks and other gear. Larger items can be discussed with the team.</p>
+<p>Trailer boats and launches, caravans and campervans, trailers, cars, 4WDs, utes, shipping containers, kayaks and other gear. Larger items can be discussed with the team.</p>
 <h2>Talk to the yard</h2>
 <p>Short-term, seasonal and long-term storage with monthly invoicing. Call 09 818 4586 or email info@westaucklandstorage.co.nz and we will get back to you.</p>`
   },
@@ -235,7 +235,7 @@ export const blogContent = {
 <p><strong>No marina price tag.</strong> Practical outdoor storage priced for a working yard, with no marina waitlist.</p>
 <p><strong>Slipway access.</strong> Available for smaller trailer boats while it is operational. Ask about current access before you arrive.</p>
 <h2>What we store</h2>
-<p>Boats and jet skis, caravans and campervans, trailers, cars, 4WDs, utes, motorbikes, kayaks and other recreational gear.</p>
+<p>Boats and jet skis, caravans and campervans, trailers, cars, 4WDs, utes, shipping containers, kayaks and other recreational gear.</p>
 <h2>A flatter, easier spot to store</h2>
 <p>Titirangi's charm is its bush and its hills — which is exactly why level, easy-access storage nearby is worth having. Drive up, hitch on and head off without wrestling the boat on a slope.</p>
 <h2>Get sorted</h2>
@@ -245,7 +245,7 @@ export const blogContent = {
     title: "Vehicle Storage in West Auckland",
     content: `<p>If a car, 4WD or ute has become a spare rather than a daily, you probably do not need it sitting on the driveway any more. We offer practical outdoor vehicle storage at Span Farm Boat Yard in Glendene — close to home and priced well below a lock-up.</p>
 <h2>What we store</h2>
-<p>Cars, 4WDs, utes and vans, along with trailers, caravans, boats and motorbikes. Tell us the size, whether it needs to stay registered, and how often you will need access, and we will suggest a spot.</p>
+<p>Cars, 4WDs, utes and vans, along with trailers, caravans, boats and shipping containers. Tell us the size, whether it needs to stay registered, and how often you will need access, and we will suggest a spot.</p>
 <h2>Parking a vehicle you use less often</h2>
 <p>Tell Jeff whether you are storing a car, 4WD or ute, its length and the start date. If it will arrive on a trailer, explain that when you enquire.</p>
 <p>The vehicle will be outdoors. Follow its maker's storage guidance and arrange any access you need while it is parked here.</p>
@@ -284,7 +284,7 @@ export const blogContent = {
     title: "Boat & Vehicle Storage in West Auckland",
     content: `<p>West Auckland Storage is a working boat yard at Span Farm Boat Yard in Glendene, storing boats and vehicles for owners across West Auckland. If you are tired of marina prices or waiting on a marina waitlist, this is the practical local alternative.</p>
 <h2>What we store</h2>
-<p>Trailer boats, launches, yachts and jet skis; caravans and campervans; trailers, cars, 4WDs, utes, trucks, motorbikes, kayaks and other recreational gear.</p>
+<p>Trailer boats, launches, yachts and jet skis; caravans and campervans; trailers, cars, 4WDs, utes, trucks, shipping containers, kayaks and other recreational gear.</p>
 <h2>Why owners choose the yard</h2>
 <p><strong>Location.</strong> 20 Akatea Road, Glendene — close to home for owners right across West Auckland.</p>
 <p><strong>Price.</strong> Fair value for outdoor storage, with no marina fees and no waitlist.</p>
@@ -404,7 +404,7 @@ export const blogContent = {
     title: "Outdoor Storage Options in West Auckland",
     content: `<p>Everything we offer is outdoor storage — practical hardstand space at a working boat yard, for the boats, vehicles and gear that do not fit at home. It is simple, affordable and easy to access.</p>
 <h2>What we can store for you</h2>
-<p>Caravans and campervans; boats — fishing, sailing and ski; cars, 4WDs and utes; trucks and work vehicles; trailers of all kinds; motorbikes; kayaks, jet skis and other recreational gear.</p>
+<p>Caravans and campervans; boats — fishing, sailing and ski; cars, 4WDs and utes; trucks and work vehicles; trailers of all kinds; shipping containers; kayaks, jet skis and other recreational gear.</p>
 <h2>Choosing outdoor storage</h2>
 <p>The yard stores vehicles, boats, trailers and equipment outdoors. It does not offer household storage. Tell Jeff exactly what you want to leave here before arranging a drop-off.</p>
 <p>Shipping containers of 20ft and 40ft are also accepted. Call the yard for container pricing and to discuss arrival.</p>
@@ -413,20 +413,17 @@ export const blogContent = {
 <h2>Talk to us</h2>
 <p>Call 09 818 4586 or email info@westaucklandstorage.co.nz and we will find the right spot for what you have.</p>`
   },
-  "motorbike-storage-at-west-auckland-storage": {
-    title: "Motorbike Storage in West Auckland",
-    content: `<p>A motorbike — or a collection of them — takes up more room than you expect, and leaving one outside at home is not ideal. We offer practical outdoor storage for motorbikes at Span Farm Boat Yard in Glendene.</p>
+  "shipping-container-storage-at-west-auckland-storage": {
+    title: "Shipping Container Storage in West Auckland",
+    content: `<p>Shipping containers need a practical place to sit when they are not being used, especially if there is no room at home or at the business. We offer outdoor storage for 20ft and 40ft shipping containers at Span Farm Boat Yard in Glendene.</p>
 <h2>What we store</h2>
-<p>Road bikes, trail bikes, classics and project bikes, along with vehicles, trailers and recreational gear.</p>
-<h2>Making room for your bike</h2>
-<p>Tell Jeff whether you have one motorbike or several and whether you will bring them on a trailer. Include the trailer in your length if it will stay too.</p>
-<p>This is outdoor storage. Think about weather protection before you book, and follow the bike maker's advice for a longer stay.</p>
-<h2>Room for more than one</h2>
-<p>If you keep a few bikes, or you are building or restoring one, storing them together at the yard keeps the garage free and everything in one accessible place.</p>
-<h2>Looking after a stored bike</h2>
-<p>Follow the maker's storage guidance for your bike, including its fuel and battery. This is outdoor storage. Ask Jeff about access before planning any work at the yard.</p>
+<p>We accept 20ft and 40ft shipping containers. Container pricing is quoted by the yard, so tell Jeff the container size, how it will arrive and when you need the space.</p>
+<h2>Making room for a container</h2>
+<p>Container placement depends on available space, access and delivery requirements. Give us the overall length and start date so the yard can check the fit before you arrange transport.</p>
+<h2>Practical outdoor storage</h2>
+<p>This is outdoor hardstand storage at a working boat yard. Tell us what you need to store and how often you expect access, and we will talk through the practical details.</p>
 <h2>Get in touch</h2>
-<p>Call 09 818 4586 or email info@westaucklandstorage.co.nz to check space.</p>`
+<p>Call 09 818 4586 or email info@westaucklandstorage.co.nz to ask about container space and pricing.</p>`
   },
   "business-storage-solutions-at-west-auckland-storage": {
     title: "Business & Fleet Storage in West Auckland",

@@ -45,7 +45,7 @@ export const pages = [
       {
         "heading": "Start with what you have",
         "paragraphs": [
-          "We store boats on trailers up to 40ft, caravans, trailers, cars, 4WDs, utes, trucks, motorbikes, jet skis, kayaks and other recreational gear, plus shipping containers (20ft and 40ft). We don’t take household storage. Space and access depend on what you’re storing, so tell us the length (including the trailer) and your start date and we’ll work it out from there."
+          "We store boats on trailers up to 40ft, caravans, trailers, cars, 4WDs, utes, trucks, shipping containers (20ft and 40ft), jet skis, kayaks and other recreational gear. We don’t take household storage. Space and access depend on what you’re storing, so tell us the length (including the trailer) and your start date and we’ll work it out from there."
         ]
       }
     ],
@@ -60,7 +60,7 @@ export const pages = [
       "boat-storage-at-west-auckland-storage",
       "caravan-storage-at-west-auckland-storage",
       "vehicle-storage-at-west-auckland-storage",
-      "motorbike-storage-at-west-auckland-storage",
+      "shipping-container-storage-at-west-auckland-storage",
       "trailer-storage-at-west-auckland-storage",
       "truck-storage-at-west-auckland-storage"
     ]
@@ -146,14 +146,14 @@ export const storageOptions = [
   {
     "slug": "vehicle-storage-at-west-auckland-storage",
     "label": "Vehicle storage",
-    "description": "Flexible outdoor vehicle storage for cars, 4WDs, utes, trucks, motorbikes and trailers in West Auckland.",
+    "description": "Flexible outdoor vehicle storage for cars, 4WDs, utes, trucks and trailers in West Auckland.",
     "image": "/images/boats-yard.jpg"
   },
   {
-    "slug": "motorbike-storage-at-west-auckland-storage",
-    "label": "Motorbike storage",
-    "description": "A practical outdoor storage option for motorbikes and recreational gear when home is getting crowded.",
-    "image": "/images/boat-trailer.jpg"
+    "slug": "shipping-container-storage-at-west-auckland-storage",
+    "label": "Shipping container storage",
+    "description": "Outdoor storage for 20ft and 40ft shipping containers at Span Farm Boat Yard in Glendene. Ask the yard for container pricing.",
+    "image": "/images/boats-yard.jpg"
   },
   {
     "slug": "trailer-storage-at-west-auckland-storage",
