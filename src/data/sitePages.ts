@@ -26,6 +26,7 @@ export const pages = [
       "Company established in 2008",
       "Span Farm Boat Yard in Glendene",
       "Practical outdoor storage",
+      "A gated yard with CCTV and an on-site manager",
       "People who know what they’re looking after"
     ],
     "related": [
@@ -44,7 +45,7 @@ export const pages = [
       {
         "heading": "Start with what you have",
         "paragraphs": [
-          "We store boats, caravans, trailers, cars, 4WDs, utes, trucks, motorbikes, kayaks and other recreational gear. Space and access depend on what you’re storing, so tell us the details and we’ll work it out from there."
+          "We store boats on trailers up to 40ft, caravans, trailers, cars, 4WDs, utes, trucks, motorbikes, jet skis, kayaks and other recreational gear, plus shipping containers (20ft and 40ft). We don’t take household storage. Space and access depend on what you’re storing, so tell us the length (including the trailer) and your start date and we’ll work it out from there."
         ]
       }
     ],
@@ -52,7 +53,8 @@ export const pages = [
       "Boat storage",
       "Caravan and trailer storage",
       "Vehicle and equipment storage",
-      "Business storage"
+      "Business storage",
+      "Shipping containers (20ft and 40ft)"
     ],
     "related": [
       "boat-storage-at-west-auckland-storage",
@@ -82,7 +84,8 @@ export const pages = [
       "09 818 4586",
       "info@westaucklandstorage.co.nz",
       "20 Akatea Road, Glendene",
-      "Short or longer-term options"
+      "Short or longer-term options",
+      "Replies within 24 hours"
     ],
     "kind": "contact",
     "related": [
@@ -115,7 +118,7 @@ export const pages = [
     ],
     "bullets": [
       "Close to home across West Auckland",
-      "Fair value, no marina price tag",
+      "From $200 + GST per month, no marina price tag",
       "Slipway access when operational",
       "Short and longer-term options"
     ],

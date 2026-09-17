@@ -121,6 +121,10 @@ const structuredData = structuredDataFor(currentPath, title, description, ogImag
     </footer>
 
     <script>
+      const header = document.querySelector<HTMLElement>('.site-header');
+      const updateHeader = () => header?.classList.toggle('is-scrolled', window.scrollY > 24);
+      window.addEventListener('scroll', updateHeader, { passive: true });
+      updateHeader();
       const menuToggle = document.querySelector<HTMLButtonElement>(".menu-toggle");
       const siteNav = document.querySelector<HTMLElement>("#site-nav");
       const closeMenu = () => {

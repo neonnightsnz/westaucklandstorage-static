@@ -6,11 +6,18 @@ West Auckland Storage is not trying to be the biggest storage brand in Auckland.
 
 **Honest operating truths**
 
-- **Location:** 20 Akatea Rd, Glendene, Auckland 0602
-- **Phone:** 09 818 4586
+- **Address (NAP):** 20 Akatea Road, Glendene, Auckland 0602
+- **Phone (NAP):** 09 818 4586
+- **Email (NAP):** info@westaucklandstorage.co.nz — monitored by Jeff, with a 24-hour response time
 - **Description:** Reliable and affordable boat, caravan and vehicle storage.
-- **The yard:** Span Farm Boat Yard Ltd — a real working boat yard in Glendene.
+- **The yard:** Span Farm Boat Yard Ltd — a real working boat yard in Glendene, run by an on-site manager (Jeff).
 - **Key differentiators:** location, price, and slipway access.
+- **Price:** billed monthly, starting from $200 + GST (quoted excluding GST). No deposit required.
+- **Security:** CCTV, a gated yard and an on-site manager are all in place and may be stated plainly.
+- **Access:** daylight hours are best for general access; after hours by gate code; 24/7 by prior arrangement.
+- **What we store:** boats to 40ft, caravans, trailers, cars, utes, trucks, motorbikes, jet skis, kayaks, business equipment, and shipping containers (20ft and 40ft). No household storage.
+
+See §12 for the full set of confirmed operational facts.
 
 ## 2. Target Audience
 
@@ -74,10 +81,11 @@ All groups share one thing: **they value proximity, price, and security.** All s
 - **General vehicle storage:** "Somewhere safe for the things you do not use every day."
 - **Long-term and seasonal:** "Store smarter, not somewhere further away."
 
-Only use figures where they remain accurate — check before publishing:
+Only use figures where they remain accurate — these are confirmed with the yard (see §12):
 
-- Company incorporated on 10 January 2008, confirmed by the owner. Use "Company established in 2008" in short copy. Incorporation does not establish continuous storage operations.
-- 100+ boats currently in storage
+- **Established 2008.** The company was incorporated on 10 January 2008, confirmed by the owner. Use "Company established in 2008" in short copy. Incorporation does not establish continuous storage operations.
+- **"15,000+ boats stored over our history."** This is the confirmed lifetime figure. Do **not** use "100+ boats currently in storage" — it is not accurate. Do not state a count of boats stored *right now*.
+- **From $200 + GST per month.** Storage is billed monthly, starting from $200 + GST. Always quote prices excluding GST and show the "+ GST".
 
 ## 7. Content Principles
 
@@ -95,7 +103,9 @@ Only use figures where they remain accurate — check before publishing:
 
 **Never use:** premier, state-of-the-art, world-class, luxury, seamless, cutting-edge, unrivalled, industry-leading
 
-Treat these with caution, and only say them when verified: "secure", "24/7", "undercover", "alarmed", "brand new"
+**Confirmed, so safe to use plainly:** "secure", "gated", "CCTV-monitored", "on-site manager".
+
+**Still treat with caution, and only say them when verified:** "24/7" (access is by prior arrangement, not unconditional), "undercover", "alarmed", "brand new".
 
 ## 9. Visual Identity
 
@@ -138,7 +148,58 @@ Treat these with caution, and only say them when verified: "secure", "24/7", "un
 - **Google Business Profile** should carry the same images and the same tone as the site.
 - **Quotes and invoices** should be plain, clear and consistent with the brand colours.
 
-## 12. Final Checklist
+## 12. Confirmed operational facts
+
+*Confirmed with the yard. Use these; do not invent alternatives, and do not claim anything that is not on this list.*
+
+**Pricing**
+
+- Storage is billed **monthly, starting from $200 + GST**. Quote prices **excluding GST** and always show the "+ GST".
+- **No deposit required.**
+
+**Availability**
+
+- There is **no waitlist**. Never advertise or imply a queue — each enquiry is handled individually.
+
+**What we store**
+
+- Boats on trailers, caravans, trailers, cars, 4WDs, utes, trucks, motorbikes, jet skis and kayaks.
+- **Boats up to 40ft (~12.2m).**
+- **Shipping containers, 20ft (~6.1m) and 40ft (~12.2m)** — ring the yard for container pricing.
+- **No household storage.** Do not offer or imply it.
+
+**Access**
+
+- **Daylight hours** are best for general access.
+- **After hours:** gate code.
+- **24/7** by prior arrangement only.
+- Owners may **work on their boats with pre-approval from the site manager**. Toilets are on site, and a hose is available for washing down boats and trailers.
+
+**Slipway**
+
+- Conditional and time-dependent. **Leave the existing messaging as-is** — it is part of the brand story and must not be strengthened.
+
+**Security (all in place)**
+
+- CCTV cameras, a gated yard and an on-site manager (Jeff).
+
+**Enquiries and quotes**
+
+- Enquiries go to **info@westaucklandstorage.co.nz**, monitored by Jeff, with a **24-hour response time**.
+- To quote, we need the **length including the trailer** and the **start date**. That is sufficient — do not ask for a width.
+
+**Payments**
+
+- Bank account **03-0263-0216807-00** (confirmed correct).
+- Cash, cheques, cards and automatic card deductions accepted.
+- Payment reference: the **boat name** for boats, or the **surname or invoice number** for everything else.
+
+**Contact details (NAP — confirmed current)**
+
+- Phone **09 818 4586**, email **info@westaucklandstorage.co.nz**, address **20 Akatea Road, Glendene**.
+- Existing yard photographs and reviews are approved for use.
+
+## 13. Final Checklist
 
 Before publishing anything, ask:
 

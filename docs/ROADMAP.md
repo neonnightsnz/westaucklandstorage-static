@@ -53,8 +53,8 @@ Read alongside `brandvoice-visual-identity.md` (voice/visual rules) and `../READ
 Decisions and tiny fixes that unblock everything else.
 
 - [ ] **Hero overlays** — decide whether to restore the richer gradients in `src/styles/global.css` (`.hero-overlay`, `.inner-hero-overlay`) and the `13px` nav size from the saved snapshot, or keep the flat overlays as intentional.
-- [ ] **Verify figures** — confirm `15+ years` and `100+ boats` with the yard; update `index.astro`, then delete the `<-- Confirm current figures -->` comment. If unverifiable, remove the stat block.
-- [ ] **Confirm NAP** — phone `09 818 4586`, email `info@westaucklandstorage.co.nz`, address `20 Akatea Road, Glendene 0602`, entity `Span Farm Boat Yard Ltd`. Confirm these are the live/billing-correct details.
+- [ ] **Verify figures** — **facts confirmed with the yard** (see brand guide §12): established 2008; the `100+ boats` claim is inaccurate and is reframed as **"15,000+ boats stored over our history"**. Remaining: update `src/pages/index.astro` (the `100+` value and the `<-- Confirm current figures -->` comment).
+- [x] **Confirm NAP** — **confirmed current/correct:** phone `09 818 4586`, email `info@westaucklandstorage.co.nz`, address `20 Akatea Road, Glendene 0602`, entity `Span Farm Boat Yard Ltd`. Bank account `03-0263-0216807-00` also confirmed.
 - [x] **Blog voice decision** — **done** (option b): all 34 articles rewritten to the brand voice. Copy lives in `src/data/curated-blog.mjs` and compiles to `blogPosts.json` via `npm run build:blog`; the mirror copy is kept only as `blogPosts.raw.json`. The build step rejects banned claims and invented testimonials.
 - [ ] **Tag a release** once the above are settled, so Cloudflare has a known-good baseline.
 
@@ -155,7 +155,7 @@ The biggest brand-aligned growth lever: the site already hints at being a local 
 | # | Question | Owner | Status |
 |---|---|---|---|
 | 1 | Restore hero gradients or keep flat? | Yard | Open |
-| 2 | Are `15+` / `100+` figures accurate? | Yard | Open |
+| 2 | Are `15+` / `100+` figures accurate? | Yard | **Resolved** — established 2008; `100+` inaccurate, reframed to `15,000+ boats stored over our history` |
 | 3 | Blog: keep verbatim / sanitise / noindex? | Yard | **Resolved** — all 34 rewritten |
 | 4 | Form backend: stay `mailto:` or add endpoint? | Yard | Open |
 | 5 | Analytics: Cloudflare Web Analytics OK? | Yard | Open |

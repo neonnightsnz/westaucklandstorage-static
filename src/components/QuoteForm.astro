@@ -6,15 +6,15 @@
   <label>What are you storing?
     <select name="item" required>
       <option value="">Choose one</option>
-      <option>Boat</option><option>Caravan</option><option>Trailer</option><option>Vehicle or other gear</option><option>Slipway access</option>
+      <option>Boat</option><option>Caravan</option><option>Trailer</option><option>Vehicle or other gear</option><option>Shipping container</option><option>Slipway access</option>
     </select>
   </label>
-  <label>Anything else we should know? <textarea name="message" rows="4" placeholder="Size, timing, access needs…"></textarea></label>
+  <label>Anything else we should know? <textarea name="message" rows="4" placeholder="Length (including trailer), start date, access needs…"></textarea></label>
   <div class="form-honey" aria-hidden="true">
     <label>Leave this field empty <input name="company" tabindex="-1" autocomplete="off" /></label>
   </div>
   <button class="button button-bright" type="submit">Send enquiry</button>
-  <p class="form-note">We’ll come back to you with the next step. Prefer to talk? Call <a href="tel:098184586">09 818 4586</a>.</p>
+  <p class="form-note">We aim to reply within 24 hours. Prefer to talk? Call <a href="tel:098184586">09 818 4586</a>.</p>
   <p class="form-status" role="status" aria-live="polite"></p>
 </form>
 
@@ -52,7 +52,7 @@
         const result = await response.json();
         if (!response.ok || result.ok !== true) throw new Error('Delivery not confirmed');
         form.reset();
-        setStatus('Thanks, your enquiry has been sent. We’ll be in touch. Prefer to talk? Call 09 818 4586.');
+        setStatus('Thanks, your enquiry has been sent. We’ll come back to you within 24 hours. Prefer to talk? Call 09 818 4586.');
       } catch {
         setStatus('Your enquiry has not been sent. Your details are still here. Please try again or call 09 818 4586.');
       } finally {

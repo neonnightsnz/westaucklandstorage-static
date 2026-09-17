@@ -1,6 +1,7 @@
 ---
 import { pageSize, archivePath } from '../data/blog';
 import Breadcrumbs from './Breadcrumbs.astro';
+import BlogSearch from './BlogSearch.astro';
 const { archive } = Astro.props;
 const selected = archive.items.slice((archive.number - 1) * pageSize, archive.number * pageSize);
 const heading = archive.label;
@@ -17,6 +18,8 @@ const heading = archive.label;
   </header>
   <section class="section-pad">
     <div class="container">
+      <BlogSearch />
+      <div data-archive-list>
       <div class="blog-grid">
         {selected.map((post, i) => <article class="blog-card">
           <a href={`/${post.slug}/`} tabindex="-1" aria-hidden="true"><img src={post.image} alt="" width="640" height="420" loading={i < 2 ? 'eager' : 'lazy'} /></a>
@@ -33,6 +36,7 @@ const heading = archive.label;
         {Array.from({ length: archive.pageCount }, (_, i) => <a href={archivePath(archive.base, i + 1)} aria-label={`Page ${i + 1}`} aria-current={archive.number === i + 1 ? 'page' : undefined}>{i + 1}</a>)}
         {archive.number < archive.pageCount && <a rel="next" href={archivePath(archive.base, archive.number + 1)}>Next →</a>}
       </nav>
+      </div>
     </div>
   </section>
 </main>
