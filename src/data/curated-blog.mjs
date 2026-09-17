@@ -171,7 +171,7 @@ export const blogContent = {
 <h2>Why Western Heights owners use the yard</h2>
 <p><strong>Close to home.</strong> Span Farm Boat Yard, 20 Akatea Road, Glendene, is a short drive down the hill and along.</p>
 <p><strong>Fair value.</strong> Outdoor hardstand storage without marina fees or a marina waitlist.</p>
-<p>Available for smaller trailer boats when it is operational — ask us about current access before you arrive.</p>
+<p>The slipway is a genuine part of Span Farm Boat Yard's story — but it's currently under repair, and haul-out is still a work in progress. Give us a call before you plan a launch or haul-out.</p>
 <h2>What fits</h2>
 <p>Boats and jet skis, caravans and campervans, trailers, cars, 4WDs, utes, shipping containers, kayaks and other recreational gear.</p>
 <h2>Talk to us</h2>
