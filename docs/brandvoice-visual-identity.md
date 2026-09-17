@@ -11,7 +11,7 @@ West Auckland Storage is not trying to be the biggest storage brand in Auckland.
 - **Email (NAP):** info@westaucklandstorage.co.nz — monitored by Jeff, with a 24-hour response time
 - **Description:** Reliable and affordable boat, caravan and vehicle storage.
 - **The yard:** Span Farm Boat Yard Ltd — a real working boat yard in Glendene, run by an on-site manager (Jeff).
-- **Key differentiators:** location, price, and slipway access.
+- **Key differentiators:** location and price, plus a working yard close to home. The slipway remains part of the story but is **currently under repair**, and haul-out facilities are a work in progress.
 - **Price:** billed monthly, starting from $200 + GST (quoted excluding GST). No deposit required.
 - **Security:** CCTV, a gated yard and an on-site manager are all in place and may be stated plainly.
 - **Access:** daylight hours are best for general access; after hours by gate code; 24/7 by prior arrangement.
@@ -95,7 +95,7 @@ Only use figures where they remain accurate — these are confirmed with the yar
 - Use the second person. ("Your boat", "your space", "your spot.")
 - Use real numbers where possible, and never fake ones.
 - Include a clear call to action on every page.
-- Describe slipway access conditionally when the current operational status is not confirmed.
+- Describe slipway and haul-out access honestly: the slipway is under repair and haul-out is a work in progress, so tell people to ask before planning around either.
 
 ## 8. Words and Phrases
 
@@ -175,9 +175,10 @@ Only use figures where they remain accurate — these are confirmed with the yar
 - **24/7** by prior arrangement only.
 - Owners may **work on their boats with pre-approval from the site manager**. Toilets are on site, and a hose is available for washing down boats and trailers.
 
-**Slipway**
+**Slipway and haul-out**
 
-- Conditional and time-dependent. **Leave the existing messaging as-is** — it is part of the brand story and must not be strengthened.
+- The yard slipway is **currently under repair**, and **haul-out facilities are a work in progress** (confirmed with the yard, September 2026).
+- Both remain part of the brand story, but state the current status plainly and never present either as available until the yard confirms it is back in service. Always tell people to ask before planning a launch or a haul-out around them.
 
 **Security (all in place)**
 
