@@ -7,7 +7,7 @@ export function GET({ site }) {
   const origin = site?.origin ?? "https://westaucklandstorage.co.nz";
   // Publication dates are not modification dates. Omit lastmod until editorial
   // modification dates are maintained; rebuilding must not claim fresh content.
-  const urls = [...new Set(["/", "/sitemap/", ...pages.map((page) => `/${page.slug}/`), ...posts.map(post => `/${post.slug}/`), ...archives.map(archive => `/${archive.slug}/`)])];
+  const urls = [...new Set(["/", "/sitemap/", "/pay-your-account/", ...pages.map((page) => `/${page.slug}/`), ...posts.map(post => `/${post.slug}/`), ...archives.map(archive => `/${archive.slug}/`)])];
   const body = urls
     .map((path) => `  <url><loc>${origin}${path}</loc></url>`)
     .join("\n");

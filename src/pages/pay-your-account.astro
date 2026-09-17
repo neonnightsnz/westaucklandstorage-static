@@ -1,0 +1,59 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+---
+
+<PageLayout title="Pay your account | West Auckland Storage" description="Pay your storage account by bank transfer, cash, cheque or card. Find Span Farm Boat Yard's bank details and payment reference here.">
+  <main id="main">
+    <header class="inner-hero archive-header">
+      <div class="container inner-hero-content">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Pay your account</span></nav>
+        <p class="eyebrow eyebrow-light">For existing customers</p>
+        <h1>Pay your<br /><em>account.</em></h1>
+        <p class="hero-lede">Pay your storage invoice by bank transfer or choose another payment method below.</p>
+      </div>
+    </header>
+    <section class="section-pad">
+      <div class="container payment-grid">
+        <section aria-labelledby="bank-heading" class="bank-details">
+          <p class="eyebrow">Internet banking</p>
+          <h2 id="bank-heading">Pay by bank transfer</h2>
+          <p>Use these details in your banking app or internet banking. Pay the amount shown on your invoice and include your surname or unit number so we can match the payment to your account.</p>
+          <dl>
+            <div><dt>Account name</dt><dd>Span Farm Boat Yard Ltd</dd></div>
+            <div><dt>Bank</dt><dd>Westpac Banking Corporation</dd></div>
+            <div><dt>Account number</dt><dd class="account-number">03-0263-0216807-00</dd></div>
+            <div><dt>Payment reference</dt><dd>Your surname or unit number</dd></div>
+          </dl>
+        </section>
+        <div class="payment-help">
+          <section aria-labelledby="methods-heading">
+            <h2 id="methods-heading">Other ways to pay</h2>
+            <ul><li>Cash or cheque</li><li>All major credit and debit cards</li><li>Automatic credit card deductions</li></ul>
+            <p>Call the yard to arrange a payment or set up automatic card deductions.</p>
+          </section>
+          <section aria-labelledby="help-heading">
+            <h2 id="help-heading">A question about your invoice?</h2>
+            <p>If you are unsure how much to pay or which reference to use, contact us before making the payment. Have your invoice handy so we can help.</p>
+            <a class="button button-bright" href="tel:098184586">Call 09 818 4586</a>
+            <p><a href="mailto:info@westaucklandstorage.co.nz">info@westaucklandstorage.co.nz</a></p>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+</PageLayout>
+
+<style>
+  .payment-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: start; }
+  h2 { font-size: clamp(30px, 3vw, 44px); }
+  p, li { line-height: 1.7; }
+  .bank-details { padding: 32px; background: var(--paper); border-top: 4px solid var(--blue-bright); }
+  dl { margin: 28px 0 0; }
+  dl div { padding: 16px 0; border-top: 1px solid #c9d8e4; }
+  dt { font-size: 14px; color: var(--muted); }
+  dd { margin: 4px 0 0; font-weight: 700; overflow-wrap: anywhere; }
+  .account-number { font-size: clamp(19px, 2vw, 26px); font-variant-numeric: tabular-nums; }
+  .payment-help section + section { margin-top: 40px; }
+  .payment-help a { overflow-wrap: anywhere; }
+  @media (max-width: 760px) { .payment-grid { grid-template-columns: 1fr; gap: 40px; } .bank-details { padding: 24px; } }
+</style>

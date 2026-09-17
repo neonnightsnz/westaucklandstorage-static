@@ -23,3 +23,6 @@
 /sitemap_index.xml /sitemap.xml 301
 /post-sitemap.xml /sitemap.xml 301
 /page-sitemap.xml /sitemap.xml 301
+
+# Correct the old payment-page contact link.
+/pay-your-account/contact/ /contact/ 301
