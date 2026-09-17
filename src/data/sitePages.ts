@@ -111,7 +111,7 @@ export const pages = [
       {
         "heading": "Why owners travel to the yard",
         "paragraphs": [
-          "It comes back to location and price, plus a working yard that is close to home and easy to reach. Slipway access depends on conditions on the day — check with us before you head down. No marina waitlist, no marina price tag, and no need to drive across the city to reach your own boat."
+          "It comes back to location and price, plus a working yard that is close to home and easy to reach. The slipway is a genuine part of Span Farm Boat Yard's story — but it's currently under repair, and haul-out is still a work in progress. Give us a call before you plan a launch or haul-out. No marina waitlist, no marina price tag, and no need to drive across the city to reach your own boat."
         ]
       }
     ],
