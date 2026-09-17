@@ -1,4 +1,4 @@
-<form class="quote-form" data-contact-form method="post" action="/api/contact">
+<form id="enquiry" class="quote-form" data-contact-form method="post" action="/api/contact">
   <div class="form-row">
     <label>Your name <input name="name" required autocomplete="name" /></label>
     <label>Phone or email <input name="contact" required /></label>
@@ -6,10 +6,15 @@
   <label>What are you storing?
     <select name="item" required>
       <option value="">Choose one</option>
-      <option>Boat</option><option>Caravan</option><option>Trailer</option><option>Vehicle or other gear</option><option>Shipping container</option><option>Slipway access</option>
+      <option>Boat</option><option>Caravan</option><option>Trailer</option><option>Vehicle or other gear</option><option>Motorbike</option><option>Truck</option><option>Business equipment</option><option>Shipping container</option><option>Slipway access</option>
     </select>
   </label>
-  <label>Anything else we should know? <textarea name="message" rows="4" placeholder="Length (including trailer), start date, access needs…"></textarea></label>
+  <div class="form-row">
+    <label>Length, including trailer <input name="length" placeholder="For example, 6 metres" /></label>
+    <label>When would you like to start? <input name="startDate" type="date" /></label>
+  </div>
+  <p class="form-note">Your length and start date help Jeff quote. An estimate is fine.</p>
+  <label>Anything else we should know? <textarea name="message" rows="4" placeholder="Access needs or a question for the yard"></textarea></label>
   <div class="form-honey" aria-hidden="true">
     <label>Leave this field empty <input name="company" tabindex="-1" autocomplete="off" /></label>
   </div>
@@ -19,15 +24,23 @@
 </form>
 
 <script>
+  import { storageOptions } from '../data/sitePages';
   document.querySelectorAll<HTMLFormElement>('[data-contact-form]').forEach(form => {
     const status = form.querySelector<HTMLElement>('.form-status');
     const submit = form.querySelector<HTMLButtonElement>('button[type="submit"]');
     const setStatus = (text: string) => { if (status) status.textContent = text; };
+    const item = form.elements.namedItem('item') as HTMLSelectElement;
+    const params = new URLSearchParams(window.location.search);
+    const requestedItem = params.get('item');
+    const allowedItems = Array.from(item.options).map(option => option.value);
+    if (requestedItem && allowedItems.includes(requestedItem)) item.value = requestedItem;
+    const requestedSource = params.get('from') || '';
+    const source = storageOptions.some(option => `/${option.slug}/` === requestedSource) ? requestedSource : window.location.pathname;
 
     document.querySelectorAll<HTMLAnchorElement>('[data-enquiry-item]').forEach(link => {
       link.addEventListener('click', () => {
-        const item = form.elements.namedItem('item') as HTMLSelectElement;
-        item.value = link.dataset.enquiryItem || '';
+        const choice = link.dataset.enquiryItem || '';
+        if (allowedItems.includes(choice)) item.value = choice;
       });
     });
 
@@ -44,9 +57,9 @@
             name: data.get('name'),
             contact: data.get('contact'),
             item: data.get('item'),
-            message: data.get('message'),
+            message: [data.get('length') ? `Length including trailer: ${data.get('length')}` : '', data.get('startDate') ? `Preferred start date: ${data.get('startDate')}` : '', data.get('message')].filter(Boolean).join('\n'),
             company: data.get('company'),
-            page: window.location.pathname,
+            page: source,
           }),
         });
         const result = await response.json();

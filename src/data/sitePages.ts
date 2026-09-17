@@ -76,7 +76,7 @@ export const pages = [
       {
         "heading": "Talk to the yard",
         "paragraphs": [
-          "Give us a few details about what you’re storing and when you need the space. We’ll come back with the next step, or call us if you’d rather have a chat."
+          "Give us a few details about what you’re storing and when you need the space. We’ll come back to you within 24 hours, or call us if you’d rather have a chat."
         ]
       }
     ],
@@ -134,7 +134,7 @@ export const storageOptions = [
   {
     "slug": "boat-storage-at-west-auckland-storage",
     "label": "Boat storage",
-    "description": "Straightforward outdoor boat storage at Span Farm Boat Yard in Glendene, with space for trailer boats, launches, yachts and jet skis.",
+    "description": "Straightforward outdoor boat storage at Span Farm Boat Yard in Glendene, with space for trailer boats, launches, yachts and jet skis up to 40ft.",
     "image": "/images/boat-hardstand.jpg"
   },
   {

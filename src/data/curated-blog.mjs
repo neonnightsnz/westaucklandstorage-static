@@ -246,10 +246,9 @@ export const blogContent = {
     content: `<p>If a car, 4WD or ute has become a spare rather than a daily, you probably do not need it sitting on the driveway any more. We offer practical outdoor vehicle storage at Span Farm Boat Yard in Glendene — close to home and priced well below a lock-up.</p>
 <h2>What we store</h2>
 <p>Cars, 4WDs, utes and vans, along with trailers, caravans, boats and motorbikes. Tell us the size, whether it needs to stay registered, and how often you will need access, and we will suggest a spot.</p>
-<h2>Why owners choose outdoor storage here</h2>
-<p><strong>Close to home.</strong> 20 Akatea Road, Glendene — handy for drivers across West Auckland.</p>
-<p><strong>Fair value.</strong> You pay for a hardstand space in a working yard, not marina fees or a polished facility.</p>
-<p><strong>Flexible terms.</strong> Store short-term while you travel, or long-term during the off-season, and pay monthly.</p>
+<h2>Parking a vehicle you use less often</h2>
+<p>Tell Jeff whether you are storing a car, 4WD or ute, its length and the start date. If it will arrive on a trailer, explain that when you enquire.</p>
+<p>The vehicle will be outdoors. Follow its maker's storage guidance and arrange any access you need while it is parked here.</p>
 <h2>A practical note</h2>
 <p>This is outdoor storage, so vehicles sit out in the weather. A cover and a wash before you park it up will serve you well, and a seasonal check keeps a stored vehicle in good shape.</p>
 <h2>Get a quote</h2>
@@ -262,10 +261,9 @@ export const blogContent = {
 <p>Tradespeople, small businesses and owners with a truck, ute or piece of equipment that is not needed every day. Because sizes vary so much, we work out each space individually rather than fitting everyone into one box.</p>
 <h2>What to tell us</h2>
 <p>The type and length of the vehicle, whether it needs to drive in and out easily, and how often you will need access. Larger vehicles depend on availability and access, so it is worth checking before you commit.</p>
-<h2>Why owners use the yard</h2>
-<p><strong>Close to home.</strong> 20 Akatea Road, Glendene, easy to reach from across West Auckland.</p>
-<p><strong>Fair value.</strong> Straightforward outdoor storage with no marina-style overheads.</p>
-<p><strong>Flexible terms.</strong> Short and longer-term arrangements, invoiced monthly.</p>
+<h2>Check the fit before you bring a truck</h2>
+<p>Give Jeff the truck type, overall length and start date. Explain if you will bring a trailer or need to collect the truck regularly.</p>
+<p>Truck storage depends on available space and access. Contact the yard before driving over so Jeff can confirm whether your vehicle will fit.</p>
 <h2>Talk to the yard</h2>
 <p>Call 09 818 4586 or email info@westaucklandstorage.co.nz with the vehicle details and we will let you know what is possible.</p>`
   },
@@ -274,10 +272,9 @@ export const blogContent = {
     content: `<p>Utility trailers and boat trailers are useful right up until you have nowhere to park them. We offer straightforward outdoor trailer storage at Span Farm Boat Yard in Glendene, so your trailer is off the street and ready the next time you need it.</p>
 <h2>What we store</h2>
 <p>Utility trailers, boat trailers, box trailers and camping trailers. Caravans, campervans and boat trailers with the boat still on them are welcome as well.</p>
-<h2>Why owners choose us</h2>
-<p><strong>Close to home.</strong> 20 Akatea Road, Glendene.</p>
-<p><strong>Fair value.</strong> Outdoor hardstand storage without marina fees.</p>
-<p><strong>Easy access.</strong> A working yard with room to move, so hitching up is not a puzzle.</p>
+<h2>Space for the whole trailer</h2>
+<p>Measure from the tow coupling to the back of the trailer, including anything that extends beyond it. Tell Jeff whether the trailer will be empty or loaded.</p>
+<p>Check the tyres, bearings and lights before collection. Agree access in advance if you need to hitch up outside daylight hours.</p>
 <h2>Before you store</h2>
 <p>Give the trailer a clean and check the tyres, bearings and lights so it is ready to roll when you collect it. Tell us roughly how long you need the space and we will sort the rest.</p>
 <h2>Get sorted</h2>
@@ -297,15 +294,14 @@ export const blogContent = {
   },
   "uncovered-boat-storage-at-west-auckland-storage": {
     title: "Uncovered Boat Storage in West Auckland",
-    content: `<p>Uncovered, outdoor boat storage suits owners who want a straightforward, affordable place to keep a boat between trips — no marina fees, no marina waitlist, and room to work on the boat when you need to.</p>
-<h2>Why uncovered storage works</h2>
-<p><strong>Cost-effective.</strong> Outdoor hardstand storage is priced below covered or marina options, which matters when the boat sits unused for part of the year.</p>
-<p><strong>Easy access.</strong> Drive up to the boat, hitch on and go — no awkward manoeuvring in a tight shed.</p>
-<p><strong>Room to work.</strong> Cleaning, servicing and getting the boat ready for the season is far easier with space around it.</p>
+    content: `<p>Uncovered, outdoor boat storage suits owners who want a straightforward, affordable place to keep a boat between trips — no marina fees and no marina waitlist. Work on your boat needs pre-approval from the site manager.</p>
+<h2>Preparing for an uncovered spot</h2>
+<p>Your boat will be outside, so plan suitable weather protection and follow the maker's storage guidance. Include the trailer when measuring for a quote.</p>
+<p>Work on your boat needs pre-approval from the site manager. A hose is available for washing down boats and trailers, and toilets are on site.</p>
 <h2>Looking after a boat stored outdoors</h2>
 <p>A good cover or tarp, a regular wash-down and a quick check of the trailer and fittings each season will keep an outdoor-stored boat in good shape.</p>
 <h2>Sizes and access</h2>
-<p>We can take boats up to around 24 tonnes, from small trailer boats to larger yachts. Tell us the size and how long you need the space.</p>
+<p>We store boats up to 40ft. Tell us the length including the trailer and your preferred start date so Jeff can quote.</p>
 <h2>Get a quote</h2>
 <p>Call 09 818 4586 or email info@westaucklandstorage.co.nz and we will work out the right spot for your boat.</p>`
   },
@@ -314,7 +310,7 @@ export const blogContent = {
     content: `<p>Span Farm Boat Yard is the working boat yard behind West Auckland Storage. If you are looking for boat storage in West Auckland that is close to home, fairly priced and run by people who know boats, you have found it.</p>
 <h2>What the yard offers</h2>
 <p><strong>Uncovered boat storage.</strong> Practical outdoor hardstand storage for boats that do not need a shed — easy to access and priced for a working yard.</p>
-<p><strong>Space for real boats.</strong> We can accommodate boats up to around 24 tonnes, from small trailer boats through to larger yachts, with room to move on the hardstand.</p>
+<p><strong>Space for real boats.</strong> We store boats up to 40ft. Tell us the length including the trailer and your start date so we can check a suitable space.</p>
 <p><strong>Slipway access.</strong> Available for smaller trailer boats when it is operational. Because it is not always in service, please ask us about current access before you arrive.</p>
 <h2>Why owners choose the yard</h2>
 <p><strong>Location.</strong> 20 Akatea Road, Glendene — close to home for owners across West Auckland.</p>
@@ -382,11 +378,10 @@ export const blogContent = {
     title: "Boat Storage at West Auckland Storage",
     content: `<p>Our main job is boat storage. We keep trailer boats, launches, yachts and jet skis at Span Farm Boat Yard in Glendene, where owners across West Auckland store their boats close to home at a fair price.</p>
 <h2>What we store</h2>
-<p>Trailer boats, launches, yachts and jet skis — and we can take boats up to around 24 tonnes, so larger vessels are welcome too.</p>
-<h2>Why owners choose our yard</h2>
-<p><strong>Close to home.</strong> 20 Akatea Road, Glendene.</p>
-<p><strong>No marina price tag.</strong> Outdoor storage without marina fees or a marina waitlist.</p>
-<p><strong>Slipway access.</strong> A launch option for smaller trailer boats while it is operational. Ask us about current access before you arrive.</p>
+<p>We store boats up to 40ft, including boats on trailers, and jet skis. Tell Jeff the length including the trailer and your start date.</p>
+<h2>Planning your next launch</h2>
+<p>Boats up to 40ft are welcome. Include the trailer when you measure the length for a quote. A hose is available for washing down boats and trailers.</p>
+<p>Slipway access is a launch option for smaller trailer boats while it is operational. Ask us about current access before you arrive.</p>
 <h2>Looking after a boat in storage</h2>
 <p>A cover, a wash-down and a seasonal check of the trailer and fittings keep an outdoor-stored boat ready for the water.</p>
 <h2>Get started</h2>
@@ -397,10 +392,9 @@ export const blogContent = {
     content: `<p>A caravan or campervan is wonderful to own and awkward to park. Between trips it takes up the best part of a driveway and sits out in the weather. Outdoor storage at our Glendene yard gives it a proper home and gives you back the space.</p>
 <h2>What we store</h2>
 <p>Caravans, campervans and motorhomes, along with trailers, boats, cars and other vehicles.</p>
-<h2>Why owners choose us</h2>
-<p><strong>Close to home.</strong> 20 Akatea Road, Glendene — easy to reach when a trip comes up.</p>
-<p><strong>Fair value.</strong> Outdoor hardstand storage without marina fees.</p>
-<p><strong>Flexible.</strong> Store for a season, over winter or on an ongoing basis, and pay monthly.</p>
+<h2>Between caravan trips</h2>
+<p>Measure the full towing length, including the drawbar, before you ask for a quote. Give Jeff your start date, even if the next trip is still a few months away.</p>
+<p>Daylight hours are best for general access. Tell Jeff if you expect an early departure so you can agree access beforehand.</p>
 <h2>Before you store</h2>
 <p>Give the caravan a clean, empty the tanks, check the tyres and consider a cover. A little preparation now protects your investment over the off-season.</p>
 <h2>Get sorted</h2>
@@ -411,10 +405,9 @@ export const blogContent = {
     content: `<p>Everything we offer is outdoor storage — practical hardstand space at a working boat yard, for the boats, vehicles and gear that do not fit at home. It is simple, affordable and easy to access.</p>
 <h2>What we can store for you</h2>
 <p>Caravans and campervans; boats — fishing, sailing and ski; cars, 4WDs and utes; trucks and work vehicles; trailers of all kinds; motorbikes; kayaks, jet skis and other recreational gear.</p>
-<h2>Why outdoor storage works</h2>
-<p><strong>Affordable.</strong> Outdoor storage costs less than covered or marina options.</p>
-<p><strong>Accessible.</strong> Drive up to your item without wrestling it out of a shed.</p>
-<p><strong>Room to work.</strong> Space around your boat or vehicle makes cleaning and maintenance far easier.</p>
+<h2>Choosing outdoor storage</h2>
+<p>The yard stores vehicles, boats, trailers and equipment outdoors. It does not offer household storage. Tell Jeff exactly what you want to leave here before arranging a drop-off.</p>
+<p>Shipping containers of 20ft and 40ft are also accepted. Call the yard for container pricing and to discuss arrival.</p>
 <h2>Looking after anything stored outdoors</h2>
 <p>Covers, a regular clean and a seasonal check go a long way — especially for boats and caravans that sit out in the weather.</p>
 <h2>Talk to us</h2>
@@ -425,14 +418,13 @@ export const blogContent = {
     content: `<p>A motorbike — or a collection of them — takes up more room than you expect, and leaving one outside at home is not ideal. We offer practical outdoor storage for motorbikes at Span Farm Boat Yard in Glendene.</p>
 <h2>What we store</h2>
 <p>Road bikes, trail bikes, classics and project bikes, along with vehicles, trailers and recreational gear.</p>
-<h2>Why owners choose the yard</h2>
-<p><strong>Close to home.</strong> 20 Akatea Road, Glendene.</p>
-<p><strong>Fair value.</strong> Outdoor storage without marina-style overheads.</p>
-<p><strong>Flexible terms.</strong> Store for a few months or long-term, and pay monthly.</p>
+<h2>Making room for your bike</h2>
+<p>Tell Jeff whether you have one motorbike or several and whether you will bring them on a trailer. Include the trailer in your length if it will stay too.</p>
+<p>This is outdoor storage. Think about weather protection before you book, and follow the bike maker's advice for a longer stay.</p>
 <h2>Room for more than one</h2>
 <p>If you keep a few bikes, or you are building or restoring one, storing them together at the yard keeps the garage free and everything in one accessible place.</p>
 <h2>Looking after a stored bike</h2>
-<p>Wash and dry it, top up the tank or drain the fuel, keep the battery on a maintainer and cover it to keep the weather off. A little care keeps a stored bike ready to ride.</p>
+<p>Follow the maker's storage guidance for your bike, including its fuel and battery. This is outdoor storage. Ask Jeff about access before planning any work at the yard.</p>
 <h2>Get in touch</h2>
 <p>Call 09 818 4586 or email info@westaucklandstorage.co.nz to check space.</p>`
   },
@@ -441,10 +433,9 @@ export const blogContent = {
     content: `<p>Businesses need somewhere practical to park the vehicles, trailers and equipment they are not using every day. We offer straightforward outdoor storage at Span Farm Boat Yard in Glendene for exactly that.</p>
 <h2>Who this suits</h2>
 <p>Tradespeople, contractors and small businesses with work vehicles, trailers, boats or equipment that need a safe home base in West Auckland.</p>
-<h2>Why businesses choose the yard</h2>
-<p><strong>Close to home.</strong> 20 Akatea Road, Glendene — convenient for teams working across West Auckland.</p>
-<p><strong>Fair value.</strong> Outdoor storage without marina-style overheads.</p>
-<p><strong>Flexible.</strong> Short and longer-term arrangements, invoiced monthly.</p>
+<h2>Planning space for work equipment</h2>
+<p>List the work vehicles, trailers or equipment you need to store. Give Jeff the overall length and start date so he can check the space.</p>
+<p>Discuss collection times before booking if your work starts early. After-hours gate-code access is available, with 24/7 access by prior arrangement only.</p>
 <h2>What we can store</h2>
 <p>Work vehicles, utes and trucks; trailers; boats; and equipment. Because sizes vary, tell us what you have and how often you need access, and we will work out the space.</p>
 <h2>Talk to us</h2>
