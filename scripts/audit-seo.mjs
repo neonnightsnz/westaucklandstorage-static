@@ -1,17 +1,15 @@
 import fs from 'node:fs';
 import path from 'node:path';
-
+import { attrMap, metaTags, structuredData } from './lib/site-checks.mjs';
 const origin = 'https://westaucklandstorage.co.nz';
 const decode = value => value.replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#0?39;|&apos;/g, "'").replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)));
-const attrs = tag => Object.fromEntries([...tag.matchAll(/([\w:-]+)\s*=\s*["']([^"']*)["']/g)].map(([, key, value]) => [key, decode(value)]));
+const attrs = attrMap;
 function inventory(root) {
   return fs.readdirSync(root, { recursive: true }).filter(file => file.endsWith('index.html') && !/(?:^|[\\/])(?:wp-content|wp-includes|wp-json|feed|comments)(?:[\\/]|$)/.test(file)).map(file => {
     const route = '/' + file.replaceAll('\\', '/').replace(/index\.html$/, '');
     const html = fs.readFileSync(path.join(root, file), 'utf8');
-    const tags = [...html.matchAll(/<(?:meta|link)\b[^>]*>/gi)].map(([tag]) => attrs(tag));
-    const schema = [...html.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)].flatMap(([, text]) => {
-      try { const value = JSON.parse(text); return value['@graph'] ?? [value]; } catch { return []; }
-    });
+    const tags = metaTags(html);
+    const schema = structuredData(html);
     const internalLinks = [...new Set([...html.matchAll(/<a\b[^>]*>/gi)].map(([tag]) => attrs(tag).href).filter(Boolean).flatMap(href => {
       try { const url = new URL(href, origin + route); return url.origin === origin ? [url.pathname.replace(/index\.html$/, '')] : []; } catch { return []; }
     }))].sort();

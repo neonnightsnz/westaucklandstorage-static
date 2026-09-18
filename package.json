@@ -6,6 +6,12 @@
   "scripts": {
     "dev": "astro dev --host 0.0.0.0 --port 5000",
     "build": "astro build",
+    "check:blog": "node --experimental-strip-types scripts/check-blog.mjs",
+    "check:contact": "node scripts/check-contact.mjs",
+    "check:sitemap": "node --experimental-strip-types scripts/check-sitemap.mjs",
+    "check": "npm run check:blog && npm run check:contact && npm run check:sitemap",
+    "audit:seo": "node scripts/audit-seo.mjs",
+    "inspect": "node scripts/inspect-route.mjs",
     "preview": "astro preview --host 0.0.0.0 --port 5000",
     "import:blog": "node scripts/import-blog.mjs",
     "build:blog": "node scripts/apply-blog-content.mjs",

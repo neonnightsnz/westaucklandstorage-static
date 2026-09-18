@@ -17,7 +17,7 @@
  * keeps entered details visible for retry and offers the yard phone number.
  */
 
-const json = (payload, status = 200) =>
+const json = (/** @type {Record<string, unknown>} */ payload, status = 200) =>
   new Response(JSON.stringify(payload), {
     status,
     headers: {
@@ -26,9 +26,9 @@ const json = (payload, status = 200) =>
     },
   });
 
-const clean = (value, max = 2000) =>
+const clean = (/** @type {unknown} */ value, max = 2000) =>
   typeof value === 'string' ? value.trim().slice(0, max) : '';
-
+/** @param {Request} request */
 async function readPayload(request) {
   const type = request.headers.get('content-type') ?? '';
   if (type.includes('application/json')) {
@@ -42,10 +42,15 @@ async function readPayload(request) {
   return Object.fromEntries(form.entries());
 }
 
+/** @returns {Response} */
 export function onRequestGet() {
   return json({ ok: false, error: 'method_not_allowed' }, 405);
 }
 
+/**
+ * @param {{ request: Request, env: Record<string, string | undefined> }} context
+ * @returns {Promise<Response>}
+ */
 export async function onRequestPost({ request, env }) {
   let data;
   try {
@@ -56,16 +61,18 @@ export async function onRequestPost({ request, env }) {
   if (!data || typeof data !== 'object' || Array.isArray(data)) {
     return json({ ok: false, error: 'invalid_payload' }, 400);
   }
-
+  /** @type {Record<string, unknown>} */
+  const fields = data;
+  const asField = (key) => clean(fields[key], 4000);
   // Honeypot: a real visitor never fills this hidden field in.
-  if (clean(data.company)) return json({ ok: true });
+  if (asField('company')) return json({ ok: true });
 
   const enquiry = {
-    name: clean(data.name, 120),
-    contact: clean(data.contact, 200),
-    item: clean(data.item, 60),
-    message: clean(data.message, 4000),
-    page: clean(data.page, 300),
+    name: clean(fields.name, 120),
+    contact: clean(fields.contact, 200),
+    item: clean(fields.item, 60),
+    message: clean(fields.message, 4000),
+    page: clean(fields.page, 300),
     receivedAt: new Date().toISOString(),
   };
 
@@ -83,6 +90,7 @@ export async function onRequestPost({ request, env }) {
     .filter(Boolean)
     .join('\n');
 
+  const provider = env.CONTACT_WEBHOOK_URL ? 'webhook' : 'resend';
   try {
     if (env.CONTACT_WEBHOOK_URL) {
       const response = await fetch(env.CONTACT_WEBHOOK_URL, {
@@ -90,10 +98,13 @@ export async function onRequestPost({ request, env }) {
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ subject: `Storage enquiry from ${enquiry.name}`, ...enquiry }),
       });
-      if (!response.ok) throw new Error(`Webhook responded ${response.status}`);
+      if (!response.ok) {
+        const error = new Error(`webhook responded ${response.status}`);
+        error.status = response.status;
+        throw error;
+      }
       return json({ ok: true });
     }
-
     if (env.RESEND_API_KEY && env.CONTACT_TO) {
       const response = await fetch('https://api.resend.com/emails', {
         method: 'POST',
@@ -109,12 +120,24 @@ export async function onRequestPost({ request, env }) {
           text,
         }),
       });
-      if (!response.ok) throw new Error(`Resend responded ${response.status}`);
-      return json({ ok: true });
-    }
-  } catch {
-    return json({ ok: false, error: 'delivery_failed' }, 502);
-  }
-
-  return json({ ok: false, error: 'not_configured' }, 503);
+          if (!response.ok) {
+            const error = new Error(`resend responded ${response.status}`);
+            error.status = response.status;
+            throw error;
+          }
+          return json({ ok: true });
+        }
+      } catch (error) {
+        // Provider-specific codes so Cloudflare logs show which path failed.
+        console.error('contact delivery failed', {
+          provider,
+          status: error?.status,
+          message: error?.message,
+        });
+        return json(
+          { ok: false, error: provider === 'webhook' ? 'webhook_failed' : 'email_failed' },
+          502,
+        );
+      }
+      return json({ ok: false, error: 'not_configured' }, 503);
 }

@@ -36,14 +36,21 @@ export function breadcrumbsFor(pathname: string): Breadcrumb[] {
 
 export function metadataFor(pathname: string, fallback: { title: string; description: string }) {
   if (marketing[pathname]) return marketing[pathname];
+  // Only the 404 page may set its own copy; every other route resolves here
+  // first, so a page's hero lede or content paragraph cannot leak out as the
+  // search result snippet.
+  if (pathname === '/404.html') return fallback;
   const post = posts.find(post => pathname === `/${post.slug}/`);
   if (post) {
     const suburb = locationGroups.flatMap(group => group.suburbs).find(suburb => suburb.slug === post.slug);
     const service = storageOptions.find(option => option.slug === post.slug);
     const description = suburb
       ? `Boat, caravan and vehicle storage for ${suburb.name} owners at our Glendene yard. Explore outdoor storage options and ask about space and access.`
-      : service?.description ?? post.content.match(/<p[^>]*>([^<]*?[.!?])(?:\s|<)/)?.[1] ?? post.excerpt;
-    return { title: /west auckland storage/i.test(post.title) ? post.title : `${post.title} | West Auckland Storage`, description };
+      : service?.description ?? post.excerpt;
+    // Article titles carry no brand suffix: the URL and the copy already say
+    // where this is, and 27 extra characters push curated suburb titles past
+    // the point where Google truncates them.
+    return { title: post.title, description };
   }
   const archive = archives.find(archive => pathname === `/${archive.slug}/`);
   if (archive) return { title: `${archive.label}${archive.number > 1 ? ` — Page ${archive.number}` : ''} | West Auckland Storage`, description: `${archive.description}${archive.number > 1 ? ` Page ${archive.number} of ${archive.pageCount}.` : ''}` };

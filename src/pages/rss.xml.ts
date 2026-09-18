@@ -1,13 +1,15 @@
-import { posts } from "../data/blog";
-
+import type { APIContext } from "astro";
+import { posts } from "../data/blog.ts";
 export const prerender = true;
-
-export function GET({ site }) {
+export function GET(...args: Pick<APIContext, "site">[]): Response {
+  const { site } = args[0] ?? ({} as Pick<APIContext, "site">);
   const origin = site?.origin ?? "https://westaucklandstorage.co.nz";
-  const sorted = [...posts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  const sorted = [...posts].sort(
+    (a: { date: string }, b: { date: string }) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+  );
   const items = sorted
     .map(
-      (post) => `    <item>
+      (post: { title: string; slug: string; date: string; excerpt: string }) => `    <item>
       <title><![CDATA[${post.title}]]></title>
       <link>${origin}/${post.slug}/</link>
       <guid isPermaLink="true">${origin}/${post.slug}/</guid>

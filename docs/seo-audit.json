@@ -1619,7 +1619,7 @@
     {
       "route": "/author/isaac/",
       "title": "Articles by Isaac | West Auckland Storage",
-      "description": "Storage notes and local guides written from the yard.",
+      "description": "Storage advice and local West Auckland guides written by Isaac at Span Farm Boat Yard — notes on boats, caravans, trailers and vehicles.",
       "canonical": "https://westaucklandstorage.co.nz/author/isaac/",
       "schemaTypes": [
         "SelfStorage",
@@ -1655,7 +1655,7 @@
     {
       "route": "/author/isaac/page/2/",
       "title": "Articles by Isaac — Page 2 | West Auckland Storage",
-      "description": "Storage notes and local guides written from the yard. Page 2 of 4.",
+      "description": "Storage advice and local West Auckland guides written by Isaac at Span Farm Boat Yard — notes on boats, caravans, trailers and vehicles. Page 2 of 4.",
       "canonical": "https://westaucklandstorage.co.nz/author/isaac/page/2/",
       "schemaTypes": [
         "SelfStorage",
@@ -1691,7 +1691,7 @@
     {
       "route": "/author/isaac/page/3/",
       "title": "Articles by Isaac — Page 3 | West Auckland Storage",
-      "description": "Storage notes and local guides written from the yard. Page 3 of 4.",
+      "description": "Storage advice and local West Auckland guides written by Isaac at Span Farm Boat Yard — notes on boats, caravans, trailers and vehicles. Page 3 of 4.",
       "canonical": "https://westaucklandstorage.co.nz/author/isaac/page/3/",
       "schemaTypes": [
         "SelfStorage",
@@ -1727,7 +1727,7 @@
     {
       "route": "/author/isaac/page/4/",
       "title": "Articles by Isaac — Page 4 | West Auckland Storage",
-      "description": "Storage notes and local guides written from the yard. Page 4 of 4.",
+      "description": "Storage advice and local West Auckland guides written by Isaac at Span Farm Boat Yard — notes on boats, caravans, trailers and vehicles. Page 4 of 4.",
       "canonical": "https://westaucklandstorage.co.nz/author/isaac/page/4/",
       "schemaTypes": [
         "SelfStorage",
@@ -1756,8 +1756,8 @@
     },
     {
       "route": "/benefits-of-storing-your-boat-at-west-auckland-storage/",
-      "title": "Benefits of Storing Your Boat with Us | West Auckland Storage",
-      "description": "Keeping a boat at home is fine until it is not — until the driveway is full, the trailer is in the way, or the boat is taking a beating from the weather.",
+      "title": "Benefits of Storing Your Boat with Us",
+      "description": "Get your driveway back and keep your boat in one place. See the benefits of storing your boat at our working Glendene yard, from $200 + GST a month.",
       "canonical": "https://westaucklandstorage.co.nz/benefits-of-storing-your-boat-at-west-auckland-storage/",
       "schemaTypes": [
         "SelfStorage",
@@ -1786,7 +1786,7 @@
     {
       "route": "/blog/",
       "title": "From the yard | West Auckland Storage",
-      "description": "Boat, caravan and vehicle storage advice, and guides for our West Auckland neighbours.",
+      "description": "Boat, caravan and vehicle storage advice, plus practical local guides for West Auckland owners — written from the yard at 20 Akatea Road, Glendene.",
       "canonical": "https://westaucklandstorage.co.nz/blog/",
       "schemaTypes": [
         "SelfStorage",
@@ -1821,7 +1821,7 @@
     {
       "route": "/blog/page/2/",
       "title": "From the yard — Page 2 | West Auckland Storage",
-      "description": "Boat, caravan and vehicle storage advice, and guides for our West Auckland neighbours. Page 2 of 4.",
+      "description": "Boat, caravan and vehicle storage advice, plus practical local guides for West Auckland owners — written from the yard at 20 Akatea Road, Glendene. Page 2 of 4.",
       "canonical": "https://westaucklandstorage.co.nz/blog/page/2/",
       "schemaTypes": [
         "SelfStorage",
@@ -1856,7 +1856,7 @@
     {
       "route": "/blog/page/3/",
       "title": "From the yard — Page 3 | West Auckland Storage",
-      "description": "Boat, caravan and vehicle storage advice, and guides for our West Auckland neighbours. Page 3 of 4.",
+      "description": "Boat, caravan and vehicle storage advice, plus practical local guides for West Auckland owners — written from the yard at 20 Akatea Road, Glendene. Page 3 of 4.",
       "canonical": "https://westaucklandstorage.co.nz/blog/page/3/",
       "schemaTypes": [
         "SelfStorage",
@@ -1891,7 +1891,7 @@
     {
       "route": "/blog/page/4/",
       "title": "From the yard — Page 4 | West Auckland Storage",
-      "description": "Boat, caravan and vehicle storage advice, and guides for our West Auckland neighbours. Page 4 of 4.",
+      "description": "Boat, caravan and vehicle storage advice, plus practical local guides for West Auckland owners — written from the yard at 20 Akatea Road, Glendene. Page 4 of 4.",
       "canonical": "https://westaucklandstorage.co.nz/blog/page/4/",
       "schemaTypes": [
         "SelfStorage",
@@ -1950,7 +1950,7 @@
     },
     {
       "route": "/business-storage-solutions-at-west-auckland-storage/",
-      "title": "Business & Fleet Storage in West Auckland | West Auckland Storage",
+      "title": "Business & Fleet Storage in West Auckland",
       "description": "Flexible outdoor storage for business vehicles, trailers, equipment and stock that need a practical West Auckland base.",
       "canonical": "https://westaucklandstorage.co.nz/business-storage-solutions-at-west-auckland-storage/",
       "schemaTypes": [
@@ -1981,7 +1981,7 @@
     },
     {
       "route": "/caravan-storage-at-west-auckland-storage/",
-      "title": "Caravan & Campervan Storage in West Auckland | West Auckland Storage",
+      "title": "Caravan & Campervan Storage in West Auckland",
       "description": "Safe, affordable outdoor caravan storage in West Auckland for the space between trips, seasons and plans.",
       "canonical": "https://westaucklandstorage.co.nz/caravan-storage-at-west-auckland-storage/",
       "schemaTypes": [
@@ -2013,7 +2013,7 @@
     {
       "route": "/category/local-guides/",
       "title": "Local guides | West Auckland Storage",
-      "description": "Storage notes and practical guides for West Auckland suburbs and neighbourhoods.",
+      "description": "Practical storage guides for West Auckland suburbs, so your boat, caravan or vehicle stays nearby and close to home.",
       "canonical": "https://westaucklandstorage.co.nz/category/local-guides/",
       "schemaTypes": [
         "SelfStorage",
@@ -2047,7 +2047,7 @@
     {
       "route": "/category/local-guides/page/2/",
       "title": "Local guides — Page 2 | West Auckland Storage",
-      "description": "Storage notes and practical guides for West Auckland suburbs and neighbourhoods. Page 2 of 2.",
+      "description": "Practical storage guides for West Auckland suburbs, so your boat, caravan or vehicle stays nearby and close to home. Page 2 of 2.",
       "canonical": "https://westaucklandstorage.co.nz/category/local-guides/page/2/",
       "schemaTypes": [
         "SelfStorage",
@@ -2080,7 +2080,7 @@
     {
       "route": "/category/storage-options/",
       "title": "Storage options | West Auckland Storage",
-      "description": "What we store at the yard, and how boat, caravan and vehicle storage works.",
+      "description": "The outdoor storage options at our Glendene yard: what we store, how boat, caravan and vehicle storage works, and what to tell us before you arrive.",
       "canonical": "https://westaucklandstorage.co.nz/category/storage-options/",
       "schemaTypes": [
         "SelfStorage",
@@ -2112,7 +2112,7 @@
     {
       "route": "/category/storage-tips/",
       "title": "Storage tips | West Auckland Storage",
-      "description": "Straightforward advice for looking after your boat, caravan and gear.",
+      "description": "Practical storage tips and straightforward guidance to look after your boat, caravan and gear while it is stored outdoors.",
       "canonical": "https://westaucklandstorage.co.nz/category/storage-tips/",
       "schemaTypes": [
         "SelfStorage",
@@ -2175,7 +2175,7 @@
     },
     {
       "route": "/discovering-west-auckland-storage-the-perfect-solution-for-titirangi-residents/",
-      "title": "Boat & Caravan Storage near Titirangi | West Auckland Storage",
+      "title": "Boat & Caravan Storage near Titirangi",
       "description": "Boat, caravan and vehicle storage for Titirangi owners at our Glendene yard. Explore outdoor storage options and ask about space and access.",
       "canonical": "https://westaucklandstorage.co.nz/discovering-west-auckland-storage-the-perfect-solution-for-titirangi-residents/",
       "schemaTypes": [
@@ -2206,7 +2206,7 @@
     },
     {
       "route": "/outdoor-storage-solutions-at-west-auckland-storage/",
-      "title": "Outdoor Storage Options in West Auckland | West Auckland Storage",
+      "title": "Outdoor Storage Options in West Auckland",
       "description": "Outdoor hardstand storage for the boats, vehicles, trailers and gear that do not fit neatly at home.",
       "canonical": "https://westaucklandstorage.co.nz/outdoor-storage-solutions-at-west-auckland-storage/",
       "schemaTypes": [
@@ -2299,7 +2299,7 @@
     },
     {
       "route": "/shipping-container-storage-at-west-auckland-storage/",
-      "title": "Shipping Container Storage in West Auckland | West Auckland Storage",
+      "title": "Shipping Container Storage in West Auckland",
       "description": "Outdoor storage for 20ft and 40ft shipping containers at Span Farm Boat Yard in Glendene. Ask the yard for container pricing.",
       "canonical": "https://westaucklandstorage.co.nz/shipping-container-storage-at-west-auckland-storage/",
       "schemaTypes": [
@@ -2399,8 +2399,8 @@
     },
     {
       "route": "/span-farm-boat-yard-ltd-your-premier-boat-storage-solution-in-west-auckland/",
-      "title": "Span Farm Boat Yard: Boat Storage in West Auckland | West Auckland Storage",
-      "description": "Span Farm Boat Yard is the working boat yard behind West Auckland Storage.",
+      "title": "Span Farm Boat Yard: Boat Storage in West Auckland",
+      "description": "Span Farm Boat Yard is the working boat yard behind West Auckland Storage. If you are looking for boat storage in West Auckland that is close to home,…",
       "canonical": "https://westaucklandstorage.co.nz/span-farm-boat-yard-ltd-your-premier-boat-storage-solution-in-west-auckland/",
       "schemaTypes": [
         "SelfStorage",
@@ -2470,7 +2470,7 @@
     },
     {
       "route": "/trailer-storage-at-west-auckland-storage/",
-      "title": "Trailer Storage in West Auckland | West Auckland Storage",
+      "title": "Trailer Storage in West Auckland",
       "description": "Straightforward outdoor trailer storage in Glendene for utility trailers, boat trailers and recreational equipment.",
       "canonical": "https://westaucklandstorage.co.nz/trailer-storage-at-west-auckland-storage/",
       "schemaTypes": [
@@ -2501,7 +2501,7 @@
     },
     {
       "route": "/truck-storage-at-west-auckland-storage/",
-      "title": "Truck Storage in West Auckland | West Auckland Storage",
+      "title": "Truck Storage in West Auckland",
       "description": "Outdoor storage options for trucks, work vehicles and larger equipment, subject to space and access requirements.",
       "canonical": "https://westaucklandstorage.co.nz/truck-storage-at-west-auckland-storage/",
       "schemaTypes": [
@@ -2532,7 +2532,7 @@
     },
     {
       "route": "/uncovered-boat-storage-at-west-auckland-storage/",
-      "title": "Uncovered Boat Storage in West Auckland | West Auckland Storage",
+      "title": "Uncovered Boat Storage in West Auckland",
       "description": "Affordable uncovered boat storage for owners who want a practical yard close to home, without paying marina prices.",
       "canonical": "https://westaucklandstorage.co.nz/uncovered-boat-storage-at-west-auckland-storage/",
       "schemaTypes": [
@@ -2563,7 +2563,7 @@
     },
     {
       "route": "/vehicle-storage-at-west-auckland-storage/",
-      "title": "Vehicle Storage in West Auckland | West Auckland Storage",
+      "title": "Vehicle Storage in West Auckland",
       "description": "Flexible outdoor vehicle storage for cars, 4WDs, utes, trucks and trailers in West Auckland.",
       "canonical": "https://westaucklandstorage.co.nz/vehicle-storage-at-west-auckland-storage/",
       "schemaTypes": [
@@ -2594,7 +2594,7 @@
     },
     {
       "route": "/west-auckland-storage-reliable-storage-in-lincoln/",
-      "title": "Storage near Lincoln Road, Henderson | West Auckland Storage",
+      "title": "Storage near Lincoln Road, Henderson",
       "description": "Boat, caravan and vehicle storage for Lincoln owners at our Glendene yard. Explore outdoor storage options and ask about space and access.",
       "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-reliable-storage-in-lincoln/",
       "schemaTypes": [
@@ -2625,7 +2625,7 @@
     },
     {
       "route": "/west-auckland-storage-reliable-storage-in-massey/",
-      "title": "Boat, Caravan & Trailer Storage near Massey | West Auckland Storage",
+      "title": "Boat, Caravan & Trailer Storage near Massey",
       "description": "Boat, caravan and vehicle storage for Massey owners at our Glendene yard. Explore outdoor storage options and ask about space and access.",
       "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-reliable-storage-in-massey/",
       "schemaTypes": [
@@ -2656,7 +2656,7 @@
     },
     {
       "route": "/west-auckland-storage-secure-storage-in-sunnyvale/",
-      "title": "Caravan & Trailer Storage near Sunnyvale | West Auckland Storage",
+      "title": "Caravan & Trailer Storage near Sunnyvale",
       "description": "Boat, caravan and vehicle storage for Sunnyvale owners at our Glendene yard. Explore outdoor storage options and ask about space and access.",
       "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-secure-storage-in-sunnyvale/",
       "schemaTypes": [
@@ -2687,7 +2687,7 @@
     },
     {
       "route": "/west-auckland-storage-the-ideal-choice-for-te-atatu-south-residents/",
-      "title": "Storage for Te Atatu South Owners | West Auckland Storage",
+      "title": "Storage for Te Atatu South Owners",
       "description": "Boat, caravan and vehicle storage for Te Atatu South owners at our Glendene yard. Explore outdoor storage options and ask about space and access.",
       "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-the-ideal-choice-for-te-atatu-south-residents/",
       "schemaTypes": [
@@ -2717,7 +2717,7 @@
     },
     {
       "route": "/west-auckland-storage-the-perfect-storage-solution-for-herald-island-residents/",
-      "title": "Boat Storage for Herald Island Residents | West Auckland Storage",
+      "title": "Boat Storage for Herald Island Residents",
       "description": "Boat, caravan and vehicle storage for Herald Island owners at our Glendene yard. Explore outdoor storage options and ask about space and access.",
       "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-the-perfect-storage-solution-for-herald-island-residents/",
       "schemaTypes": [
@@ -2748,7 +2748,7 @@
     },
     {
       "route": "/west-auckland-storage-trusted-storage-solutions-in-west-harbour/",
-      "title": "Boat Storage for West Harbour Owners | West Auckland Storage",
+      "title": "Boat Storage for West Harbour Owners",
       "description": "Boat, caravan and vehicle storage for West Harbour owners at our Glendene yard. Explore outdoor storage options and ask about space and access.",
       "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-trusted-storage-solutions-in-west-harbour/",
       "schemaTypes": [
@@ -2779,8 +2779,8 @@
     },
     {
       "route": "/west-auckland-storage-your-go-to-for-secure-boat-and-vehicle-storage/",
-      "title": "Boat & Vehicle Storage in West Auckland | West Auckland Storage",
-      "description": "West Auckland Storage is a working boat yard at Span Farm Boat Yard in Glendene, storing boats and vehicles for owners across West Auckland.",
+      "title": "Boat & Vehicle Storage in West Auckland",
+      "description": "Boat and vehicle storage for owners across West Auckland. Our working yard at Span Farm Boat Yard in Glendene stores boats, caravans, trailers and cars.",
       "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-your-go-to-for-secure-boat-and-vehicle-storage/",
       "schemaTypes": [
         "SelfStorage",
@@ -2808,7 +2808,7 @@
     },
     {
       "route": "/west-auckland-storage-your-go-to-storage-solution-in-te-atatu-peninsula/",
-      "title": "Boat & Caravan Storage for Te Atatu Peninsula | West Auckland Storage",
+      "title": "Boat & Caravan Storage for Te Atatu Peninsula",
       "description": "Boat, caravan and vehicle storage for Te Atatu Peninsula owners at our Glendene yard. Explore outdoor storage options and ask about space and access.",
       "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-your-go-to-storage-solution-in-te-atatu-peninsula/",
       "schemaTypes": [
@@ -2838,7 +2838,7 @@
     },
     {
       "route": "/west-auckland-storage-your-ideal-storage-solution-in-western-heights/",
-      "title": "Boat & Caravan Storage near Western Heights | West Auckland Storage",
+      "title": "Boat & Caravan Storage near Western Heights",
       "description": "Boat, caravan and vehicle storage for Western Heights owners at our Glendene yard. Explore outdoor storage options and ask about space and access.",
       "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-your-ideal-storage-solution-in-western-heights/",
       "schemaTypes": [
@@ -2869,7 +2869,7 @@
     },
     {
       "route": "/west-auckland-storage-your-premier-storage-solution-in-glendene/",
-      "title": "Storage in Glendene — Right at the Yard | West Auckland Storage",
+      "title": "Storage in Glendene — Right at the Yard",
       "description": "Boat, caravan and vehicle storage for Glendene owners at our Glendene yard. Explore outdoor storage options and ask about space and access.",
       "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-your-premier-storage-solution-in-glendene/",
       "schemaTypes": [
@@ -2900,7 +2900,7 @@
     },
     {
       "route": "/west-auckland-storage-your-reliable-storage-solution-in-kelston/",
-      "title": "Caravan, Trailer & Boat Storage near Kelston | West Auckland Storage",
+      "title": "Caravan, Trailer & Boat Storage near Kelston",
       "description": "Boat, caravan and vehicle storage for Kelston owners at our Glendene yard. Explore outdoor storage options and ask about space and access.",
       "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-your-reliable-storage-solution-in-kelston/",
       "schemaTypes": [
@@ -2931,7 +2931,7 @@
     },
     {
       "route": "/west-auckland-storage-your-reliable-storage-solution-in-laingholm/",
-      "title": "Boat, Caravan & Vehicle Storage near Laingholm | West Auckland Storage",
+      "title": "Boat, Caravan & Vehicle Storage near Laingholm",
       "description": "Boat, caravan and vehicle storage for Laingholm owners at our Glendene yard. Explore outdoor storage options and ask about space and access.",
       "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-your-reliable-storage-solution-in-laingholm/",
       "schemaTypes": [
@@ -2962,7 +2962,7 @@
     },
     {
       "route": "/west-auckland-storage-your-storage-solution-in-hobsonville/",
-      "title": "Storage for Hobsonville Boats & Caravans | West Auckland Storage",
+      "title": "Storage for Hobsonville Boats & Caravans",
       "description": "Boat, caravan and vehicle storage for Hobsonville owners at our Glendene yard. Explore outdoor storage options and ask about space and access.",
       "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-your-storage-solution-in-hobsonville/",
       "schemaTypes": [
@@ -2993,7 +2993,7 @@
     },
     {
       "route": "/west-auckland-storage-your-storage-solution-in-new-lynn/",
-      "title": "Storage in Glendene for New Lynn Owners | West Auckland Storage",
+      "title": "Storage in Glendene for New Lynn Owners",
       "description": "Boat, caravan and vehicle storage for New Lynn owners at our Glendene yard. Explore outdoor storage options and ask about space and access.",
       "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-your-storage-solution-in-new-lynn/",
       "schemaTypes": [
@@ -3024,7 +3024,7 @@
     },
     {
       "route": "/west-auckland-storage-your-trusted-storage-in-huia/",
-      "title": "Boat & Trailer Storage for Huia | West Auckland Storage",
+      "title": "Boat & Trailer Storage for Huia",
       "description": "Boat, caravan and vehicle storage for Huia owners at our Glendene yard. Explore outdoor storage options and ask about space and access.",
       "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-your-trusted-storage-in-huia/",
       "schemaTypes": [
@@ -3055,7 +3055,7 @@
     },
     {
       "route": "/west-auckland-storage-your-trusted-storage-solution-in-glen-eden/",
-      "title": "Caravan, Trailer & Boat Storage near Glen Eden | West Auckland Storage",
+      "title": "Caravan, Trailer & Boat Storage near Glen Eden",
       "description": "Boat, caravan and vehicle storage for Glen Eden owners at our Glendene yard. Explore outdoor storage options and ask about space and access.",
       "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-your-trusted-storage-solution-in-glen-eden/",
       "schemaTypes": [
@@ -3086,7 +3086,7 @@
     },
     {
       "route": "/west-auckland-storage-your-trusted-storage-solution-in-green-bay/",
-      "title": "Boat & Caravan Storage near Green Bay | West Auckland Storage",
+      "title": "Boat & Caravan Storage near Green Bay",
       "description": "Boat, caravan and vehicle storage for Green Bay owners at our Glendene yard. Explore outdoor storage options and ask about space and access.",
       "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-your-trusted-storage-solution-in-green-bay/",
       "schemaTypes": [
@@ -3117,7 +3117,7 @@
     },
     {
       "route": "/west-auckland-storage-your-trusted-storage-solution-in-swanson/",
-      "title": "Boat & Trailer Storage for Swanson | West Auckland Storage",
+      "title": "Boat & Trailer Storage for Swanson",
       "description": "Boat, caravan and vehicle storage for Swanson owners at our Glendene yard. Explore outdoor storage options and ask about space and access.",
       "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-your-trusted-storage-solution-in-swanson/",
       "schemaTypes": [
@@ -3148,7 +3148,7 @@
     },
     {
       "route": "/west-auckland-storage-your-trusted-storage-solution-in-whenuapai/",
-      "title": "Storage for Whenuapai Boats & Vehicles | West Auckland Storage",
+      "title": "Storage for Whenuapai Boats & Vehicles",
       "description": "Boat, caravan and vehicle storage for Whenuapai owners at our Glendene yard. Explore outdoor storage options and ask about space and access.",
       "canonical": "https://westaucklandstorage.co.nz/west-auckland-storage-your-trusted-storage-solution-in-whenuapai/",
       "schemaTypes": [
@@ -3179,8 +3179,8 @@
     },
     {
       "route": "/why-choose-west-auckland-storage-for-your-long-term-storage-needs/",
-      "title": "Long-Term Boat, Caravan & Vehicle Storage | West Auckland Storage",
-      "description": "Some things you store because you need them next weekend.",
+      "title": "Long-Term Boat, Caravan & Vehicle Storage",
+      "description": "Long-term boat, caravan and vehicle storage at Span Farm Boat Yard in Glendene. Practical outdoor hardstand space with monthly invoicing and no marina waitlist.",
       "canonical": "https://westaucklandstorage.co.nz/why-choose-west-auckland-storage-for-your-long-term-storage-needs/",
       "schemaTypes": [
         "SelfStorage",
@@ -3208,8 +3208,8 @@
     },
     {
       "route": "/why-choose-west-auckland-storage-for-your-short-term-storage-needs/",
-      "title": "Short-Term & Seasonal Storage in West Auckland | West Auckland Storage",
-      "description": "Not everything needs storing for months.",
+      "title": "Short-Term & Seasonal Storage in West Auckland",
+      "description": "Short-term and seasonal boat, caravan and vehicle storage in Glendene, West Auckland. Flexible outdoor space for a few weeks, a winter season or building work.",
       "canonical": "https://westaucklandstorage.co.nz/why-choose-west-auckland-storage-for-your-short-term-storage-needs/",
       "schemaTypes": [
         "SelfStorage",
@@ -3238,7 +3238,7 @@
     {
       "route": "/why-choose-west-auckland-storage/",
       "title": "Why Owners Choose West Auckland Storage",
-      "description": "There are plenty of storage options in West Auckland.",
+      "description": "Discover why West Auckland owners choose our Glendene yard for outdoor boat, caravan and vehicle storage: close to home, from $200 + GST a month, no marina…",
       "canonical": "https://westaucklandstorage.co.nz/why-choose-west-auckland-storage/",
       "schemaTypes": [
         "SelfStorage",

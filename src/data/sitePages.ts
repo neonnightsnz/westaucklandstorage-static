@@ -118,7 +118,7 @@ export const pages = [
     "bullets": [
       "Close to home across West Auckland",
       "From $200 + GST per month, no marina price tag",
-      "Slipway access depends on conditions on the day — check with us before you head down",
+      "The slipway is a genuine part of Span Farm Boat Yard's story — but it's currently under repair, and haul-out is still a work in progress. Give us a call before you plan a launch or haul-out.",
       "Short and longer-term options"
     ],
     "related": [

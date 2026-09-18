@@ -1,5 +1,5 @@
-import posts from './blogPosts.json';
-import { storageOptions } from './sitePages';
+import posts from './blogPosts.json' with { type: 'json' };
+import { storageOptions } from './sitePages.ts';
 
 export { posts };
 export const pageSize = 10;
@@ -9,17 +9,17 @@ export const categories = [
   {
     slug: 'local-guides',
     label: 'Local guides',
-    description: 'Storage notes and practical guides for West Auckland suburbs and neighbourhoods.',
+    description: 'Practical storage guides for West Auckland suburbs, so your boat, caravan or vehicle stays nearby and close to home.',
   },
   {
     slug: 'storage-options',
     label: 'Storage options',
-    description: 'What we store at the yard, and how boat, caravan and vehicle storage works.',
+    description: 'The outdoor storage options at our Glendene yard: what we store, how boat, caravan and vehicle storage works, and what to tell us before you arrive.',
   },
   {
     slug: 'storage-tips',
     label: 'Storage tips',
-    description: 'Straightforward advice for looking after your boat, caravan and gear.',
+    description: 'Practical storage tips and straightforward guidance to look after your boat, caravan and gear while it is stored outdoors.',
   },
 ];
 
@@ -64,8 +64,8 @@ export const postsWithCategory = posts.map((post) => ({ ...post, category: categ
 export const archivePath = (base: string, page: number) => `/${base}/${page === 1 ? '' : `page/${page}/`}`;
 
 const archiveDefinitions = [
-  { base: 'blog', label: 'From the yard', description: 'Boat, caravan and vehicle storage advice, and guides for our West Auckland neighbours.', items: postsWithCategory },
-  { base: 'author/isaac', label: 'Articles by Isaac', description: 'Storage notes and local guides written from the yard.', items: postsWithCategory },
+  { base: 'blog', label: 'From the yard', description: 'Boat, caravan and vehicle storage advice, plus practical local guides for West Auckland owners — written from the yard at 20 Akatea Road, Glendene.', items: postsWithCategory },
+  { base: 'author/isaac', label: 'Articles by Isaac', description: 'Storage advice and local West Auckland guides written by Isaac at Span Farm Boat Yard — notes on boats, caravans, trailers and vehicles.', items: postsWithCategory },
   ...categories.map((category) => ({
     base: `category/${category.slug}`,
     label: category.label,

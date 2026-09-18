@@ -29,7 +29,7 @@ const relatedPages = page?.related
 
 <PageLayout
   title={post ? `${post.title} | West Auckland Storage` : archive ? `${archive.label} — Page ${archive.number} | West Auckland Storage` : `${page.title.replace(".", "")} ${page.highlight} | West Auckland Storage`}
-    description={post ? post.excerpt : archive ? `${archive.description} Page ${archive.number} of ${archive.pageCount}.` : page.description}
+  description={post ? post.excerpt : archive ? `${archive.description} Page ${archive.number} of ${archive.pageCount}.` : page.description}
   type={post ? 'article' : 'website'}
   publishedTime={post?.date}
 >
