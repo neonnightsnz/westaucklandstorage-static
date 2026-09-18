@@ -1,8 +1,8 @@
 # Homepage polish: complete updated code
 
-Complete current sources, including the follow-up CRO changes for local organic search and Google Maps. See [the CRO audit](homepage-cro-audit.md) for findings, priorities and test alternatives. Section order, grids, functional attributes, data structures and scripts are preserved. No dependencies added.
+Complete current sources, including the CRO changes for local organic search and Google Maps and the frontend-design refinement. See [the CRO audit](homepage-cro-audit.md) and [the design review](frontend-design-review.md). Section order, grids, functional attributes, data structures and scripts are preserved. No dependencies added.
 
-Browser review covered the hero reference at desktop and mobile widths, cards and interactions. The follow-up check confirmed the required form labels at 1440px and 390px, no horizontal page overflow, and no captured console errors. No enquiry was submitted. An earlier final hover-state screenshot was interrupted by a browser timeout.
+Verification: homepage and saved reference compared at 1440px and 390px. No horizontal page overflow or captured console errors. Desktop cards and outlined CTA focus contrast checked. Previous checks covered the form, mobile menu, FAQ, carousel and slipway preselection. No enquiry was submitted. Build and site checks passed; contact provider tests used mocks.
 
 ## src/pages/index.astro
 
@@ -295,7 +295,7 @@ const faqs = [
   h1, h2 { line-height: .96; text-wrap: balance; }
   h3 { line-height: 1.08; }
   .hero-lede { max-width: 560px; line-height: 1.6; }
-  .hero-note { color: #d8e7f2; line-height: 1.6; }
+  .hero-note { color: #d8e7f2; font-size: 13px; letter-spacing: 0; line-height: 1.6; text-transform: none; }
   .note-line { flex-shrink: 0; }
   .hero-content { padding-bottom: 48px; }
   .hero h1 em { color: var(--blue-light); }
@@ -307,14 +307,14 @@ const faqs = [
     box-shadow: 0 3px 0 rgba(3, 27, 50, .5), 0 8px 20px rgba(3, 27, 50, .16);
   }
   .button-bright:hover, .button-bright:focus-visible { background: var(--blue-light); border-color: var(--blue-light); color: var(--blue-dark); }
-  .button-outline-light { background: rgba(8, 46, 84, .25); }
+  .button-outline-light { background: rgba(8, 46, 84, .25); transition: transform .2s ease; }
   .button-outline-light:hover, .button-outline-light:focus-visible { background: white; color: var(--blue-dark); }
   .button:active { transform: translateY(1px); box-shadow: none; }
   .button:focus-visible, .text-link:focus-visible { outline: 3px solid currentColor; outline-offset: 5px; }
   .text-link { line-height: 1.6; text-underline-offset: 5px; }
   .text-link:hover { text-decoration: underline; }
   .text-link-light:hover, .text-link-light:focus-visible { color: var(--blue-light); }
-  .pillar-card, .service-card { border-radius: 3px; box-shadow: 0 2px 8px rgba(8, 46, 84, .05); }
+  .pillar-card, .service-card { border-radius: 0; box-shadow: none; }
   .pillar-card { border-bottom: 1px solid var(--line); }
   .pillar-card h3 { margin-top: 0; }
   .pillar-card p { line-height: 1.65; }
@@ -323,10 +323,13 @@ const faqs = [
     flex-direction: column;
     overflow: hidden;
     border: 1px solid var(--line);
-    transition: border-color .2s ease, box-shadow .2s ease;
+    transition: border-color .2s ease;
   }
-  .service-card:hover, .service-card:focus-within { border-color: #91b3ce; box-shadow: 0 10px 24px rgba(8, 46, 84, .09); }
-  .service-card:focus-within .service-image img { transform: scale(1.04); }
+  .service-card:hover, .service-card:focus-within { border-color: var(--blue); }
+  .service-image img { transition: none; }
+  .service-card:hover .service-image img, .service-card:focus-within .service-image img { transform: none; }
+  .service-image, .service-image img, .location-image, .location-image img,
+  .why-photo, .why-photo img, .yard-band, .yard-band img { border-radius: 0; }
   .service-body { display: flex; flex: 1; flex-direction: column; align-items: start; }
   .service-body .text-link { margin-top: auto; }
   .check-list small { color: #d3e5f1; line-height: 1.6; }
@@ -339,6 +342,9 @@ const faqs = [
   .faq-list details p { font-size: 16px; line-height: 1.7; }
   .contact-email { overflow-wrap: anywhere; text-underline-offset: 4px; }
   .contact-email:hover, .contact-phone:hover { text-decoration: underline; }
+  @media (min-width: 681px) {
+    .hero-content { padding-top: 150px; }
+  }
   @media (max-width: 680px) {
     .hero-content { padding-bottom: 40px; }
     .hero-actions .button { min-width: 220px; }

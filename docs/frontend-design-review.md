@@ -36,4 +36,4 @@ All changes live in the homepage's scoped CSS. Existing elements, copy, routes, 
 
 ## Verification scope
 
-Use targeted viewport screenshots at 1440px and 390px. Compare the hero against the saved reference, inspect the revised card treatment and check outlined-button keyboard focus contrast. Check horizontal page overflow and run the repository build and site checks. Do not submit the form. Follow `browser-efficiency-rules.md` and stop after two unsuccessful browser attempts.
+Compared viewport screenshots of the homepage and saved reference at 1440px and 390px. The desktop hero label starts approximately 37px below the header. Neither viewport has horizontal page overflow. Inspected the revised service cards and confirmed the outlined CTA's keyboard focus state uses navy text on a white background. No browser console errors were captured. No form was submitted. Restored the browser viewport and closed the temporary preview tabs.
