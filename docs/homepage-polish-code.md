@@ -1,3 +1,12 @@
+# Homepage polish: complete updated code
+
+Complete current sources, including the follow-up CRO changes for local organic search and Google Maps. See [the CRO audit](homepage-cro-audit.md) for findings, priorities and test alternatives. Section order, grids, functional attributes, data structures and scripts are preserved. No dependencies added.
+
+Browser review covered the hero reference at desktop and mobile widths, cards and interactions. The follow-up check confirmed the required form labels at 1440px and 390px, no horizontal page overflow, and no captured console errors. No enquiry was submitted. An earlier final hover-state screenshot was interrupted by a browser timeout.
+
+## src/pages/index.astro
+
+```astro
 ---
 import PageLayout from "../layouts/PageLayout.astro";
 import QuoteForm from "../components/QuoteForm.astro";
@@ -342,3 +351,114 @@ const faqs = [
     .button, .service-image img { transform: none !important; }
   }
 </style>
+```
+
+## src/components/QuoteForm.astro
+
+```astro
+<form id="enquiry" class="quote-form" data-contact-form method="post" action="/api/contact">
+  <div class="form-row">
+    <label>Your name (required) <input name="name" required autocomplete="name" placeholder="Your full name" /></label>
+    <label>Phone or email (required) <input name="contact" required placeholder="Your phone or email" /></label>
+  </div>
+  <label>What are you storing? (required)
+    <select name="item" required>
+      <option value="">Choose one</option>
+      <option>Boat</option><option>Caravan</option><option>Trailer</option><option>Vehicle or other gear</option><option>Truck</option><option>Business equipment</option><option>Shipping container</option><option>Slipway access</option>
+    </select>
+  </label>
+  <div class="form-row">
+    <label>Length, including trailer <input name="length" placeholder="For example, 6 metres" /></label>
+    <label>Preferred start date <input name="startDate" type="date" /></label>
+  </div>
+  <p class="form-note">Length and start date are optional, but help Jeff quote. Estimates are fine. He'll confirm the details with you.</p>
+  <label>Anything else? (optional) <textarea name="message" rows="4" placeholder="Tell us about access needs or ask a question about the yard"></textarea></label>
+  <div class="form-honey" aria-hidden="true">
+    <label>Leave this field empty <input name="company" tabindex="-1" autocomplete="off" /></label>
+  </div>
+  <button class="button button-bright" type="submit">Send enquiry</button>
+  <p class="form-note">Your enquiry goes to Jeff at the yard. Expect a reply within 24 hours. Prefer to call? <a href="tel:098184586">09 818 4586</a>.</p>
+  <p class="form-status" role="status" aria-live="polite"></p>
+</form>
+
+<style>
+  .quote-form { border: 1px solid var(--line); border-top: 4px solid var(--blue-bright); box-shadow: 0 16px 40px rgba(8, 46, 84, .12); }
+  .quote-form label { letter-spacing: 0; text-transform: none; line-height: 1.5; }
+  .quote-form input, .quote-form select, .quote-form textarea {
+    min-width: 0;
+    min-height: 48px;
+    border-color: #8196a7;
+    border-radius: 3px;
+    transition: border-color .2s ease, box-shadow .2s ease;
+  }
+  .quote-form input::placeholder, .quote-form textarea::placeholder { color: #586c7c; opacity: 1; }
+  .quote-form input:focus, .quote-form select:focus, .quote-form textarea:focus {
+    border-color: var(--blue);
+    outline: 2px solid var(--blue);
+    outline-offset: 2px;
+    box-shadow: none;
+    background: white;
+  }
+  .quote-form .button { border: 1px solid var(--blue); background: var(--blue); color: white; border-radius: 3px; box-shadow: 0 3px 0 var(--blue-dark); }
+  .quote-form .button:hover:not(:disabled), .quote-form .button:focus-visible { background: var(--blue-dark); color: white; }
+  .quote-form .button:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; }
+  .quote-form .button:active:not(:disabled) { transform: translateY(1px); box-shadow: none; }
+  .quote-form .button:disabled { opacity: .65; cursor: wait; transform: none; box-shadow: none; }
+  .form-note, .form-status { font-size: 13px; line-height: 1.6; }
+  .form-row + .form-note { margin: -4px 0 20px; }
+  .form-status:empty { margin: 0; }
+  .form-status:not(:empty) { padding: 12px; background: var(--paper); border-left: 3px solid var(--blue); }
+</style>
+
+<script>
+  import { storageOptions } from '../data/sitePages';
+  document.querySelectorAll<HTMLFormElement>('[data-contact-form]').forEach(form => {
+    const status = form.querySelector<HTMLElement>('.form-status');
+    const submit = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+    const setStatus = (text: string) => { if (status) status.textContent = text; };
+    const item = form.elements.namedItem('item') as HTMLSelectElement;
+    const params = new URLSearchParams(window.location.search);
+    const requestedItem = params.get('item');
+    const allowedItems = Array.from(item.options).map(option => option.value);
+    if (requestedItem && allowedItems.includes(requestedItem)) item.value = requestedItem;
+    const requestedSource = params.get('from') || '';
+    const source = storageOptions.some(option => `/${option.slug}/` === requestedSource) ? requestedSource : window.location.pathname;
+
+    document.querySelectorAll<HTMLAnchorElement>('[data-enquiry-item]').forEach(link => {
+      link.addEventListener('click', () => {
+        const choice = link.dataset.enquiryItem || '';
+        if (allowedItems.includes(choice)) item.value = choice;
+      });
+    });
+
+    form.addEventListener('submit', async event => {
+      event.preventDefault();
+      const data = new FormData(form);
+      submit?.setAttribute('disabled', 'true');
+      setStatus('Sending your enquiry…');
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({
+            name: data.get('name'),
+            contact: data.get('contact'),
+            item: data.get('item'),
+            message: [data.get('length') ? `Length including trailer: ${data.get('length')}` : '', data.get('startDate') ? `Preferred start date: ${data.get('startDate')}` : '', data.get('message')].filter(Boolean).join('\n'),
+            company: data.get('company'),
+            page: source,
+          }),
+        });
+        const result = await response.json();
+        if (!response.ok || result.ok !== true) throw new Error('Delivery not confirmed');
+        form.reset();
+        setStatus('Thanks, your enquiry has been sent. We’ll come back to you within 24 hours. Prefer to talk? Call 09 818 4586.');
+      } catch {
+        setStatus('Your enquiry has not been sent. Your details are still here. Please try again or call 09 818 4586.');
+      } finally {
+        submit?.removeAttribute('disabled');
+      }
+    });
+  });
+</script>
+```

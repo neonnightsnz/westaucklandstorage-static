@@ -1,9 +1,9 @@
 <form id="enquiry" class="quote-form" data-contact-form method="post" action="/api/contact">
   <div class="form-row">
-    <label>Your name <input name="name" required autocomplete="name" /></label>
-    <label>Phone or email <input name="contact" required /></label>
+    <label>Your name (required) <input name="name" required autocomplete="name" placeholder="Your full name" /></label>
+    <label>Phone or email (required) <input name="contact" required placeholder="Your phone or email" /></label>
   </div>
-  <label>What are you storing?
+  <label>What are you storing? (required)
     <select name="item" required>
       <option value="">Choose one</option>
       <option>Boat</option><option>Caravan</option><option>Trailer</option><option>Vehicle or other gear</option><option>Truck</option><option>Business equipment</option><option>Shipping container</option><option>Slipway access</option>
@@ -11,17 +11,46 @@
   </label>
   <div class="form-row">
     <label>Length, including trailer <input name="length" placeholder="For example, 6 metres" /></label>
-    <label>When would you like to start? <input name="startDate" type="date" /></label>
+    <label>Preferred start date <input name="startDate" type="date" /></label>
   </div>
-  <p class="form-note">Your length and start date help Jeff quote. An estimate is fine.</p>
-  <label>Anything else we should know? <textarea name="message" rows="4" placeholder="Access needs or a question for the yard"></textarea></label>
+  <p class="form-note">Length and start date are optional, but help Jeff quote. Estimates are fine. He'll confirm the details with you.</p>
+  <label>Anything else? (optional) <textarea name="message" rows="4" placeholder="Tell us about access needs or ask a question about the yard"></textarea></label>
   <div class="form-honey" aria-hidden="true">
     <label>Leave this field empty <input name="company" tabindex="-1" autocomplete="off" /></label>
   </div>
   <button class="button button-bright" type="submit">Send enquiry</button>
-  <p class="form-note">We aim to reply within 24 hours. Prefer to talk? Call <a href="tel:098184586">09 818 4586</a>.</p>
+  <p class="form-note">Your enquiry goes to Jeff at the yard. Expect a reply within 24 hours. Prefer to call? <a href="tel:098184586">09 818 4586</a>.</p>
   <p class="form-status" role="status" aria-live="polite"></p>
 </form>
+
+<style>
+  .quote-form { border: 1px solid var(--line); border-top: 4px solid var(--blue-bright); box-shadow: 0 16px 40px rgba(8, 46, 84, .12); }
+  .quote-form label { letter-spacing: 0; text-transform: none; line-height: 1.5; }
+  .quote-form input, .quote-form select, .quote-form textarea {
+    min-width: 0;
+    min-height: 48px;
+    border-color: #8196a7;
+    border-radius: 3px;
+    transition: border-color .2s ease, box-shadow .2s ease;
+  }
+  .quote-form input::placeholder, .quote-form textarea::placeholder { color: #586c7c; opacity: 1; }
+  .quote-form input:focus, .quote-form select:focus, .quote-form textarea:focus {
+    border-color: var(--blue);
+    outline: 2px solid var(--blue);
+    outline-offset: 2px;
+    box-shadow: none;
+    background: white;
+  }
+  .quote-form .button { border: 1px solid var(--blue); background: var(--blue); color: white; border-radius: 3px; box-shadow: 0 3px 0 var(--blue-dark); }
+  .quote-form .button:hover:not(:disabled), .quote-form .button:focus-visible { background: var(--blue-dark); color: white; }
+  .quote-form .button:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; }
+  .quote-form .button:active:not(:disabled) { transform: translateY(1px); box-shadow: none; }
+  .quote-form .button:disabled { opacity: .65; cursor: wait; transform: none; box-shadow: none; }
+  .form-note, .form-status { font-size: 13px; line-height: 1.6; }
+  .form-row + .form-note { margin: -4px 0 20px; }
+  .form-status:empty { margin: 0; }
+  .form-status:not(:empty) { padding: 12px; background: var(--paper); border-left: 3px solid var(--blue); }
+</style>
 
 <script>
   import { storageOptions } from '../data/sitePages';
