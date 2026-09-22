@@ -395,6 +395,20 @@ address { margin: 0 0 25px; color: var(--ink); font-size: 15px; font-style: norm
 }
 
 /* ------------------------------------------------------------------
+   Storage near <suburb> — the location layer (Stage 12, Locations).
+   Spoke pages hang off /storage-near-you/ and reuse the marketing-page
+   grid, so only the hub's second link and the aside stack need rules.
+   ------------------------------------------------------------------ */
+.location-list li + li { margin-top: 0; }
+.location-item-page { display: block; padding: 0 2px 12px; border-top: 0; color: var(--blue); font-size: 13px; font-weight: 600; }
+.location-item-page:hover, .location-item-page:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
+
+.near-page .aside-card + .aside-card { margin-top: 20px; }
+.near-page .aside-card address { margin-bottom: 18px; }
+.near-page .archive-note { margin-top: 22px; }
+.near-page .location-list strong { font-family: var(--body); font-size: 15px; letter-spacing: 0; text-transform: none; }
+
+/* ------------------------------------------------------------------
    Design pass — de-template the default chrome and strengthen identity.
    Grounded in the yard's own world: painted signage, hardstand markings
    and marine blues. Rationale lives in docs/brandvoice-visual-identity.md and docs/ROADMAP.md.

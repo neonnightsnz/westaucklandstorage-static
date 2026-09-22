@@ -1,7 +1,20 @@
 // West Auckland suburbs with a published local guide, grouped by area for the
 // /storage-near-you/ hub. A `slug` of null means we serve the area but have no
-// dedicated guide yet — it is listed, but not linked.
-export const locationGroups = [
+// dedicated guide yet. It is listed, but not linked, and it gets no
+// /storage-near-*/ page either. The type is explicit so the null check holds.
+export interface Suburb {
+  name: string;
+  slug: string | null;
+  note: string;
+}
+
+export interface LocationGroup {
+  area: string;
+  blurb: string;
+  suburbs: Suburb[];
+}
+
+export const locationGroups: LocationGroup[] = [
   {
     area: 'Around the yard',
     blurb: 'The suburbs closest to Span Farm Boat Yard in Glendene.',
@@ -49,3 +62,8 @@ export const locationGroups = [
 ];
 
 export const locationCount = locationGroups.reduce((total, group) => total + group.suburbs.length, 0);
+
+/** Only the suburbs with a published guide, with the null case removed by the type. */
+export const guidedSuburbs: (Suburb & { slug: string })[] = locationGroups
+  .flatMap((group) => group.suburbs)
+  .filter((suburb): suburb is Suburb & { slug: string } => Boolean(suburb.slug));

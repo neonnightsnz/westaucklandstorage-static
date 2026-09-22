@@ -1,5 +1,7 @@
 import posts from './blogPosts.json' with { type: 'json' };
 import { storageOptions } from './sitePages.ts';
+import { locationGroups } from './locations.ts';
+import { guidedSuburbs } from './locations.ts';
 
 export { posts };
 export const pageSize = 10;
@@ -25,28 +27,12 @@ export const categories = [
 
 const categoryBySlug = new Map(categories.map((category) => [category.slug, category]));
 
-// "Storage near <suburb>" locations — the neighbourhood series.
-const locationSlugs = new Set([
-  'west-auckland-storage-your-reliable-storage-solution-in-laingholm',
-  'west-auckland-storage-your-trusted-storage-in-huia',
-  'west-auckland-storage-secure-storage-in-sunnyvale',
-  'west-auckland-storage-your-storage-solution-in-new-lynn',
-  'west-auckland-storage-reliable-storage-in-massey',
-  'west-auckland-storage-trusted-storage-solutions-in-west-harbour',
-  'west-auckland-storage-your-storage-solution-in-hobsonville',
-  'west-auckland-storage-reliable-storage-in-lincoln',
-  'west-auckland-storage-your-trusted-storage-solution-in-green-bay',
-  'west-auckland-storage-your-reliable-storage-solution-in-kelston',
-  'west-auckland-storage-your-trusted-storage-solution-in-swanson',
-  'west-auckland-storage-your-trusted-storage-solution-in-whenuapai',
-  'west-auckland-storage-your-premier-storage-solution-in-glendene',
-  'west-auckland-storage-your-ideal-storage-solution-in-western-heights',
-  'west-auckland-storage-your-trusted-storage-solution-in-glen-eden',
-  'west-auckland-storage-the-perfect-storage-solution-for-herald-island-residents',
-  'west-auckland-storage-your-go-to-storage-solution-in-te-atatu-peninsula',
-  'west-auckland-storage-the-ideal-choice-for-te-atatu-south-residents',
-  'discovering-west-auckland-storage-the-perfect-solution-for-titirangi-residents',
-]);
+// "Storage near <suburb>" locations — the neighbourhood series, listed once in
+// src/data/locations.ts so the hub, the guides and the /storage-near-<suburb>/
+// pages cannot drift apart. A suburb listed there with a null slug is served but
+// has no guide, so it is deliberately absent here and falls through to storage
+// tips rather than claiming to be a local guide.
+const locationSlugs = new Set(guidedSuburbs.map((suburb) => suburb.slug));
 
 const storageSlugs = new Set(storageOptions.map((option) => option.slug));
 

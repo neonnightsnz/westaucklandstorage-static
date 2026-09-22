@@ -4,11 +4,16 @@ import PageLayout from "../layouts/PageLayout.astro";
 import { pages, storageOptions } from "../data/sitePages";
 import { posts, archives } from "../data/blog";
 import { locationGroups } from "../data/locations";
+import { locationPages } from "../data/locationPages";
 import BlogArticle from "../components/BlogArticle.astro";
 import BlogArchive from "../components/BlogArchive.astro";
 import Breadcrumbs from "../components/Breadcrumbs.astro";
 
 export const prerender = true;
+
+// A suburb page exists for every guide, so the hub can offer both. Keyed on the
+// guide slug, which is what locationGroups stores, against the page's route.
+const nearPathByGuide = new Map(locationPages.map((page) => [page.guideSlug, page.slug]));
 
 export function getStaticPaths() {
   return [...pages.filter(page => !posts.some(post => post.slug === page.slug) && page.slug !== 'blog').map((page) => ({
@@ -85,7 +90,8 @@ const relatedPages = page?.related
                 <p class="location-area-blurb">{group.blurb}</p>
                 <ul class="location-list">
                   {group.suburbs.map((suburb) => suburb.slug
-                    ? <li><a href={`/${suburb.slug}/`}><strong>{suburb.name}</strong><span>{suburb.note}</span></a></li>
+                    ? <li><a href={`/${suburb.slug}/`}><strong>{suburb.name}</strong><span>{suburb.note}</span></a>
+                        <a class="location-item-page" href={nearPathByGuide.get(suburb.slug)}>{suburb.name} storage details</a></li>
                     : <li><span class="location-item"><strong>{suburb.name}</strong><span>{suburb.note}</span></span></li>)}
                 </ul>
               </div>

@@ -1,6 +1,8 @@
 import { posts, archives, categoryFor, categoryLabel } from './blog';
 import { storageOptions } from './sitePages';
 import { locationGroups } from './locations';
+import { guidedSuburbs } from './locations';
+import { locationPages } from './locationPages';
 
 export const siteUrl = 'https://westaucklandstorage.co.nz';
 export const absoluteUrl = (pathname: string) => new URL(pathname, siteUrl).href;
@@ -30,6 +32,8 @@ export function breadcrumbsFor(pathname: string): Breadcrumb[] {
     if (archive.number > 1) items.push({ name: `Page ${archive.number}`, path: pathname });
     return items;
   }
+  const nearPage = locationPages.find(page => pathname === page.slug);
+  if (nearPage) return [home, { name: 'Storage near you', path: '/storage-near-you/' }, { name: nearPage.suburb, path: pathname }];
   const labels: Record<string, string> = { '/about/': 'About the yard', '/services/': 'What we store', '/contact/': 'Get in touch', '/storage-near-you/': 'Storage near you', '/sitemap/': 'Sitemap' };
   return labels[pathname] ? [home, { name: labels[pathname], path: pathname }] : [];
 }
@@ -42,7 +46,7 @@ export function metadataFor(pathname: string, fallback: { title: string; descrip
   if (pathname === '/404.html') return fallback;
   const post = posts.find(post => pathname === `/${post.slug}/`);
   if (post) {
-    const suburb = locationGroups.flatMap(group => group.suburbs).find(suburb => suburb.slug === post.slug);
+    const suburb = guidedSuburbs.find(suburb => suburb.slug === post.slug);
     const service = storageOptions.find(option => option.slug === post.slug);
     const description = suburb
       ? `Boat, caravan and vehicle storage for ${suburb.name} owners at our Glendene yard. Explore outdoor storage options and ask about space and access.`
@@ -54,6 +58,8 @@ export function metadataFor(pathname: string, fallback: { title: string; descrip
   }
   const archive = archives.find(archive => pathname === `/${archive.slug}/`);
   if (archive) return { title: `${archive.label}${archive.number > 1 ? ` — Page ${archive.number}` : ''} | West Auckland Storage`, description: `${archive.description}${archive.number > 1 ? ` Page ${archive.number} of ${archive.pageCount}.` : ''}` };
+  const nearPage = locationPages.find(page => pathname === page.slug);
+  if (nearPage) return { title: `${nearPage.title} | West Auckland Storage`, description: nearPage.description };
   return fallback;
 }
 
@@ -97,6 +103,16 @@ export function structuredDataFor(pathname: string, title: string, description: 
     author: { '@type': 'Person', '@id': `${siteUrl}/author/isaac/#person`, name: post.author, url: `${siteUrl}/author/isaac/` },
     publisher: { '@id': organizationId }, mainEntityOfPage: { '@id': `${canonical}#webpage` },
     articleSection: categoryLabel(categoryFor(post.slug)), inLanguage: 'en-NZ',
+  });
+  // Location pages describe this yard serving one suburb, so they carry a Place
+  // rather than a second business entity. No branchOf: there is one yard, and
+  // claiming a branch would misstate the business in structured data.
+  const nearPage = locationPages.find(page => pathname === page.slug);
+  if (nearPage) graph.push({
+    '@type': 'Place', '@id': `${canonical}#place`, url: canonical,
+    name: `Storage near ${nearPage.locality}`, description,
+    address: { '@type': 'PostalAddress', streetAddress: '20 Akatea Road, Glendene', addressLocality: 'Waitakere', addressRegion: 'Auckland', postalCode: '0602', addressCountry: 'NZ' },
+    isPartOf: { '@id': organizationId },
   });
   return { '@context': 'https://schema.org', '@graph': graph };
 }

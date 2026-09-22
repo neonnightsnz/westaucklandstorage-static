@@ -1,0 +1,139 @@
+---
+// Storage near <suburb> — the location layer, one page per guided suburb.
+//
+// Deliberately separate from /storage-near-you/, which introduces the yard.
+// These pages answer one query each: storage near the suburb the reader lives in.
+//
+// The markup lives in an Astro component rather than in the route file because
+// the route has to satisfy two Astro 7 constraints at once:
+//
+// 1. The route is a spread route. A single-param segment is interpolated into a
+//    template string by Astro's pattern builder, which escapes regex
+//    metacharacters but not `$`. A guide slug containing `-${...}` therefore
+//    starts a template substitution, which is how
+//    /storage-near-west-auckland-storage-lincoln/ was becoming
+//    /storage-near-storage-near-west-auckland-storage-lincoln/.
+// 2. A spread param is stored under `...slug`, but Astro looks it up under the
+//    name with exactly three characters stripped. Both spellings are supplied by
+//    the route file so the lookup succeeds either way.
+//
+// Keeping the markup here means the route file only has to get the param right.
+import PageLayout from '../layouts/PageLayout.astro';
+import { locationPages, type LocationPage } from '../data/locationPages';
+import { locationGroups } from '../data/locations';
+
+export const prerender = true;
+
+/** A suburb by its guide slug, so the page and the hub cannot disagree. */
+const guideSlugFor = (page: LocationPage) =>
+  locationGroups.flatMap((group) => group.suburbs).find((suburb) => suburb.slug === page.guideSlug)?.slug;
+
+/** Three nearby suburbs: whoever shares the area group first, then the rest. */
+const peersFor = (page: LocationPage): LocationPage[] => {
+  const ownGroup = locationGroups.find((group) => group.suburbs.some((suburb) => suburb.slug === page.guideSlug));
+  const ordered = [
+    ...(ownGroup?.suburbs ?? []),
+    ...locationGroups.filter((group) => group !== ownGroup).flatMap((group) => group.suburbs),
+  ];
+  const nearby: LocationPage[] = [];
+  for (const suburb of ordered) {
+    if (!suburb.slug || suburb.slug === page.guideSlug) continue;
+    const match = locationPages.find((candidate) => candidate.guideSlug === suburb.slug);
+    if (match) nearby.push(match);
+    if (nearby.length === 3) break;
+  }
+  return nearby;
+};
+
+const { page } = Astro.props as { page: LocationPage };
+const guideSlug = guideSlugFor(page);
+const peers = peersFor(page);
+---
+
+<PageLayout title={`${page.title} | West Auckland Storage`} description={page.description}>
+  <main id="main">
+    <section class="inner-hero" style={`--hero-image: url("/images/glendene.jpg")`}>
+      <div class="inner-hero-overlay"></div>
+      <div class="container inner-hero-content">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a><span aria-hidden="true">/</span><a href="/storage-near-you/">Storage near you</a><span aria-hidden="true">/</span><span aria-current="page">{page.suburb}</span>
+        </nav>
+        <p class="eyebrow eyebrow-light">Storage near {page.locality}</p>
+        <h1>Store close to home.<br /><em>{page.locality}.</em></h1>
+        <p class="hero-lede">{page.description}</p>
+      </div>
+    </section>
+
+    <section class="page-content section-pad">
+      <div class="container page-grid">
+        <article class="prose">
+          {page.sections.map((section) => (
+            <section>
+              <h2>{section.heading}</h2>
+              {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+            </section>
+          ))}
+        </article>
+        <aside class="page-aside">
+          <div class="aside-card">
+            <p class="eyebrow">Good to know</p>
+            <ul class="check-list check-list-dark">
+              {page.bullets.map((bullet) => <li><span aria-hidden="true">+</span><div><strong>{bullet}</strong></div></li>)}
+            </ul>
+            <a class="button button-bright" href="/contact/?item=Boat">Ask about space</a>
+            <p class="archive-note">Storage is billed monthly from $200 + GST, with no deposit. The slipway is currently under repair and haul-out is a work in progress, so call before you plan around either.</p>
+          </div>
+          <div class="aside-card">
+            <p class="eyebrow">The yard</p>
+            <address>Span Farm Boat Yard<br />20 Akatea Road<br />Glendene, Auckland 0602</address>
+            <a class="article-aside-link" href="tel:098184586">Call 09 818 4586</a>
+            <a class="article-aside-link" href="mailto:info@westaucklandstorage.co.nz">info@westaucklandstorage.co.nz</a>
+            <a class="article-aside-link" href="https://maps.app.goo.gl/a359LycS4y4m8mbS9" target="_blank" rel="noreferrer">Open in Google Maps</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    {guideSlug && (
+      <section class="locations-section section-pad">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Next steps</p>
+              <h2>Read the {page.suburb}<br /><span>guide.</span></h2>
+            </div>
+            <p>The guide walks through what owners in {page.suburb} usually store, and how to get a price.</p>
+          </div>
+          <ul class="location-list">
+            <li>
+              <a href={`/${guideSlug}/`}><strong>{page.suburb} storage guide</strong><span>What local owners store, and the next step</span></a>
+            </li>
+            <li>
+              <a href="/storage-near-you/"><strong>Every West Auckland suburb</strong><span>All 20 areas we serve, grouped by distance</span></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    )}
+
+    <section class="related-section section-pad">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Nearby</p>
+            <h2>Other suburbs<br /><span>we serve.</span></h2>
+          </div>
+        </div>
+        <div class="related-grid">
+          {peers.map((peer) => (
+            <a class="related-card" href={peer.slug}>
+              <span class="eyebrow">Storage near</span>
+              <h3>{peer.suburb}</h3>
+              <span class="text-link">See {peer.suburb}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+</PageLayout>

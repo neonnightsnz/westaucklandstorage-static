@@ -3,12 +3,16 @@ import { posts, categoryFor, categoryLabel } from '../data/blog';
 import { formatPostDate, postYear } from '../data/dates';
 import { storageOptions } from '../data/sitePages';
 import { locationGroups } from '../data/locations';
+import { locationPages } from '../data/locationPages';
 import Breadcrumbs from './Breadcrumbs.astro';
 const { post } = Astro.props;
 const category = categoryFor(post.slug);
 const categoryName = categoryLabel(category);
 const localGroup = locationGroups.find(group => group.suburbs.some(suburb => suburb.slug === post.slug));
 const localPeers = localGroup?.suburbs.map(suburb => suburb.slug).filter(slug => slug && slug !== post.slug) ?? [];
+// The storage-near page for this suburb, if the guide has one. Suburbs we serve
+// without a guide have no slug, so no page is linked.
+const localPage = locationPages.find(page => page.guideSlug === post.slug);
 const preferred = category === 'local-guides'
   ? [storageOptions[0].slug, ...localPeers]
   : category === 'storage-options'
@@ -54,6 +58,7 @@ const contactHref = enquiryItem ? `/contact/?${new URLSearchParams({ item: enqui
         <a class="article-aside-link" href="tel:098184586">Call 09 818 4586</a>
         <a class="article-aside-link" href="/services/">Explore our storage options</a>
         <a class="article-aside-link" href="/storage-near-you/">Storage near you</a>
+        {localPage && <a class="article-aside-link" href={`/${localPage.slug}/`}>Storage near {localPage.suburb}</a>}
         <nav aria-label="Storage options for this guide">
           {serviceLinks.map(option => <a class="article-aside-link" href={`/${option.slug}/`}>{option.label} in Glendene</a>)}
         </nav>

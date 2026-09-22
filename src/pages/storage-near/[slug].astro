@@ -1,0 +1,35 @@
+---
+// Storage near <suburb> — the route for the location layer.
+//
+// A plain Astro page. Two things had to be right, and both were the reason the
+// route was writing /storage-near-storage-near-<slug>/ for a while:
+//
+// 1. The static segment is a directory, not part of the filename. Astro builds
+//    the route pattern from the literal segments plus the param, so a file named
+//    `storage-near-[slug].astro` contributes the prefix and every value returned
+//    by `getStaticPaths` is appended to it. Nesting the page as
+//    `storage-near/[slug].astro` gives the same public URL with the prefix in a
+//    place that cannot be applied twice.
+// 2. The spread form is not an option here. Astro requires a rest parameter to
+//    be a whole path segment, so `[....slug]` is rejected outright, and an
+//    unnamed `[...slug]` resolves its param under a name Astro then looks up
+//    differently. A single plain `[slug]` avoids both problems.
+//
+// The slug is the guide slug without any prefix. The page markup lives in
+// src/components/StorageNearPage.astro.
+import StorageNearPage from '../../components/StorageNearPage.astro';
+import { locationPages } from '../../data/locationPages';
+
+export const prerender = true;
+
+export function getStaticPaths() {
+  return locationPages.map((page) => ({
+    params: { slug: page.guideSlug },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+---
+
+<StorageNearPage page={page} />
