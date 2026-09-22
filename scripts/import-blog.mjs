@@ -49,8 +49,10 @@ const posts = slugs.map(slug => {
   const imageAlt = imageTag ? plain(imageTag.match(/alt="([^"]*)"/)?.[1] ?? '') : '';
   const dateLabel = plain(html.match(/itemprop="datePublished">([^<]+)/)[1]);
   const date = new Date(`${dateLabel} UTC`).toISOString().slice(0, 10);
+  // The human-readable label is derived from `date` by src/data/dates.ts, so it is
+  // not stored here: that avoids the two drifting apart.
   const excerpt = plain(content.match(/<p[^>]*>([\s\S]*?)<\/p>/)[1]);
-  return { slug, title, date, dateLabel, author: 'Isaac', image, imageAlt, excerpt, content };
+  return { slug, title, date, author: 'Isaac', image, imageAlt, excerpt, content };
 });
 if (posts.length !== 34) throw new Error(`Expected 34 original posts, found ${posts.length}`);
 fs.writeFileSync('src/data/blogPosts.raw.json', JSON.stringify(posts, null, 2) + '\n');

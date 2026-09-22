@@ -7,21 +7,31 @@
     "dev": "astro dev --host 0.0.0.0 --port 5000",
     "build": "astro build",
     "check:blog": "node --experimental-strip-types scripts/check-blog.mjs",
+    "check:blog:sync": "node scripts/check-blog-sync.mjs",
+    "test": "vitest run",
     "check:contact": "node scripts/check-contact.mjs",
     "check:sitemap": "node --experimental-strip-types scripts/check-sitemap.mjs",
-    "check": "npm run check:blog && npm run check:contact && npm run check:sitemap",
+    "check": "npm run test && npm run check:blog && npm run check:blog:sync && npm run check:contact && npm run check:sitemap",
     "audit:seo": "node scripts/audit-seo.mjs",
     "inspect": "node scripts/inspect-route.mjs",
     "preview": "astro preview --host 0.0.0.0 --port 5000",
     "import:blog": "node scripts/import-blog.mjs",
     "build:blog": "node scripts/apply-blog-content.mjs",
+    "build:article-alts": "node scripts/apply-article-alts.mjs",
     "build:assets": "node scripts/generate-assets.mjs",
     "check:site": "node scripts/check-site.mjs"
   },
-  "keywords": ["astro", "storage", "west-auckland"],
+  "keywords": [
+    "astro",
+    "storage",
+    "west-auckland"
+  ],
   "author": "West Auckland Storage",
   "license": "ISC",
   "dependencies": {
     "astro": "^7.3.2"
+  },
+  "devDependencies": {
+    "vitest": "^5.0.1"
   }
 }

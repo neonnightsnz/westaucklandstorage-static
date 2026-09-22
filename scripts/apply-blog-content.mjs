@@ -3,8 +3,13 @@
 // Run with: npm run build:blog
 import fs from 'node:fs';
 import { blogContent } from '../src/data/curated-blog.mjs';
+import { contactCta, expandShared, slipwayLine, yardAddressHtml } from '../src/data/shared-blog-content.mjs';
 
-const posts = JSON.parse(fs.readFileSync('src/data/blogPosts.json', 'utf8'));
+const posts = JSON.parse(fs.readFileSync(process.env.BLOG_SOURCE ?? 'src/data/blogPosts.json', 'utf8'));
+
+// The address and CTA live once in src/data/shared-blog-content.mjs and reach
+// each article through the {{yard}} / {{cta}} placeholders curated-blog.mjs uses.
+const placeholders = /\{\{(?:yard|yardShort|cta)\}\}/g;
 
 // Claims the brand guide bans outright, plus the fabricated-testimonial pattern
 // the original WordPress copy used (e.g. "– Emma R.").
@@ -35,16 +40,44 @@ const missing = posts.filter((post) => !blogContent[post.slug]).map((post) => po
 if (missing.length) throw new Error(`Missing curated copy for: ${missing.join(', ')}`);
 
 const problems = [];
+const unknownSlugs = [...new Set(
+  Object.keys(blogContent)
+    .flatMap((slug) => [...blogContent[slug].content.matchAll(/\(\(([^)]+)\)\)/g)].map(([, body]) => `${slug} -> ${body}`)),
+)];
+if (unknownSlugs.length) problems.push(`Unresolved curated placeholders:\n  ${unknownSlugs.join('\n  ')}`);
+
+const sharedSlipwaySentence = slipwayLine.replace(/<[^>]*>/g, '').trim();
+// Posts whose contact details are not the phrasal verb "Call": those wrap {{cta}}
+// in their own wording (e.g. "Give us a call on ..."), which stays editorial.
+const callPhrase = new RegExp(`Call\\s+${contactCta.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`);
+
 const updated = posts.map((post) => {
   const curated = blogContent[post.slug];
-  const content = curated.content.trim();
+  const content = expandShared(curated.content).trim();
+  const leftover = content.match(placeholders);
+  if (leftover) problems.push(`Unexpanded placeholder "${leftover[0]}" in ${post.slug}`);
+  if (!content.includes(contactCta)) problems.push(`Missing shared contact details: ${post.slug}`);
+  if (content.includes(`Call ${contactCta}`) && !callPhrase.test(content)) {
+    problems.push(`Malformed shared contact line: ${post.slug}`);
+  }
+  // The shared yard copy must not drift when an article is edited: a rebuild that
+  // drops a shared paragraph is a regression, not an editorial choice.
+  for (const sentence of [`Span Farm Boat Yard, ${yardAddressHtml}`, sharedSlipwaySentence, `are already storing with us`]) {
+    if (post.content.includes(sentence) && !content.includes(sentence)) {
+      problems.push(`Shared yard copy dropped from ${post.slug}: ${sentence}`);
+    }
+  }
   if (content.length <= 1000) problems.push(`Too short: ${post.slug} (${content.length} chars)`);
   const bannedHit = content.match(banned);
   if (bannedHit) problems.push(`Banned claim "${bannedHit[0]}" in ${post.slug}`);
   const accessHit = content.match(unplannedAccess);
   if (accessHit) problems.push(`Unqualified access claim "${accessHit[0]}" in ${post.slug}`);
   if (fakeQuote.test(content)) problems.push(`Possible invented testimonial in ${post.slug}`);
-  return { ...post, title: curated.title, content, excerpt: excerptOf(content, curated.description) };
+  const excerptSource = typeof curated.description === 'string' ? expandShared(curated.description) : curated.description;
+  // dateLabel is intentionally not carried over: templates derive the readable
+  // date from `date` with formatPostDate() so the two cannot disagree.
+  const { dateLabel: _dropped, ...withoutLabel } = post;
+  return { ...withoutLabel, title: curated.title, content, excerpt: excerptOf(content, excerptSource) };
 });
 
 if (problems.length) {
@@ -52,5 +85,8 @@ if (problems.length) {
   process.exit(1);
 }
 
-fs.writeFileSync('src/data/blogPosts.json', `${JSON.stringify(updated, null, 2)}\n`);
+fs.writeFileSync(
+  `src/data/${process.env.BLOG_OUT ?? 'blogPosts.json'}`,
+  `${JSON.stringify(updated, null, 2)}\n`,
+);
 console.log(`Applied curated copy to ${updated.length} articles.`);

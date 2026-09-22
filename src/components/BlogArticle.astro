@@ -1,5 +1,6 @@
 ---
 import { posts, categoryFor, categoryLabel } from '../data/blog';
+import { formatPostDate, postYear } from '../data/dates';
 import { storageOptions } from '../data/sitePages';
 import { locationGroups } from '../data/locations';
 import Breadcrumbs from './Breadcrumbs.astro';
@@ -35,7 +36,7 @@ const contactHref = enquiryItem ? `/contact/?${new URLSearchParams({ item: enqui
       <Breadcrumbs />
       <p class="eyebrow">From the yard</p>
       <h1>{post.title}</h1>
-      <p class="article-meta"><time datetime={post.date}>{post.dateLabel}</time> · By <a href="/author/isaac/">{post.author}</a> · <a href={`/category/${category}/`}>{categoryName}</a></p>
+      <p class="article-meta"><time datetime={post.date}>{formatPostDate(post.date)}</time> · By <a href="/author/isaac/">{post.author}</a> · <a href={`/category/${category}/`}>{categoryName}</a></p>
     </div>
   </header>
   <section class="page-content section-pad article-section">
@@ -56,7 +57,7 @@ const contactHref = enquiryItem ? `/contact/?${new URLSearchParams({ item: enqui
         <nav aria-label="Storage options for this guide">
           {serviceLinks.map(option => <a class="article-aside-link" href={`/${option.slug}/`}>{option.label} in Glendene</a>)}
         </nav>
-        <p class="archive-note">This article was published in {post.date.slice(0, 4)}. Please check with the yard for current facilities, access and availability.</p>
+        <p class="archive-note">This article was published in {postYear(post.date)}. Please check with the yard for current facilities, access and availability.</p>
         {enquiryItem && <p class="archive-note">September 2026 website note. Prices, space and slipway access can change. Confirm your requirements with Jeff before bringing anything to the yard.</p>}
       </aside>
     </div>
