@@ -94,7 +94,7 @@
         const result = await response.json();
         if (!response.ok || result.ok !== true) throw new Error('Delivery not confirmed');
         form.reset();
-        setStatus('Thanks, your enquiry has been sent. We’ll come back to you within 24 hours. Prefer to talk? Call 09 818 4586.');
+        setStatus('Thanks — your enquiry is on its way to Jeff at the yard. We’ll be in touch within 24 hours. If it’s urgent, call 09 818 4586.');
       } catch {
         setStatus('Your enquiry has not been sent. Your details are still here. Please try again or call 09 818 4586.');
       } finally {
