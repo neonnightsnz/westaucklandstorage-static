@@ -113,7 +113,7 @@ The biggest brand-aligned growth lever: the site already hints at being a local 
 
 ## 8. Phase 5 — Housekeeping & governance
 
-- [x] **Repo cleanup** — historical mirrors, original image exports, backups and temporary files archived outside the repository with a hash manifest. Canonical import source moved to `references/wordpress/`; public image URLs preserved. See `cleanup-archive.md`.
+- [x] **Repo cleanup** — historical mirrors, original image exports, backups and temporary files archived outside the repository with a hash manifest. The historical mirror was verified, then removed; public image URLs were preserved. See `cleanup-archive.md`.
 - [x] **Loose files** — brand guidance, roadmap, review template, screenshots and source brief moved to `docs/`; duplicate design-system text archived.
 - [ ] **CI check** — add a GitHub Action (or Cloudflare build step) running `npm ci && npm run build && npm run check:site` on every push.
 - [ ] **Deploy hygiene** — confirm `wrangler.jsonc` publish dir = `dist`, Node 22, and that the mirror is never published.
@@ -126,7 +126,7 @@ The biggest brand-aligned growth lever: the site already hints at being a local 
 `scripts/check-site.mjs` enforces these — treat as contract:
 
 - Homepage is the Replit landing page with `class="hero"`; no HTTrack splash; no `index.html` splash entry point.
-- The mirror (`references/wordpress/`) is never published; redirects for mirror prefixes exist.
+- The historical mirror is not part of the deployment; redirects for legacy mirror prefixes remain.
 - Every page (except `design-system/index.html` and `services/contact/index.html`) has exactly one `id="site-nav"` and a skip link.
 - `/services/` exposes exactly **9** `service-card`s.
 - Exactly **one** `data-contact-form` on `/` and `/contact/`, each containing "Prepare enquiry".

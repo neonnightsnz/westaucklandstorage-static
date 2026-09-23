@@ -10,7 +10,7 @@ The reference and its assets belong outside `public/` and must not be deployed. 
 
 ## Application and deployment
 
-The application lives at the repository root: `src/` contains Astro code and `public/` contains published assets. The canonical WordPress import source is `references/wordpress/`; the design reference is `references/design/`. Project documentation lives in `docs/`. Historical copies and original image exports are archived outside the repository; see `docs/cleanup-archive.md`. Reference material is not a deployment root.
+The application lives at the repository root: `src/` contains Astro code and `public/` contains published assets. The historical WordPress mirror was removed after verification; the design reference remains in `references/design/`. Project documentation lives in `docs/`. Historical copies and original image exports are archived outside the repository; see `docs/cleanup-archive.md`. Reference material is not a deployment root.
 
 Cloudflare Pages must run `npm run build` from the repository root and publish `dist`. Keep `pages_build_output_dir` in `wrangler.jsonc` set to `./dist`. The build command must also be configured in the Cloudflare Pages project settings; the output-directory setting alone does not run a build. Do not commit `dist` or publish the repository root.
 

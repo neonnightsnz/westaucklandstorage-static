@@ -7,7 +7,7 @@
  *   node scripts/inspect-route.mjs --warn           # only routes with warnings
  *
  * Reads docs/seo-audit.json, which scripts/audit-seo.mjs writes. Run
- * `npm run audit:seo` first (after `npm run build`) to refresh it.
+ * the reusable SEO audit tooling first (after `npm run build`) to refresh it.
  * Exits non-zero when a checked route has a warning, so it can gate a build.
  */
 import fs from 'node:fs';
@@ -22,7 +22,7 @@ const DESC_MIN = 70;
 const EXEMPT = new Set(['/design-system/', '/services/contact/']);
 
 if (!fs.existsSync(AUDIT_FILE)) {
-  console.error(`No ${AUDIT_FILE}. Run \`npm run build && npm run audit:seo\` first.`);
+  console.error(`No ${AUDIT_FILE}. Run the reusable SEO audit tooling after the build.`);
   process.exit(2);
 }
 
@@ -72,7 +72,7 @@ if (args.includes('--all') || args.length === 0) {
   const missing = wanted.filter((route) => !pages.some((page) => page.route === route));
   selected = pages.filter((page) => wanted.includes(page.route));
   if (missing.length) {
-    console.error(`Not in the build (run \`npm run audit:seo\` if it is new): ${missing.join(', ')}`);
+    console.error(`Not in the build (refresh the SEO audit if it is new): ${missing.join(', ')}`);
     process.exit(2);
   }
 }
