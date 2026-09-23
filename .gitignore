@@ -18,3 +18,9 @@ src/data/blogPosts.raw.json
 /tmp-*
 /hts-cache/
 /hts-log.txt
+
+# Local form/provider secrets
+.env
+.env.*
+!.env.example
+
