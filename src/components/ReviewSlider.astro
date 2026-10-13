@@ -4,8 +4,8 @@ import { featuredReviews } from '../data/reviews';
 <section class="review-slider" aria-label="Owner reviews" aria-roledescription="carousel" data-review-slider>
   <div class="review-track" id="owner-review-track" tabindex="0" aria-label="Reviews. Use the left and right arrow keys to browse.">
     {featuredReviews.map((review, index) => (
-      <figure class="review-card" role="group" aria-roledescription="slide" aria-label={`Review ${index + 1} of ${featuredReviews.length}`}>
-        <p class="review-stars" aria-label={`${review.rating} out of 5 stars`}><span aria-hidden="true">{'★'.repeat(review.rating)}</span></p>
+      <figure class="review-card">
+        <p class="review-stars"><span class="sr-only">{review.rating} out of 5 stars</span><span aria-hidden="true">{'★'.repeat(review.rating)}</span></p>
         <blockquote class="review-quote">{review.text}</blockquote>
         <figcaption class="review-author">{review.name}</figcaption>
       </figure>

@@ -1,9 +1,9 @@
 // Generates brand assets that cannot live as source files elsewhere:
 //   public/images/og-default.jpg   1200x630 social sharing card
-//   public/images/apple-touch-icon.png  180x180
+//   public/images/apple-touch-icon.png  canonical 180x180
 //   public/images/icon-192.png / icon-512.png  manifest icons
 // Run with: npm run build:assets
-// The source logo/glyph lives in public/favicon.svg (blue square + white boat).
+// Keep the provided Apple touch icon as the canonical anchor logo.
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -59,17 +59,36 @@ async function generateOg() {
 }
 
 async function generateIcons() {
+  const iconSource = path.join(imagesDir, 'apple-touch-icon.png');
   const sizes = [
-    ['apple-touch-icon.png', 180],
     ['icon-192.png', 192],
     ['icon-512.png', 512],
   ];
   for (const [name, size] of sizes) {
-    await sharp(favicon, { density: 384 }).resize(size, size).png().toFile(path.join(imagesDir, name));
+    await sharp(iconSource).resize(size, size).png().toFile(path.join(imagesDir, name));
     console.log(`${name} ${size}x${size}`);
   }
 }
 
+const optimizedPhotos = [
+  ['boat-trailer.jpg', 'boat-trailer.webp', 1600],
+  ['boat-hardstand.jpg', 'boat-hardstand.webp', 900],
+  ['trailer-storage.jpg', 'trailer-storage.webp', 900],
+  ['boats-yard.jpg', 'boats-yard.webp', 1100],
+  ['yard-boat.jpg', 'yard-boat.webp', 1100],
+  ['glendene.jpg', 'glendene.webp', 1100],
+];
+for (const [source, output, width] of optimizedPhotos) {
+  const input = sharp(path.join(imagesDir, source));
+  for (const targetWidth of [...new Set([480, 800, 1200, width].filter(size => size <= width))]) {
+    const target = targetWidth === width ? output : output.replace('.webp', '-' + targetWidth + '.webp');
+    await input.clone()
+      .resize({ width: targetWidth, withoutEnlargement: true })
+      .webp({ quality: 76, effort: 5 })
+      .toFile(path.join(imagesDir, target));
+  }
+}
+await sharp(path.join(imagesDir, 'logo.png')).webp({ quality: 90, effort: 5 }).toFile(path.join(imagesDir, 'logo.webp'));
 await generateOg();
 await generateIcons();
 console.log('Assets written to public/images/.');

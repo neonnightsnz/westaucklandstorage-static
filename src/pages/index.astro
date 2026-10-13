@@ -1,9 +1,12 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
 import QuoteForm from "../components/QuoteForm.astro";
+import CallbackForm from "../components/CallbackForm.astro";
 import { reviewCount, averageRating } from "../data/reviews";
 import ReviewSlider from "../components/ReviewSlider.astro";
 import { yearsSinceIncorporation } from "../data/company";
+
+const responsiveSrcset = (name: string, widths: number[], originalWidth: number) => widths.map(width => '/images/' + name + (width === originalWidth ? '' : '-' + width) + '.webp ' + width + 'w').join(', ');
 
 const services = [
   {
@@ -11,21 +14,24 @@ const services = [
     href: "/boat-storage-at-west-auckland-storage/",
     title: "Boat storage",
     copy: "Free up your driveway and keep your boat close to home. Outdoor storage for boats on trailers up to 40ft, plus jet skis.",
-    image: "/images/boat-hardstand.jpg",
+    image: "/images/boat-hardstand.webp",
+    srcset: responsiveSrcset("boat-hardstand", [480, 800, 900], 900),
   },
   {
     number: "02",
     href: "/caravan-storage-at-west-auckland-storage/",
     title: "Caravan & trailer storage",
     copy: "Make room at home between trips. Store your caravan or trailer for a season or longer, with flexible terms and monthly billing.",
-    image: "/images/trailer-storage.jpg",
+    image: "/images/trailer-storage.webp",
+    srcset: responsiveSrcset("trailer-storage", [480, 800, 900], 900),
   },
   {
     number: "03",
     href: "/vehicle-storage-at-west-auckland-storage/",
     title: "Vehicles & gear",
     copy: "Need room for a car, 4WD, ute, truck or kayak? Tell us what you want to store and we'll check the space you need.",
-    image: "/images/boats-yard.jpg",
+    image: "/images/boats-yard.webp",
+    srcset: responsiveSrcset("boats-yard", [480, 800, 1100], 1100),
   },
 ];
 
@@ -89,22 +95,28 @@ const faqs = [
 <PageLayout home title="West Auckland Storage | Boat, Caravan & Vehicle Storage" description="Secure, affordable boat and caravan storage close to home in West Auckland. Store at Span Farm Boat Yard in Glendene.">
     <main id="main">
       <section class="hero">
-        <div class="hero-image" aria-hidden="true"></div>
+        <img class="hero-image" src="/images/boat-trailer.webp" srcset={responsiveSrcset("boat-trailer", [480, 800, 1200, 1600], 1600)} sizes="100vw" alt="" aria-hidden="true" width="1600" height="1067" fetchpriority="high" decoding="async" />
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-          <p class="eyebrow eyebrow-light">Boat, caravan &amp; vehicle storage in Glendene</p>
-          <h1>Free up space.<br /><em>Keep it local.</em></h1>
-                    <p class="hero-lede">Outdoor storage at Span Farm Boat Yard from $200 + GST a month. A gated yard with CCTV and an on-site manager. No deposit required.</p>
-          <div class="hero-actions">
-            <a class="button button-bright" href="#contact">Get a storage quote</a>
-            <a class="text-link text-link-light" href="tel:098184586">Call 09 818 4586</a>
+          <div class="hero-copy">
+            <p class="eyebrow eyebrow-light">Boat, caravan &amp; vehicle storage in Glendene</p>
+            <h1>Free up space.<br /><em>Keep it local.</em></h1>
+            <div class="hero-lede-block">
+              <img class="hero-avatar" src="/images/jeff.png" alt="Jeff, a director of West Auckland Storage" width="68" height="68" decoding="async" />
+              <p class="hero-lede">Outdoor storage at Span Farm Boat Yard from $200 + GST a month. A gated yard with CCTV and an on-site manager. No deposit required.</p>
+            </div>
+            <div class="hero-actions">
+              <a class="text-link text-link-light" href="#contact">Get a storage quote</a>
+            </div>
+            <div class="hero-note">
+              <span class="note-line"></span>
+              <span>{yearsSinceIncorporation}+ years since incorporation · {averageRating.toFixed(1)}/5 across {reviewCount} reviews from storage owners.</span>
+            </div>
           </div>
-                    <div class="hero-note">
-            <span class="note-line"></span>
-            <span>{yearsSinceIncorporation}+ years since incorporation · {averageRating.toFixed(1)} out of 5 from {reviewCount} owner reviews.</span>
+          <div class="hero-callback">
+            <CallbackForm />
           </div>
-        </div>
-        <div class="hero-stamp" aria-hidden="true">
+        </div>        <div class="hero-stamp" aria-hidden="true">
           <span>WEST</span><strong>AUCKLAND</strong><span>STORAGE</span>
         </div>
             </section>
@@ -157,13 +169,13 @@ const faqs = [
             {services.map((service) => (
               <article class="service-card">
                 <div class="service-image">
-                  <img src={service.image} alt={service.title} loading="lazy" />
+                  <img src={service.image} srcset={service.srcset} sizes="(max-width: 700px) 90vw, 33vw" alt={service.title} loading="lazy" />
                   <span class="service-number">{service.number}</span>
                 </div>
                 <div class="service-body">
                   <h3>{service.title}</h3>
                   <p>{service.copy}</p>
-                  <a class="text-link" href={service.href}>View storage details <span aria-hidden="true">→</span></a>
+                  <a class="text-link" href={service.href}>View {service.title.toLowerCase()} storage details <span aria-hidden="true">→</span></a>
                 </div>
               </article>
             ))}
@@ -173,7 +185,7 @@ const faqs = [
 
       <section id="why-us" class="why-section">
         <div class="why-photo">
-          <img src="/images/yard-boat.jpg" alt="Boat stored at the Span Farm Boat Yard" loading="lazy" />
+          <img src="/images/yard-boat.webp" srcset={responsiveSrcset("yard-boat", [480, 800, 1100], 1100)} sizes="(max-width: 700px) 100vw, 50vw" alt="Boat stored at the Span Farm Boat Yard" loading="lazy" />
           <span class="photo-caption">20 Akatea Road · Glendene</span>
         </div>
         <div class="why-content section-pad">
@@ -212,7 +224,7 @@ const faqs = [
             <a class="text-link" href="https://maps.app.goo.gl/a359LycS4y4m8mbS9" target="_blank" rel="noreferrer">Open in Google Maps <span aria-hidden="true">↗</span></a>
           </div>
           <div class="location-image">
-            <img src="/images/glendene.jpg" alt="Auckland landscape near Glendene" loading="lazy" />
+            <img src="/images/glendene.webp" srcset={responsiveSrcset("glendene", [480, 800, 1100], 1100)} sizes="(max-width: 700px) 100vw, 50vw" alt="Auckland landscape near Glendene" loading="lazy" />
             <div class="location-pin" aria-hidden="true"><span>20</span><small>AKATEA<br />ROAD</small></div>
           </div>
         </div>
@@ -220,7 +232,7 @@ const faqs = [
 
             <section class="why-section slipway-section">
               <div class="why-photo">
-                <img src="/images/boat-trailer.jpg" alt="A trailer boat at Span Farm Boat Yard" loading="lazy" />
+                <img src="/images/boat-trailer.webp" srcset={responsiveSrcset("boat-trailer", [480, 800, 1200, 1600], 1600)} sizes="(max-width: 700px) 100vw, 50vw" alt="A trailer boat at Span Farm Boat Yard" loading="lazy" width="1600" height="1067" />
                 <span class="photo-caption">Span Farm Boat Yard · Glendene</span>
               </div>
               <div class="why-content section-pad">
@@ -232,7 +244,7 @@ const faqs = [
             </section>
 
             <figure class="yard-band">
-              <img src="/images/boats-yard.jpg" alt="Boats and trailers stored on the hardstand at Span Farm Boat Yard" loading="lazy" />
+              <img src="/images/boats-yard.webp" srcset={responsiveSrcset("boats-yard", [480, 800, 1100], 1100)} sizes="(max-width: 700px) 100vw, 50vw" alt="Boats and trailers stored on the hardstand at Span Farm Boat Yard" loading="lazy" />
               <figcaption class="photo-caption">Hardstand · Span Farm Boat Yard, Glendene</figcaption>
             </figure>
 
@@ -286,9 +298,14 @@ const faqs = [
   h1, h2 { line-height: .96; text-wrap: balance; }
   h3 { line-height: 1.08; }
   .hero-lede { max-width: 560px; line-height: 1.6; }
+.hero-lede-block { display:flex; align-items:center; gap:14px; max-width:620px; margin-bottom:36px; }
+  .hero-lede-block .hero-lede { flex:1; margin:0; }
+  .hero-avatar { display:block; width:68px; height:68px; flex:0 0 68px; border:2px solid rgba(255,255,255,.8); border-radius:50%; object-fit:cover; object-position:center; }
   .hero-note { color: #d8e7f2; font-size: 13px; letter-spacing: 0; line-height: 1.6; text-transform: none; }
   .note-line { flex-shrink: 0; }
   .hero-content { padding-bottom: 48px; }
+  .hero-copy { max-width: 660px; }
+  .hero-callback { width: 100%; max-width: 500px; justify-self: end; }
   .hero h1 em { color: var(--blue-light); }
   .button { border-radius: 3px; transition: transform .2s ease, background-color .2s ease, box-shadow .2s ease; }
   .button-bright {
@@ -335,6 +352,9 @@ const faqs = [
   .contact-email:hover, .contact-phone:hover { text-decoration: underline; }
   @media (min-width: 681px) {
     .hero-content { padding-top: 150px; }
+  }
+  @media (min-width: 1000px) {
+    .hero-content { display:grid; grid-template-columns:minmax(0, 1.15fr) minmax(390px, .85fr); align-items:center; gap:clamp(36px, 5vw, 76px); }
   }
   @media (max-width: 680px) {
     .hero-content { padding-bottom: 40px; }

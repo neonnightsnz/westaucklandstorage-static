@@ -6,7 +6,7 @@ export const pages = [
     "title": "A real yard.",
     "highlight": "No fuss.",
     "description": "West Auckland Storage is part of Span Farm Boat Yard in Glendene — a practical place to store the things that matter to you.",
-    "image": "/images/yard-boat.jpg",
+    "image": "/images/yard-boat.webp",
     "sections": [
       {
         "heading": "Not a chain. Not a call centre.",
@@ -39,7 +39,7 @@ export const pages = [
     "title": "Storage that",
     "highlight": "makes sense.",
     "description": "Boat, caravan, trailer, vehicle and equipment storage close to home in West Auckland.",
-    "image": "/images/boats-yard.jpg",
+    "image": "/images/boats-yard.webp",
     "sections": [
       {
         "heading": "Start with what you have",
@@ -70,7 +70,7 @@ export const pages = [
     "title": "Tell us what",
     "highlight": "you’ve got.",
     "description": "Call or email West Auckland Storage for a straightforward quote on boat, caravan, trailer and vehicle storage.",
-    "image": "/images/yard-boat.jpg",
+    "image": "/images/yard-boat.webp",
     "sections": [
       {
         "heading": "Talk to the yard",
@@ -98,7 +98,7 @@ export const pages = [
     "title": "Storage near",
     "highlight": "you.",
     "description": "Boat, caravan and vehicle storage for owners across West Auckland — from our Glendene yard we look after boats from Henderson, Massey, Te Atatu, New Lynn, Titirangi and beyond.",
-    "image": "/images/glendene.jpg",
+    "image": "/images/glendene.webp",
     "kind": "locations",
     "sections": [
       {
@@ -133,55 +133,55 @@ export const storageOptions = [
   {
     "slug": "boat-storage-at-west-auckland-storage",
     "label": "Boat storage",
-    "description": "Straightforward outdoor boat storage at Span Farm Boat Yard in Glendene, with space for trailer boats, launches, yachts and jet skis up to 40ft.",
-    "image": "/images/boat-hardstand.jpg"
+    "description": "Outdoor boat storage in West Auckland for trailer boats up to 40ft and jet skis. Store at our Glendene yard. Ask Jeff about space, access and a quote.",
+    "image": "/images/boat-hardstand.webp"
   },
   {
     "slug": "caravan-storage-at-west-auckland-storage",
     "label": "Caravan storage",
-    "description": "Safe, affordable outdoor caravan storage in West Auckland for the space between trips, seasons and plans.",
-    "image": "/images/trailer-storage.jpg"
+    "description": "Outdoor caravan and campervan storage at our Glendene yard. Monthly rates start from $200 + GST, with no deposit. Ask Jeff about space and dates.",
+    "image": "/images/trailer-storage.webp"
   },
   {
     "slug": "vehicle-storage-at-west-auckland-storage",
     "label": "Vehicle storage",
     "description": "Flexible outdoor vehicle storage for cars, 4WDs, utes, trucks and trailers in West Auckland.",
-    "image": "/images/boats-yard.jpg"
+    "image": "/images/boats-yard.webp"
   },
   {
     "slug": "shipping-container-storage-at-west-auckland-storage",
     "label": "Shipping container storage",
-    "description": "Outdoor storage for 20ft and 40ft shipping containers at Span Farm Boat Yard in Glendene. Ask the yard for container pricing.",
-    "image": "/images/boats-yard.jpg"
+    "description": "20ft and 40ft shipping container storage in West Auckland at our Glendene yard. Ask Jeff about outdoor space, delivery access and pricing before arranging transport.",
+    "image": "/images/boats-yard.webp"
   },
   {
     "slug": "trailer-storage-at-west-auckland-storage",
     "label": "Trailer storage",
     "description": "Straightforward outdoor trailer storage in Glendene for utility trailers, boat trailers and recreational equipment.",
-    "image": "/images/trailer-storage.jpg"
+    "image": "/images/trailer-storage.webp"
   },
   {
     "slug": "truck-storage-at-west-auckland-storage",
     "label": "Truck storage",
     "description": "Outdoor storage options for trucks, work vehicles and larger equipment, subject to space and access requirements.",
-    "image": "/images/boats-yard.jpg"
+    "image": "/images/boats-yard.webp"
   },
   {
     "slug": "outdoor-storage-solutions-at-west-auckland-storage",
     "label": "Outdoor storage",
     "description": "Outdoor hardstand storage for the boats, vehicles, trailers and gear that do not fit neatly at home.",
-    "image": "/images/yard-boat.jpg"
+    "image": "/images/yard-boat.webp"
   },
   {
     "slug": "uncovered-boat-storage-at-west-auckland-storage",
     "label": "Uncovered boat storage",
     "description": "Affordable uncovered boat storage for owners who want a practical yard close to home, without paying marina prices.",
-    "image": "/images/boat-hardstand.jpg"
+    "image": "/images/boat-hardstand.webp"
   },
   {
     "slug": "business-storage-solutions-at-west-auckland-storage",
     "label": "Business storage",
     "description": "Flexible outdoor storage for business vehicles, trailers, equipment and stock that need a practical West Auckland base.",
-    "image": "/images/boats-yard.jpg"
+    "image": "/images/boats-yard.webp"
   }
 ];

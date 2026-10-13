@@ -1,0 +1,98 @@
+<dialog class="exit-callback" aria-labelledby="exit-callback-title" data-exit-callback>
+  <form class="exit-callback-card" action="/api/contact" method="post" data-exit-callback-form>
+    <button class="exit-callback-close" type="button" aria-label="Close call back form" data-exit-callback-close>×</button>
+    <p class="exit-callback-kicker">BEFORE YOU GO</p>
+    <h2 id="exit-callback-title">Still looking for storage space?</h2>
+    <p class="exit-callback-copy">Leave your details and we will get back to you within 24 hours. Or call the yard on <a href="tel:098184586">09 818 4586</a>.</p>
+    <div class="exit-callback-fields">
+      <label>Your name<input name="name" required autocomplete="name" placeholder="Your name" /></label>
+      <label>Phone or email<input name="contact" required autocomplete="tel" placeholder="Best number or email" /></label>
+    </div>
+    <input type="hidden" name="item" value="Callback request" />
+    <input type="hidden" name="message" value="Please call me back." />
+    <input type="hidden" name="page" value="exit-intent" />
+    <div class="exit-callback-honeypot" aria-hidden="true"><label>Leave this field empty<input name="company" tabindex="-1" autocomplete="off" /></label></div>
+    <button class="button button-bright exit-callback-submit" type="submit">Request a call back</button>
+    <p class="exit-callback-status" role="status" aria-live="polite"></p>
+  </form>
+</dialog>
+
+<style>
+  .exit-callback { width:min(100% - 32px, 480px); max-width:none; max-height:calc(100dvh - 32px); padding:0; overflow:auto; border:0; border-radius:8px; background:#f5f8fa; color:#12283d; box-shadow:0 24px 80px rgba(0,0,0,.34); }
+  .exit-callback::backdrop { background:rgba(8,28,49,.72); backdrop-filter:blur(3px); }
+  .exit-callback-card { position:relative; display:grid; gap:13px; padding:30px; }
+  .exit-callback-close { position:absolute; top:12px; right:12px; display:grid; width:40px; height:40px; place-items:center; border:1px solid #d3e1eb; border-radius:50%; background:white; color:#082e54; font-size:26px; line-height:1; cursor:pointer; }
+  .exit-callback-kicker { margin:0; color:#145693; font-size:11px; font-weight:700; letter-spacing:.14em; }
+  .exit-callback h2 { max-width:370px; margin:0; color:#082e54; font-size:clamp(28px,6vw,38px); line-height:1.04; }
+  .exit-callback-copy { margin:0; color:#40576a; line-height:1.55; }
+  .exit-callback-copy a { color:#145693; font-weight:700; }
+  .exit-callback-fields { display:grid; gap:11px; }
+  .exit-callback-fields label { display:grid; gap:6px; color:#20394e; font-size:13px; font-weight:700; }
+  .exit-callback-fields input { width:100%; min-height:48px; padding:10px 12px; border:1px solid #8196a7; border-radius:4px; background:white; color:#172b3c; font:inherit; }
+  .exit-callback-fields input:focus-visible { outline:3px solid #145693; outline-offset:2px; }
+  .exit-callback-submit { width:100%; justify-content:center; min-height:50px; cursor:pointer; }
+  .exit-callback-status { margin:0; color:#20394e; line-height:1.5; }
+  .exit-callback-status:empty { display:none; }
+  .exit-callback-honeypot { position:absolute!important; left:-10000px!important; width:1px!important; height:1px!important; overflow:hidden!important; }
+  @media(max-width:480px) { .exit-callback-card { padding:28px 22px 22px; } }
+</style>
+
+<script>
+  const exitDialog = document.querySelector<HTMLDialogElement>('[data-exit-callback]');
+  const exitForm = exitDialog?.querySelector<HTMLFormElement>('[data-exit-callback-form]');
+  const exitStatus = exitDialog?.querySelector<HTMLElement>('.exit-callback-status');
+  const exitSubmit = exitForm?.querySelector<HTMLButtonElement>('[type="submit"]');
+  const exitKey = 'wast-exit-callback-shown';
+  const eligibleAt = Date.now() + 15000;
+  let deepestScroll = 0;
+  let priorScroll = window.scrollY;
+  let shownThisPage = false;
+  let returnFocus: HTMLElement | null = null;
+  const engaged = () => Date.now() >= eligibleAt && (deepestScroll >= 0.25 || window.scrollY >= 500);
+  const hasStartedEnquiry = () => Array.from(document.querySelectorAll('form[action="/api/contact"]')).some(form => Array.from(form.querySelectorAll('input:not([type="hidden"]), textarea, select')).some(field => (field instanceof HTMLInputElement || field instanceof HTMLTextAreaElement || field instanceof HTMLSelectElement) && field.value.trim() !== '') || (document.activeElement instanceof HTMLElement && form.contains(document.activeElement)));
+  const showExitDialog = () => {
+    if (!exitDialog || exitDialog.open || shownThisPage || !engaged() || hasStartedEnquiry()) return;
+    try { if (sessionStorage.getItem(exitKey) === 'yes') return; } catch {}
+    shownThisPage = true;
+    try { sessionStorage.setItem(exitKey, 'yes'); } catch {}
+    returnFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    exitDialog.showModal();
+    exitDialog.querySelector<HTMLInputElement>('input[name="name"]')?.focus();
+  };
+  const closeExitDialog = () => exitDialog?.close();
+  window.addEventListener('scroll', () => {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    deepestScroll = scrollable > 0 ? Math.max(deepestScroll, window.scrollY / scrollable) : 0;
+    const currentScroll = window.scrollY;
+    if (!window.matchMedia('(pointer: fine)').matches && priorScroll - currentScroll > 90) showExitDialog();
+    priorScroll = currentScroll;
+  }, { passive: true });
+  if (window.matchMedia('(pointer: fine)').matches) {
+    document.addEventListener('mouseleave', event => { if (event.clientY <= 0) showExitDialog(); });
+  }
+  exitDialog?.querySelector('[data-exit-callback-close]')?.addEventListener('click', closeExitDialog);
+  exitDialog?.addEventListener('click', event => { if (event.target === exitDialog) closeExitDialog(); });
+  exitDialog?.addEventListener('close', () => returnFocus?.focus({ preventScroll: true }));
+  exitForm?.addEventListener('submit', async event => {
+    event.preventDefault();
+    if (!exitForm.reportValidity()) return;
+    const data = new FormData(exitForm);
+    if (exitSubmit) exitSubmit.disabled = true;
+    if (exitStatus) exitStatus.textContent = 'Sending your request…';
+    try {
+      const response = await fetch(exitForm.action, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(Object.fromEntries(data.entries())),
+      });
+      const result = await response.json();
+      if (!response.ok || result.ok !== true) throw new Error('Callback request was not delivered');
+      exitForm.reset();
+      if (exitStatus) exitStatus.textContent = 'Thanks — we will be in touch within 24 hours.';
+    } catch {
+      if (exitStatus) exitStatus.textContent = 'We couldn’t send that just now. Please try again or call 09 818 4586.';
+    } finally {
+      if (exitSubmit) exitSubmit.disabled = false;
+    }
+  });
+</script>

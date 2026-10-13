@@ -9,7 +9,8 @@ export const absoluteUrl = (pathname: string) => new URL(pathname, siteUrl).href
 export type Breadcrumb = { name: string; path: string };
 
 const marketing: Record<string, { title: string; description: string }> = {
-  '/': { title: 'Boat, Caravan & Vehicle Storage | West Auckland Storage', description: 'Outdoor boat, caravan and vehicle storage at Span Farm Boat Yard in Glendene, West Auckland. Ask about space, flexible terms and current slipway access.' },
+  '/': { title: 'Storage in West Auckland | Boats, Caravans & Vehicles', description: 'Need storage in West Auckland? Store a boat, caravan or vehicle at our Glendene yard from $200 + GST a month. No deposit. Ask Jeff about available space.' },
+  '/shipping-container-storage-at-west-auckland-storage/': { title: 'Shipping Container Storage West Auckland | 20ft & 40ft', description: 'Need shipping container storage in West Auckland? Ask about 20ft and 40ft container space at our Glendene yard, delivery access and pricing.' },
   '/about/': { title: 'About Span Farm Boat Yard | West Auckland Storage', description: 'Meet West Auckland Storage at Span Farm Boat Yard, 20 Akatea Road, Glendene. Practical outdoor storage for boats, caravans, trailers and vehicles.' },
   '/services/': { title: 'Boat, Caravan & Vehicle Storage Options | West Auckland Storage', description: 'Explore outdoor storage for boats, caravans, trailers, cars, trucks and business equipment in Glendene. Contact the yard for availability and a quote.' },
   '/contact/': { title: 'Contact & Storage Quotes | West Auckland Storage', description: 'Call 09 818 4586 or enquire about boat, caravan and vehicle storage at 20 Akatea Road, Glendene. Tell us your item size and preferred dates.' },
@@ -48,9 +49,11 @@ export function metadataFor(pathname: string, fallback: { title: string; descrip
   if (post) {
     const suburb = guidedSuburbs.find(suburb => suburb.slug === post.slug);
     const service = storageOptions.find(option => option.slug === post.slug);
-    const description = suburb
-      ? `Boat, caravan and vehicle storage for ${suburb.name} owners at our Glendene yard. Explore outdoor storage options and ask about space and access.`
-      : service?.description ?? post.excerpt;
+    const description = suburb?.name === 'Whenuapai'
+      ? 'Looking for storage in Whenuapai? Our Glendene yard stores boats, caravans and work vehicles. Tell Jeff the size and start date to check space.'
+      : suburb
+        ? `Boat, caravan and vehicle storage for ${suburb.name} owners at our Glendene yard. Explore outdoor storage options and ask about space and access.`
+        : service?.description ?? post.excerpt;
     // Article titles carry no brand suffix: the URL and the copy already say
     // where this is, and 27 extra characters push curated suburb titles past
     // the point where Google truncates them.

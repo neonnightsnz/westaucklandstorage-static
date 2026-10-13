@@ -151,7 +151,7 @@ ${slipwayLine}
 <p>Flexible short and long-term storage with monthly invoicing. Call {{cta}} and we will work out the details.</p>`
   },
   "west-auckland-storage-your-trusted-storage-solution-in-whenuapai": {
-    title: "Storage for Whenuapai Boats & Vehicles",
+    title: "Whenuapai Storage for Boats, Caravans & Vehicles",
     content: `<p>Whenuapai sits between the airfield and the upper harbour, with a real mix of larger sections and new development. Whether you have a boat, a caravan or a work vehicle, keeping it at a nearby yard is often simpler than juggling it at home.</p>
 <h2>Why Whenuapai owners use the yard</h2>
 <p><strong>Close to home.</strong> Span Farm Boat Yard, {{yard}}, is an easy drive from Whenuapai.</p>
@@ -412,10 +412,10 @@ ${slipwayLine}
 <p>Call {{cta}} with the size of your boat and how long you need the space.</p>`
   },
   "boat-storage-at-west-auckland-storage": {
-    title: "Boat Storage at West Auckland Storage",
-    description: "Boat storage in Glendene, West Auckland, for trailer boats, launches and yachts up to 40ft. Outdoor hardstand space run by people who know boats.",
-    content: `<p>Our main job is boat storage. We keep trailer boats, launches, yachts and jet skis at Span Farm Boat Yard in Glendene, where owners across West Auckland store their boats close to home at a fair price.</p>
-<p>We are at Span Farm Boat Yard, {{yard}} — boat storage for owners across West Auckland.</p>
+    title: "Boat Storage in West Auckland",
+    description: "Outdoor boat storage in West Auckland for trailer boats up to 40ft and jet skis. Store at our Glendene yard. Ask Jeff about space, access and a quote.",
+    content: `<p>Need a place to keep your boat between trips? We store trailer boats, launches, yachts and jet skis at Span Farm Boat Yard in Glendene.</p>
+<p>At Span Farm Boat Yard, {{yard}}, the boat storage is outdoors on hardstand. Tell Jeff your length and start date so he can check space.</p>
 <h2>What we store</h2>
 <p>We store boats up to 40ft, including boats on trailers, and jet skis. Tell Jeff the length including the trailer and your start date.</p>
 <h2>Planning your next launch</h2>
@@ -427,19 +427,19 @@ ${slipwayLine}
 <p>Short and long-term storage, invoiced monthly. Call {{cta}} to check space.</p>`
   },
   "caravan-storage-at-west-auckland-storage": {
-    title: "Caravan & Campervan Storage in West Auckland",
-    description: "Caravan and campervan storage in West Auckland. Outdoor hardstand space at our Glendene yard between trips, without a marina price tag or waitlist.",
-    content: `<p>A caravan or campervan is wonderful to own and awkward to park. Between trips it takes up the best part of a driveway and sits out in the weather. Outdoor storage at our Glendene yard gives it a proper home and gives you back the space.</p>
+    title: "Caravan Storage in West Auckland",
+    description: "Outdoor caravan and campervan storage at our Glendene yard. Monthly rates start from $200 + GST, with no deposit. Ask Jeff about space and dates.",
+    content: `<p>A caravan or campervan can take up most of a driveway between trips. Outdoor storage at our Glendene yard frees up that space at home.</p>
 <h2>What we store</h2>
 <p>Caravans, campervans and motorhomes, along with trailers, boats, cars and other vehicles.</p>
 <h2>Between caravan trips</h2>
 ${slipwayLine}
-<p>Measure the full towing length, including the drawbar, before you ask for a quote. Give Jeff your start date, even if the next trip is still a few months away.</p>
-<p>We are at Span Farm Boat Yard, {{yard}} — caravan storage close to home for owners across West Auckland.</p>
+<p>Measure the full towing length, including the drawbar, and tell Jeff your start date. Monthly rates start at $200 + GST, with no deposit.</p>
+<p>At Span Farm Boat Yard, {{yard}}, outdoor storage keeps your caravan in Glendene, West Auckland. Ask Jeff about space before arranging drop-off.</p>
 <p>Daylight hours are best for general access. Tell Jeff if you expect an early departure so you can agree access beforehand.</p>
 <h2>Before you store</h2>
 <p>Give the caravan a clean, empty the tanks, check the tyres and consider a cover. A little preparation now protects your investment over the off-season.</p>
-<p>Before you arrive, check your towing length against the space you have been given and tell the yard the width of the caravan including any awning or rear rack.</p>
+
 <h2>Get sorted</h2>
 <p>Call {{cta}} with the size and how long you need the space.</p>`
   },

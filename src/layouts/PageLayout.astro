@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import { metadataFor, structuredDataFor } from "../data/seo";
 import { posts } from "../data/blog";
+import ExitCallback from "../components/ExitCallback.astro";
 
 interface Props {
   title: string;
@@ -22,8 +23,9 @@ const post = posts.find(post => currentPath === `/${post.slug}/`);
 const ogImage = new URL(post?.image ?? '/images/og-default.jpg', site).href;
 const ogImageAlt = post?.imageAlt || (post ? post.title : 'West Auckland Storage — boat, caravan and vehicle storage in Glendene');
 const navigation = [
-  { href: '/services/', label: 'What we store' },
-  { href: '/about/', label: 'Why us' },
+  { href: '/services/', label: 'Storage' },
+  { href: '/#contact', label: 'Pricing' },
+  { href: '/about/', label: 'About' },
   { href: '/contact/', label: 'Contact' },
 ];
 
@@ -39,9 +41,15 @@ const structuredData = structuredDataFor(currentPath, title, description, ogImag
     <meta name="theme-color" content="#145693" />
     <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large'} />
     <link rel="canonical" href={canonical} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
+    <link rel="icon" href="/images/favicon_io/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon_io/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon_io/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon_io/apple-touch-icon.png" />
+    <link rel="manifest" href="/images/favicon_io/site.webmanifest" />
     <link rel="alternate" type="application/rss+xml" title="West Auckland Storage — From the yard" href="/rss.xml" />
     <meta property="og:site_name" content="West Auckland Storage" />
     <meta property="og:type" content={type} />
@@ -67,7 +75,7 @@ const structuredData = structuredDataFor(currentPath, title, description, ogImag
     <header class:list={['site-header', { 'interior-header': !home }]}>
       <div class="container header-inner">
         <a class="brand" href="/" aria-label="West Auckland Storage home">
-          <img src="/images/logo.png" alt="West Auckland Storage" width="221" height="259" />
+          <img src="/images/logo.webp" alt="West Auckland Storage" width="221" height="259" />
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
           <span class="sr-only">Toggle navigation</span>
@@ -76,6 +84,7 @@ const structuredData = structuredDataFor(currentPath, title, description, ogImag
         <nav id="site-nav" class="site-nav" aria-label="Main navigation">
           {navigation.map(item => <a href={item.href} aria-current={currentPath === item.href ? 'page' : undefined}>{item.label}</a>)}
           <a class="nav-call" href="tel:098184586">Call 09 818 4586 <span aria-hidden="true">↗</span></a>
+          <a class="nav-quote" href={currentPath === '/' ? '#contact' : '/contact/#enquiry'}>Get a quote</a>
         </nav>
       </div>
     </header>
@@ -86,7 +95,7 @@ const structuredData = structuredDataFor(currentPath, title, description, ogImag
       <div class="container footer-top">
         <div class="footer-brand-block">
           <a class="brand brand-footer" href="/" aria-label="West Auckland Storage home">
-            <img src="/images/logo.png" alt="West Auckland Storage" width="221" height="259" />
+            <img src="/images/logo.webp" alt="West Auckland Storage" width="221" height="259" />
           </a>
           <p class="footer-tagline">Keep it close.<br />Keep it sorted.</p>
           <p>Boat, caravan and vehicle storage in Glendene.</p>
@@ -110,6 +119,7 @@ const structuredData = structuredDataFor(currentPath, title, description, ogImag
           <a href="mailto:info@westaucklandstorage.co.nz">info@westaucklandstorage.co.nz</a>
           <address>Span Farm Boat Yard<br />20 Akatea Road<br />Glendene, Auckland 0602</address>
           <a class="button button-bright" href="/contact/">Ask about space</a>
+          <a class="footer-review-link" href="https://search.google.com/local/writereview?placeid=ChIJF51w2hBBDW0RwciNuUuzjSo" target="_blank" rel="noopener noreferrer">Leave us a Google review <span aria-hidden="true">↗</span></a>
         </div>
       </div>
       <div class="container footer-bottom">
@@ -117,6 +127,8 @@ const structuredData = structuredDataFor(currentPath, title, description, ogImag
         <span>Part of Span Farm Boat Yard Ltd</span>
       </div>
     </footer>
+
+    <ExitCallback />
 
     <script>
       const header = document.querySelector<HTMLElement>('.site-header');
