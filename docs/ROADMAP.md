@@ -160,3 +160,15 @@ The biggest brand-aligned growth lever: the site already hints at being a local 
 | 4 | Form backend: stay `mailto:` or add endpoint? | Yard | Open |
 | 5 | Analytics: Cloudflare Web Analytics OK? | Yard | Open |
 | 6 | Repo debris: safe to delete? | Yard | Open |
+
+## 12. Cross-site review follow-ups — 14 October 2026
+
+These follow-ups come from a review of the live site and current source. Keep the CRO audit as the evidence record; do not mark work complete until it is verified.
+
+- [ ] **Refresh this roadmap to match the current implementation.** The roadmap still describes a `mailto:` form with no backend, while `src/components/QuoteForm.astro` posts to `functions/api/contact.js`. Update the current-state summary, form decision and phase status so the next project session does not plan over completed or changed work.
+- [ ] **Fix image-to-category mismatches.** The CRO audit records kayaks on the caravan/trailer card and boats on the vehicle card. Select current, owner-approved yard photos that show the advertised storage type; keep the existing crop and verify desktop and mobile.
+- [ ] **Prove enquiry delivery before relying on the quote promise.** Confirm one delivery provider is configured for both preview and production, then test successful delivery, visible confirmation, provider failure with preserved input and phone fallback. The API returns `503` when no provider is configured.
+- [ ] **Add or confirm the privacy information for enquiry forms.** Document what contact data is collected, why, who receives it, retention and how a person can request access/correction. Obtain owner approval and link the notice beside every form; do not add unsupported privacy guarantees.
+- [ ] **Measure the actual conversion.** Establish a baseline and define a delivered, qualified enquiry as the main outcome. Track successful delivery separately from form starts, submit attempts and phone/email clicks; do not send contact details or message text to analytics.
+- [ ] **Keep exit prompts evidence-led.** The current CRO brief says not to add popups or fields. Do not expand or retune the existing callback prompt until the owner approves the hypothesis and a measurement plan; check frequency, dismissal, keyboard use and mobile behavior if it remains in scope.
+- [ ] **Complete final visual and route review after the approved fixes.** Check the real Cloudflare preview at desktop and phone-sized widths, verify the branded 404 status, and confirm production serves the reviewed build.
