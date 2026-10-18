@@ -512,7 +512,7 @@ html { scroll-padding-top: 130px; }
 .site-header { position: fixed; transition: background .2s ease, box-shadow .2s ease; }
 .site-header.interior-header { position: sticky; }
 .site-header.is-scrolled { background: var(--blue-dark); box-shadow: 0 4px 16px rgba(0,0,0,.18); }
-.site-nav.is-open { max-height: calc(100dvh - 110px); overflow-y: auto; }
+.site-nav.is-open { max-height: calc(100dvh - 160px); overflow-y: auto; }
 .blog-search { margin-bottom: 40px; padding: 24px; background: white; border-radius: 16px; }
 .blog-search label { display: block; margin-bottom: 10px; font-weight: 700; }
 .blog-search-controls { display: flex; gap: 12px; }
