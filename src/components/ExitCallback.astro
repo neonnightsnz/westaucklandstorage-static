@@ -45,7 +45,6 @@
   const exitKey = 'wast-exit-callback-shown';
   const eligibleAt = Date.now() + 15000;
   let deepestScroll = 0;
-  let priorScroll = window.scrollY;
   let shownThisPage = false;
   let returnFocus: HTMLElement | null = null;
   const engaged = () => Date.now() >= eligibleAt && (deepestScroll >= 0.25 || window.scrollY >= 500);
@@ -67,9 +66,6 @@
   window.addEventListener('scroll', () => {
     const scrollable = document.documentElement.scrollHeight - window.innerHeight;
     deepestScroll = scrollable > 0 ? Math.max(deepestScroll, window.scrollY / scrollable) : 0;
-    const currentScroll = window.scrollY;
-    if (!window.matchMedia('(pointer: fine)').matches && priorScroll - currentScroll > 90) showExitDialog();
-    priorScroll = currentScroll;
   }, { passive: true });
   if (window.matchMedia('(pointer: fine)').matches) {
     document.addEventListener('mouseleave', event => { if (event.clientY <= 0) showExitDialog(); });
