@@ -18,7 +18,7 @@
 </dialog>
 
 <style>
-  .exit-callback { width:min(100% - 32px, 480px); max-width:none; max-height:calc(100dvh - 32px); padding:0; overflow:auto; border:0; border-radius:8px; background:#f5f8fa; color:#12283d; box-shadow:0 24px 80px rgba(0,0,0,.34); }
+  .exit-callback { position:fixed; inset:0; box-sizing:border-box; width:min(480px, calc(100vw - 32px)); max-width:calc(100vw - 32px); max-height:calc(100dvh - 32px); margin:auto; padding:0; overflow:auto; overscroll-behavior:contain; border:0; border-radius:8px; background:#f5f8fa; color:#12283d; box-shadow:0 24px 80px rgba(0,0,0,.34); }
   .exit-callback::backdrop { background:rgba(8,28,49,.72); backdrop-filter:blur(3px); }
   .exit-callback-card { position:relative; display:grid; gap:13px; padding:30px; }
   .exit-callback-close { position:absolute; top:12px; right:12px; display:grid; width:40px; height:40px; place-items:center; border:1px solid #d3e1eb; border-radius:50%; background:white; color:#082e54; font-size:26px; line-height:1; cursor:pointer; }
