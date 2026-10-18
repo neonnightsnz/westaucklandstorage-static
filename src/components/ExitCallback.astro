@@ -50,14 +50,18 @@
   let returnFocus: HTMLElement | null = null;
   const engaged = () => Date.now() >= eligibleAt && (deepestScroll >= 0.25 || window.scrollY >= 500);
   const hasStartedEnquiry = () => Array.from(document.querySelectorAll('form[action="/api/contact"]')).some(form => Array.from(form.querySelectorAll('input:not([type="hidden"]), textarea, select')).some(field => (field instanceof HTMLInputElement || field instanceof HTMLTextAreaElement || field instanceof HTMLSelectElement) && field.value.trim() !== '') || (document.activeElement instanceof HTMLElement && form.contains(document.activeElement)));
+  const openCallbackDialog = (trigger?: HTMLElement | null) => {
+    if (!exitDialog || exitDialog.open) return;
+    returnFocus = trigger ?? (document.activeElement instanceof HTMLElement ? document.activeElement : null);
+    exitDialog.showModal();
+    exitDialog.querySelector<HTMLInputElement>('input[name="name"]')?.focus();
+  };
   const showExitDialog = () => {
     if (!exitDialog || exitDialog.open || shownThisPage || !engaged() || hasStartedEnquiry()) return;
     try { if (sessionStorage.getItem(exitKey) === 'yes') return; } catch {}
     shownThisPage = true;
     try { sessionStorage.setItem(exitKey, 'yes'); } catch {}
-    returnFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
-    exitDialog.showModal();
-    exitDialog.querySelector<HTMLInputElement>('input[name="name"]')?.focus();
+    openCallbackDialog();
   };
   const closeExitDialog = () => exitDialog?.close();
   window.addEventListener('scroll', () => {
@@ -71,6 +75,11 @@
     document.addEventListener('mouseleave', event => { if (event.clientY <= 0) showExitDialog(); });
   }
   exitDialog?.querySelector('[data-exit-callback-close]')?.addEventListener('click', closeExitDialog);
+  document.querySelectorAll<HTMLElement>('[data-open-callback]').forEach(trigger => trigger.addEventListener('click', () => {
+    shownThisPage = true;
+    try { sessionStorage.setItem(exitKey, 'yes'); } catch {}
+    openCallbackDialog(trigger);
+  }));
   exitDialog?.addEventListener('click', event => { if (event.target === exitDialog) closeExitDialog(); });
   exitDialog?.addEventListener('close', () => returnFocus?.focus({ preventScroll: true }));
   exitForm?.addEventListener('submit', async event => {
