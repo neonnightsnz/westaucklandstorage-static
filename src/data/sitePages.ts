@@ -104,8 +104,8 @@ export const pages = [
       {
         "heading": "One yard, across the west",
         "paragraphs": [
-          "West Auckland Storage sits at Span Farm Boat Yard in Glendene, right in the middle of the west. That means most owners are only a short drive from their boat, caravan or trailer — close enough to check on it, clean it, or hook up and head away for the weekend.",
-          "Below are the West Auckland suburbs we look after most often, each with a local guide. If your suburb isn’t listed, get in touch — if you can get to Glendene, we can almost certainly help."
+          "West Auckland Storage is at Span Farm Boat Yard, 20 Akatea Road, Glendene. Owners from across the west bring boats, caravans, trailers and vehicles here when they need more room at home.",
+          "Use the local guides below to learn about storing near your suburb. If your area is not listed, ask us about your item and we will confirm whether the yard can accommodate it."
         ]
       },
       {

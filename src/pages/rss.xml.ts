@@ -1,21 +1,27 @@
 import type { APIContext } from "astro";
 import { posts } from "../data/blog.ts";
+import { locationPages } from "../data/locationPages.ts";
+const retiredHomepageSlug = "span-farm-boat-yard-ltd-your-premier-boat-storage-solution-in-west-auckland";
 export const prerender = true;
 export function GET(...args: Pick<APIContext, "site">[]): Response {
   const { site } = args[0] ?? ({} as Pick<APIContext, "site">);
   const origin = site?.origin ?? "https://westaucklandstorage.co.nz";
-  const sorted = [...posts].sort(
+  const sorted = posts.filter((post) => post.slug !== retiredHomepageSlug).sort(
     (a: { date: string }, b: { date: string }) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   );
   const items = sorted
     .map(
-      (post: { title: string; slug: string; date: string; excerpt: string }) => `    <item>
+      (post: { title: string; slug: string; date: string; excerpt: string }) => {
+        const location = locationPages.find((page) => page.guideSlug === post.slug);
+        const postUrl = `${origin}${location?.slug ?? `/${post.slug}/`}`;
+        return `    <item>
       <title><![CDATA[${post.title}]]></title>
-      <link>${origin}/${post.slug}/</link>
-      <guid isPermaLink="true">${origin}/${post.slug}/</guid>
+      <link>${postUrl}</link>
+      <guid isPermaLink="true">${postUrl}</guid>
       <pubDate>${new Date(post.date).toUTCString()}</pubDate>
       <description><![CDATA[${post.excerpt}]]></description>
-    </item>`,
+    </item>`;
+      },
     )
     .join("\n");
 

@@ -27,3 +27,25 @@
 # Correct the old payment-page contact link.
 /pay-your-account/contact/ /contact/ 301
 /motorbike-storage-at-west-auckland-storage/ /shipping-container-storage-at-west-auckland-storage/ 301
+
+# The newer /storage-near/ guides replace the overlapping WordPress suburb articles.
+/west-auckland-storage-your-premier-storage-solution-in-glendene/ /storage-near/west-auckland-storage-your-premier-storage-solution-in-glendene/ 301
+/west-auckland-storage-your-reliable-storage-solution-in-kelston/ /storage-near/west-auckland-storage-your-reliable-storage-solution-in-kelston/ 301
+/west-auckland-storage-your-storage-solution-in-new-lynn/ /storage-near/west-auckland-storage-your-storage-solution-in-new-lynn/ 301
+/west-auckland-storage-your-trusted-storage-solution-in-green-bay/ /storage-near/west-auckland-storage-your-trusted-storage-solution-in-green-bay/ 301
+/west-auckland-storage-secure-storage-in-sunnyvale/ /storage-near/west-auckland-storage-secure-storage-in-sunnyvale/ 301
+/west-auckland-storage-reliable-storage-in-lincoln/ /storage-near/west-auckland-storage-reliable-storage-in-lincoln/ 301
+/west-auckland-storage-reliable-storage-in-massey/ /storage-near/west-auckland-storage-reliable-storage-in-massey/ 301
+/west-auckland-storage-your-ideal-storage-solution-in-western-heights/ /storage-near/west-auckland-storage-your-ideal-storage-solution-in-western-heights/ 301
+/west-auckland-storage-trusted-storage-solutions-in-west-harbour/ /storage-near/west-auckland-storage-trusted-storage-solutions-in-west-harbour/ 301
+/west-auckland-storage-your-storage-solution-in-hobsonville/ /storage-near/west-auckland-storage-your-storage-solution-in-hobsonville/ 301
+/west-auckland-storage-your-trusted-storage-solution-in-whenuapai/ /storage-near/west-auckland-storage-your-trusted-storage-solution-in-whenuapai/ 301
+/west-auckland-storage-the-perfect-storage-solution-for-herald-island-residents/ /storage-near/west-auckland-storage-the-perfect-storage-solution-for-herald-island-residents/ 301
+/west-auckland-storage-your-go-to-storage-solution-in-te-atatu-peninsula/ /storage-near/west-auckland-storage-your-go-to-storage-solution-in-te-atatu-peninsula/ 301
+/west-auckland-storage-the-ideal-choice-for-te-atatu-south-residents/ /storage-near/west-auckland-storage-the-ideal-choice-for-te-atatu-south-residents/ 301
+/west-auckland-storage-your-trusted-storage-solution-in-glen-eden/ /storage-near/west-auckland-storage-your-trusted-storage-solution-in-glen-eden/ 301
+/discovering-west-auckland-storage-the-perfect-solution-for-titirangi-residents/ /storage-near/discovering-west-auckland-storage-the-perfect-solution-for-titirangi-residents/ 301
+/west-auckland-storage-your-reliable-storage-solution-in-laingholm/ /storage-near/west-auckland-storage-your-reliable-storage-solution-in-laingholm/ 301
+/west-auckland-storage-your-trusted-storage-in-huia/ /storage-near/west-auckland-storage-your-trusted-storage-in-huia/ 301
+/west-auckland-storage-your-trusted-storage-solution-in-swanson/ /storage-near/west-auckland-storage-your-trusted-storage-solution-in-swanson/ 301
+/span-farm-boat-yard-ltd-your-premier-boat-storage-solution-in-west-auckland/ / 301

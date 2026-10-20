@@ -24,10 +24,6 @@ import { locationGroups } from '../data/locations';
 
 export const prerender = true;
 
-/** A suburb by its guide slug, so the page and the hub cannot disagree. */
-const guideSlugFor = (page: LocationPage) =>
-  locationGroups.flatMap((group) => group.suburbs).find((suburb) => suburb.slug === page.guideSlug)?.slug;
-
 /** Three nearby suburbs: whoever shares the area group first, then the rest. */
 const peersFor = (page: LocationPage): LocationPage[] => {
   const ownGroup = locationGroups.find((group) => group.suburbs.some((suburb) => suburb.slug === page.guideSlug));
@@ -46,7 +42,6 @@ const peersFor = (page: LocationPage): LocationPage[] => {
 };
 
 const { page } = Astro.props as { page: LocationPage };
-const guideSlug = guideSlugFor(page);
 const peers = peersFor(page);
 ---
 
@@ -80,7 +75,7 @@ const peers = peersFor(page);
             <ul class="check-list check-list-dark">
               {page.bullets.map((bullet) => <li><span aria-hidden="true">+</span><div><strong>{bullet}</strong></div></li>)}
             </ul>
-            <a class="button button-bright" href="/contact/?item=Boat">Ask about space</a>
+            <a class="button button-bright" href="/contact/">Ask about space</a>
             <p class="archive-note">Storage is billed monthly from $200 + GST, with no deposit. The slipway is currently under repair and haul-out is a work in progress, so call before you plan around either.</p>
           </div>
           <div class="aside-card">
@@ -93,28 +88,6 @@ const peers = peersFor(page);
         </aside>
       </div>
     </section>
-
-    {guideSlug && (
-      <section class="locations-section section-pad">
-        <div class="container">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">Next steps</p>
-              <h2>Read the {page.suburb}<br /><span>guide.</span></h2>
-            </div>
-            <p>The guide walks through what owners in {page.suburb} usually store, and how to get a price.</p>
-          </div>
-          <ul class="location-list">
-            <li>
-              <a href={`/${guideSlug}/`}><strong>{page.suburb} storage guide</strong><span>What local owners store, and the next step</span></a>
-            </li>
-            <li>
-              <a href="/storage-near-you/"><strong>Every West Auckland suburb</strong><span>All 20 areas we serve, grouped by distance</span></a>
-            </li>
-          </ul>
-        </div>
-      </section>
-    )}
 
     <section class="related-section section-pad">
       <div class="container">

@@ -13,6 +13,10 @@ const localPeers = localGroup?.suburbs.map(suburb => suburb.slug).filter(slug =>
 // The storage-near page for this suburb, if the guide has one. Suburbs we serve
 // without a guide have no slug, so no page is linked.
 const localPage = locationPages.find(page => page.guideSlug === post.slug);
+const articleHref = (slug: string) => {
+  const location = locationPages.find((page) => page.guideSlug === slug);
+  return location ? location.slug : `/${slug}/`;
+};
 const preferred = category === 'local-guides'
   ? [storageOptions[0].slug, ...localPeers]
   : category === 'storage-options'
@@ -58,7 +62,7 @@ const contactHref = enquiryItem ? `/contact/?${new URLSearchParams({ item: enqui
         <a class="article-aside-link" href="tel:098184586">Call 09 818 4586</a>
         <a class="article-aside-link" href="/services/">Explore our storage options</a>
         <a class="article-aside-link" href="/storage-near-you/">Storage near you</a>
-        {localPage && <a class="article-aside-link" href={`/${localPage.slug}/`}>Storage near {localPage.suburb}</a>}
+        {localPage && <a class="article-aside-link" href={localPage.slug}>Storage near {localPage.suburb}</a>}
         <nav aria-label="Storage options for this guide">
           {serviceLinks.map(option => <a class="article-aside-link" href={`/${option.slug}/`}>{option.label} in Glendene</a>)}
         </nav>
@@ -71,7 +75,7 @@ const contactHref = enquiryItem ? `/contact/?${new URLSearchParams({ item: enqui
     <div class="container">
       <p class="eyebrow">Keep reading</p>
       <div class="related-grid">
-        {related.map(item => <a class="related-card" href={`/${item.slug}/`}><h3>{item.title}</h3><span class="text-link">Read article →</span></a>)}
+        {related.map(item => <a class="related-card" href={articleHref(item.slug)}><h3>{item.title}</h3><span class="text-link">Read article →</span></a>)}
       </div>
     </div>
   </nav>
