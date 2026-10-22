@@ -428,20 +428,19 @@ ${slipwayLine}
   },
   "caravan-storage-at-west-auckland-storage": {
     title: "Caravan Storage in West Auckland",
-    description: "Outdoor caravan and campervan storage at our Glendene yard. Monthly rates start from $200 + GST, with no deposit. Ask Jeff about space and dates.",
+    description: "Need caravan storage in West Auckland? Store outdoors at our Glendene yard from $200 + GST a month, with no deposit. Ask about space and dates.",
+    omitLegacySlipwayNotice: true,
     content: `<p>A caravan or campervan can take up most of a driveway between trips. Outdoor storage at our Glendene yard frees up that space at home.</p>
 <h2>What we store</h2>
 <p>Caravans, campervans and motorhomes, along with trailers, boats, cars and other vehicles.</p>
 <h2>Between caravan trips</h2>
-${slipwayLine}
-<p>Measure the full towing length, including the drawbar, and tell Jeff your start date. Monthly rates start at $200 + GST, with no deposit.</p>
-<p>At Span Farm Boat Yard, {{yard}}, outdoor storage keeps your caravan in Glendene, West Auckland. Ask Jeff about space before arranging drop-off.</p>
-<p>Daylight hours are best for general access. Tell Jeff if you expect an early departure so you can agree access beforehand.</p>
+<p>Measure the full length, including the drawbar, and tell Jeff your start date. Storage is billed monthly from $200 + GST, with no deposit. Ask about available space before arranging drop-off.</p>
+<p>We are at Span Farm Boat Yard, {{yard}}. Daylight hours are best for general access. If you need to collect the caravan outside those hours, agree access with the yard in advance.</p>
 <h2>Before you store</h2>
-<p>Give the caravan a clean, empty the tanks, check the tyres and consider a cover. A little preparation now protects your investment over the off-season.</p>
-
+<p>Before you drop it off, empty the tanks, check the tyres and secure loose items. Outdoor storage means your caravan will be exposed to the weather, so use a suitable cover if you have one.</p>
+<p>Our <a href="/storage-near-you/">West Auckland storage guides</a> explain where the yard is in relation to nearby suburbs. For other vehicles and gear, see our <a href="/services/">storage options</a>.</p>
 <h2>Get sorted</h2>
-<p>Call {{cta}} with the size and how long you need the space.</p>`
+<p>Call {{cta}} or <a href="/contact/">send an enquiry</a> with the caravan length, including the drawbar, and your start date.</p>`
   },
   "outdoor-storage-solutions-at-west-auckland-storage": {
     title: "Outdoor Storage Options in West Auckland",
@@ -461,18 +460,17 @@ ${slipwayLine}
   },
   "shipping-container-storage-at-west-auckland-storage": {
     title: "Shipping Container Storage in West Auckland",
+    omitLegacySlipwayNotice: true,
     content: `<p>Shipping containers need a practical place to sit when they are not being used, especially if there is no room at home or at the business. We offer outdoor storage for 20ft and 40ft shipping containers at Span Farm Boat Yard in Glendene.</p>
 <h2>What we store</h2>
-<p>We accept 20ft and 40ft shipping containers. Container pricing is quoted by the yard, so tell Jeff the container size, how it will arrive and when you need the space.</p>
+<p>We accept 20ft and 40ft shipping containers. Container pricing is quoted by the yard, so tell Jeff the container size, how it will arrive and when you need the space. This is outdoor storage at our West Auckland yard, not indoor or household storage.</p>
 <h2>Making room for a container</h2>
-<p>Container placement depends on available space, access and delivery requirements. Give us the overall length and start date so the yard can check the fit before you arrange transport.</p>
+<p>Container placement depends on available space, access and delivery requirements. Give us the container length, delivery details and start date so the yard can check the fit before you arrange transport. Confirm the approach and unloading plan with Jeff first.</p>
 <h2>Practical outdoor storage</h2>
 <p>This is outdoor hardstand storage at a working boat yard. Tell us what you need to store and how often you expect access, and we will talk through the practical details.</p>
-<p>Check with the yard before arranging transport, and tell us the container's condition and whether it will be loaded on arrival. That way the spot you are given is one the container can actually be set down in.</p>
-<p>We are at Span Farm Boat Yard, {{yard}} — container storage for homes and businesses across West Auckland.</p>
-${slipwayLine}
+<p>For other vehicle and equipment storage, see our <a href="/services/">full list of storage options</a>. You can also read our <a href="/storage-near-you/">West Auckland local storage guides</a>.</p>
 <h2>Get in touch</h2>
-<p>Call {{cta}} to ask about container space and pricing.</p>`
+<p>We are at Span Farm Boat Yard, {{yard}}. Call {{cta}} or <a href="/contact/">send an enquiry</a> to ask about container space and pricing before arranging delivery.</p>`
   },
   "business-storage-solutions-at-west-auckland-storage": {
     title: "Business & Fleet Storage in West Auckland",

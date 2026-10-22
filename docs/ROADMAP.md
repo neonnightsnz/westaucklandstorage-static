@@ -172,3 +172,24 @@ These follow-ups come from a review of the live site and current source. Keep th
 - [ ] **Measure the actual conversion.** Establish a baseline and define a delivered, qualified enquiry as the main outcome. Track successful delivery separately from form starts, submit attempts and phone/email clicks; do not send contact details or message text to analytics.
 - [ ] **Keep exit prompts evidence-led.** The current CRO brief says not to add popups or fields. Do not expand or retune the existing callback prompt until the owner approves the hypothesis and a measurement plan; check frequency, dismissal, keyboard use and mobile behavior if it remains in scope.
 - [ ] **Complete final visual and route review after the approved fixes.** Check the real Cloudflare preview at desktop and phone-sized widths, verify the branded 404 status, and confirm production serves the reviewed build.
+
+## 13. SEO data review — 22 October 2026
+
+Use `seo-data/` as a dated evidence archive. The Oct 22 crawl exports for pages, links and images match the Oct 19 exports byte for byte, so they do not verify the SEO changes deployed on Oct 20. The Search Console exports are useful for prioritising work, but their reporting window is not recorded in the filenames. Treat page and query figures as a baseline until a fresh export is available.
+
+### Prioritised plan
+
+1. [ ] **Refresh the site crawl after deployment.** Run a new crawl of the production domain and save pages, links and images exports with the crawl date. Check that the retired suburb article URLs redirect to their current `/storage-near/` pages, the duplicate Span Farm article redirects to `/`, and all sitemap URLs return successfully. Compare only exports from known crawl dates.
+2. [ ] **Check Search Console after Google has recrawled the redirects.** Export performance by page and query for a clearly recorded date range. Confirm whether impressions and clicks attributed to HTTP and retired article URLs have shifted to the canonical URLs. Do not treat the current cannibalization scores as proof that the live pages still compete: the report includes protocol duplicates and retired paths.
+3. [x] **Improve existing container storage content.** The Oct 22 visibility report shows `container storage auckland` at 109 impressions and average position 21.8, `shipping container storage` at 120 and position 23.8, and `container storage west auckland` at 35 and position 10.9. Updated the existing container article with clearer outdoor storage and delivery planning details, and links to the service, location and enquiry pages. Container pricing remains by enquiry. No duplicate location page was added.
+4. [x] **Improve caravan and local storage page relevance.** The report shows `caravan storage near me` at 56 impressions and average position 24.6, and `storage west auckland` at 363 and position 13.9. Updated the caravan article with clearer sizing, access and enquiry guidance, and links to nearby storage guides and services. Each `/storage-near/` page now links to boat, caravan, container and all service options. Claims stay within the confirmed facts.
+5. [x] **Review internal links by hand after the page updates.** The automated internal-link opportunity file has only a header and no recommendations. Added contextual links between the caravan and container articles, the service and location hubs, and the `/storage-near/` pages and relevant storage options. No sitewide keyword-heavy links were added.
+6. [ ] **Ignore irrelevant or inaccurate keyword suggestions.** Do not target `Grafton storage`, covered trailer storage, boat haul-out, or other terms that imply an unserved area or an unavailable service. The slipway is under repair and haul-out is a work in progress; use the exact status in the brand guide.
+7. [ ] **Repeat measurement after changes.** Save new Search Console exports with the reporting range and export date. Compare clicks, impressions, CTR and average position by canonical page and relevant query. Review snippets and page content if a page earns impressions but few clicks; make one focused change at a time.
+
+### Evidence and limits
+
+- `quick-wins-new-visibility-opportunities-2026-10-22-035541.csv` contains the visibility figures above. These figures identify candidates for review, not guaranteed traffic gains.
+- The Oct 22 cannibalization report lists HTTP homepage URLs and retired article URLs among its risks. The URL consolidation and redirects have since been deployed, so verify with a fresh crawl and later Search Console data before making further structural changes.
+- The Oct 22 CTR report includes low-volume and irrelevant queries. Check whether a query matches an actual service before changing titles or descriptions.
+- The Oct 13 Search Console archives and backlink export are older context. The backlink export lists Waze pages associated with Span Farm and does not identify a new on-site action.

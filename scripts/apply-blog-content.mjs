@@ -62,7 +62,12 @@ const updated = posts.map((post) => {
   }
   // The shared yard copy must not drift when an article is edited: a rebuild that
   // drops a shared paragraph is a regression, not an editorial choice.
-  for (const sentence of [`Span Farm Boat Yard, ${yardAddressHtml}`, sharedSlipwaySentence, `are already storing with us`]) {
+  const sharedSentences = [`Span Farm Boat Yard, ${yardAddressHtml}`, `are already storing with us`];
+  // Some legacy storage articles carried the shared slipway notice even when
+  // the page was about caravans or containers. Let the curated source opt out
+  // where that detail does not help the reader.
+  if (!curated.omitLegacySlipwayNotice) sharedSentences.push(sharedSlipwaySentence);
+  for (const sentence of sharedSentences) {
     if (post.content.includes(sentence) && !content.includes(sentence)) {
       problems.push(`Shared yard copy dropped from ${post.slug}: ${sentence}`);
     }
